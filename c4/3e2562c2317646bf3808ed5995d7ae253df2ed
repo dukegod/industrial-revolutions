@@ -1,0 +1,30 @@
+.gitignore
+  h_c10f653d02d2fc 1-21
+01-history.html
+  h_c10f653d02d2fc 1-664
+02-architecture.html
+  h_c10f653d02d2fc 1-282
+03-current.html
+  h_c10f653d02d2fc 1-215
+04-glossary.html
+  h_c10f653d02d2fc 1-238
+05-industrial-logic.html
+  h_c10f653d02d2fc 1-421
+assets/style.css
+  h_c10f653d02d2fc 1-185
+computer-architecture-evolution.html
+  h_c10f653d02d2fc 1-43
+index.html
+  h_c10f653d02d2fc 1-365
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c43e2562c2317646bf3808ed5995d7ae253df2ed",
+  "prompts": {},
+  "humans": {
+    "h_c10f653d02d2fc": {
+      "author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
