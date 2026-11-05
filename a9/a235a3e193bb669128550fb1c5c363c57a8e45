@@ -1,0 +1,23 @@
+05-architecture.html
+  s_ae6303e289bfd2::t_0c3c3acf4d5dbf 6,16,276
+08-logic.html
+  s_ae6303e289bfd2::t_50f78b277e1037 6,16,35-36,47,49-53,96,415
+assets/style.css
+  s_ae6303e289bfd2::t_a3c6e3c37973fc 2-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a9a235a3e193bb669128550fb1c5c363c57a8e45",
+  "prompts": {},
+  "sessions": {
+    "s_ae6303e289bfd2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a5a9-f28b-7581-9380-507f1225840b",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
