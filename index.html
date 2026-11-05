@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>电脑技术的发展路径 · 核心沉淀</title>
+<title>核心沉淀 · 工业革命与人类发展</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -13,7 +13,7 @@
 
 <nav class="nav">
   <div class="nav-in">
-    <span class="nav-brand">Computer Architecture</span>
+    <span class="nav-brand">Industrial Revolutions</span>
     <div class="nav-links">
       <a href="index.html" class="on">核心沉淀</a>
       <a href="01-first.html">第一次</a>
@@ -32,59 +32,64 @@
 
   <header class="hero">
     <p class="kicker">Core · 核心沉淀</p>
-    <h1>电脑技术的发展路径：以工业革命为主线</h1>
+    <h1>人类为什么会这样发展：从四轮工业革命读出的规律</h1>
     <p class="lede">
-      这套文档以<b>工业革命为主线</b>：四轮革命各一页，从「替代了什么」到「组织如何被迫重构」，
-      再到「代价与收益如何分配」。电脑不是并列的一段历史，而是<b>第三次革命内部的一条纵切线</b>——
-      它的八次架构跃迁完整写在第三次那一页里。
-      这一页只放<b>沉淀下来的核心</b>：主线地图、结论、当下的硬约束、对 Agent 平台的推论，以及最高频的 20 个术语。
+      这一页站在<b>工业革命的视角</b>，回答一个关于人类社会的问题：<b>进步是怎么发生的，又为什么总是迟到、总是伴随不平等？</b>
+      四轮革命提供的是同一个答案的四个版本——<b>每一次革命都把人类的一部分能力变成可规模化、低成本、可复制的外力；
+      随后组织被迫围绕它重排；再随后，收益才慢慢分配下去</b>。
+      电脑不是这段历史的主角，它只是<b>第三次革命内部最深刻的一次纵切</b>——理解它的八次架构跃迁，
+      是理解「可编程性如何重塑一个组织」最好的样本。
     </p>
     <div class="meta">
-      <span class="tag">共 <b>9 页</b></span>
-      <span class="tag">主线 <b>四轮革命</b></span>
-      <span class="tag">第三次内部 <b>八次架构跃迁</b></span>
-      <span class="tag">术语 <b>98 条</b></span>
-      <span class="tag">现状核对至 <b>2026-11</b></span>
+      <span class="tag">四轮革命 <b>同一答案的四个版本</b></span>
+      <span class="tag">推进逻辑 <b>三条铁律</b></span>
+      <span class="tag">当下定位 <b>第四次·组织重构前夜</b></span>
+      <span class="tag">事实核对至 <b>2026-11</b></span>
       <span class="tag"><a href="07-glossary.html">术语速查 <b>20 条</b> →</a></span>
     </div>
   </header>
 
   <div class="conclusion">
     <div class="lbl">核心结论</div>
-    <p><b>电脑技术史 = 「通用化 → 专用化 → 可定制化」与「单机 → 集群 → AI 工厂」两条曲线的叠加。</b></p>
+    <p><b>人类发展的动力，是「把稀缺变成不稀缺」；而每一轮发展的代价，是把新的稀缺制造出来。</b></p>
     <p>
-      架构的每次跃迁都不是单纯把机器做得更快，而是<b>重新分配了「算力」与「数据搬运」的比重</b>。
-      当算力不再稀缺，内存容量、互连带宽与电力供给就成了新的稀缺资源。因此今天评价一套计算系统，
-      衡量对象已从单颗芯片的 FLOPS，转向<b>每瓦每秒产出多少 token、每个 token 的端到端成本、以及异构资源被调度的效率</b>。
+      四轮革命依次拿走了<b>体力</b>（蒸汽机与煤）、<b>肌肉</b>（电动机与流水线）、<b>认知</b>（计算机与网络）、
+      <b>认知的执行环节</b>（大模型与智能体）。每拿走一层，人类的活动边界就向外扩一格；
+      每扩一格，稀缺就转移到另一个地方——原料与市场、规模与协调、注意力与信任、<b>目标设定与责任</b>。
     </p>
     <p>
-      而这一切的位置感来自更外层：<b>电脑是第三次工业革命的核心标志物，它的普及定义了信息时代</b>。
-      四轮革命依次替代<b>体力</b>、<b>肌肉</b>、<b>认知</b>、<b>认知的执行环节</b>——
-      详见下面的主线地图与 <a href="03-third.html" style="color:var(--accent)">03 第三次工业革命</a>。
+      但真正反直觉的是下面这条：<b>技术可用，和发展兑现，是两件事，中间隔着一次组织重构。</b>
+      电气化 1879 年就商用了，美国制造业生产率却要到 1920 年代才起飞——<b>约 40 年</b>，
+      因为工厂最初只是「把蒸汽机换成大马达」，直到「每台机器配自己的马达、并按物料流重排厂房」，收益才出现。
+      计算机重复了同一幕（约 15 年），<b>今天的 AI 正处在这条曲线的第三段开头</b>。
+    </p>
+    <p>
+      所以判断一项新技术值不值得期待，最有信息量的从来不是它的能力曲线，而是三个问题：
+      <b>它取消了什么稀缺？它要求谁重组流程？它兑现的时候，收益会分给谁？</b>
     </p>
   </div>
 
   <!-- ============ 00 主线地图 ============ -->
   <section style="margin-top:36px">
     <div class="sec-head">
-      <span class="num">00</span><h2>主线地图：四轮革命，以及这套文档怎么排</h2>
-      <span class="sub">先定位，再往下看</span>
+      <span class="num">00</span><h2>主线地图：四轮革命，同一个答案的四个版本</h2>
+      <span class="sub">先看结构，再看规律</span>
     </div>
 
     <figure class="figbox">
-      <svg viewBox="0 0 860 236" width="100%" style="display:block;height:auto" role="img" aria-label="四轮工业革命主线地图与文档页面对应关系">
+      <svg viewBox="0 0 860 286" width="100%" style="display:block;height:auto" role="img" aria-label="四轮工业革命的替代对象、核心机制、组织变革与新稀缺迁移对照图">
         <defs>
-          <marker id="arwMap" markerWidth="8" markerHeight="8" refX="6.5" refY="2.8" orient="auto">
+          <marker id="arwC" markerWidth="8" markerHeight="8" refX="6.5" refY="2.8" orient="auto">
             <path d="M0,0 L6.5,2.8 L0,5.6 Z" fill="#2f6f5e"/>
           </marker>
         </defs>
         <g font-family="Outfit, 'PingFang SC', sans-serif">
           <g font-size="11" fill="#7c7a72" letter-spacing="1">
             <text x="8" y="18">轮次</text>
-            <text x="112" y="18">替代的能力</text>
+            <text x="112" y="18">取消的稀缺</text>
             <text x="268" y="18">核心机制</text>
-            <text x="500" y="18">兑现条件</text>
-            <text x="700" y="18">对应页面</text>
+            <text x="500" y="18">组织被迫重构</text>
+            <text x="720" y="18">新稀缺</text>
           </g>
           <line x1="8" y1="26" x2="852" y2="26" stroke="#14171e" stroke-width="1.2"/>
 
@@ -94,7 +99,7 @@
             <text x="112" y="58" font-size="12.5" fill="#14171e">体力 / 畜力</text>
             <text x="268" y="58" font-size="12" fill="#3a4256">能量密度跃升</text>
             <text x="500" y="58" font-size="12" fill="#3a4256">工厂制度 + 时间纪律</text>
-            <text x="700" y="58" font-size="12" fill="#2f6f5e" font-weight="600">01 第一次</text>
+            <text x="720" y="58" font-size="12" fill="#3a4256">原料与市场</text>
             <line x1="8" y1="82" x2="852" y2="82" stroke="#e9e3d6"/>
           </g>
 
@@ -104,7 +109,7 @@
             <text x="112" y="108" font-size="12.5" fill="#14171e">肌肉 / 传动轴</text>
             <text x="268" y="108" font-size="12" fill="#3a4256">单元驱动 · 动力可独立分配</text>
             <text x="500" y="108" font-size="12" fill="#3a4256">厂房重建 + 流水线</text>
-            <text x="700" y="108" font-size="12" fill="#2f6f5e" font-weight="600">02 第二次</text>
+            <text x="720" y="108" font-size="12" fill="#3a4256">规模与协调</text>
             <line x1="8" y1="132" x2="852" y2="132" stroke="#e9e3d6"/>
           </g>
 
@@ -114,7 +119,7 @@
             <text x="112" y="158" font-size="12.5" fill="#14171e">认知 / 信息处理</text>
             <text x="268" y="158" font-size="12" fill="#3a4256">可编程 + 零边际复制</text>
             <text x="500" y="158" font-size="12" fill="#3a4256">软件产业 + 流程再造</text>
-            <text x="700" y="158" font-size="12" fill="#2f6f5e" font-weight="600">03 第三次</text>
+            <text x="720" y="158" font-size="12" fill="#3a4256">注意力与信任</text>
             <line x1="8" y1="182" x2="852" y2="182" stroke="#e9e3d6"/>
           </g>
 
@@ -124,35 +129,25 @@
             <text x="112" y="208" font-size="12.5" fill="#14171e">认知的执行环节</text>
             <text x="268" y="208" font-size="12" fill="#3a4256">自主拆解 + 工具 + 校验</text>
             <text x="500" y="208" font-size="12" fill="#3a4256">协议 + 信任边界</text>
-            <text x="700" y="208" font-size="12" fill="#2f6f5e" font-weight="600">04 第四次</text>
+            <text x="720" y="208" font-size="12" fill="#3a4256">目标设定与责任</text>
           </g>
 
-          <g stroke="#2f6f5e" stroke-width="1.4" opacity=".5" marker-end="url(#arwMap)" fill="none">
-            <path d="M100,56 L106,56"/>
-          </g>
+          <!-- 底部：同一个答案 -->
+          <rect x="8" y="228" width="844" height="48" rx="8" fill="#2f6f5e"/>
+          <text x="430" y="248" font-size="13" fill="#fff" text-anchor="middle" font-weight="600">
+            同一个答案：把人类的一部分能力，转成可复制、可规模化、可低成本调用的外部资源
+          </text>
+          <text x="430" y="266" font-size="11" fill="#cfe4dc" text-anchor="middle">
+            变的是「拿走哪一部分」，不变的是这条链：取消稀缺 → 组织重构 → 收益兑现 → 新稀缺浮出
+          </text>
         </g>
       </svg>
       <figcaption>
-        图 0 · 主线地图。<b>竖着看是替代关系</b>——每轮替代的是不同层次的能力；
-        <b>横着看是组织关系</b>——每一列都对应一次「旧流程被拆掉重排」，这才是收益兑现的真正开关。
-        四轮下方另有三页纵切与支撑页：<a href="05-architecture.html" style="color:var(--accent)">05 底层架构</a>（第三次内部）、
-        <a href="06-current.html" style="color:var(--accent)">06 现状与来源</a>（第四次当下）、
-        <a href="08-logic.html" style="color:var(--accent)">08 铁律与推论</a>（跨轮抽象）。
+        图 0 · 四轮革命的<b>共同机制</b>只有一句话：<b>把人类自身的一部分能力，转成可复制、可规模化、可低成本调用的外部资源</b>。
+        变的是「拿走哪一部分」，不变的是这条链。而<b>最后一列（新稀缺）才是社会变迁真正开始的地方</b>——
+        前一列只是让出了空间，后一列决定了人类会把注意力投向哪里。
       </figcaption>
     </figure>
-
-    <div class="card" style="margin-top:14px">
-      <p style="font-size:14.5px">
-        电脑是<b>第三次工业革命的核心标志物</b>——第三次科技革命四大发明之一（原子能、电子计算机、空间技术、生物工程），
-        也是其中唯一仍在持续演进的那一个；它的普及又直接定义了<b>信息时代</b>。
-        两个说法不矛盾：<b>工业革命</b>讲的是生产方式的变革，<b>信息时代</b>讲的是资源结构的变化，
-        <b>电脑</b>是同时落在两层上的具体技术载体。
-      </p>
-      <p style="margin-top:10px">
-        因此这套文档的排法是：<b>四轮革命各占一页，电脑的八次架构跃迁作为第三次革命的内部章</b>，
-        现状与来源对应第四次当下，最后一页抽出跨轮的铁律与推论。
-      </p>
-    </div>
 
     <div class="figbox" style="padding:16px 22px 8px;margin-top:14px">
       <table>
@@ -162,7 +157,7 @@
         <tbody>
           <tr><td>时期</td><td>1760s–1840s</td><td>1870s–1914</td><td>1945 / 1970s–</td><td>2010s–</td></tr>
           <tr><td>核心机制</td><td>蒸汽动力：能量密度跃升</td><td>电力与单元驱动：动力可独立分配</td><td>可编程计算：步骤可零成本复制</td><td>大模型与工具：决策可被委托执行</td></tr>
-          <tr><td>替代对象</td><td>体力 / 畜力</td><td>肌肉 / 传动轴</td><td>认知 / 信息处理</td><td>认知的执行环节</td></tr>
+          <tr><td>取消的稀缺</td><td>体力 / 畜力</td><td>肌肉 / 传动轴</td><td>认知 / 信息处理</td><td>认知的执行环节</td></tr>
           <tr><td>组织变革</td><td>工厂制度 + 时间纪律</td><td>厂房重建 + 流水线 + 科学管理</td><td>软件产业 + 网络 + 流程再造</td><td>协议 + 信任边界 + 流程重构（进行中）</td></tr>
           <tr><td>兑现时滞<br/><span style="font-weight:400;font-size:11.5px">（第一次为分配端，其余为生产率端）</span></td><td>约 100 年（到共享增长）</td><td>约 40 年（电气化）</td><td>约 15 年（计算机）</td><td>尚未兑现</td></tr>
           <tr><td>分配后果</td><td>恩格斯停顿：1780–1840 劳均产出 +46%、工资 +12%</td><td>1860 年后工资增速反超产出增速</td><td>数字鸿沟 · 去技能化</td><td>入门级岗位先受冲击</td></tr>
@@ -171,52 +166,209 @@
       </table>
     </div>
     <p class="muted" style="margin-top:10px">
-      <b>读这张表的三个提醒：</b>「替代对象」列是主线，其余列是它的展开；
+      <b>读这张表的三个提醒：</b>「取消的稀缺」列是主线，其余列是它的展开；
       「兑现时滞」一行<b>混着两种时滞</b>——第一次约 100 年是分配端（收益多久分到劳动者手里），
       第二、三次的 40 年与 15 年是生产率端（多久体现在统计里），两者机制不同、不可相加；
       引用前先声明分期口径（传统教材的「三次科技革命」与产业经济学的「第四次」不是同一套划分）。
     </p>
   </section>
 
-  <!-- ============ 三条核心判断 ============ -->
+  <!-- ============ 01 三条铁律 ============ -->
   <section>
     <div class="sec-head">
-      <span class="num">01</span><h2>三条核心判断</h2>
-      <span class="sub">如果只记三句话，记这三条</span>
+      <span class="num">01</span><h2>推进人类发展的三条铁律</h2>
+      <span class="sub">四轮革命反复验证的三件事</span>
     </div>
+
     <div class="card">
       <div class="imp">
         <div class="idx">01</div>
         <div>
-          <h3>算力已经过剩，数据搬运与电力才是稀缺资源</h3>
-          <p>近 20 年峰值算力增长约 60 万倍，DRAM 带宽只增长约 100 倍，互连带宽只增长约 30 倍。<b>大多数算力在等数据</b>——这就是内存墙。评价系统的正确视角，是「每瓦每秒 token」，而不是峰值 FLOPS。</p>
+          <h3>铁律一 · 稀缺迁移：革命解决一种稀缺，同时制造下一种</h3>
+          <p>
+            每一轮革命都让某种原本受限的东西变得充裕，而人类随即会把注意力投向下一个受限的东西。
+            动力便宜了，稀缺转向<b>规模与协调</b>；信息便宜了，稀缺转向<b>注意力与信任</b>；执行便宜了，稀缺转向<b>目标该由谁设定、结果由谁负责</b>。
+          </p>
+          <p style="margin-top:8px">
+            <b>所以：</b>用「有没有提升效率」衡量一项新技术，一定在错误的维度上找答案。
+            正确的问题是——<b>它取消了什么稀缺，又把稀缺推到了哪里？</b>
+            一项不制造新稀缺的技术，多半不会改变社会结构。
+          </p>
         </div>
       </div>
+
       <div class="imp">
         <div class="idx">02</div>
         <div>
-          <h3>专用化不可逆，代价是生态碎片化</h3>
-          <p>从 x86 通用到 GPU/ASIC 专用，再到 RISC-V + Chiplet 可定制，效率一路提升，但每一步都在制造新的迁移成本。<b>ISA 只是契约，真正决定迁移成本的是编程模型与库生态</b>——CUDA 正是靠后两者锁住生态。异构化的账单迟早要付，最好现在付。</p>
+          <h3>铁律二 · 兑现时滞：技术可用与生产率兑现之间，隔着一次组织重构</h3>
+          <p>
+            这是最反直觉、也最有操作价值的一条。<b>电气化从 1879 年商用到 1920 年代美国制造业生产率起飞，用了约 40 年</b>
+            （Paul David, 1990）；原因不是电动机不好，而是工厂最初只是「把蒸汽机换成大马达」，
+            直到「每台机器配自己的马达、并按物料流重排厂房」——<b>技术本身不产生生产率，重构才产生</b>。
+            计算机重复了同一幕：索洛 1987 年写下那句名言，美国生产率直到 1990 年代末才起飞，约 15 年。
+          </p>
+          <p style="margin-top:8px">
+            <b>所以：</b>看到一项新技术「还没带来收益」时，先别急着判断它无效。
+            要问的是：<b>围绕它的组织，有没有人开始重排？</b>没重排就没有收益，这不是例外情况，而是通例。
+          </p>
         </div>
       </div>
+
       <div class="imp">
         <div class="idx">03</div>
         <div>
-          <h3>Agent 的成本结构既不同于训练，也不同于传统请求</h3>
-          <p>Agent 负载是<b>算力密集 + 控制密集 + I/O 密集</b>三者并存：推理吃 GPU 的带宽与显存，任务拆解、工具调用、权限校验吃 CPU 与内存。只按「GPU 卡时」做资源画像，会系统性高估利用率、低估真实瓶颈。</p>
+          <h3>铁律三 · 分配时滞：技术收益不会自动均摊，它有自己的时间表</h3>
+          <p>
+            进步与受益从来不是同步的。<b>1780–1840 年英国劳均产出上升 46%，实际工资只上升 12%</b>——
+            艾伦称之为「<b>恩格斯停顿</b>」：收益先归资本，劳动要等到 <b>1860 年后</b>工资增速反超产出增速才追上，
+            距革命起步约一百年。代价也不只在分配端：童工、工厂污染、城市贫民窟、单调岗位、两次世界大战的物资基础。
+          </p>
+          <p style="margin-top:8px">
+            <b>所以：</b>任何「技术会带来 X」的说法，都要补上三个子问题：<b>谁先受益、谁承担转型成本、多久之后才轮到大多数人？</b>
+            今天的对应物已经出现在数据里——冲击先落在入门级岗位（22–25 岁软件开发者就业自 2024 年下降近 20%），
+            而整体就业尚未显著下降。<b>而承担转型成本的，往往正是最早被替代的那批人。</b>
+          </p>
         </div>
       </div>
     </div>
+
+    <figure class="figbox" style="margin-top:14px">
+      <svg viewBox="0 0 860 214" width="100%" style="display:block;height:auto" role="img" aria-label="三条铁律构成的闭环：取消稀缺、组织重构、收益兑现、再造稀缺">
+        <defs>
+          <marker id="arwL" markerWidth="8" markerHeight="8" refX="6.5" refY="2.8" orient="auto">
+            <path d="M0,0 L6.5,2.8 L0,5.6 Z" fill="#2f6f5e"/>
+          </marker>
+        </defs>
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+          <rect x="40" y="40" width="170" height="72" rx="10" fill="#fff" stroke="#e9e3d6"/>
+          <text x="125" y="66" font-size="13" fill="#14171e" font-weight="600" text-anchor="middle">① 取消一种稀缺</text>
+          <text x="125" y="86" font-size="11" fill="#7c7a72" text-anchor="middle">技术可用</text>
+          <text x="125" y="102" font-size="11" fill="#7c7a72" text-anchor="middle">（但组织没变）</text>
+
+          <rect x="270" y="40" width="170" height="72" rx="10" fill="#2f6f5e"/>
+          <text x="355" y="66" font-size="13" fill="#fff" font-weight="600" text-anchor="middle">② 组织被迫重构</text>
+          <text x="355" y="86" font-size="11" fill="#cfe4dc" text-anchor="middle">流程被拆掉重排</text>
+          <text x="355" y="102" font-size="11" fill="#cfe4dc" text-anchor="middle">（收益在这里才出现）</text>
+
+          <rect x="500" y="40" width="170" height="72" rx="10" fill="#fff" stroke="#e9e3d6"/>
+          <text x="585" y="66" font-size="13" fill="#14171e" font-weight="600" text-anchor="middle">③ 收益兑现</text>
+          <text x="585" y="86" font-size="11" fill="#7c7a72" text-anchor="middle">生产率提升</text>
+          <text x="585" y="102" font-size="11" fill="#7c7a72" text-anchor="middle">（分配另有时滞）</text>
+
+          <rect x="270" y="146" width="170" height="52" rx="10" fill="#fff" stroke="#e9e3d6"/>
+          <text x="355" y="168" font-size="13" fill="#14171e" font-weight="600" text-anchor="middle">④ 新稀缺浮出</text>
+          <text x="355" y="186" font-size="11" fill="#7c7a72" text-anchor="middle">下一轮从这里开始</text>
+
+          <g stroke="#2f6f5e" stroke-width="1.5" fill="none" marker-end="url(#arwL)" opacity=".7">
+            <path d="M214,76 L266,76"/>
+            <path d="M444,76 L496,76"/>
+            <path d="M585,116 L585,140"/>
+            <path d="M266,172 L125,172"/>
+            <path d="M125,168 L125,116"/>
+          </g>
+
+          <text x="8" y="20" font-size="11.5" fill="#7c7a72">闭环：每一次革命走完一圈，人类的活动边界外扩一格</text>
+          <text x="8" y="212" font-size="11.5" fill="#7c7a72">
+            <tspan fill="#2f6f5e" font-weight="600">时滞出现在 ①→② 之间</tspan>
+            <tspan>——技术可用但组织未重排的漫长等待；分配滞后则出现在 ②→③ 与 ③ 之后。</tspan>
+          </text>
+        </g>
+      </svg>
+      <figcaption>
+        图 1 · 三条铁律构成一个<b>闭环</b>，而不是三个并列的规律。
+        <b>人类发展的节奏感来自这个闭环的周期长度</b>：周期越短，重排越容易、代价越小、受益越快
+        ——电气化 40 年、计算机 15 年、AI 的周期正在被压缩，这既是机会，也是风险。
+      </figcaption>
+    </figure>
   </section>
 
-  <!-- ============ 三条主线 ============ -->
+  <!-- ============ 02 当下定位 ============ -->
   <section>
     <div class="sec-head">
-      <span class="num">02</span><h2>三条主线：演进的骨架</h2>
-      <span class="sub">八段历史可压缩成这三行</span>
+      <span class="num">02</span><h2>当下定位：第四次革命走到哪一步</h2>
+      <span class="sub">用 2026 年的一手数据校准，不靠感觉</span>
     </div>
 
-    <figure class="figbox">
+    <div class="grid2">
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7h-6"/><path d="M21 7v6"/></svg>
+          已经发生的：普及速度史上最快
+        </h3>
+        <dl class="kv">
+          <dt>人口采用</dt><dd>53% · 3 年内</dd>
+          <dt>组织采用</dt><dd>88%</dd>
+          <dt>价值集中</dt><dd>前 20% 拿走 74%</dd>
+          <dt>领先者优势</dt><dd>7.2×</dd>
+          <dt>能力进展</dt><dd>OSWorld 12% → ~66%</dd>
+        </dl>
+        <p class="muted" style="margin-top:10px">
+          生成式 AI 三年达成 53% 人口采用，<b>快于 PC 与互联网</b>；SWE-bench Verified 一年内从 60% 升至接近 100%。
+          但美国以投资第一的身份，采用率仅列第 24（28.3%）——<b>采用速度是价格与场景指标，不是能力指标</b>。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+          还没发生的：组织内部没动
+        </h3>
+        <dl class="kv">
+          <dt>智能体部署</dt><dd>各职能均为个位数</dd>
+          <dt>已重设计流程</dt><dd>领先者 56% / 普遍不足</dd>
+          <dt>见收益周期</dt><dd>试点后约 6.8 个月</dd>
+          <dt>CEO 无财务收益</dt><dd>56%</dd>
+          <dt>入门岗冲击</dt><dd>22–25 岁开发岗 −20%</dd>
+        </dl>
+        <p class="muted" style="margin-top:10px">
+          PwC 2026 调研：仅 26% 的 CEO 认为成本因 AI 下降，超半数没看到任何收入或成本收益；
+          澳洲样本只有 7% 的企业重设计过工作流，AI 领先者是 56%。
+          <b>这正是 1895 年工厂的样子。</b>
+        </p>
+      </div>
+    </div>
+
+    <div class="notes" style="margin-top:14px">
+      <h3>把两列数据放在一起，得到的判断只有一个</h3>
+      <ul>
+        <li><b>消费端已经普及，组织端还没开始。</b>生成式 AI 是史上扩散最快的通用技术，但组织内部的智能体部署仍是个位数比例——
+          这与电气化时期「电动机早已存在、生产率却纹丝不动」的阶段完全一致。</li>
+        <li><b>价值集中不是分化，而是信号。</b>20% 的企业拿走 74% 的 AI 价值，且领先者把 AI 用于「重塑」而非「提效」的比例高出 2.6 倍。
+          <b>领先者做的事和大多数人做的事，不是同一件事。</b></li>
+        <li><b>因此当前最该做的不是「更快地铺开工具」，而是「更早地拆流程」。</b>流程重构慢、不可逆、先做的人吃到全部收益——
+          这是第四次革命眼下最明确的窗口。</li>
+        <li><b>下一次稀缺的预告：</b>当执行变便宜，稀缺就转向<b>目标设定与责任担承</b>——
+          权限模型、审计链路与责任边界，会从合规附属品变成核心能力。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 03 第三次革命内部 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">03</span><h2>第三次革命内部：电脑作为一条纵切线</h2>
+      <span class="sub">为什么用电脑做样本</span>
+    </div>
+
+    <div class="card">
+      <p>
+        四轮革命里，<b>电脑是唯一还在持续演进的标志物</b>，也是资料最完整、机制最清晰的一次。
+        更重要的是：它把「可编程性」这件事演示到了极致——
+        <b>冯·诺依曼结构让「步骤」第一次成为可存储、可改写、可零成本复制的东西</b>，
+        于是组织不必为每一个新任务重造一台机器，只需重写一段程序。
+        这是人类第一次拥有<b>「不重造流程、只改写流程」</b>的能力，而这正是「零边际复制」在组织层面的含义。
+      </p>
+      <p style="margin-top:10px">
+        所以第三次革命的八次架构跃迁（1945 存储程序 → 1978 ISA 契约 → 1985 Cache → 1995 多核 → 2006 GPU/CUDA →
+        2016 数据中心专用化 → 2023 内存墙与 AI 工厂 → 2026 RISC-V 可定制），
+        值得逐条读——<b>它同时展示了技术如何被「专用化」，以及专用化如何制造新的迁移成本</b>。
+        详见 <a href="03-third.html" style="color:var(--accent)">03 第三次工业革命</a>，
+        抽象层与影响对照见 <a href="05-architecture.html" style="color:var(--accent)">05 底层架构</a>，
+        2026 年的完整数据与来源见 <a href="06-current.html" style="color:var(--accent)">06 现状与来源</a>。
+      </p>
+    </div>
+
+    <figure class="figbox" style="margin-top:14px">
       <svg viewBox="0 0 860 222" width="100%" style="display:block;height:auto" role="img" aria-label="三条技术主线的演进方向">
         <defs>
           <marker id="arw2" markerWidth="8" markerHeight="8" refX="6.5" refY="2.8" orient="auto">
@@ -265,28 +417,18 @@
         </g>
       </svg>
       <figcaption>
-        图 · 三条主线。关键在于<b>三者不同步</b>：主线二（形态）比主线三（规模）慢半拍，而主线一（瓶颈）始终在追赶前两者——这正是当下「算力堆得很快、内存与互连跟不上」的根源。
+        图 2 · 八次架构跃迁可压缩成这三条主线。<b>关键在于三者不同步</b>：主线二（形态）比主线三（规模）慢半拍，
+        而主线一（瓶颈）始终在追赶前两者——这正是当下「算力堆得很快、内存与互连跟不上」的根源。
+        <b>而「瓶颈迁移」这条主线，正是铁律一在技术层的投影。</b>
       </figcaption>
     </figure>
-    <p class="muted" style="margin-top:10px">
-      每次「解决瓶颈」的做法都是<b>把复杂度推向上一层</b>：多核逼出并发编程，GPU 逼出编程模型与库，集群逼出分布式一致性，AI 工厂逼出调度与成本治理。
-      技术债不会消失，只会换一层楼继续住。详细拆解见 <a href="05-architecture.html" style="color:var(--accent)">底层架构与影响</a>。
-    </p>
-  </section>
 
-  <!-- ============ 硬约束速览 ============ -->
-  <section>
-    <div class="sec-head">
-      <span class="num">03</span><h2>2026 年的三个硬约束</h2>
-      <span class="sub">速览 · 完整数据与来源见<a href="06-current.html" style="color:var(--accent)">现状与来源</a></span>
-    </div>
-    <div class="grid2">
+    <div class="grid2" style="margin-top:14px">
       <div class="card">
         <h3>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11v2M10 11v2M14 11v2M18 11v2"/></svg>
-          约束一：内存墙
+          技术侧的硬约束：算力过剩，搬运与电力稀缺
         </h3>
-        <p style="margin-bottom:12px">算力、内存带宽、互连带宽的增速已经脱节——这正是 AI 芯片「买了却用不满」的原因。</p>
         <div class="bench">
           <span class="bench-label">峰值算力</span>
           <div class="bench-track"><div class="bench-fill" style="width:100%"></div></div>
@@ -307,85 +449,98 @@
 
       <div class="card">
         <h3>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7h-6"/><path d="M21 7v6"/></svg>
-          约束二：内存产能即算力配额
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
+          社会侧的硬约束：受益从来不同步
         </h3>
         <dl class="kv">
-          <dt>HBM4 接口</dt><dd>2048-bit（较 HBM3 翻倍）</dd>
-          <dt>单堆栈带宽</dt><dd>最高 3.3 TB/s（三星 11.7Gbps）</dd>
-          <dt>堆栈价格</dt><dd>HBM3 ≈$200 / 3E ≈$300 / 4 ≈$500</dd>
-          <dt>DRAM 合约价</dt><dd>2026 年预计 +70% 以上</dd>
-          <dt>产能格局</dt><dd>2026 Q1 产能已被预订至年底</dd>
+          <dt>停顿期</dt><dd>1780–1840</dd>
+          <dt>产出 vs 工资</dt><dd>+46% vs +12%</dd>
+          <dt>追赶起点</dt><dd>1860 年后</dd>
+          <dt>当代对应</dt><dd>入门级岗位 −20%</dd>
+          <dt>仍未解决</dt><dd>目标与责任</dd>
         </dl>
-        <p class="muted" style="margin-top:8px">算力扩张速度事实上受制于 12–18 个月前签下的内存长约，而不受制于芯片设计。</p>
+        <p class="muted" style="margin-top:10px">
+          技术侧的稀缺与分配侧的稀缺是<b>两套并行的问题</b>。
+          前者决定系统怎么造，后者决定社会怎么分——<b>只解决前者，不会自动解决后者</b>。
+        </p>
       </div>
-    </div>
-
-    <div class="card" style="margin-top:14px">
-      <h3>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
-        约束三：ISA 格局松动，但生态是硬门槛
-      </h3>
-      <div class="bench">
-        <span class="bench-label">RISC-V 处理器份额</span>
-        <div class="bench-track"><div class="bench-fill" style="width:25%"></div></div>
-        <span class="bench-val">≈25%</span>
-      </div>
-      <p style="margin-top:12px;font-size:13.8px">
-        2026 年的三个标志性进展：<b>RVA23 服务器平台规范 1.0</b>（2026-06）统一了 UEFI/ACPI、PCIe/IOMMU、BMC、RAS 与安全启动，让跨品牌部署成为可能；
-        <b>CPU 直连 GPU</b>（RISC-V 经 NVLink Fusion 与 NVIDIA GPU 硬件级互连）使其进入 AI 数据中心核心链路；
-        <b>边缘与车载规模化</b>（车规 RISC-V 已量产上车）。
-        但三道门槛同时存在：各家自定义扩展互不兼容、软件适配周期常超一年、晶圆产能排产优先级低。
-      </p>
     </div>
   </section>
 
-  <!-- ============ 5 条推论 ============ -->
+  <!-- ============ 04 推论 ============ -->
   <section>
     <div class="sec-head">
-      <span class="num">04</span><h2>对 Agent 平台建设的 5 条推论</h2>
-      <span class="sub">基于架构事实的推论，落地前需结合真实负载校验</span>
+      <span class="num">04</span><h2>这套逻辑落到我们身上：5 条推论</h2>
+      <span class="sub">从宏观规律推回具体决策 · 落地前需结合真实负载校验</span>
     </div>
     <div class="card">
       <div class="imp">
         <div class="idx">01</div>
         <div>
-          <h3>Agent 的成本模型不是「卡时」，是「token 成本 + 内存占用」<span class="infer">推论</span></h3>
-          <p>长上下文、多轮工具调用、并发子 Agent 会同时放大两件事：<b>KV Cache 的内存占用</b>与<b>解码阶段的带宽需求</b>。这意味着上下文压缩、分层缓存、prefill/decode 分离路由属于<b>平台级能力</b>，而不是应用侧可以各自实现的技巧——否则每个应用都会重复踩一遍内存墙。</p>
+          <h3>平台要卖的不是「更强的模型接入」，是「重组的可行性」<span class="infer">推论</span></h3>
+          <p>
+            按铁律二，收益来自流程重构，而重构的瓶颈从来不是「能不能生成」，
+            而是<b>「能不能安全地嵌入现有系统、并且被组织接受」</b>。
+            所以平台层真正的稀缺资产是：<b>协议（MCP / A2A）、权限与审计、可观测性、成本口径、跨系统身份</b>——
+            这些恰恰是让流程敢改的技术前提。
+          </p>
         </div>
       </div>
+
       <div class="imp">
         <div class="idx">02</div>
         <div>
-          <h3>CPU 不是配角，Agent 的大部分时间花在控制流上<span class="infer">推论</span></h3>
-          <p>任务拆解、工具调用、权限校验、结果解析、跨系统编排，本质是控制密集与 I/O 密集负载，落在 CPU 与内存上；而 LLM 推理落在 GPU 上。<b>如果平台按「GPU 卡时」单一维度做资源画像，就会系统性高估利用率、低估真实瓶颈。</b>CPU/GPU 分池 + 按请求阶段做资源画像，比统一队列更贴合真实负载。</p>
+          <h3>「每瓦每秒 token」是技术口径，还需要一个组织口径<span class="infer">推论</span></h3>
+          <p>
+            电气化的教训是：<b>单位成本下降不会自动变成生产率</b>，除非有东西承接被释放的产能。
+            对应到今天，token 便宜之后，承接方是<b>被重构的流程</b>与<b>新的协作单元</b>。
+            平台要提供的第二类指标，是<b>「每个流程被重构后释放了多少人时」</b>——
+            这是继「每瓦每秒 token」之后，第二个能把技术账翻译成组织账的口径。
+          </p>
         </div>
       </div>
+
       <div class="imp">
         <div class="idx">03</div>
         <div>
-          <h3>推理后端必须可替换，否则硬件代际切换会变成平台级事故<span class="infer">推论</span></h3>
-          <p>路线图上 2026/2027/2028 每年一代平台，每代更换内存代际与互连标准。把推理引擎、调度策略与硬件形态解耦（模型服务层可替换、算子与量化路径可替换），让硬件代际切换退化为<b>配置变更</b>而非架构改造。这是「专用化不可逆」这条主线的直接推论。</p>
+          <h3>路线图里必须有一条「人的迁移」线<span class="infer">推论</span></h3>
+          <p>
+            22–25 岁开发岗 −20% 说明冲击落在<b>入门级</b>。对平台团队的直接含义有两点：
+            一是<b>Agent 承担的是「已被写清 SOP 的执行」，不是「判断」</b>——边界划错，事故率和信任崩塌会同时发生；
+            二是平台自身的团队会出现同样的入门级断层，<b>「谁来带新人」正在变成一个新的基础设施问题</b>。
+          </p>
         </div>
       </div>
+
       <div class="imp">
         <div class="idx">04</div>
         <div>
-          <h3>可移植性现在做，比未来迁移便宜得多<span class="infer">推论</span></h3>
-          <p>RISC-V 与各类自研 ASIC 的现实路径是「先在应用与模型层兼容，再谈 ISA 层」——指令集迁移的主要成本是软件生态，而软件生态的重建通常需要一年以上。<b>平台侧现在就把模型服务、向量检索、工具协议与具体加速器解耦</b>，是把未来成本前置到今天的低息投入。</p>
+          <h3>J 曲线意味着：短期看不到收益是正常的，不是失败的信号<span class="infer">推论</span></h3>
+          <p>
+            如果平台在推进「流程重构」类的事，那么头几个季度的 ROI 曲线<b>必然是下探的</b>：
+            迁移、重构、度量口径切换都先记成本。
+            与其用「已上线多少个 Agent」汇报，<b>不如改用「重组资本存量」汇报</b>——
+            流程改了几条、迁完几条、新度量口径建了几套。这才是能预示未来收益的先行指标。
+          </p>
         </div>
       </div>
+
       <div class="imp">
         <div class="idx">05</div>
         <div>
-          <h3>把「每瓦每秒 token」引入平台级 SLO<span class="infer">推论</span></h3>
-          <p>行业衡量指标已从 FLOPS 转向能效与吞吐比。对平台而言，可落地的对应物是<b>单位资源的有效产出</b>：单个推理节点的有效 token 产出、显存与内存的占用率、以及不同推理形态（短问答 / 长上下文 / 多 Agent 并发）各自的成本曲线。把这些变成可观测、可分账的指标，比单看 QPS 更接近真实成本。</p>
+          <h3>稀缺已经迁移：下一轮的瓶颈是「责任」而不是「算力」<span class="infer">推论</span></h3>
+          <p>
+            按铁律一，当执行变便宜，稀缺就转向<b>目标设定与结果担责</b>。
+            这解释了一个反常现象：模型能力仍在快速进步（OSWorld 上智能体任务成功率从约 12% 跃升至约 66%），
+            但组织侧的真实进展仍然缓慢——<b>卡点从「能不能做」变成了「谁批准、谁负责、出了事怎么办」</b>。
+            对平台的含义：<b>权限模型、审计链路与责任边界，将从合规附属品变成核心产品能力</b>。
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ 术语速查 ============ -->
+  <!-- ============ 05 术语速查 ============ -->
   <section>
     <div class="sec-head">
       <span class="num">05</span><h2>高频术语速查</h2>
@@ -393,11 +548,15 @@
     </div>
     <div class="figbox">
       <div class="ggrid quick">
+        <div class="entry"><h4>工业革命 <span class="en">Industrial Revolution</span></h4><p>以一项通用技术的普及为标志，生产方式、生产组织与社会结构被整体改写的过程。<b>分期口径并不统一</b>，引用前需说明用的是哪一套。</p></div>
+        <div class="entry"><h4>通用技术 <span class="en">General Purpose Technology</span></h4><p>会渗透到多数行业并引发组织与制度变化的技术（蒸汽机、电力、信息技术）。<b>只有通用技术才能改写生产方式，而不只是提效。</b></p></div>
+        <div class="entry"><h4>功能固着 <span class="en">Functional fixity</span></h4><p>David 用于解释电气化迟滞的概念：管理者把旧流程的形状当成技术本身的一部分，于是<b>只做替换而不做重排</b>。</p></div>
+        <div class="entry"><h4>单元驱动 <span class="en">Unit drive</span></h4><p>每台机器配自己的电动机，从而摆脱中央传动轴的布局约束。<b>第二次革命生产率爆发的真正开关</b>，与今天的「流程重构」是同一个动作。</p></div>
+        <div class="entry"><h4>恩格斯停顿 <span class="en">Engels' Pause</span></h4><p>1780–1840 年英国劳均产出 +46%，实际工资仅 +12%。<b>技术收益与分配收益是两件事</b>，后者有自己的时间表。</p></div>
+        <div class="entry"><h4>生产率 J 曲线 <span class="en">Productivity J-curve</span></h4><p>重组期先付出成本、后收获收益，测得生产率先下探再陡升。<b>短期看不到收益是重组的正常形态</b>，不是失败的信号。</p></div>
         <div class="entry"><h4>内存墙 <span class="en">Memory wall</span></h4><p>算力增速远超内存带宽增速，导致计算单元在等数据。</p></div>
         <div class="entry"><h4>存储层次 <span class="en">Memory hierarchy</span></h4><p>寄存器→缓存→主存→SSD→远端存储的层级，靠局部性做出等效扩容。</p></div>
-        <div class="entry"><h4>缓存三要素 <span class="en">Cache</span></h4><p>命中时间、缺失率、容量，决定访存是纳秒级还是百纳秒级。</p></div>
         <div class="entry"><h4>算术强度 <span class="en">Arithmetic intensity</span></h4><p>每搬 1 字节能做多少次运算，决定负载是算力受限还是带宽受限。</p></div>
-        <div class="entry"><h4>Roofline 模型</h4><p>用可达算力与内存带宽两条线界定性能上限。</p></div>
         <div class="entry"><h4>HBM <span class="en">High Bandwidth Memory</span></h4><p>垂直堆叠 DRAM 与加速器同封装，靠超宽接口而非高频率取胜。</p></div>
         <div class="entry"><h4>NUMA <span class="en">Non-uniform memory access</span></h4><p>内存按节点绑定，跨节点更慢；远端内存带宽是集群扩展的真实上限。</p></div>
         <div class="entry"><h4>CUDA</h4><p>NVIDIA 的并行计算平台与编程模型，本身即护城河。</p></div>
@@ -406,13 +565,9 @@
         <div class="entry"><h4>预填充与解码 <span class="en">Prefill / Decode</span></h4><p>前者算力密集，后者带宽密集，是分离部署的前提。</p></div>
         <div class="entry"><h4>连续批处理 <span class="en">Continuous batching</span></h4><p>请求完成即补入新请求，直接决定吞吐与排队时延。</p></div>
         <div class="entry"><h4>推理引擎</h4><p>面向生成式模型优化的服务框架，核心是调度与显存管理。</p></div>
+        <div class="entry"><h4>投机解码 <span class="en">Speculative decoding</span></h4><p>用小模型草拟多个 token 再由大模型并行验证，用额外算力换更低的单 token 时延。</p></div>
         <div class="entry"><h4>前缀缓存 <span class="en">Prefix caching</span></h4><p>复用相同前缀的 KV Cache，多轮与共享提示场景省下大量成本。</p></div>
-        <div class="entry"><h4>Scale-up / Scale-out</h4><p>同域扩加速器 / 跨节点扩集群，出域即从芯片互连变成网络问题。</p></div>
-        <div class="entry"><h4>装箱 <span class="en">Bin packing</span></h4><p>把不同规格负载塞进异构算力池，是训练推理混部的前提。</p></div>
-        <div class="entry"><h4>TCO <span class="en">Total cost of ownership</span></h4><p>硬件、机房、电力、网络与运维的总账，自研与采购须同口径比较。</p></div>
-        <div class="entry"><h4>每瓦每秒 token</h4><p>把能效与产出绑定的指标，已取代单纯 FLOPS 成为主要口径。</p></div>
         <div class="entry"><h4>Agent Loop</h4><p>感知—推理—行动—反馈闭环，每轮都重读上下文，成本被放大的根源。</p></div>
-        <div class="entry"><h4>MCP / A2A</h4><p>模型接工具、Agent 接 Agent 的两类标准化协议，解决重复造轮子与跨主体委派。</p></div>
       </div>
     </div>
   </section>
@@ -429,7 +584,7 @@
           <tr><th>页面</th><th>内容</th><th>什么时候读</th></tr>
         </thead>
         <tbody>
-          <tr><td><a href="index.html">核心沉淀</a></td><td>主线地图、结论、三条技术主线、硬约束速览、5 条推论、20 条术语速查</td><td>汇报前 5 分钟、通勤路上、作为长期记忆的锚点</td></tr>
+          <tr><td><a href="index.html">核心沉淀</a></td><td>人类发展的三条铁律、四轮对照、当下定位、对 Agent 平台的 5 条推论</td><td>做任何判断之前先读这一页</td></tr>
           <tr><td><a href="01-first.html">01 第一次</a></td><td>蒸汽动力、工厂制度、1833 工厂法、为什么发生在英国、这一轮的账</td><td>讲清「革命真正发明的是组织形式」时</td></tr>
           <tr><td><a href="02-second.html">02 第二次</a></td><td>单元驱动与布局重排、贝塞麦/泰勒制/流水线、共享增长的确立</td><td>解释「新技术为什么不自动变生产率」时</td></tr>
           <tr><td><a href="03-third.html">03 第三次</a></td><td>可编程与零边际复制 + <b>内部章：电脑的八次架构跃迁</b></td><td>需要完整技术时间轴、或讲第三代革命时</td></tr>
@@ -437,15 +592,15 @@
           <tr><td><a href="05-architecture.html">05 底层架构</a></td><td>七层抽象栈、三条主线的完整图示、十个维度的影响对照表</td><td>做抽象层设计、划定平台边界、说服别人时</td></tr>
           <tr><td><a href="06-current.html">06 现状与来源</a></td><td>2026 年三个硬约束的完整数据、2026–2028 路线图、全部来源与不确定项</td><td>引用具体数字、对外汇报需要可核对来源时</td></tr>
           <tr><td><a href="07-glossary.html">07 术语表</a></td><td>十组易混概念辨析、98 条分组词条、按角色的阅读路径</td><td>读文档、评审、面试、写材料时的随身词典</td></tr>
-          <tr><td><a href="08-logic.html">08 铁律与推论</a></td><td>推进人类发展的四条铁律、当下定位、映射到 Agent 平台的 5 条推论</td><td>做方向判断、写战略叙事、解释「为什么现在还不能只看效果」时</td></tr>
+          <tr><td><a href="08-logic.html">08 铁律与推论</a></td><td>四条铁律的完整推导、兑现时滞时间轴、当下定位与 5 条平台推论</td><td>要论证过程、需要引用时滞数据时</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
   <footer>
-    电脑技术的发展路径 · 核心沉淀页 · 以工业革命为主线 · 事实核对截至 2026 年 11 月公开信息 · 历史分期为编者归纳，各阶段边界为近似划分<br/>
-    主线：<a href="01-first.html">第一次</a> · <a href="02-second.html">第二次</a> · <a href="03-third.html">第三次</a> · <a href="04-fourth.html">第四次</a> · <a href="05-architecture.html">底层架构</a> · <a href="06-current.html">现状与来源</a> · <a href="07-glossary.html">术语表</a> · <a href="08-logic.html">铁律与推论</a> · <a href="05-architecture.html">底层架构与影响</a> · <a href="06-current.html">现状与来源</a> · <a href="07-glossary.html">术语表</a> · <a href="08-logic.html">工业革命的逻辑</a>
+    工业革命与人类发展 · 核心沉淀页 · 事实核对截至 2026 年 11 月公开信息 · 历史分期为编者归纳，各阶段边界为近似划分<br/>
+    主线：<a href="01-first.html">第一次</a> · <a href="02-second.html">第二次</a> · <a href="03-third.html">第三次</a> · <a href="04-fourth.html">第四次</a> · <a href="05-architecture.html">底层架构</a> · <a href="06-current.html">现状与来源</a> · <a href="07-glossary.html">术语表</a> · <a href="08-logic.html">铁律与推论</a>
   </footer>
 
 </div>
