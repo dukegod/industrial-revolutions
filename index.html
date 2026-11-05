@@ -16,11 +16,14 @@
     <span class="nav-brand">Computer Architecture</span>
     <div class="nav-links">
       <a href="index.html" class="on">核心沉淀</a>
-      <a href="01-history.html">发展路径</a>
-      <a href="02-architecture.html">底层架构与影响</a>
-      <a href="03-current.html">现状与来源</a>
-      <a href="04-glossary.html">术语表</a>
-      <a href="05-industrial-logic.html">工业革命的逻辑</a>
+      <a href="01-first.html">第一次</a>
+      <a href="02-second.html">第二次</a>
+      <a href="03-third.html">第三次</a>
+      <a href="04-fourth.html">第四次</a>
+      <a href="05-architecture.html">底层架构</a>
+      <a href="06-current.html">现状与来源</a>
+      <a href="07-glossary.html">术语表</a>
+      <a href="08-logic.html">铁律与推论</a>
     </div>
   </div>
 </nav>
@@ -29,17 +32,20 @@
 
   <header class="hero">
     <p class="kicker">Core · 核心沉淀</p>
-    <h1>电脑技术的发展路径：结论、判断与行动项</h1>
+    <h1>电脑技术的发展路径：以工业革命为主线</h1>
     <p class="lede">
-      这一页只放<b>沉淀下来的核心</b>：结论、三条主线、当下的硬约束、对 Agent 平台的推论，以及最高频的 20 个术语。
-      完整的时间轴、架构分层、数据与来源分散在四个专题页，页首导航可随时跳转。
+      这套文档以<b>工业革命为主线</b>：四轮革命各一页，从「替代了什么」到「组织如何被迫重构」，
+      再到「代价与收益如何分配」。电脑不是并列的一段历史，而是<b>第三次革命内部的一条纵切线</b>——
+      它的八次架构跃迁完整写在第三次那一页里。
+      这一页只放<b>沉淀下来的核心</b>：主线地图、结论、当下的硬约束、对 Agent 平台的推论，以及最高频的 20 个术语。
     </p>
     <div class="meta">
-      <span class="tag">共 <b>6 页</b></span>
-      <span class="tag">历史主线 <b>四轮革命</b></span>
+      <span class="tag">共 <b>9 页</b></span>
+      <span class="tag">主线 <b>四轮革命</b></span>
+      <span class="tag">第三次内部 <b>八次架构跃迁</b></span>
       <span class="tag">术语 <b>98 条</b></span>
       <span class="tag">现状核对至 <b>2026-11</b></span>
-      <span class="tag"><a href="04-glossary.html">术语速查 <b>20 条</b> →</a></span>
+      <span class="tag"><a href="07-glossary.html">术语速查 <b>20 条</b> →</a></span>
     </div>
   </header>
 
@@ -53,44 +59,123 @@
     </p>
     <p>
       而这一切的位置感来自更外层：<b>电脑是第三次工业革命的核心标志物，它的普及定义了信息时代</b>。
-      三次革命依次替代<b>体力</b>、<b>肌肉</b>、<b>认知</b>，当下正在发生的第四次走向<b>自主决策</b>——
-      详见下面的坐标系与 <a href="01-history.html" style="color:var(--accent)">01 发展路径</a>。
+      四轮革命依次替代<b>体力</b>、<b>肌肉</b>、<b>认知</b>、<b>认知的执行环节</b>——
+      详见下面的主线地图与 <a href="03-third.html" style="color:var(--accent)">03 第三次工业革命</a>。
     </p>
   </div>
 
-  <!-- ============ 00 坐标系 ============ -->
+  <!-- ============ 00 主线地图 ============ -->
   <section style="margin-top:36px">
     <div class="sec-head">
-      <span class="num">00</span><h2>坐标系：电脑站在第几轮工业革命里</h2>
+      <span class="num">00</span><h2>主线地图：四轮革命，以及这套文档怎么排</h2>
       <span class="sub">先定位，再往下看</span>
     </div>
-    <div class="card">
+
+    <figure class="figbox">
+      <svg viewBox="0 0 860 236" width="100%" style="display:block;height:auto" role="img" aria-label="四轮工业革命主线地图与文档页面对应关系">
+        <defs>
+          <marker id="arwMap" markerWidth="8" markerHeight="8" refX="6.5" refY="2.8" orient="auto">
+            <path d="M0,0 L6.5,2.8 L0,5.6 Z" fill="#2f6f5e"/>
+          </marker>
+        </defs>
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+          <g font-size="11" fill="#7c7a72" letter-spacing="1">
+            <text x="8" y="18">轮次</text>
+            <text x="112" y="18">替代的能力</text>
+            <text x="268" y="18">核心机制</text>
+            <text x="500" y="18">兑现条件</text>
+            <text x="700" y="18">对应页面</text>
+          </g>
+          <line x1="8" y1="26" x2="852" y2="26" stroke="#14171e" stroke-width="1.2"/>
+
+          <g>
+            <text x="8" y="54" font-size="13.5" fill="#2f6f5e" font-weight="600">第一次</text>
+            <text x="8" y="70" font-size="10.5" fill="#7c7a72">1760s–1840s</text>
+            <text x="112" y="58" font-size="12.5" fill="#14171e">体力 / 畜力</text>
+            <text x="268" y="58" font-size="12" fill="#3a4256">能量密度跃升</text>
+            <text x="500" y="58" font-size="12" fill="#3a4256">工厂制度 + 时间纪律</text>
+            <text x="700" y="58" font-size="12" fill="#2f6f5e" font-weight="600">01 第一次</text>
+            <line x1="8" y1="82" x2="852" y2="82" stroke="#e9e3d6"/>
+          </g>
+
+          <g>
+            <text x="8" y="104" font-size="13.5" fill="#2f6f5e" font-weight="600">第二次</text>
+            <text x="8" y="120" font-size="10.5" fill="#7c7a72">1870s–1914</text>
+            <text x="112" y="108" font-size="12.5" fill="#14171e">肌肉 / 传动轴</text>
+            <text x="268" y="108" font-size="12" fill="#3a4256">单元驱动 · 动力可独立分配</text>
+            <text x="500" y="108" font-size="12" fill="#3a4256">厂房重建 + 流水线</text>
+            <text x="700" y="108" font-size="12" fill="#2f6f5e" font-weight="600">02 第二次</text>
+            <line x1="8" y1="132" x2="852" y2="132" stroke="#e9e3d6"/>
+          </g>
+
+          <g>
+            <text x="8" y="154" font-size="13.5" fill="#2f6f5e" font-weight="600">第三次</text>
+            <text x="8" y="170" font-size="10.5" fill="#7c7a72">1945 / 1970s–</text>
+            <text x="112" y="158" font-size="12.5" fill="#14171e">认知 / 信息处理</text>
+            <text x="268" y="158" font-size="12" fill="#3a4256">可编程 + 零边际复制</text>
+            <text x="500" y="158" font-size="12" fill="#3a4256">软件产业 + 流程再造</text>
+            <text x="700" y="158" font-size="12" fill="#2f6f5e" font-weight="600">03 第三次</text>
+            <line x1="8" y1="182" x2="852" y2="182" stroke="#e9e3d6"/>
+          </g>
+
+          <g>
+            <text x="8" y="204" font-size="13.5" fill="#2f6f5e" font-weight="600">第四次</text>
+            <text x="8" y="220" font-size="10.5" fill="#7c7a72">2010s–</text>
+            <text x="112" y="208" font-size="12.5" fill="#14171e">认知的执行环节</text>
+            <text x="268" y="208" font-size="12" fill="#3a4256">自主拆解 + 工具 + 校验</text>
+            <text x="500" y="208" font-size="12" fill="#3a4256">协议 + 信任边界</text>
+            <text x="700" y="208" font-size="12" fill="#2f6f5e" font-weight="600">04 第四次</text>
+          </g>
+
+          <g stroke="#2f6f5e" stroke-width="1.4" opacity=".5" marker-end="url(#arwMap)" fill="none">
+            <path d="M100,56 L106,56"/>
+          </g>
+        </g>
+      </svg>
+      <figcaption>
+        图 0 · 主线地图。<b>竖着看是替代关系</b>——每轮替代的是不同层次的能力；
+        <b>横着看是组织关系</b>——每一列都对应一次「旧流程被拆掉重排」，这才是收益兑现的真正开关。
+        四轮下方另有三页纵切与支撑页：<a href="05-architecture.html" style="color:var(--accent)">05 底层架构</a>（第三次内部）、
+        <a href="06-current.html" style="color:var(--accent)">06 现状与来源</a>（第四次当下）、
+        <a href="08-logic.html" style="color:var(--accent)">08 铁律与推论</a>（跨轮抽象）。
+      </figcaption>
+    </figure>
+
+    <div class="card" style="margin-top:14px">
       <p style="font-size:14.5px">
         电脑是<b>第三次工业革命的核心标志物</b>——第三次科技革命四大发明之一（原子能、电子计算机、空间技术、生物工程），
         也是其中唯一仍在持续演进的那一个；它的普及又直接定义了<b>信息时代</b>。
         两个说法不矛盾：<b>工业革命</b>讲的是生产方式的变革，<b>信息时代</b>讲的是资源结构的变化，
         <b>电脑</b>是同时落在两层上的具体技术载体。
       </p>
-      <div class="figbox" style="padding:16px 22px 8px;margin-top:12px">
-        <table>
-          <thead>
-            <tr><th>维度</th><th>第一次</th><th>第二次</th><th>第三次</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>时期</td><td>1760s 起</td><td>1870s 起</td><td>1945 / 1970s 起</td></tr>
-            <tr><td>通用技术</td><td>蒸汽机</td><td>电力与电动机</td><td>计算机、信息技术</td></tr>
-            <tr><td>替代了什么</td><td>体力</td><td>肌肉</td><td>认知</td></tr>
-            <tr><td>关键资源</td><td>煤</td><td>电 + 材料</td><td>信息与知识</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="muted" style="margin-top:12px">
-        三次革命分别替代<b>体力</b>、<b>肌肉</b>、<b>认知</b>。按产业经济学口径正在进入的第四次，替代的是<b>自主决策</b>——
-        从辅助人决策，转向系统自主拆解与执行；而 Agent 平台正好压在这条分界线上。
-        四轮革命的完整史实主线（前两次不再只给摘要）、第三次革命内部的八次架构跃迁，以及各轮的代价与分配后果，见 <a href="01-history.html" style="color:var(--accent)">01 发展路径</a>；
-        把四轮压成可复用的规律与铁律，见 <a href="05-industrial-logic.html" style="color:var(--accent)">05 工业革命的逻辑</a>。
+      <p style="margin-top:10px">
+        因此这套文档的排法是：<b>四轮革命各占一页，电脑的八次架构跃迁作为第三次革命的内部章</b>，
+        现状与来源对应第四次当下，最后一页抽出跨轮的铁律与推论。
       </p>
     </div>
+
+    <div class="figbox" style="padding:16px 22px 8px;margin-top:14px">
+      <table>
+        <thead>
+          <tr><th>维度</th><th>第一次</th><th>第二次</th><th>第三次</th><th>第四次</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>时期</td><td>1760s–1840s</td><td>1870s–1914</td><td>1945 / 1970s–</td><td>2010s–</td></tr>
+          <tr><td>核心机制</td><td>蒸汽动力：能量密度跃升</td><td>电力与单元驱动：动力可独立分配</td><td>可编程计算：步骤可零成本复制</td><td>大模型与工具：决策可被委托执行</td></tr>
+          <tr><td>替代对象</td><td>体力 / 畜力</td><td>肌肉 / 传动轴</td><td>认知 / 信息处理</td><td>认知的执行环节</td></tr>
+          <tr><td>组织变革</td><td>工厂制度 + 时间纪律</td><td>厂房重建 + 流水线 + 科学管理</td><td>软件产业 + 网络 + 流程再造</td><td>协议 + 信任边界 + 流程重构（进行中）</td></tr>
+          <tr><td>兑现时滞<br/><span style="font-weight:400;font-size:11.5px">（第一次为分配端，其余为生产率端）</span></td><td>约 100 年（到共享增长）</td><td>约 40 年（电气化）</td><td>约 15 年（计算机）</td><td>尚未兑现</td></tr>
+          <tr><td>分配后果</td><td>恩格斯停顿：1780–1840 劳均产出 +46%、工资 +12%</td><td>1860 年后工资增速反超产出增速</td><td>数字鸿沟 · 去技能化</td><td>入门级岗位先受冲击</td></tr>
+          <tr><td>新稀缺</td><td>原料与市场</td><td>规模与协调</td><td>注意力与信任</td><td>目标设定与责任</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="margin-top:10px">
+      <b>读这张表的三个提醒：</b>「替代对象」列是主线，其余列是它的展开；
+      「兑现时滞」一行<b>混着两种时滞</b>——第一次约 100 年是分配端（收益多久分到劳动者手里），
+      第二、三次的 40 年与 15 年是生产率端（多久体现在统计里），两者机制不同、不可相加；
+      引用前先声明分期口径（传统教材的「三次科技革命」与产业经济学的「第四次」不是同一套划分）。
+    </p>
   </section>
 
   <!-- ============ 三条核心判断 ============ -->
@@ -185,7 +270,7 @@
     </figure>
     <p class="muted" style="margin-top:10px">
       每次「解决瓶颈」的做法都是<b>把复杂度推向上一层</b>：多核逼出并发编程，GPU 逼出编程模型与库，集群逼出分布式一致性，AI 工厂逼出调度与成本治理。
-      技术债不会消失，只会换一层楼继续住。详细拆解见 <a href="02-architecture.html" style="color:var(--accent)">底层架构与影响</a>。
+      技术债不会消失，只会换一层楼继续住。详细拆解见 <a href="05-architecture.html" style="color:var(--accent)">底层架构与影响</a>。
     </p>
   </section>
 
@@ -193,7 +278,7 @@
   <section>
     <div class="sec-head">
       <span class="num">03</span><h2>2026 年的三个硬约束</h2>
-      <span class="sub">速览 · 完整数据与来源见<a href="03-current.html" style="color:var(--accent)">现状与来源</a></span>
+      <span class="sub">速览 · 完整数据与来源见<a href="06-current.html" style="color:var(--accent)">现状与来源</a></span>
     </div>
     <div class="grid2">
       <div class="card">
@@ -304,7 +389,7 @@
   <section>
     <div class="sec-head">
       <span class="num">05</span><h2>高频术语速查</h2>
-      <span class="sub">20 条 · 完整 <a href="04-glossary.html" style="color:var(--accent)">98 条术语表</a></span>
+      <span class="sub">20 条 · 完整 <a href="07-glossary.html" style="color:var(--accent)">98 条术语表</a></span>
     </div>
     <div class="figbox">
       <div class="ggrid quick">
@@ -335,8 +420,8 @@
   <!-- ============ 文档导航 ============ -->
   <section>
     <div class="sec-head">
-      <span class="num">06</span><h2>本套文档怎么读</h2>
-      <span class="sub">六页，按需取用</span>
+      <span class="num">06</span><h2>这套文档怎么读</h2>
+      <span class="sub">九页，先沿主线走，再取细节</span>
     </div>
     <div class="figbox" style="padding:16px 22px 8px">
       <table>
@@ -344,20 +429,23 @@
           <tr><th>页面</th><th>内容</th><th>什么时候读</th></tr>
         </thead>
         <tbody>
-          <tr><td><a href="index.html">核心沉淀</a></td><td>结论、三条主线、硬约束速览、5 条推论、20 条术语速查</td><td>汇报前 5 分钟、通勤路上、作为长期记忆的锚点</td></tr>
-          <tr><td><a href="01-history.html">01 发展路径</a></td><td>工业革命主线（四轮完整展开）+ 第三次内部八次架构跃迁</td><td>需要讲清来龙去脉、做行业对比或新人科普时</td></tr>
-          <tr><td><a href="02-architecture.html">02 底层架构与影响</a></td><td>七层抽象栈、三条主线的完整图示、十个维度的影响对照表</td><td>做抽象层设计、划定平台边界、说服别人时</td></tr>
-          <tr><td><a href="03-current.html">03 现状与来源</a></td><td>2026 年三个硬约束的完整数据、2026–2028 路线图、全部来源与不确定项</td><td>引用具体数字、对外汇报需要可核对来源时</td></tr>
-          <tr><td><a href="04-glossary.html">04 术语表</a></td><td>十组易混概念辨析、98 条分组词条、按角色的阅读路径</td><td>读文档、评审、面试、写材料时的随身词典</td></tr>
-          <tr><td><a href="05-industrial-logic.html">05 工业革命的逻辑</a></td><td>四轮革命的机制速查、推进发展的四条铁律、当下定位与 5 条平台推论</td><td>做方向判断、写战略叙事、解释「为什么现在还不能只看效果」时</td></tr>
+          <tr><td><a href="index.html">核心沉淀</a></td><td>主线地图、结论、三条技术主线、硬约束速览、5 条推论、20 条术语速查</td><td>汇报前 5 分钟、通勤路上、作为长期记忆的锚点</td></tr>
+          <tr><td><a href="01-first.html">01 第一次</a></td><td>蒸汽动力、工厂制度、1833 工厂法、为什么发生在英国、这一轮的账</td><td>讲清「革命真正发明的是组织形式」时</td></tr>
+          <tr><td><a href="02-second.html">02 第二次</a></td><td>单元驱动与布局重排、贝塞麦/泰勒制/流水线、共享增长的确立</td><td>解释「新技术为什么不自动变生产率」时</td></tr>
+          <tr><td><a href="03-third.html">03 第三次</a></td><td>可编程与零边际复制 + <b>内部章：电脑的八次架构跃迁</b></td><td>需要完整技术时间轴、或讲第三代革命时</td></tr>
+          <tr><td><a href="04-fourth.html">04 第四次</a></td><td>自主执行、2026 普及数据、组织端为何没动、新稀缺预告</td><td>判断当下位置、讨论 Agent 边界时</td></tr>
+          <tr><td><a href="05-architecture.html">05 底层架构</a></td><td>七层抽象栈、三条主线的完整图示、十个维度的影响对照表</td><td>做抽象层设计、划定平台边界、说服别人时</td></tr>
+          <tr><td><a href="06-current.html">06 现状与来源</a></td><td>2026 年三个硬约束的完整数据、2026–2028 路线图、全部来源与不确定项</td><td>引用具体数字、对外汇报需要可核对来源时</td></tr>
+          <tr><td><a href="07-glossary.html">07 术语表</a></td><td>十组易混概念辨析、98 条分组词条、按角色的阅读路径</td><td>读文档、评审、面试、写材料时的随身词典</td></tr>
+          <tr><td><a href="08-logic.html">08 铁律与推论</a></td><td>推进人类发展的四条铁律、当下定位、映射到 Agent 平台的 5 条推论</td><td>做方向判断、写战略叙事、解释「为什么现在还不能只看效果」时</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
   <footer>
-    电脑技术的发展路径 · 核心沉淀页 · 事实核对截至 2026 年 11 月公开信息 · 历史分期为编者归纳，各阶段边界为近似划分<br/>
-    配套专题：<a href="01-history.html">发展路径</a> · <a href="02-architecture.html">底层架构与影响</a> · <a href="03-current.html">现状与来源</a> · <a href="04-glossary.html">术语表</a> · <a href="05-industrial-logic.html">工业革命的逻辑</a>
+    电脑技术的发展路径 · 核心沉淀页 · 以工业革命为主线 · 事实核对截至 2026 年 11 月公开信息 · 历史分期为编者归纳，各阶段边界为近似划分<br/>
+    主线：<a href="01-first.html">第一次</a> · <a href="02-second.html">第二次</a> · <a href="03-third.html">第三次</a> · <a href="04-fourth.html">第四次</a> · <a href="05-architecture.html">底层架构</a> · <a href="06-current.html">现状与来源</a> · <a href="07-glossary.html">术语表</a> · <a href="08-logic.html">铁律与推论</a> · <a href="05-architecture.html">底层架构与影响</a> · <a href="06-current.html">现状与来源</a> · <a href="07-glossary.html">术语表</a> · <a href="08-logic.html">工业革命的逻辑</a>
   </footer>
 
 </div>

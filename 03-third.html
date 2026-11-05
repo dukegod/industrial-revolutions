@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>03 第三次工业革命 · 电脑技术的发展路径</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <span class="nav-brand">Computer Architecture</span>
+    <div class="nav-links">
+      <a href="index.html">核心沉淀</a>
+      <a href="01-first.html">第一次</a>
+      <a href="02-second.html">第二次</a>
+      <a href="03-third.html" class="on">第三次</a>
+      <a href="04-fourth.html">第四次</a>
+      <a href="05-architecture.html">底层架构</a>
+      <a href="06-current.html">现状与来源</a>
+      <a href="07-glossary.html">术语表</a>
+      <a href="08-logic.html">铁律与推论</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="kicker">03 · Third Industrial Revolution</p>
+    <h1>第三次工业革命（1945 / 1970s–）：把步骤从流程里抽出来</h1>
+    <p class="lede">这一轮的核心是<b>可编程 + 零边际复制</b>：人类第一次拥有了「复制一份行为几乎不花钱」的手段。<b>电脑是这一轮的核心标志物</b>，因此本页下半部分把第三次革命在计算这一个维度上的内部进程——八次架构跃迁——完整展开。</p>
+    <div class="meta">
+      <span class="tag">时期 <b>1945 / 1970s–</b></span>
+      <span class="tag">替代 <b>认知 / 信息处理</b></span>
+      <span class="tag">核心标志物 <b>电子计算机</b></span>
+      <span class="tag">内部进程 <b>八次架构跃迁</b></span>
+      <span class="tag">兑现时滞 <b>生产率端约 15 年</b></span>
+    </div>
+  </header>
+
+
+    <div class="sec-head">
+      <span class="num">01</span><h2>核心机制与这一轮的账</h2>
+      <span class="sub">电脑技术史 = 这一轮内部的八次架构跃迁</span>
+    </div>
+
+    <div class="card">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11v2M10 11v2M14 11v2M18 11v2"/></svg>
+        核心机制：可编程 + 零边际复制
+      </h3>
+      <p>
+        第三次革命是第一次让<b>「步骤」本身</b>成为可存储、可修改、可复制的东西。
+        冯·诺依曼结构把程序与数据放进同一存储，计算从此是<b>可复用的软件</b>而非一次性的机械过程；
+        再加上网络，<b>复制一份行为几乎不花钱</b>——这是人类第一次拥有的「零边际复制」。
+      </p>
+      <p style="margin-top:10px">
+        但它的兑现同样慢：索洛 1987 年写下「<b>你能在除生产率统计外的任何地方看到计算机时代</b>」，
+        美国生产率直到 1990 年代末才起飞——<b>约 15 年</b>。原因还是那句老话：<b>机器装上了，流程没重排</b>。
+      </p>
+    </div>
+
+    <div class="notes" style="margin-top:14px">
+      <h3>这一轮的三大件（传统教材口径的四大发明之一）</h3>
+      <ul>
+        <li><b>电子计算机</b>——本套文档的全部对象，也是四大发明中<b>唯一仍在持续演进</b>的一个。</li>
+        <li><b>原子能</b>——把能量供给从化石燃料的储量约束中解放出来，但代价是核废料与核扩散的政治成本。</li>
+        <li><b>空间技术</b>——把「地球上的资源与市场」边界打开，同时催生了通信、导航、材料等大量外溢技术。</li>
+        <li><b>生物工程</b>——从改造生命本身开始，是这一轮中「对象从物转向生命」的转折，但商业化兑现远慢于计算。</li>
+      </ul>
+    </div>
+
+    <!-- 八次架构跃迁 -->
+    <div style="margin-top:36px">
+      <div class="sec-head">
+        <span class="num">02</span><h2>内部章：电脑的八次架构跃迁</h2>
+        <span class="sub">左列为时期，右侧为「架构跃迁 → 带来的影响」</span>
+      </div>
+      <ol class="tl">
+        <li>
+          <div class="when"><span class="yr">1945–1957</span><span class="name">电子管 / 晶体管</span></div>
+          <div class="body">
+            <h3>确立「存储程序」：计算第一次成为可复用的通用过程</h3>
+            <div class="chips"><span class="chip">冯·诺依曼结构</span><span class="chip">ENIAC→EDVAC</span><span class="chip">晶体管替代电子管</span></div>
+            <p class="impact">
+              <b>跃迁：</b>程序从「改接线」变成「存进机器」，与数据同构；电子管换成晶体管后体积与能耗骤降。<br/>
+              <b>影响：</b>「一台机器跑不同程序」成为可能，<b>软件第一次成为独立产业</b>；此后所有通用计算形态的根源都在这里。
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="when"><span class="yr">1958–1978</span><span class="name">集成电路 / ISA 商业化</span></div>
+          <div class="body">
+            <h3>ISA 成为软硬件之间的商业契约</h3>
+            <div class="chips"><span class="chip">LSI 集成</span><span class="chip">Intel 4004（1971）</span><span class="chip">x86（1978）</span></div>
+            <p class="impact">
+              <b>跃迁：</b>微处理器把 CPU 变成可量产商品；x86 用「向下兼容」把指令集变成长期契约。<br/>
+              <b>影响：</b>软硬件彻底解耦，OS 与应用可独立迭代；<b>「兼容优先于最优」从此成为整个 PC 产业的文化</b>，也决定了此后三十年谁的护城河更深。
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="when"><span class="yr">1985–1995</span><span class="name">RISC / Cache</span></div>
+          <div class="body">
+            <h3>性能不再靠堆指令，而靠「喂饱」流水线</h3>
+            <div class="chips"><span class="chip">精简 ISA（ARM/SPARC/MIPS）</span><span class="chip">多级 Cache</span><span class="chip">DRAM 主存</span></div>
+            <p class="impact">
+              <b>跃迁：</b>流水线 + 寄存器堆 + 存储层次，把单核性能从「每周期几条指令」推向「每周期一条」；<b>访存延迟第一次成为一等公民</b>。<br/>
+              <b>影响：</b>「内存墙」雏形出现；CISC 与 RISC 之争最终以「x86 靠兼容 + 制程红利、ARM 靠授权模式各占一边」收敛——<b>生态模式比指令集本身更决定胜负</b>。
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="when"><span class="yr">1995–2006</span><span class="name">多核 / SMP</span></div>
+          <div class="body">
+            <h3>从「一台机器」到「一堆核」：并发成为通用工程能力</h3>
+            <div class="chips"><span class="chip">SMP（1995）</span><span class="chip">超线程（2003）</span><span class="chip">NUMA / CC-NUMA</span></div>
+            <p class="impact">
+              <b>跃迁：</b>单核提速撞上功耗与频率墙，产业转向横向扩展；内存与缓存必须按 NUMA 拓扑手工摆放。<br/>
+              <b>影响：</b>软件栈被迫大规模重写，<b>线程、锁、内存序、并行算法</b> 成为工程师通用技能；Amdahl 定律成为架构与算法共同的天花板。
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="when"><span class="yr">2006–2015</span><span class="name">GPU / CUDA 与移动 SoC</span></div>
+          <div class="body">
+            <h3>两条支线同时爆发：通用并行算力 + 移动优先</h3>
+            <div class="chips"><span class="chip">GPU 可编程化（2006–08）</span><span class="chip">CUDA 生态</span><span class="chip">异构 SoC / big.LITTLE</span></div>
+            <p class="impact">
+              <b>跃迁：</b>图形流水线变成通用并行阵列；手机 SoC 用制程与封装红利让消费级设备算力超过桌面。<br/>
+              <b>影响：</b>NVIDIA 从「卖显卡」转型「卖算力平台」，<b>CUDA 成为比指令集更硬的护城河</b>；软件竞争焦点从 ISA 转向「编程模型 + 库」；计算重心整体移向移动，催生移动优先的互联网与云端数据流。
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="when"><span class="yr">2016–2022</span><span class="name">数据中心专用化</span></div>
+          <div class="body">
+            <h3>Scaling Law 成为行业共识：堆卡比调优更划算</h3>
+            <div class="chips"><span class="chip">TPU（2016 起）</span><span class="chip">NVLink / InfiniBand 域</span><span class="chip">DGX 整机</span><span class="chip">低精度训练</span></div>
+            <p class="impact">
+              <b>跃迁：</b>Transformer + 大规模集群让「专用加速器 + 高速互连」成为标配，云厂商开始自研 ASIC。<br/>
+              <b>影响：</b>算力竞赛从芯片级升级为<b>系统、网络、机房、电力</b>级的全栈竞赛；模型能力第一次可被资本化，AI 从研究议题变成产品议题。
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="when"><span class="yr">2023–2026</span><span class="name">内存墙 / Chiplet / AI 工厂</span></div>
+          <div class="body">
+            <h3>瓶颈换人：算力过剩，数据搬运与电力稀缺</h3>
+            <div class="chips"><span class="chip">HBM3E → HBM4</span><span class="chip">Chiplet + CoWoS</span><span class="chip">Scale-up 以太网</span><span class="chip">液冷机柜</span><span class="chip">Prefill/Decode 分离</span></div>
+            <p class="impact">
+              <b>跃迁：</b>算力两年翻 3 倍，内存带宽只涨 1.6 倍、互连只涨 1.4 倍——<b>大部分算力在等数据</b>；于是 HBM 容量、KV Cache 分层、prefill/decode 分离成为一等设计。<br/>
+              <b>影响：</b><b>衡量指标从 FLOPS 变成「每瓦每秒 token」</b>；推理在 2028 年前后成为数据中心最大电力消耗来源；自研芯片打破单一供给；内存超级周期直接改写消费电子成本结构。
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="when"><span class="yr">2026→</span><span class="name">RISC-V 与可定制异构</span></div>
+          <div class="body">
+            <h3>ISA 从商业垄断回到「可定制底座」</h3>
+            <div class="chips"><span class="chip">RVA23 基线 + 服务器平台规范 1.0</span><span class="chip">Chiplet 自由组合</span><span class="chip">CPU 直连 GPU</span><span class="chip">边缘 / 车载 / 推理</span></div>
+            <p class="impact">
+              <b>跃迁：</b>2026 年 6 月落地的服务器平台规范 1.0 补齐了 UEFI/ACPI、PCIe/IOMMU、BMC Redfish、RAS、安全启动等系统级规则，<b>让「一套镜像跨品牌部署」成为可能</b>。<br/>
+              <b>影响：</b>新壁垒从「能不能做」转向<b>「指令扩展碎片化 + 软件生态碎片化 + 产能」</b>；同时 AI 反哺 ISA 迁移——用 Agent 写移植代码，正在降低换架构的成本。
+            </p>
+          </div>
+        </li>
+      </ol>
+      <p class="muted" style="margin-top:12px">
+        <b>把八次跃迁放回主线看：</b>它们不是「电脑发展史」，而是<b>第三次革命在「计算」这一个维度上的内部进程</b>。
+        每一次跃迁都在解决上一轮的瓶颈，而复杂度同步上移一层——
+        多核逼出并发编程，GPU 逼出编程模型与库，集群逼出分布式一致性，AI 工厂逼出调度与成本治理。
+        抽象层与影响对照见 <a href="05-architecture.html" style="color:var(--accent)">05 底层架构</a>。
+      </p>
+    </div>
+
+    <div class="notes" style="margin-top:20px">
+      <h3>这一轮的账</h3>
+      <ul>
+        <li><b>收益：</b>信息成为与物质、能源并列的核心资源；软件与知识第一次能零成本复制；全球化分工被通信成本压平。</li>
+        <li><b>代价：</b>数字鸿沟、劳动的监控化与去技能化、平台对数据的集中——<b>「连接了」不等于「平等了」</b>。</li>
+        <li><b>留给下一轮的稀缺：</b>信息处理与计算变得极其便宜，<b>稀缺转移到了「注意力」与「信任」</b>——这也是第三次革命至今仍未「结束」的根源：它把「决策辅助」做到了极致，却没解决「谁来决策、谁负责」。</li>
+      </ul>
+    </div>
+  
+    <div class="notes" style="margin-top:20px">
+      <h3>在主线上的位置</h3>
+      <ul>
+        <li><b>替代了什么：</b>认知与信息处理——「步骤」第一次成为可存储、可修改、可复制的东西。</li>
+        <li><b>兑现的条件：</b>软件产业 + 网络 + 流程再造。索洛 1987 年写下「你能在除生产率统计外的任何地方看到计算机时代」，
+          美国生产率直到 1990 年代末才起飞——<b>约 15 年</b>，原因还是那句老话：机器装上了，流程没重排。</li>
+        <li><b>留在主线上的三个追问：</b>为什么这次革命至今没结束（见上「这一轮的账」）？电脑的八次跃迁与三次铁律怎么对应（见 <a href="08-logic.html" style="color:var(--accent)">08 铁律与推论</a>）？2026 年的当下位置在哪（见 <a href="04-fourth.html" style="color:var(--accent)">04 第四次</a>）？</li>
+      </ul>
+    </div>
+
+  <footer>
+    电脑技术的发展路径 · 以工业革命为主线 · 事实核对截至 2026 年 11 月公开信息 · 历史分期为编者归纳，各阶段边界为近似划分<br/>
+    主线：<a href="01-first.html">第一次</a> · <a href="02-second.html">第二次</a> · <a href="03-third.html">第三次</a> · <a href="04-fourth.html">第四次</a> · <a href="05-architecture.html">底层架构</a> · <a href="06-current.html">现状与来源</a> · <a href="07-glossary.html">术语表</a> · <a href="08-logic.html">铁律与推论</a>
+  </footer>
+
+</div>
+</body>
+</html>

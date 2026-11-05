@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>02 第二次工业革命 · 电脑技术的发展路径</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <span class="nav-brand">Computer Architecture</span>
+    <div class="nav-links">
+      <a href="index.html">核心沉淀</a>
+      <a href="01-first.html">第一次</a>
+      <a href="02-second.html" class="on">第二次</a>
+      <a href="03-third.html">第三次</a>
+      <a href="04-fourth.html">第四次</a>
+      <a href="05-architecture.html">底层架构</a>
+      <a href="06-current.html">现状与来源</a>
+      <a href="07-glossary.html">术语表</a>
+      <a href="08-logic.html">铁律与推论</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="kicker">02 · Second Industrial Revolution</p>
+    <h1>第二次工业革命（1870s–1914）：把动力送到每一台机器旁边</h1>
+    <p class="lede">这一轮的核心不是「电动机比蒸汽机快」，而是<b>动力可以按需送到任意一点</b>——每台机器配自己的马达（单元驱动），于是机器第一次可以按物料流向排列。真正的生产率开关不是电动机，是<b>单元驱动 + 布局重排</b>。</p>
+    <div class="meta">
+      <span class="tag">时期 <b>1870s–1914</b></span>
+      <span class="tag">替代 <b>肌肉 / 传动轴</b></span>
+      <span class="tag">关键发明 <b>电动机 · 贝塞麦转炉 · 流水线</b></span>
+      <span class="tag">关键管理 <b>泰勒制（1911）</b></span>
+      <span class="tag">兑现时滞 <b>生产率端约 40 年</b></span>
+    </div>
+  </header>
+
+
+    <div class="sec-head">
+      <span class="num">02</span><h2>核心机制、并行三件事与这一轮的账</h2>
+      <span class="sub">核心机制 · 单元驱动 · 兑现时滞</span>
+    </div>
+
+    <div class="card">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7h-6"/><path d="M21 7v6"/></svg>
+        核心机制：单元驱动（unit drive）
+      </h3>
+      <p>
+        第一次革命留下一个几何约束：蒸汽机太大，所有机器必须<b>围着传动轴排布</b>，
+        厂房因此多层化、流程绕着轴转、任何一处皮带故障全厂停工。
+      </p>
+      <p style="margin-top:10px">
+        第二次革命的核心不是「电动机比蒸汽机快」，而是<b>动力可以按需送到任意一点</b>：
+        每台机器配自己的马达（<b>单元驱动</b>）。于是机器可以<b>按物料流向排列</b>，厂房可以单层化，
+        流程第一次能够为了物料而设计，而不是为了传动轴。
+        <b>这就是「组织被迫重构」在物理层面的样子。</b>
+      </p>
+    </div>
+
+    <figure class="figbox" style="margin-top:14px">
+      <svg viewBox="0 0 860 250" width="100%" style="display:block;height:auto" role="img" aria-label="中央传动布局与单元驱动布局的对比，以及兑现时滞">
+        <defs>
+          <marker id="arwU" markerWidth="7" markerHeight="7" refX="5.5" refY="2.5" orient="auto">
+            <path d="M0,0 L5.5,2.5 L0,5 Z" fill="#7c7a72"/>
+          </marker>
+        </defs>
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+          <!-- 左：中央传动 -->
+          <text x="8" y="20" font-size="12.5" fill="#14171e" font-weight="600">中央传动（group drive）</text>
+          <text x="8" y="38" font-size="11" fill="#7c7a72">布局由动力位置决定</text>
+          <rect x="8" y="48" width="390" height="128" rx="10" fill="#fff" stroke="#e9e3d6"/>
+          <!-- 蒸汽机 -->
+          <rect x="176" y="60" width="56" height="24" rx="5" fill="#f2efe7" stroke="#d9d2c2"/>
+          <text x="204" y="76" font-size="10" fill="#3a4256" text-anchor="middle">蒸汽机</text>
+          <!-- 天轴 -->
+          <line x1="204" y1="84" x2="204" y2="96" stroke="#7c7a72" stroke-width="1.6"/>
+          <line x1="30" y1="96" x2="378" y2="96" stroke="#7c7a72" stroke-width="2.4"/>
+          <!-- 皮带 -->
+          <g stroke="#b9b1a0" stroke-width="1.1">
+            <line x1="52" y1="96" x2="52" y2="116"/><line x1="120" y1="96" x2="120" y2="116"/>
+            <line x1="288" y1="96" x2="288" y2="116"/><line x1="356" y1="96" x2="356" y2="116"/>
+          </g>
+          <!-- 机器 -->
+          <g fill="#fff" stroke="#e9e3d6">
+            <rect x="30" y="116" width="44" height="26" rx="4"/><rect x="98" y="116" width="44" height="26" rx="4"/>
+            <rect x="266" y="116" width="44" height="26" rx="4"/><rect x="334" y="116" width="44" height="26" rx="4"/>
+          </g>
+          <text x="52" y="133" font-size="9.5" fill="#7c7a72" text-anchor="middle">机</text>
+          <text x="120" y="133" font-size="9.5" fill="#7c7a72" text-anchor="middle">机</text>
+          <text x="288" y="133" font-size="9.5" fill="#7c7a72" text-anchor="middle">机</text>
+          <text x="356" y="133" font-size="9.5" fill="#7c7a72" text-anchor="middle">机</text>
+          <text x="204" y="166" font-size="11" fill="#3a4256" text-anchor="middle">多层厂房 · 一根轴故障 = 全厂停工</text>
+
+          <!-- 右：单元驱动 -->
+          <text x="462" y="20" font-size="12.5" fill="#2f6f5e" font-weight="600">单元驱动（unit drive）</text>
+          <text x="462" y="38" font-size="11" fill="#7c7a72">布局由物料流决定</text>
+          <rect x="462" y="48" width="390" height="128" rx="10" fill="#fff" stroke="#2f6f5e" stroke-opacity=".4"/>
+          <g fill="#fff" stroke="#e9e3d6">
+            <rect x="484" y="116" width="44" height="26" rx="4"/><rect x="552" y="116" width="44" height="26" rx="4"/>
+            <rect x="620" y="116" width="44" height="26" rx="4"/><rect x="688" y="116" width="44" height="26" rx="4"/>
+          </g>
+          <g fill="#2f6f5e">
+            <circle cx="506" cy="106" r="6"/><circle cx="574" cy="106" r="6"/><circle cx="642" cy="106" r="6"/><circle cx="710" cy="106" r="6"/>
+          </g>
+          <text x="506" y="133" font-size="9.5" fill="#7c7a72" text-anchor="middle">机</text>
+          <text x="574" y="133" font-size="9.5" fill="#7c7a72" text-anchor="middle">机</text>
+          <text x="642" y="133" font-size="9.5" fill="#7c7a72" text-anchor="middle">机</text>
+          <text x="710" y="133" font-size="9.5" fill="#7c7a72" text-anchor="middle">机</text>
+          <g stroke="#2f6f5e" stroke-width="1.4" marker-end="url(#arwU)" opacity=".8">
+            <path d="M528,129 L552,129"/><path d="M596,129 L620,129"/><path d="M664,129 L688,129"/>
+          </g>
+          <text x="657" y="166" font-size="11" fill="#2f6f5e" text-anchor="middle" font-weight="600">单层厂房 · 按工序排列 · 流水线成为可能</text>
+
+          <!-- 下方：兑现 -->
+          <line x1="8" y1="192" x2="852" y2="192" stroke="#e9e3d6"/>
+          <text x="8" y="212" font-size="12" fill="#14171e"><tspan fill="#2f6f5e" font-weight="600">兑现时滞：</tspan><tspan>只把蒸汽机换成大马达 → 生产率几乎不动；改成单元驱动 + 重排厂房 → 1920s 美国制造业生产率年增 5% 以上</tspan></text>
+          <text x="8" y="232" font-size="11.5" fill="#7c7a72">Paul David (1990)：1880–1920 美国制造业生产率增速无明显提升；电动机 1899 年只占美国工厂总动力的不到 5%，直到 1920s 才接近全面渗透</text>
+        </g>
+      </svg>
+      <figcaption>
+        图 1 · <b>第二次革命真正的生产率开关不是电动机，是「单元驱动 + 布局重排」</b>。
+        这是本套文档反复出现的那条规律最原始的样子：<b>新技术本身不产生生产率，重构才产生。</b>
+      </figcaption>
+    </figure>
+
+    <div class="grid2" style="margin-top:14px">
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
+          同轮并行的三件事：材料、化学、管理
+        </h3>
+        <ul style="margin:6px 0 0;padding-left:18px;font-size:13.8px;color:var(--ink2)">
+          <li><b>钢铁：</b>贝塞麦转炉法（1856）用空气吹炼熔铁除杂，让钢从昂贵变成便宜——<b>材料成本下降，等于给所有行业发了一次补贴</b>。</li>
+          <li><b>化学：</b>哈伯-博施合成氨工艺在 1913 年于德国实现工业化，让氮肥可以量产，直接支撑了 1950–70 年代的绿色革命——<b>化学革命的兑现晚于它的起点近半个世纪</b>。</li>
+          <li><b>管理：</b>泰勒《科学管理原理》（1911）把作业拆解、计时、标准化，<b>把「老师傅的手艺」变成可复制的标准动作</b>。这是第一次把知识从个人身上剥离成组织资产。</li>
+          <li><b>流水线：</b>福特 1913-12-01 在 Highland Park 工厂启用移动装配线，Model T 车体组装时间从 12 小时以上压到约 90 分钟。</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+          这一轮的账
+        </h3>
+        <p>
+          <b>分配：</b>上一轮留下的分配账，在这一轮结清：<b>1860 年后英国实际工资增速反超劳均产出增速</b>
+          （1.61%/年 vs 1.03%/年），「共享增长」确立（Allen, 2009）。
+          艾伦给出的机制<b>不是</b>替代弹性上升，而是<b>资本积累终于追上了技术进步的要求</b>——
+          19 世纪上半叶「资本与劳动替代弹性偏低」正是恩格斯停顿的成因；积累一旦追上技术，工资就与生产率同步。
+        </p>
+        <p style="margin-top:8px">
+          <b>代价：</b>流水线把劳动变成单调重复的岗位；两次世界大战的物质基础正是这一轮的重工业与化工能力；
+          泰勒制把工人的自主性换成可计算性。
+        </p>
+        <p style="margin-top:8px">
+          <b>留给下一轮的稀缺：</b>动力与材料都便宜了，<b>但「谁来协调这些分散的产能」成了新问题</b>——
+          于是有了电气化后的规模组织，也有了后来需要被计算的「信息」。
+        </p>
+      </div>
+    </div>
+  
+    <div class="notes" style="margin-top:20px">
+      <h3>在主线上的位置</h3>
+      <ul>
+        <li><b>替代了什么：</b>肌肉与传动轴——机器不再必须围着一根中央天轴排布，动力可以按需送到任意一点。</li>
+        <li><b>兑现的条件：</b>厂房重建（单元驱动 + 单层平面）+ 流水线 + 科学管理，即围绕新动力重排整个生产组织。</li>
+        <li><b>留在主线上的三个追问：</b>第一次留下的分配账是怎么在这一轮结清的（见本页「这一轮的账」与 <a href="08-logic.html" style="color:var(--accent)">08 铁律与推论</a>）？「协调分散产能」这个新稀缺后来怎么变成「信息」（见 <a href="03-third.html" style="color:var(--accent)">03 第三次</a>）？今天的等价动作在哪（见 <a href="04-fourth.html" style="color:var(--accent)">04 第四次</a>）？</li>
+      </ul>
+    </div>
+
+  <footer>
+    电脑技术的发展路径 · 以工业革命为主线 · 事实核对截至 2026 年 11 月公开信息 · 历史分期为编者归纳，各阶段边界为近似划分<br/>
+    主线：<a href="01-first.html">第一次</a> · <a href="02-second.html">第二次</a> · <a href="03-third.html">第三次</a> · <a href="04-fourth.html">第四次</a> · <a href="05-architecture.html">底层架构</a> · <a href="06-current.html">现状与来源</a> · <a href="07-glossary.html">术语表</a> · <a href="08-logic.html">铁律与推论</a>
+  </footer>
+
+</div>
+</body>
+</html>
