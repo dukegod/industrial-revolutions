@@ -1,0 +1,21 @@
+03-third.html
+  s_ae6303e289bfd2::t_90fe2ee41dd019 36,49,81,182,204
+08-logic.html
+  s_ae6303e289bfd2::t_d957fafa801e34 51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f6f406f294b3100351ac91f88a8cf426eb1481c4",
+  "prompts": {},
+  "sessions": {
+    "s_ae6303e289bfd2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a5a9-f28b-7581-9380-507f1225840b",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
