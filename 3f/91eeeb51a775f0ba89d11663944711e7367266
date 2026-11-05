@@ -1,0 +1,19 @@
+03-third.html
+  s_213c02a4335703::t_8e0d169425b7a2 6,19-26,34-36,38-42,48,79,81,185,197-199,201-204,209-210
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3f91eeeb51a775f0ba89d11663944711e7367266",
+  "prompts": {},
+  "sessions": {
+    "s_213c02a4335703": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "6e9e8f6c-a6eb-4858-98bb-42fe084e7668",
+        "model": "GLM-5.3-joybuilder"
+      },
+      "human_author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
