@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>05 工业革命的逻辑 · 电脑技术的发展路径</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <span class="nav-brand">Computer Architecture</span>
+    <div class="nav-links">
+      <a href="index.html">核心沉淀</a>
+      <a href="01-history.html">发展路径</a>
+      <a href="02-architecture.html">底层架构与影响</a>
+      <a href="03-current.html">现状与来源</a>
+      <a href="04-glossary.html">术语表</a>
+      <a href="05-industrial-logic.html" class="on">工业革命的逻辑</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="kicker">05 · Industrial Logic</p>
+    <h1>四轮工业革命的核心原理，与推进人类发展的逻辑</h1>
+    <p class="lede">
+      前面四页把视角落在一台电脑上。这一页把镜头拉远：<b>每轮工业革命到底替换了什么、靠什么机制起效，
+      以及它们为什么共享同一条推进逻辑</b>。结论先行——<b>革命不是「发明清单」，而是「稀缺迁移」</b>：
+      每一轮取消一种稀缺，同时制造出下一种稀缺。理解这条链，才能判断今天的位置和下一步该做什么。
+    </p>
+    <div class="meta">
+      <span class="tag">四轮革命 <b>核心机制</b></span>
+      <span class="tag">推进逻辑 <b>4 条铁律</b></span>
+      <span class="tag">当下定位 <b>第四次·重组期前夜</b></span>
+      <span class="tag">事实核对至 <b>2026-11</b></span>
+      <span class="tag"><a href="01-history.html">史实主线 →</a></span>
+    </div>
+  </header>
+
+  <div class="notes" style="margin-top:18px">
+    <h3>这一页和 01 页怎么分工</h3>
+    <ul>
+      <li><b><a href="01-history.html">01 发展路径</a> = 史实主线。</b>四轮革命逐轮展开，每轮给到具体发明、年份、法规、数据；
+      电脑的八次架构跃迁作为第三次革命的内部主线嵌在里面。</li>
+      <li><b>本页 = 抽象层。</b>把四轮革命压成四条可复用的铁律，再把铁律映射到当下的平台决策。
+        <b>要引用具体史实（1833 工厂法、1913 流水线、1856 转炉）去 01，要引用规律与判断来本页。</b></li>
+    </ul>
+  </div>
+
+  <div class="conclusion">
+    <div class="lbl">核心结论</div>
+    <p><b>四轮革命的共同原理是：把人类自身的一部分能力，转化为可复制、可规模化、可低成本调用的外部资源。</b></p>
+    <p>
+      第一次拿走<b>体力</b>（蒸汽机与煤），第二次拿走<b>肌肉</b>（电动机与流水线），第三次拿走<b>认知</b>（计算机与网络），
+      第四次正在拿走<b>认知的执行环节</b>（大模型与智能体）。每一次替代都遵循同一条链：
+      <b>能量密度跃迁 → 单位成本下降 → 瓶颈迁移 → 组织被迫重构 → 生产率兑现 → 新一轮稀缺浮出水面</b>。
+    </p>
+    <p>
+      而最反直觉、也最重要的一条推论是：<b>技术落地与生产率兑现之间，隔着一次组织重构</b>。
+      电气化从 1879 年可用到 1920 年代美国制造业生产率起飞，用了约 <b>40 年</b>（Paul David, 1990）——
+      因为工厂最初只是「把蒸汽机换成大马达」，直到「每台机器配自己的马达」并重排厂房布局，收益才出现。
+      这条规律对今天的 AI 同样成立，也是判断「我们该做什么」的准绳。
+    </p>
+  </div>
+
+  <!-- ============ 01 四轮革命的机制 ============ -->
+  <section style="margin-top:36px">
+    <div class="sec-head">
+      <span class="num">01</span><h2>四轮革命，抽象成一句话</h2>
+      <span class="sub">机制速查 · 细节见 01 页</span>
+    </div>
+
+    <div class="figbox" style="padding:16px 22px 8px">
+      <table>
+        <thead>
+          <tr><th>轮次</th><th>核心机制（一句话）</th><th>替代对象</th><th>兑现条件</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>第一次<br/><span style="font-weight:400;font-size:11.5px">1760s–1840s</span></td><td>把力气从肌肉里抽出来：能量密度的量级跃迁</td><td>体力 / 畜力</td><td>工厂制度 + 时间纪律</td></tr>
+          <tr><td>第二次<br/><span style="font-weight:400;font-size:11.5px">1870s–1914</span></td><td>把动力送到每台机器旁边：<b>单元驱动</b>让布局可以按物料流重排</td><td>肌肉 / 传动轴</td><td>厂房重建 + 流水线 + 科学管理</td></tr>
+          <tr><td>第三次<br/><span style="font-weight:400;font-size:11.5px">1945 / 1970s–</span></td><td>把步骤从流程里抽出来：可编程 + 零边际复制</td><td>认知 / 信息处理</td><td>软件产业 + 网络 + 流程再造</td></tr>
+          <tr><td>第四次<br/><span style="font-weight:400;font-size:11.5px">2010s–</span></td><td>把决策的执行环节交出去：自主拆解 + 调用 + 校验</td><td>认知的执行环节</td><td>协议与信任边界 + 流程重构（进行中）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="margin-top:10px">
+      <b>变的是「拿走哪一部分」和「兑现需要什么条件」，不变的恰恰是机制本身</b>：
+      把人类的一部分能力，转成可复制、可规模化、可低成本调用的外部资源。
+      每轮的发明、年份、法规与数据细节，见 <a href="01-history.html" style="color:var(--accent)">01 发展路径</a>。
+    </p>
+
+    <div class="notes" style="margin-top:14px">
+      <h3>把四轮并排看，能看到什么</h3>
+      <ul>
+        <li><b>「替代对象」这一列才是主线</b>：体力 → 肌肉 → 认知 → 认知的执行环节，逐层向上，四轮之间才连得上。</li>
+        <li><b>「兑现条件」这一列反复出现同一个词：重构。</b>第一次是重建厂房与劳动纪律，第二次是重排机器与流程，
+          第三次是重做业务流程，第四次正在重做的是<b>「谁定义目标、谁验收结果」</b>这条链路——它没有物理形态，因此可能更快，也可能更慢。</li>
+        <li><b>每一轮的代价都不在技术侧，而在分配侧。</b>童工与贫民窟、单调岗位与世界大战、数字鸿沟、入门级岗位先受冲击——
+          技术收益与分配收益从来不是同一件事，两者之间也有自己的时间表。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 02 推进逻辑四条铁律 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">02</span><h2>推进人类发展的四条铁律</h2>
+      <span class="sub">每条都有可核对的史实支撑</span>
+    </div>
+
+    <div class="card">
+      <div class="imp">
+        <div class="idx">01</div>
+        <div>
+          <h3>铁律一 · 稀缺迁移：革命解决一种稀缺，同时制造下一种</h3>
+          <p>
+            第一次把「力气」变便宜，稀缺就转移到<b>原料与市场</b>；第二次把「动力」变便宜，稀缺转移到<b>规模与协调</b>；
+            第三次把「信息处理」变便宜，稀缺转移到<b>注意力与信任</b>；第四次把「执行」变便宜，
+            稀缺正在转移到<b>「目标该是什么」与「结果谁来负责」</b>。
+          </p>
+          <p style="margin-top:8px">
+            <b>推论：</b>用「有没有提升效率」衡量一项新技术，一定会在错误的维度上找答案。
+            正确的问法是「<b>它取消了什么稀缺，又把稀缺推到了哪里</b>」——
+            这也是本套文档 <a href="index.html" style="color:var(--accent)">「瓶颈迁移」主线</a>的宏观版本。
+          </p>
+        </div>
+      </div>
+
+      <div class="imp">
+        <div class="idx">02</div>
+        <div>
+          <h3>铁律二 · 兑现时滞：技术可用 ≠ 生产率兑现，中间隔着一次组织重构</h3>
+          <p>
+            这是最反直觉、也最可操作的一条。三次实证：
+            <b>电气化 ≈ 40 年</b>（1879 商用 → 1920 年代生产率起飞，David 1990）；
+            <b>计算机 ≈ 15 年</b>（1987 索洛之问 → 1990 年代末美国生产率加速）；
+            <b>AI 至今未到</b>（组织采用率已达 88%，但 AI 智能体在几乎所有业务职能的部署仍是<b>个位数</b>）。
+          </p>
+          <p style="margin-top:8px">
+            机制已被解释清楚：<b>旧流程不会因为新工具变好，只会被新工具加速</b>。
+            生产率要跳，必须把流程本身拆掉重排——也就是第二次革命的「单元驱动」动作。
+          </p>
+        </div>
+      </div>
+
+      <div class="imp">
+        <div class="idx">03</div>
+        <div>
+          <h3>铁律三 · 重组先付成本：收益曲线是 J 形，不是直线</h3>
+          <p>
+            重组期要先投钱（重构流程、培训、换设备、迁数据），这批支出<b>先计入成本、不产生收益</b>，
+            所以实测生产率会先下探，之后才陡升——Brynjolfsson、Rock &amp; Syverson 称之为<b>「生产率 J 曲线」</b>。
+            他们估算，到 2017 年底，美国全要素生产率若计入相关无形资产，比官方统计<b>高出 15.9%</b>；
+            2025 年美国人口普查局在早期工业 AI 采用中也观察到同样的 J 形。
+          </p>
+          <p style="margin-top:8px">
+            <b>推论：</b>用「这个季度有没有产出」评判一项重组型投入，一定判错。
+            正确的观察点是<b>重组资本有没有在累积</b>——流程改了没有、迁完没有、新的度量口径建了没有。
+          </p>
+        </div>
+      </div>
+
+      <div class="imp">
+        <div class="idx">04</div>
+        <div>
+          <h3>铁律四 · 收益不自动均摊：分配有自己的时间表</h3>
+          <p>
+            技术进步的<b>生产率收益与分配收益是两件事</b>。艾伦（Robert C. Allen）用「<b>恩格斯停顿</b>」给出量化：
+            <b>1780–1840 年英国劳均产出上升 46%，实际工资只上升 12%</b>；1840–1900 年劳均产出上升 90%、实际工资上升 123%，
+            <b>1860 年后实际工资增速反超产出增速</b>（1.61%/年 vs 1.03%/年），「共享增长」才真正确立。
+          </p>
+          <p style="margin-top:8px">
+            今天的对应物已经出现在数据里：<b>22–25 岁软件开发者就业自 2024 年下降近 20%</b>，
+            而整体就业尚未显著下降——冲击先落在<b>入门级岗位</b>，也就是职业阶梯的第一级。
+            <b>推论：</b>技术路线图里必须包含「谁被替代、谁先受益」这一层，否则组织会在收益兑现前先失去接班人。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <figure class="figbox" style="margin-top:14px">
+      <svg viewBox="0 0 860 250" width="100%" style="display:block;height:auto" role="img" aria-label="技术兑现时间轴：电气化约40年，计算机约15年，AI尚未兑现">
+        <defs>
+          <linearGradient id="fillJ" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#2f6f5e" stop-opacity=".16"/>
+            <stop offset="100%" stop-color="#2f6f5e" stop-opacity=".02"/>
+          </linearGradient>
+        </defs>
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+          <text x="8" y="20" font-size="12.5" fill="#7c7a72">技术可用的时点</text>
+          <text x="852" y="20" font-size="12.5" fill="#7c7a72" text-anchor="end">生产率兑现的时点</text>
+          <line x1="8" y1="30" x2="852" y2="30" stroke="#e9e3d6"/>
+
+          <!-- electricity bar -->
+          <rect x="112" y="44" width="560" height="26" rx="6" fill="url(#fillJ)"/>
+          <circle cx="112" cy="57" r="5" fill="#2f6f5e"/>
+          <circle cx="672" cy="57" r="5" fill="#2f6f5e"/>
+          <text x="8" y="61" font-size="12.5" fill="#14171e" font-weight="600">电气化</text>
+          <text x="112" y="40" font-size="11" fill="#7c7a72">1879 商用</text>
+          <text x="672" y="40" font-size="11" fill="#7c7a72" text-anchor="end">1920s 生产率起飞</text>
+          <text x="392" y="61" font-size="11.5" fill="#2f6f5e" text-anchor="middle">约 40 年 · 单元驱动 + 厂房重建</text>
+
+          <!-- computer bar -->
+          <rect x="112" y="92" width="210" height="26" rx="6" fill="url(#fillJ)"/>
+          <circle cx="112" cy="105" r="5" fill="#2f6f5e"/>
+          <circle cx="322" cy="105" r="5" fill="#2f6f5e"/>
+          <text x="8" y="109" font-size="12.5" fill="#14171e" font-weight="600">计算机</text>
+          <text x="112" y="88" font-size="11" fill="#7c7a72">1987 索洛之问</text>
+          <text x="322" y="88" font-size="11" fill="#7c7a72" text-anchor="end">1990s 末起飞</text>
+          <text x="217" y="109" font-size="11.5" fill="#2f6f5e" text-anchor="middle">约 15 年</text>
+
+          <!-- AI bar -->
+          <rect x="112" y="140" width="96" height="26" rx="6" fill="url(#fillJ)"/>
+          <circle cx="112" cy="153" r="5" fill="#2f6f5e"/>
+          <circle cx="208" cy="153" r="5" fill="none" stroke="#2f6f5e" stroke-width="1.6" stroke-dasharray="3 2"/>
+          <text x="8" y="157" font-size="12.5" fill="#14171e" font-weight="600">生成式 AI</text>
+          <text x="112" y="136" font-size="11" fill="#7c7a72">2022 破圈</text>
+          <text x="222" y="136" font-size="11" fill="#c97b3f">尚未兑现</text>
+          <text x="224" y="157" font-size="11.5" fill="#c97b3f">采用率已达 88%，但智能体部署仍在个位数</text>
+
+          <!-- notes -->
+          <line x1="8" y1="184" x2="852" y2="184" stroke="#e9e3d6"/>
+          <text x="8" y="204" font-size="11.5" fill="#3a4256">
+            <tspan fill="#2f6f5e" font-weight="600">规律：</tspan>
+            <tspan>时滞长度 = 「把旧流程拆掉重排」所需的时间。技术越通用，旧流程越庞大，重构越慢。</tspan>
+          </text>
+          <text x="8" y="222" font-size="11.5" fill="#7c7a72">
+            <tspan>数据来源：David (1990) 电气化 40 年滞后；索洛 (1987) 与美国生产率 1990 年代末起飞；Stanford AI Index 2026 组织采用率与智能体部署。</tspan>
+          </text>
+          <text x="8" y="239" font-size="11.5" fill="#7c7a72">
+            <tspan>注：本图只画「生产率端」时滞。分配端时滞（收益多久分到劳动者手里）另计，见 01 页四轮并置表。</tspan>
+          </text>
+        </g>
+      </svg>
+      <figcaption>
+        图 2 · <b>时滞不是偶然，是通例</b>。每一轮的等待时间都由「旧流程有多庞大」决定——
+        而旧流程越庞大，说明上一轮革命铺得越彻底，这本身是好事。
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ 03 当下定位 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">03</span><h2>当下定位：第四次革命走到了哪一步</h2>
+      <span class="sub">用 2026 年的一手数据校准，不靠感觉</span>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7h-6"/><path d="M21 7v6"/></svg>
+          已经发生的：普及速度史上最快
+        </h3>
+        <dl class="kv">
+          <dt>人口采用</dt><dd>53% · 3 年内</dd>
+          <dt>组织采用</dt><dd>88%</dd>
+          <dt>价值集中</dt><dd>前 20% 拿走 74%</dd>
+          <dt>领先者优势</dt><dd>7.2×</dd>
+          <dt>美国采用排名</dt><dd>第 24 位</dd>
+        </dl>
+        <p class="muted" style="margin-top:10px">
+          生成式 AI 三年达成 53% 人口采用，<b>快于 PC 与互联网</b>；但美国以投资第一的身份，采用率仅列第 24（28.3%），
+          与 GDP 强相关。<b>采用速度不是能力指标，是价格与场景指标。</b>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+          还没发生的：组织内部没动
+        </h3>
+        <dl class="kv">
+          <dt>智能体部署</dt><dd>各职能均为个位数</dd>
+          <dt>已重设计流程</dt><dd>领先者 56% / 普遍不足</dd>
+          <dt>见收益周期</dt><dd>试点后约 6.8 个月</dd>
+          <dt>CEO 无财务收益</dt><dd>56%</dd>
+          <dt>入门岗冲击</dt><dd>22–25 岁开发岗 −20%</dd>
+        </dl>
+        <p class="muted" style="margin-top:10px">
+          PwC 2026 调研中，<b>仅 26% 的 CEO 认为成本因 AI 下降，超半数没有看到任何收入或成本收益</b>；
+          澳洲样本里只有 <b>7% 的企业重设计过工作流</b>，而 AI 领先者是 <b>56%</b>。
+          <b>这正是 1895 年工厂的样子。</b>
+        </p>
+      </div>
+    </div>
+
+    <div class="notes" style="margin-top:14px">
+      <h3>把两条数据放在一起，结论只有一个</h3>
+      <ul>
+        <li><b>消费端已经普及，组织端还没开始。</b>生成式 AI 是史上扩散最快的通用技术，但组织内部的智能体部署仍是个位数比例——这与电气化时期「电动机早已存在、生产率却纹丝不动」的阶段完全一致。</li>
+        <li><b>价值集中不是分化，而是信号。</b>20% 的企业拿走 74% 的 AI 价值，且领先者把 AI 用于「重塑」而非「提效」的比例高出 2.6 倍。<b>领先者做的事和大多数人做的事，不是同一件事。</b></li>
+        <li><b>因此当前的正确动作不是「更快地铺开工具」，而是「更早地拆流程」。</b>流程重构慢、不可逆、先做的人吃到全部收益——这是第四次革命眼下最明确的窗口。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 04 对我们的映射 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">04</span><h2>映射回我们自己：这套逻辑对 Agent 平台意味着什么</h2>
+      <span class="sub">从宏观规律推回具体决策</span>
+    </div>
+
+    <div class="card">
+      <div class="imp">
+        <div class="idx">01</div>
+        <div>
+          <h3>平台要卖的不是「更强的模型接入」，是「重组的可行性」<span class="infer">推论</span></h3>
+          <p>
+            按铁律二，收益来自流程重构，而重构的瓶颈从来不是「能不能生成」，
+            而是<b>「能不能安全地嵌入现有系统、并且被组织接受」</b>。
+            所以平台层真正的稀缺资产是：<b>协议（MCP / A2A）、权限与审计、可观测性、成本口径、跨系统身份</b>——
+            这些恰恰是让流程敢改的技术前提。
+          </p>
+        </div>
+      </div>
+
+      <div class="imp">
+        <div class="idx">02</div>
+        <div>
+          <h3>「每瓦每秒 token」是第四次革命版的生产率指标，但还不够<span class="infer">推论</span></h3>
+          <p>
+            电气化的教训是：<b>单位成本下降不会自动变成生产率</b>，除非有东西承接被释放的产能。
+            对应到今天，token 便宜之后，承接方是<b>被重构的流程</b>与<b>新的协作单元</b>。
+            平台要提供的第二类指标，是<b>「每个流程被重构后释放了多少人时」</b>——
+            这是继「每瓦每秒 token」之后，第二个能把技术账翻译成组织账的口径。
+          </p>
+        </div>
+      </div>
+
+      <div class="imp">
+        <div class="idx">03</div>
+        <div>
+          <h3>铁律四提示：平台路线图必须带一条「人的迁移」线<span class="infer">推论</span></h3>
+          <p>
+            22–25 岁开发岗 −20% 说明冲击落在<b>入门级</b>。对平台团队的直接含义有两点：
+            一是<b>Agent 承担的是「已被写清 SOP 的执行」，不是「判断」</b>——边界划错，事故率和信任崩塌会同时发生；
+            二是平台自身的团队会出现同样的入门级断层，<b>「谁来带新人」这件事本身正在变成一个新的基础设施问题</b>。
+          </p>
+        </div>
+      </div>
+
+      <div class="imp">
+        <div class="idx">04</div>
+        <div>
+          <h3>J 曲线意味着：短期看不到收益，是正常的，不是失败的信号<span class="infer">推论</span></h3>
+          <p>
+            如果平台在推进「流程重构」类的事，那么头几个季度的 ROI 曲线<b>必然是下探的</b>：
+            迁移、重构、度量口径切换都先记成本。
+            与其用「已上线多少个 Agent」汇报，<b>不如改用「重组资本存量」汇报</b>——
+            流程改了几条、迁完几条、新度量口径建了几套。这才是能预示未来收益的先行指标。
+          </p>
+        </div>
+      </div>
+
+      <div class="imp">
+        <div class="idx">05</div>
+        <div>
+          <h3>稀缺已经迁移：下一轮的瓶颈是「责任」而不是「算力」<span class="infer">推论</span></h3>
+          <p>
+            按铁律一，当执行变便宜，稀缺就转向<b>目标设定与结果担责</b>。
+            这解释了一个反常现象：模型能力仍在快速进步（OSWorld 上智能体任务成功率从约 12% 跃升至约 66%），
+            但组织侧的真实进展仍然缓慢——<b>卡点从「能不能做」变成了「谁批准、谁负责、出了事怎么办」</b>。
+            对平台的含义：<b>权限模型、审计链路与责任边界，将从合规附属品变成核心产品能力</b>。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 来源与不确定项 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">05</span><h2>来源与不确定项</h2>
+      <span class="sub">引用前请先读这一节</span>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>学术与一手来源</h3>
+        <div class="src">
+          <p style="margin-bottom:9px">· Paul A. David (1990), <i>The Dynamo and the Computer</i>, American Economic Review<br/><span>电气化 40 年滞后；「功能固着」与厂房重排；1920s 美国生产率年增 5% 以上</span></p>
+          <p style="margin-bottom:9px">· Robert Solow (1987), <i>Computers and the Productivity Paradox</i>, NYT Book Review<br/><span>「你能在除生产率统计外的任何地方看到计算机时代」</span></p>
+          <p style="margin-bottom:9px">· Bresnahan &amp; Trajtenberg (1995), <i>General Purpose Technologies 'Engines of Growth?'</i>, Journal of Econometrics<br/><span>GPT 三特征：普遍渗透 / 自身持续改进 / 催生互补发明</span></p>
+          <p style="margin-bottom:9px">· Brynjolfsson, Rock &amp; Syverson (2021), <i>The Productivity J-Curve</i>, AEJ: Macroeconomics<br/><span>重组先付成本；2017 年底 TFP 计入无形资本后高出官方 15.9%</span></p>
+          <p style="margin-bottom:9px">· Robert C. Allen (2009), <i>Engels' Pause</i>, <b>Explorations in Economic History</b> 46(4): 418–435<br/><span>1780–1840 劳均产出 +46% vs 实际工资 +12%；1840–1900 产出 +90%、工资 +123%；1860–1900 工资增速 1.61%/年 vs 产出 1.03%/年</span></p>
+          <p style="margin-bottom:9px">· Edward A. Wrigley (2010), <i>Energy and the English Industrial Revolution</i>, CUP<br/><span>「有机经济」国家的能量天花板；煤作为能源基础的指数增长</span></p>
+          <p style="margin-bottom:0">· PwC (2026) Global AI Performance Study；Stanford HAI <i>2026 AI Index Report</i>（2026-04 发布）<br/><span>1,217 位高管 / 25 行业；53% 人口采用、88% 组织采用、74% 价值集中、7.2× 领先者优势</span></p>
+        </div>
+      </div>
+      <div class="card">
+        <h3>不确定项与口径差异</h3>
+        <div class="notes" style="margin-top:0">
+          <ul>
+            <li><b>四次革命分期本身没有统一口径。</b>本页采用「通用目的技术 + 组织重构兑现」这一套分析框架下的分期，与传统教材的「三次科技革命」口径不完全等价，混用时务必说明。</li>
+            <li><b>「1880–1920 美国制造业生产率无明显提升」是 David 的历史估计</b>，受基期选择与统计口径影响；不同研究给出的年份区间略有差异，本页用「约 40 年」概括而非精确到年。</li>
+            <li><b>J 曲线与 15.9% 是估算而非观测</b>：无形资产资本化方法本身有争议，该数字用于说明量级，不宜当作精确结论引用。</li>
+            <li><b>2026 年的组织侧数据是横截面调研</b>（PwC 1,217 位高管），反映的是当期感知与自报收益，不能直接推出因果；「采用率 88%」与「智能体部署个位数」来自不同口径，不应相减。</li>
+            <li><b>「第四次革命」的分期在学界仍有争议</b>，本页只把它当作当前观察窗口，不宣称其已定型。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    电脑技术的发展路径 · 05 工业革命的逻辑 · 史实与数据核对截至 2026 年 11 月公开信息 · 分期与框架为编者归纳<br/>
+    配套专题：<a href="index.html">核心沉淀</a> · <a href="01-history.html">发展路径</a> · <a href="02-architecture.html">底层架构与影响</a> · <a href="03-current.html">现状与来源</a> · <a href="04-glossary.html">术语表</a>
+  </footer>
+
+</div>
+</body>
+</html>

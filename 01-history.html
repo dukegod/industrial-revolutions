@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>01 工业革命主线 · 电脑技术的发展路径</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <span class="nav-brand">Computer Architecture</span>
+    <div class="nav-links">
+      <a href="index.html">核心沉淀</a>
+      <a href="01-history.html" class="on">发展路径</a>
+      <a href="02-architecture.html">底层架构与影响</a>
+      <a href="03-current.html">现状与来源</a>
+      <a href="04-glossary.html">术语表</a>
+      <a href="05-industrial-logic.html">工业革命的逻辑</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="kicker">01 · Main Line</p>
+    <h1>工业革命主线：四轮替代，以及电脑在其中占据的位置</h1>
+    <p class="lede">
+      这一页以<b>工业革命为主线</b>，不是把技术史当背景。每一轮都按同一套解剖写：
+      <b>核心机制 → 替代了什么 → 组织如何被迫重构 → 代价与收益如何分配 → 下一轮的稀缺浮出水面</b>。
+      电脑技术史不是并列的一段，而是<b>第三次革命内部的八次架构跃迁</b>；而当下的 Agent 平台，
+      正在成为<b>第四次革命里最像「组织重构」的那一块</b>。
+    </p>
+    <div class="meta">
+      <span class="tag">四轮革命 <b>完整展开</b></span>
+      <span class="tag">第三次内部 <b>8 次跃迁</b></span>
+      <span class="tag">时期 <b>1760s → 2026+</b></span>
+      <span class="tag">抽象规律见 <a href="05-industrial-logic.html"><b>05 工业革命的逻辑</b> →</a></span>
+    </div>
+  </header>
+
+  <div class="conclusion">
+    <div class="lbl">这一页的核心结论</div>
+    <p><b>四轮革命替换的是四种不同层次的人类能力，而每轮革命真正的分水岭，都发生在「组织被迫重构」的那一刻，而不是技术本身出现的那一刻。</b></p>
+    <p>
+      第一次拿走<b>体力</b>，第二次拿走<b>肌肉</b>，第三次拿走<b>认知</b>，第四次正在拿走<b>认知的执行环节</b>。
+      技术侧的核心机制始终是同一句：<b>把人类自身的一部分能力，转成可复制、可规模化、可低成本调用的外部资源</b>。
+    </p>
+    <p>
+      这条主线有一个反直觉的推论：<b>技术可用与生产率兑现之间，隔着一次组织重构</b>。
+      电气化从 1879 年商用到 1920 年代美国制造业生产率起飞，用了约 <b>40 年</b>；
+      计算机从满屋摆放到生产率加速，用了约 <b>15 年</b>。当下 AI 的位置，正在这条线的延长线上。
+    </p>
+  </div>
+
+  <!-- ============ 00 全景图 ============ -->
+  <section style="margin-top:36px">
+    <div class="sec-head">
+      <span class="num">00</span><h2>全景：四轮革命，一根骨架四种形态</h2>
+      <span class="sub">先看结构，再逐轮展开</span>
+    </div>
+
+    <figure class="figbox">
+      <svg viewBox="0 0 860 320" width="100%" style="display:block;height:auto" role="img" aria-label="四轮工业革命的替代对象、核心机制、组织变革与代价对照全景图">
+        <defs>
+          <marker id="arwM" markerWidth="8" markerHeight="8" refX="6.5" refY="2.8" orient="auto">
+            <path d="M0,0 L6.5,2.8 L0,5.6 Z" fill="#2f6f5e"/>
+          </marker>
+        </defs>
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+          <!-- 行标题 -->
+          <g font-size="11" fill="#7c7a72" letter-spacing="1">
+            <text x="8" y="20">轮次 / 时期</text>
+            <text x="150" y="20">替代的能力</text>
+            <text x="300" y="20">核心机制</text>
+            <text x="530" y="20">组织被迫重构</text>
+            <text x="742" y="20">代价</text>
+          </g>
+          <line x1="8" y1="28" x2="852" y2="28" stroke="#14171e" stroke-width="1.2"/>
+
+          <!-- 第一次 -->
+          <g>
+            <text x="8" y="56" font-size="13.5" fill="#2f6f5e" font-weight="600">第一次</text>
+            <text x="8" y="72" font-size="10.5" fill="#7c7a72">1760s–1840s</text>
+            <text x="150" y="60" font-size="12.5" fill="#14171e">体力 / 畜力</text>
+            <text x="300" y="60" font-size="12" fill="#3a4256">蒸汽动力 + 棉纺机械</text>
+            <text x="300" y="78" font-size="11" fill="#7c7a72">能量密度跃升</text>
+            <text x="530" y="60" font-size="12" fill="#3a4256">工厂制度 + 时间纪律</text>
+            <text x="742" y="60" font-size="12" fill="#3a4256">童工 / 城市贫民窟</text>
+            <line x1="8" y1="92" x2="852" y2="92" stroke="#e9e3d6"/>
+          </g>
+
+          <!-- 第二次 -->
+          <g>
+            <text x="8" y="116" font-size="13.5" fill="#2f6f5e" font-weight="600">第二次</text>
+            <text x="8" y="132" font-size="10.5" fill="#7c7a72">1870s–1914</text>
+            <text x="150" y="120" font-size="12.5" fill="#14171e">肌肉 / 传动轴</text>
+            <text x="300" y="120" font-size="12" fill="#3a4256">电力 + 单元驱动</text>
+            <text x="300" y="138" font-size="11" fill="#7c7a72">动力可独立分配</text>
+            <text x="530" y="120" font-size="12" fill="#3a4256">厂房重建 + 流水线</text>
+            <text x="530" y="138" font-size="11" fill="#7c7a72">科学管理（1911）</text>
+            <text x="742" y="120" font-size="12" fill="#3a4256">劳动的单调化</text>
+            <line x1="8" y1="152" x2="852" y2="152" stroke="#e9e3d6"/>
+          </g>
+
+          <!-- 第三次 -->
+          <g>
+            <text x="8" y="176" font-size="13.5" fill="#2f6f5e" font-weight="600">第三次</text>
+            <text x="8" y="192" font-size="10.5" fill="#7c7a72">1945/1970s–</text>
+            <text x="150" y="180" font-size="12.5" fill="#14171e">认知 / 信息处理</text>
+            <text x="300" y="180" font-size="12" fill="#3a4256">可编程计算 + 网络</text>
+            <text x="300" y="198" font-size="11" fill="#7c7a72">步骤可复用、零边际复制</text>
+            <text x="530" y="180" font-size="12" fill="#3a4256">软件产业 + 流程再造</text>
+            <text x="530" y="198" font-size="11" fill="#7c7a72">ERP / 云 / 平台</text>
+            <text x="742" y="180" font-size="12" fill="#3a4256">数字鸿沟 / 监控化</text>
+            <line x1="8" y1="212" x2="852" y2="212" stroke="#e9e3d6"/>
+          </g>
+
+          <!-- 第四次 -->
+          <g>
+            <text x="8" y="236" font-size="13.5" fill="#2f6f5e" font-weight="600">第四次</text>
+            <text x="8" y="252" font-size="10.5" fill="#7c7a72">2010s–</text>
+            <text x="150" y="240" font-size="12.5" fill="#14171e">认知的执行环节</text>
+            <text x="300" y="240" font-size="12" fill="#3a4256">大模型 + 工具调用</text>
+            <text x="300" y="258" font-size="11" fill="#7c7a72">自主拆解与校验</text>
+            <text x="530" y="240" font-size="12" fill="#3a4256">协议 + 信任边界</text>
+            <text x="530" y="258" font-size="11" fill="#7c7a72">（尚未完成）</text>
+            <text x="742" y="240" font-size="12" fill="#3a4256">入门级岗位先受冲击</text>
+          </g>
+
+          <!-- 底部：贯穿四轮的共同机制 -->
+          <rect x="8" y="272" width="844" height="36" rx="8" fill="#2f6f5e"/>
+          <text x="430" y="288" font-size="12.5" fill="#fff" text-anchor="middle" font-weight="600">
+            共同的机制：把人类的一部分能力，转成可复制、可规模化、可低成本调用的外部资源
+          </text>
+          <text x="430" y="303" font-size="11" fill="#cfe4dc" text-anchor="middle">
+            变的是「拿走哪一部分」与「兑现需要什么条件」，不变的恰恰是这个机制本身
+          </text>
+        </g>
+      </svg>
+      <figcaption>
+        图 0 · 四轮革命的全景。<b>竖着看是替代关系</b>——每轮替代的是不同层次的能力；
+        <b>横着看是组织关系</b>——每一列都对应一次「旧流程被拆掉重排」，这才是收益兑现的真正开关。
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ 01 第一次 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">01</span><h2>第一次工业革命（1760s–1840s）：把力气从肌肉里抽出来</h2>
+      <span class="sub">核心机制 · 组织变革 · 代价</span>
+    </div>
+
+    <div class="card">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
+        核心机制：能量密度的量级跃迁
+      </h3>
+      <p>
+        这一轮的技术本质只有一个：<b>把动力的来源从生物体换成化石燃料</b>。人一小时能输出的功是有限且不可储存的，
+        而烧掉的煤可以持续转化为机械功，并被储存、分配、重复调用。
+      </p>
+      <p style="margin-top:10px">
+        但真正让技术<b>可复制</b>的，是三个具体动作：
+        <b>① 分离冷凝器</b>（瓦特，1765 年发明、1769 年专利）——避免每循环都反复加热冷却汽缸，把浪费的热量省下来；
+        <b>② 旋转运动</b>（1781 年太阳与行星齿轮专利）——把往复运动变成连续旋转，
+        而旋转正是几乎所有工厂机器的通用接口；
+        <b>③ 棉纺机械的系列化</b>——珍妮纺纱机（1760s）、水力纺纱机（1769 专利）、骡机，把纺纱从手工作坊搬进厂房。
+      </p>
+    </div>
+
+    <div class="grid2" style="margin-top:14px">
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20h-20"/></svg>
+          为什么发生在英国：不是民族性，是价格
+        </h3>
+        <p>
+          艾伦（Allen, 2009）的解释是目前最有力的一种：<b>英国 wages 高、能源价格低</b>。
+          高工资让「省人」值钱，廉价煤炭让「用能」便宜——两者叠加，才使「用机器替代人」成为划算的选项。
+        </p>
+        <p style="margin-top:8px">
+          这也解释了为什么技术<b>先在英国出现、后才扩散到世界</b>：纽科门机（1712）最初只为矿井排水，
+          因为在煤矿口燃料几乎免费，笨到极点的机器也能回本。等瓦特把效率提上去，
+          它才在燃料昂贵的地方变得划算。<b>先有的不是发明，是「哪种技术值得被发明」。</b>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 12h10M12 7v10"/></svg>
+          真正的发明：工厂制度
+        </h3>
+        <p>
+          阿克赖特 1771 年在德比郡克罗姆福德建成水力纺纱厂。他的创新<b>不是某一台机器</b>，
+          而是<b>把几百名非熟练工组织起来看管一串动力机器</b>——从家庭作坊的「熟练工独自纺线」，
+          变成「非熟练工在厂房里照看机器」。
+        </p>
+        <p style="margin-top:8px">
+          这才是这一轮最深的变化：<b>工厂不只是建筑，它是一套时间纪律</b>。
+          1833 年《工厂法》给「工厂」下了法律定义——凡使用蒸汽、水力或其他机械动力的纺织厂，
+          并规定 9 岁以下童工不得入厂、9–13 岁每天 8 小时/每周 48 小时、13–18 岁每天不超过 12 小时，
+          同时 13 岁以下儿童每天须接受两小时基础教育。<b>从此人的时间第一次被外部机制精确切分。</b>
+        </p>
+      </div>
+    </div>
+
+    <div class="notes" style="margin-top:14px">
+      <h3>这一轮的账，怎么算</h3>
+      <ul>
+        <li><b>收益最终是真的，但迟到了整整一代人：</b>1780–1840 年劳均产出上升 46%、实际工资只上升 12%（恩格斯停顿）；
+          1840–1900 年劳均产出上升 90%、实际工资上升 123%，<b>1860 年后实际工资增速反超产出增速</b>，
+          「共享增长」才真正确立（Allen, 2009）。从革命起步算，这是<b>约一百年</b>之后。</li>
+        <li><b>代价不是抽象的：</b>童工、工厂污染、城市贫民窟、以及恩格斯笔下的曼彻斯特。1833 年那 4 名检查员管着全英国纺织厂，今天看荒谬，但<b>政府第一次获得「进入厂房并处罚」的权力</b>，制度能力本身就是这次革命的产物。</li>
+        <li><b>留给下一轮的稀缺：</b>动力解决了，但<b>动力怎么送到每一台机器旁边</b>成了新问题——第一次的机器仍需人推、需牛马拉。这就是第二次革命的入口。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 02 第二次 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">02</span><h2>第二次工业革命（1870s–1914）：把动力送到每一台机器旁边</h2>
+      <span class="sub">核心机制 · 单元驱动 · 兑现时滞</span>
+    </div>
+
+    <div class="card">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7h-6"/><path d="M21 7v6"/></svg>
+        核心机制：单元驱动（unit drive）
+      </h3>
+      <p>
+        第一次革命留下一个几何约束：蒸汽机太大，所有机器必须<b>围着传动轴排布</b>，
+        厂房因此多层化、流程绕着轴转、任何一处皮带故障全厂停工。
+      </p>
+      <p style="margin-top:10px">
+        第二次革命的核心不是「电动机比蒸汽机快」，而是<b>动力可以按需送到任意一点</b>：
+        每台机器配自己的马达（<b>单元驱动</b>）。于是机器可以<b>按物料流向排列</b>，厂房可以单层化，
+        流程第一次能够为了物料而设计，而不是为了传动轴。
+        <b>这就是「组织被迫重构」在物理层面的样子。</b>
+      </p>
+    </div>
+
+    <figure class="figbox" style="margin-top:14px">
+      <svg viewBox="0 0 860 250" width="100%" style="display:block;height:auto" role="img" aria-label="中央传动布局与单元驱动布局的对比，以及兑现时滞">
+        <defs>
+          <marker id="arwU" markerWidth="7" markerHeight="7" refX="5.5" refY="2.5" orient="auto">
+            <path d="M0,0 L5.5,2.5 L0,5 Z" fill="#7c7a72"/>
+          </marker>
+        </defs>
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+          <!-- 左：中央传动 -->
+          <text x="8" y="20" font-size="12.5" fill="#14171e" font-weight="600">中央传动（group drive）</text>
+          <text x="8" y="38" font-size="11" fill="#7c7a72">布局由动力位置决定</text>
+          <rect x="8" y="48" width="390" height="128" rx="10" fill="#fff" stroke="#e9e3d6"/>
+          <!-- 蒸汽机 -->
+          <rect x="176" y="60" width="56" height="24" rx="5" fill="#f2efe7" stroke="#d9d2c2"/>
+          <text x="204" y="76" font-size="10" fill="#3a4256" text-anchor="middle">蒸汽机</text>
+          <!-- 天轴 -->
+          <line x1="204" y1="84" x2="204" y2="96" stroke="#7c7a72" stroke-width="1.6"/>
+          <line x1="30" y1="96" x2="378" y2="96" stroke="#7c7a72" stroke-width="2.4"/>
+          <!-- 皮带 -->
+          <g stroke="#b9b1a0" stroke-width="1.1">
+            <line x1="52" y1="96" x2="52" y2="116"/><line x1="120" y1="96" x2="120" y2="116"/>
+            <line x1="288" y1="96" x2="288" y2="116"/><line x1="356" y1="96" x2="356" y2="116"/>
+          </g>
+          <!-- 机器 -->
+          <g fill="#fff" stroke="#e9e3d6">
+            <rect x="30" y="116" width="44" height="26" rx="4"/><rect x="98" y="116" width="44" height="26" rx="4"/>
+            <rect x="266" y="116" width="44" height="26" rx="4"/><rect x="334" y="116" width="44" height="26" rx="4"/>
+          </g>
+          <text x="52" y="133" font-size="9.5" fill="#7c7a72" text-anchor="middle">机</text>
+          <text x="120" y="133" font-size="9.5" fill="#7c7a72" text-anchor="middle">机</text>
+          <text x="288" y="133" font-size="9.5" fill="#7c7a72" text-anchor="middle">机</text>
+          <text x="356" y="133" font-size="9.5" fill="#7c7a72" text-anchor="middle">机</text>
+          <text x="204" y="166" font-size="11" fill="#3a4256" text-anchor="middle">多层厂房 · 一根轴故障 = 全厂停工</text>
+
+          <!-- 右：单元驱动 -->
+          <text x="462" y="20" font-size="12.5" fill="#2f6f5e" font-weight="600">单元驱动（unit drive）</text>
+          <text x="462" y="38" font-size="11" fill="#7c7a72">布局由物料流决定</text>
+          <rect x="462" y="48" width="390" height="128" rx="10" fill="#fff" stroke="#2f6f5e" stroke-opacity=".4"/>
+          <g fill="#fff" stroke="#e9e3d6">
+            <rect x="484" y="116" width="44" height="26" rx="4"/><rect x="552" y="116" width="44" height="26" rx="4"/>
+            <rect x="620" y="116" width="44" height="26" rx="4"/><rect x="688" y="116" width="44" height="26" rx="4"/>
+          </g>
+          <g fill="#2f6f5e">
+            <circle cx="506" cy="106" r="6"/><circle cx="574" cy="106" r="6"/><circle cx="642" cy="106" r="6"/><circle cx="710" cy="106" r="6"/>
+          </g>
+          <text x="506" y="133" font-size="9.5" fill="#7c7a72" text-anchor="middle">机</text>
+          <text x="574" y="133" font-size="9.5" fill="#7c7a72" text-anchor="middle">机</text>
+          <text x="642" y="133" font-size="9.5" fill="#7c7a72" text-anchor="middle">机</text>
+          <text x="710" y="133" font-size="9.5" fill="#7c7a72" text-anchor="middle">机</text>
+          <g stroke="#2f6f5e" stroke-width="1.4" marker-end="url(#arwU)" opacity=".8">
+            <path d="M528,129 L552,129"/><path d="M596,129 L620,129"/><path d="M664,129 L688,129"/>
+          </g>
+          <text x="657" y="166" font-size="11" fill="#2f6f5e" text-anchor="middle" font-weight="600">单层厂房 · 按工序排列 · 流水线成为可能</text>
+
+          <!-- 下方：兑现 -->
+          <line x1="8" y1="192" x2="852" y2="192" stroke="#e9e3d6"/>
+          <text x="8" y="212" font-size="12" fill="#14171e"><tspan fill="#2f6f5e" font-weight="600">兑现时滞：</tspan><tspan>只把蒸汽机换成大马达 → 生产率几乎不动；改成单元驱动 + 重排厂房 → 1920s 美国制造业生产率年增 5% 以上</tspan></text>
+          <text x="8" y="232" font-size="11.5" fill="#7c7a72">Paul David (1990)：1880–1920 美国制造业生产率增速无明显提升；电动机 1899 年只占美国工厂总动力的不到 5%，直到 1920s 才接近全面渗透</text>
+        </g>
+      </svg>
+      <figcaption>
+        图 1 · <b>第二次革命真正的生产率开关不是电动机，是「单元驱动 + 布局重排」</b>。
+        这是本套文档反复出现的那条规律最原始的样子：<b>新技术本身不产生生产率，重构才产生。</b>
+      </figcaption>
+    </figure>
+
+    <div class="grid2" style="margin-top:14px">
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
+          同轮并行的三件事：材料、化学、管理
+        </h3>
+        <ul style="margin:6px 0 0;padding-left:18px;font-size:13.8px;color:var(--ink2)">
+          <li><b>钢铁：</b>贝塞麦转炉法（1856）用空气吹炼熔铁除杂，让钢从昂贵变成便宜——<b>材料成本下降，等于给所有行业发了一次补贴</b>。</li>
+          <li><b>化学：</b>哈伯-博施合成氨工艺在 1913 年于德国实现工业化，让氮肥可以量产，直接支撑了 1950–70 年代的绿色革命——<b>化学革命的兑现晚于它的起点近半个世纪</b>。</li>
+          <li><b>管理：</b>泰勒《科学管理原理》（1911）把作业拆解、计时、标准化，<b>把「老师傅的手艺」变成可复制的标准动作</b>。这是第一次把知识从个人身上剥离成组织资产。</li>
+          <li><b>流水线：</b>福特 1913-12-01 在 Highland Park 工厂启用移动装配线，Model T 车体组装时间从 12 小时以上压到约 90 分钟。</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+          这一轮的账
+        </h3>
+        <p>
+          <b>分配：</b>上一轮留下的分配账，在这一轮结清：<b>1860 年后英国实际工资增速反超劳均产出增速</b>
+          （1.61%/年 vs 1.03%/年），「共享增长」确立（Allen, 2009）。
+          艾伦给出的机制<b>不是</b>替代弹性上升，而是<b>资本积累终于追上了技术进步的要求</b>——
+          19 世纪上半叶「资本与劳动替代弹性偏低」正是恩格斯停顿的成因；积累一旦追上技术，工资就与生产率同步。
+        </p>
+        <p style="margin-top:8px">
+          <b>代价：</b>流水线把劳动变成单调重复的岗位；两次世界大战的物质基础正是这一轮的重工业与化工能力；
+          泰勒制把工人的自主性换成可计算性。
+        </p>
+        <p style="margin-top:8px">
+          <b>留给下一轮的稀缺：</b>动力与材料都便宜了，<b>但「谁来协调这些分散的产能」成了新问题</b>——
+          于是有了电气化后的规模组织，也有了后来需要被计算的「信息」。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 第三次 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">03</span><h2>第三次工业革命（1945 / 1970s–）：把步骤从流程里抽出来</h2>
+      <span class="sub">电脑技术史 = 这一轮内部的八次架构跃迁</span>
+    </div>
+
+    <div class="card">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11v2M10 11v2M14 11v2M18 11v2"/></svg>
+        核心机制：可编程 + 零边际复制
+      </h3>
+      <p>
+        第三次革命是第一次让<b>「步骤」本身</b>成为可存储、可修改、可复制的东西。
+        冯·诺依曼结构把程序与数据放进同一存储，计算从此是<b>可复用的软件</b>而非一次性的机械过程；
+        再加上网络，<b>复制一份行为几乎不花钱</b>——这是人类第一次拥有的「零边际复制」。
+      </p>
+      <p style="margin-top:10px">
+        但它的兑现同样慢：索洛 1987 年写下「<b>你能在除生产率统计外的任何地方看到计算机时代</b>」，
+        美国生产率直到 1990 年代末才起飞——<b>约 15 年</b>。原因还是那句老话：<b>机器装上了，流程没重排</b>。
+      </p>
+    </div>
+
+    <div class="notes" style="margin-top:14px">
+      <h3>这一轮的三大件（传统教材口径的四大发明之一）</h3>
+      <ul>
+        <li><b>电子计算机</b>——本套文档的全部对象，也是四大发明中<b>唯一仍在持续演进</b>的一个。</li>
+        <li><b>原子能</b>——把能量供给从化石燃料的储量约束中解放出来，但代价是核废料与核扩散的政治成本。</li>
+        <li><b>空间技术</b>——把「地球上的资源与市场」边界打开，同时催生了通信、导航、材料等大量外溢技术。</li>
+        <li><b>生物工程</b>——从改造生命本身开始，是这一轮中「对象从物转向生命」的转折，但商业化兑现远慢于计算。</li>
+      </ul>
+    </div>
+
+    <!-- 八次架构跃迁 -->
+    <div style="margin-top:26px">
+      <div class="sec-head">
+        <span class="num">03.1</span><h2>第三次革命内部：八次架构跃迁</h2>
+        <span class="sub">左列为时期，右侧为「架构跃迁 → 带来的影响」</span>
+      </div>
+      <ol class="tl">
+        <li>
+          <div class="when"><span class="yr">1945–1957</span><span class="name">电子管 / 晶体管</span></div>
+          <div class="body">
+            <h3>确立「存储程序」：计算第一次成为可复用的通用过程</h3>
+            <div class="chips"><span class="chip">冯·诺依曼结构</span><span class="chip">ENIAC→EDVAC</span><span class="chip">晶体管替代电子管</span></div>
+            <p class="impact">
+              <b>跃迁：</b>程序从「改接线」变成「存进机器」，与数据同构；电子管换成晶体管后体积与能耗骤降。<br/>
+              <b>影响：</b>「一台机器跑不同程序」成为可能，<b>软件第一次成为独立产业</b>；此后所有通用计算形态的根源都在这里。
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="when"><span class="yr">1958–1978</span><span class="name">集成电路 / ISA 商业化</span></div>
+          <div class="body">
+            <h3>ISA 成为软硬件之间的商业契约</h3>
+            <div class="chips"><span class="chip">LSI 集成</span><span class="chip">Intel 4004（1971）</span><span class="chip">x86（1978）</span></div>
+            <p class="impact">
+              <b>跃迁：</b>微处理器把 CPU 变成可量产商品；x86 用「向下兼容」把指令集变成长期契约。<br/>
+              <b>影响：</b>软硬件彻底解耦，OS 与应用可独立迭代；<b>「兼容优先于最优」从此成为整个 PC 产业的文化</b>，也决定了此后三十年谁的护城河更深。
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="when"><span class="yr">1985–1995</span><span class="name">RISC / Cache</span></div>
+          <div class="body">
+            <h3>性能不再靠堆指令，而靠「喂饱」流水线</h3>
+            <div class="chips"><span class="chip">精简 ISA（ARM/SPARC/MIPS）</span><span class="chip">多级 Cache</span><span class="chip">DRAM 主存</span></div>
+            <p class="impact">
+              <b>跃迁：</b>流水线 + 寄存器堆 + 存储层次，把单核性能从「每周期几条指令」推向「每周期一条」；<b>访存延迟第一次成为一等公民</b>。<br/>
+              <b>影响：</b>「内存墙」雏形出现；CISC 与 RISC 之争最终以「x86 靠兼容 + 制程红利、ARM 靠授权模式各占一边」收敛——<b>生态模式比指令集本身更决定胜负</b>。
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="when"><span class="yr">1995–2006</span><span class="name">多核 / SMP</span></div>
+          <div class="body">
+            <h3>从「一台机器」到「一堆核」：并发成为通用工程能力</h3>
+            <div class="chips"><span class="chip">SMP（1995）</span><span class="chip">超线程（2003）</span><span class="chip">NUMA / CC-NUMA</span></div>
+            <p class="impact">
+              <b>跃迁：</b>单核提速撞上功耗与频率墙，产业转向横向扩展；内存与缓存必须按 NUMA 拓扑手工摆放。<br/>
+              <b>影响：</b>软件栈被迫大规模重写，<b>线程、锁、内存序、并行算法</b> 成为工程师通用技能；Amdahl 定律成为架构与算法共同的天花板。
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="when"><span class="yr">2006–2015</span><span class="name">GPU / CUDA 与移动 SoC</span></div>
+          <div class="body">
+            <h3>两条支线同时爆发：通用并行算力 + 移动优先</h3>
+            <div class="chips"><span class="chip">GPU 可编程化（2006–08）</span><span class="chip">CUDA 生态</span><span class="chip">异构 SoC / big.LITTLE</span></div>
+            <p class="impact">
+              <b>跃迁：</b>图形流水线变成通用并行阵列；手机 SoC 用制程与封装红利让消费级设备算力超过桌面。<br/>
+              <b>影响：</b>NVIDIA 从「卖显卡」转型「卖算力平台」，<b>CUDA 成为比指令集更硬的护城河</b>；软件竞争焦点从 ISA 转向「编程模型 + 库」；计算重心整体移向移动，催生移动优先的互联网与云端数据流。
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="when"><span class="yr">2016–2022</span><span class="name">数据中心专用化</span></div>
+          <div class="body">
+            <h3>Scaling Law 成为行业共识：堆卡比调优更划算</h3>
+            <div class="chips"><span class="chip">TPU（2016 起）</span><span class="chip">NVLink / InfiniBand 域</span><span class="chip">DGX 整机</span><span class="chip">低精度训练</span></div>
+            <p class="impact">
+              <b>跃迁：</b>Transformer + 大规模集群让「专用加速器 + 高速互连」成为标配，云厂商开始自研 ASIC。<br/>
+              <b>影响：</b>算力竞赛从芯片级升级为<b>系统、网络、机房、电力</b>级的全栈竞赛；模型能力第一次可被资本化，AI 从研究议题变成产品议题。
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="when"><span class="yr">2023–2026</span><span class="name">内存墙 / Chiplet / AI 工厂</span></div>
+          <div class="body">
+            <h3>瓶颈换人：算力过剩，数据搬运与电力稀缺</h3>
+            <div class="chips"><span class="chip">HBM3E → HBM4</span><span class="chip">Chiplet + CoWoS</span><span class="chip">Scale-up 以太网</span><span class="chip">液冷机柜</span><span class="chip">Prefill/Decode 分离</span></div>
+            <p class="impact">
+              <b>跃迁：</b>算力两年翻 3 倍，内存带宽只涨 1.6 倍、互连只涨 1.4 倍——<b>大部分算力在等数据</b>；于是 HBM 容量、KV Cache 分层、prefill/decode 分离成为一等设计。<br/>
+              <b>影响：</b><b>衡量指标从 FLOPS 变成「每瓦每秒 token」</b>；推理在 2028 年前后成为数据中心最大电力消耗来源；自研芯片打破单一供给；内存超级周期直接改写消费电子成本结构。
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="when"><span class="yr">2026→</span><span class="name">RISC-V 与可定制异构</span></div>
+          <div class="body">
+            <h3>ISA 从商业垄断回到「可定制底座」</h3>
+            <div class="chips"><span class="chip">RVA23 基线 + 服务器平台规范 1.0</span><span class="chip">Chiplet 自由组合</span><span class="chip">CPU 直连 GPU</span><span class="chip">边缘 / 车载 / 推理</span></div>
+            <p class="impact">
+              <b>跃迁：</b>2026 年 6 月落地的服务器平台规范 1.0 补齐了 UEFI/ACPI、PCIe/IOMMU、BMC Redfish、RAS、安全启动等系统级规则，<b>让「一套镜像跨品牌部署」成为可能</b>。<br/>
+              <b>影响：</b>新壁垒从「能不能做」转向<b>「指令扩展碎片化 + 软件生态碎片化 + 产能」</b>；同时 AI 反哺 ISA 迁移——用 Agent 写移植代码，正在降低换架构的成本。
+            </p>
+          </div>
+        </li>
+      </ol>
+      <p class="muted" style="margin-top:12px">
+        <b>把八次跃迁放回主线看：</b>它们不是「电脑发展史」，而是<b>第三次革命在「计算」这一个维度上的内部进程</b>。
+        每一次跃迁都在解决上一轮的瓶颈，而复杂度同步上移一层——
+        多核逼出并发编程，GPU 逼出编程模型与库，集群逼出分布式一致性，AI 工厂逼出调度与成本治理。
+        详细拆解见 <a href="02-architecture.html" style="color:var(--accent)">02 底层架构与影响</a>。
+      </p>
+    </div>
+
+    <div class="notes" style="margin-top:20px">
+      <h3>这一轮的账</h3>
+      <ul>
+        <li><b>收益：</b>信息成为与物质、能源并列的核心资源；软件与知识第一次能零成本复制；全球化分工被通信成本压平。</li>
+        <li><b>代价：</b>数字鸿沟、劳动的监控化与去技能化、平台对数据的集中——<b>「连接了」不等于「平等了」</b>。</li>
+        <li><b>留给下一轮的稀缺：</b>信息处理与计算变得极其便宜，<b>稀缺转移到了「注意力」与「信任」</b>——这也是第三次革命至今仍未「结束」的根源：它把「决策辅助」做到了极致，却没解决「谁来决策、谁负责」。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 04 第四次 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">04</span><h2>第四次工业革命（2010s–）：把决策的执行环节交出去</h2>
+      <span class="sub">正在发生 · 数据核对至 2026-11</span>
+    </div>
+
+    <div class="card">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        核心机制：自主执行
+      </h3>
+      <p>
+        分水岭在<b>自主性</b>：第三次是自动化——按既定程序稳定执行；
+        第四次是<b>系统自主拆解任务、调用工具、跨系统协作并校验结果</b>。
+      </p>
+      <p style="margin-top:10px">
+        用主线的话讲：<b>模型是发动机，工具协议、权限边界与反馈闭环才是传动轴</b>。
+        第四次革命真正的通用技术，很可能不是某个模型，而是<b>「模型 × 工具 × 协议 × 校验」这一整套组合</b>——
+        这与第二次革命里「电动机 × 单元驱动 × 厂房重建」是同一种结构。
+      </p>
+    </div>
+
+    <div class="grid2" style="margin-top:14px">
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7h-6"/><path d="M21 7v6"/></svg>
+          已经发生的：普及速度史上最快
+        </h3>
+        <dl class="kv">
+          <dt>人口采用</dt><dd>53% · 3 年内</dd>
+          <dt>组织采用</dt><dd>88%</dd>
+          <dt>价值集中</dt><dd>前 20% 拿走 74%</dd>
+          <dt>领先者优势</dt><dd>7.2×</dd>
+          <dt>能力进展</dt><dd>OSWorld 12% → ~66%</dd>
+        </dl>
+        <p class="muted" style="margin-top:10px">
+          生成式 AI 三年达成 53% 人口采用，<b>快于 PC 与互联网</b>；SWE-bench Verified 一年内从 60% 升至接近 100%。
+          但美国以投资第一的身份，采用率仅列第 24（28.3%）——<b>采用速度是价格与场景指标，不是能力指标</b>。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+          还没发生的：组织内部没动
+        </h3>
+        <dl class="kv">
+          <dt>智能体部署</dt><dd>各职能均为个位数</dd>
+          <dt>已重设计流程</dt><dd>领先者 56% / 普遍不足</dd>
+          <dt>见收益周期</dt><dd>试点后约 6.8 个月</dd>
+          <dt>CEO 无财务收益</dt><dd>56%</dd>
+          <dt>入门岗冲击</dt><dd>22–25 岁开发岗 −20%</dd>
+        </dl>
+        <p class="muted" style="margin-top:10px">
+          PwC 2026 调研：仅 26% 的 CEO 认为成本因 AI 下降，超半数没看到任何收入或成本收益；
+          澳洲样本只有 7% 的企业重设计过工作流，AI 领先者是 56%。
+          <b>这正是 1895 年工厂的样子。</b>
+        </p>
+      </div>
+    </div>
+
+    <div class="notes" style="margin-top:14px">
+      <h3>把第四轮放回主线：它在重复前三次的哪一步</h3>
+      <ul>
+        <li><b>重复的：</b>「消费端普及 → 组织端重构 → 生产率兑现」这条时滞链条，一模一样。
+          电气化 40 年、计算机 15 年，AI 目前是<b>第三段刚起步</b>。</li>
+        <li><b>不同的：</b>前三次替代的是<b>体力与肌肉</b>，第四次触及<b>认知</b>——因此冲击落在知识工作者的入门级岗位，
+          而不是整类职业。22–25 岁软件开发者就业自 2024 年下降近 20%，而整体就业尚未显著下降。</li>
+        <li><b>关键区别：</b>前三次的生产率兑现靠<b>重建厂房与流程</b>；这一次的对应物是<b>重建「谁定义目标、谁验收结果」这条链路</b>——
+          它没有物理形态，因此<b>可能更快，也可能更慢</b>：因为它不需要浇混凝土，但需要拆的是「谁向谁汇报、哪个系统拥有记录」。</li>
+        <li><b>下一次稀缺的预告：</b>当执行变便宜，稀缺就转向<b>目标设定与责任担承</b>——
+          权限模型、审计链路与责任边界，会从合规附属品变成核心产品能力。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 05 四轮并置 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">05</span><h2>四轮并置：一张表看清演进骨架</h2>
+      <span class="sub">机制 · 替代 · 组织 · 兑现 · 新稀缺</span>
+    </div>
+
+    <div class="figbox" style="padding:16px 22px 8px">
+      <table>
+        <thead>
+          <tr><th>维度</th><th>第一次</th><th>第二次</th><th>第三次</th><th>第四次</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>时期</td><td>1760s–1840s</td><td>1870s–1914</td><td>1945 / 1970s–</td><td>2010s–</td></tr>
+          <tr><td>核心机制</td><td>蒸汽动力：能量密度跃升</td><td>电力与单元驱动：动力可独立分配</td><td>可编程计算：步骤可零成本复制</td><td>大模型与工具：决策可被委托执行</td></tr>
+          <tr><td>替代对象</td><td>体力 / 畜力</td><td>肌肉 / 传动轴</td><td>认知 / 信息处理</td><td>认知的执行环节</td></tr>
+          <tr><td>组织变革</td><td>工厂制度 + 时间纪律</td><td>厂房重建 + 流水线 + 科学管理</td><td>软件产业 + 网络 + 流程再造</td><td>协议 + 信任边界 + 流程重构（进行中）</td></tr>
+          <tr><td>兑现时滞<br/><span style="font-weight:400;font-size:11.5px">（第一次为分配端，其余为生产率端）</span></td><td>约 100 年（到共享增长）</td><td>约 40 年（电气化）</td><td>约 15 年（计算机）</td><td>尚未兑现</td></tr>
+          <tr><td>分配后果</td><td>恩格斯停顿：1780–1840 劳均产出 +46%、工资 +12%</td><td>1860 年后工资增速反超产出增速</td><td>数字鸿沟 · 去技能化</td><td>入门级岗位先受冲击</td></tr>
+          <tr><td>新稀缺</td><td>原料与市场</td><td>规模与协调</td><td>注意力与信任</td><td>目标设定与责任</td></tr>
+          <tr><td>本套文档对应</td><td colspan="4"><a href="05-industrial-logic.html">05 工业革命的逻辑</a> — 四条铁律与平台推论</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="notes" style="margin-top:14px">
+      <h3>读这张表的三个提醒</h3>
+      <ul>
+        <li><b>「替代对象」列是主线，其余列是它的展开。</b>四轮之间的连续性全在这一列——体力、肌肉、认知、执行，逐层向上。</li>
+        <li><b>「兑现时滞」不是失败，是机制的一部分，但这一行混着两种时滞。</b>
+          第一次的约 100 年是<b>分配端</b>（收益多久才分到劳动者手里），第二、三次的 40 年与 15 年是<b>生产率端</b>（多久体现在统计里）。
+          两者机制不同、不可相加：分配端靠<b>资本积累追上技术进步</b>，生产率端靠<b>组织围绕新能力重排</b>。</li>
+        <li><b>分期口径不统一，引用前先声明。</b>传统教材口径「第三次科技革命 = 1945/1970s 起」，产业经济学口径「第四次 = 2010s 起的智能化」——
+          按后一套，Agent 平台属于<b>第四次</b>而非第三次。汇报时先说清用哪一套，否则同一件事会被理解成两个意思。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 06 来源 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">06</span><h2>来源与不确定项</h2>
+      <span class="sub">对外引用前先读这一节</span>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>一手与学术来源</h3>
+        <div class="src">
+          <p style="margin-bottom:9px">· Robert C. Allen (2009), <i>The British Industrial Revolution in Global Perspective</i>, CUP<br/><span>高工资 + 廉价煤的要素价格解释；技术为何先在英国出现、后才扩散</span></p>
+          <p style="margin-bottom:9px">· Paul A. David (1990), <i>The Dynamo and the Computer</i>, American Economic Review<br/><span>电气化约 40 年时滞；功能固着；单元驱动与厂房重排；1920s 生产率年增 5% 以上</span></p>
+          <p style="margin-bottom:9px">· Robert Solow (1987), <i>Computers and the Productivity Paradox</i>, NYT Book Review<br/><span>「你能在除生产率统计外的任何地方看到计算机时代」</span></p>
+          <p style="margin-bottom:9px">· Robert C. Allen (2009), <i>Engels' Pause: Technical Change, Capital Accumulation, and Inequality in the British Industrial Revolution</i>, <b>Explorations in Economic History</b> 46(4): 418–435<br/><span>1780–1840 劳均产出 +46% vs 实际工资 +12%；1840–1900 产出 +90%、工资 +123%；1860–1900 工资增速 1.61%/年 vs 产出 1.03%/年；「替代弹性偏低 → 积累追上技术 → 工资同步」机制</span></p>
+          <p style="margin-bottom:9px">· Edward A. Wrigley (2010), <i>Energy and the English Industrial Revolution</i>, CUP<br/><span>「有机经济」的能量天花板；煤作为能源基础的持续增长</span></p>
+          <p style="margin-bottom:9px">· Bresnahan &amp; Trajtenberg (1995), <i>General Purpose Technologies 'Engines of Growth?'</i>, Journal of Econometrics<br/><span>GPT 三特征：普遍渗透 / 自身持续改进 / 催生互补发明</span></p>
+          <p style="margin-bottom:0">· 《工厂法》1833（英国议会法案全文）；PwC (2026) Global AI Performance Study；Stanford HAI <i>2026 AI Index Report</i>（2026-04）<br/><span>工厂的法定定义与工时规定；1,217 位高管 / 25 行业；53% 人口采用、88% 组织采用、74% 价值集中</span></p>
+        </div>
+      </div>
+      <div class="card">
+        <h3>不确定项与口径差异</h3>
+        <div class="notes" style="margin-top:0">
+          <ul>
+            <li><b>四次革命分期没有统一口径。</b>本页采用「通用目的技术 + 组织重构兑现」框架下的分期，与传统教材的「三次科技革命」不等价，混用时务必说明。</li>
+            <li><b>「1880–1920 美国制造业生产率无明显提升」是历史估计</b>，受基期与统计口径影响；不同研究给出的年份区间略有差异，本页用「约 40 年」概括。</li>
+            <li><b>Allen 的要素价格解释是主流解释而非定论</b>：其工资数据的可比性、纺织业技术偏向、以及荷兰同样高工资却未率先工业化等问题，学界仍有权重不同的批评。</li>
+            <li><b>哈伯-博施的「绿色革命」因果链跨越近半个世纪</b>，且同期还有育种、灌溉、农药、土地制度等变量，不能单归因于合成氨。</li>
+            <li><b>2026 年的组织侧数据是横截面调研</b>（PwC 1,217 位高管），反映当期感知与自报收益，不能直接推出因果；「88% 采用率」与「智能体部署个位数」来自不同口径，不应相减。</li>
+            <li><b>八次架构跃迁的阶段边界为编者归纳</b>，各阶段互有重叠，不宜当作精确年份引用。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    电脑技术的发展路径 · 01 工业革命主线 · 事实核对截至 2026 年 11 月公开信息 · 历史分期为编者归纳，各阶段边界为近似划分<br/>
+    配套专题：<a href="index.html">核心沉淀</a> · <a href="02-architecture.html">底层架构与影响</a> · <a href="03-current.html">现状与来源</a> · <a href="04-glossary.html">术语表</a> · <a href="05-industrial-logic.html">工业革命的逻辑</a>
+  </footer>
+
+</div>
+</body>
+</html>

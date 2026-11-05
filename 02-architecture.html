@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>02 底层架构与影响 · 电脑技术的发展路径</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <span class="nav-brand">Computer Architecture</span>
+    <div class="nav-links">
+      <a href="index.html">核心沉淀</a>
+      <a href="01-history.html">发展路径</a>
+      <a href="02-architecture.html" class="on">底层架构与影响</a>
+      <a href="03-current.html">现状与来源</a>
+      <a href="04-glossary.html">术语表</a>
+      <a href="05-industrial-logic.html">工业革命的逻辑</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="kicker">02 · Architecture &amp; Impact</p>
+    <h1>七层抽象栈，与它带来的结构性改变</h1>
+    <p class="lede">
+      理解电脑技术史的关键，不是罗列型号，而是看<b>每一层抽象各自解决了上一层的什么麻烦、又制造了什么新麻烦</b>。
+      这一页给出坐标系（分层栈）、骨架（三条主线），以及影响落到各层的对照表。
+    </p>
+    <div class="meta">
+      <span class="tag">分层 <b>7 层</b></span>
+      <span class="tag">主线 <b>3 条</b></span>
+      <span class="tag">影响维度 <b>10 项</b></span>
+      <span class="tag">历史细节见 <a href="01-history.html"><b>发展路径</b> →</a></span>
+    </div>
+  </header>
+
+  <!-- ============ 七层栈 ============ -->
+  <section style="margin-top:36px">
+    <div class="sec-head">
+      <span class="num">01</span><h2>先看栈：瓶颈在层与层之间往下沉</h2>
+      <span class="sub">抽象层越高，越容易把复杂度「藏起来」</span>
+    </div>
+    <p>
+      每一次架构跃迁，本质上都是<b>把某一层的复杂度用软件吸收掉</b>，同时把新的稀缺性压到更低层。
+      上层开发者感受最直接的，往往是最低层的改动——这就是为什么芯片、内存、网络的代际变化会直接改写应用架构。
+    </p>
+
+    <figure class="figbox">
+      <svg viewBox="0 0 860 396" width="100%" style="display:block;height:auto" role="img" aria-label="计算机系统七层抽象栈与瓶颈下沉路径">
+        <defs>
+          <linearGradient id="gstack" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2f6f5e" stop-opacity=".20"/>
+            <stop offset="1" stop-color="#2f6f5e" stop-opacity=".07"/>
+          </linearGradient>
+          <marker id="arw" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+            <path d="M0,0 L7,3.2 L0,6.4 Z" fill="#2f6f5e"/>
+          </marker>
+        </defs>
+
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+          <g>
+            <rect x="24" y="16" width="560" height="42" rx="9" fill="url(#gstack)" stroke="#e9e3d6"/>
+            <text x="42" y="35" font-size="13.5" fill="#14171e" font-weight="600">应用与工作负载</text>
+            <text x="42" y="50" font-size="11.5" fill="#7c7a72">业务逻辑 / 模型 / Agent 编排 · 成本直接由下层决定</text>
+          </g>
+          <g>
+            <rect x="24" y="70" width="560" height="42" rx="9" fill="url(#gstack)" stroke="#e9e3d6"/>
+            <text x="42" y="89" font-size="13.5" fill="#14171e" font-weight="600">运行时与框架</text>
+            <text x="42" y="104" font-size="11.5" fill="#7c7a72">CUDA / XLA / vLLM / SGLang · 编程模型与库决定迁移成本</text>
+          </g>
+          <g>
+            <rect x="24" y="124" width="560" height="42" rx="9" fill="url(#gstack)" stroke="#e9e3d6"/>
+            <text x="42" y="143" font-size="13.5" fill="#14171e" font-weight="600">系统与调度</text>
+            <text x="42" y="158" font-size="11.5" fill="#7c7a72">容器编排 / 多租户 / 冷热分层 · 决定资源利用率</text>
+          </g>
+          <g>
+            <rect x="24" y="178" width="560" height="42" rx="9" fill="url(#gstack)" stroke="#e9e3d6"/>
+            <text x="42" y="197" font-size="13.5" fill="#14171e" font-weight="600">互连与网络</text>
+            <text x="42" y="212" font-size="11.5" fill="#7c7a72">Scale-up: NVLink / ICI · Scale-out: 以太网 / InfiniBand</text>
+          </g>
+          <g>
+            <rect x="24" y="232" width="560" height="42" rx="9" fill="url(#gstack)" stroke="#e9e3d6"/>
+            <text x="42" y="251" font-size="13.5" fill="#14171e" font-weight="600">内存与存储</text>
+            <text x="42" y="266" font-size="11.5" fill="#7c7a72">HBM / DDR / CXL / NVMe · 当下最紧的资源</text>
+          </g>
+          <g>
+            <rect x="24" y="286" width="560" height="42" rx="9" fill="url(#gstack)" stroke="#e9e3d6"/>
+            <text x="42" y="305" font-size="13.5" fill="#14171e" font-weight="600">硅、封装与散热</text>
+            <text x="42" y="320" font-size="11.5" fill="#7c7a72">制程节点 / Chiplet / CoWoS / 液冷 · 交付单元已是机架</text>
+          </g>
+          <g>
+            <rect x="24" y="340" width="560" height="42" rx="9" fill="url(#gstack)" stroke="#e9e3d6"/>
+            <text x="42" y="359" font-size="13.5" fill="#14171e" font-weight="600">指令集与微架构</text>
+            <text x="42" y="374" font-size="11.5" fill="#7c7a72">x86 / ARM / RISC-V / GPU 核心 · 生态契约</text>
+          </g>
+        </g>
+
+        <path d="M640,40 L640,360" stroke="#2f6f5e" stroke-width="2" fill="none" marker-end="url(#arw)" opacity=".85"/>
+        <text x="656" y="52" font-family="Outfit, 'PingFang SC', sans-serif" font-size="12.5" fill="#2f6f5e" font-weight="600">瓶颈下沉方向</text>
+        <g font-family="JetBrains Mono, monospace" font-size="11" fill="#7c7a72">
+          <text x="656" y="86">S1-S3 指令与流水线</text>
+          <text x="656" y="132">S4-S5 并行与编程模型</text>
+          <text x="656" y="196">S6 互连与集群</text>
+          <text x="656" y="250">S7 内存容量与带宽</text>
+          <text x="656" y="304">S8 电力 / 成本 / 生态</text>
+        </g>
+        <text x="656" y="348" font-family="Outfit, 'PingFang SC', sans-serif" font-size="11.5" fill="#7c7a72">→ 越往下越难改，</text>
+        <text x="656" y="364" font-family="Outfit, 'PingFang SC', sans-serif" font-size="11.5" fill="#7c7a72">但越往上越能藏</text>
+      </svg>
+      <figcaption>
+        图 1 · 七层抽象栈。S1–S8 对应 <a href="01-history.html" style="color:var(--accent)">发展路径</a>页的八个阶段编号。
+      </figcaption>
+    </figure>
+  </section>
+
+  <!-- ============ 三条主线 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">02</span><h2>把八段历史压缩成三条主线</h2>
+      <span class="sub">记住这三条，就抓住了演进的骨架</span>
+    </div>
+
+    <figure class="figbox">
+      <svg viewBox="0 0 860 222" width="100%" style="display:block;height:auto" role="img" aria-label="三条技术主线的演进方向">
+        <defs>
+          <marker id="arw2" markerWidth="8" markerHeight="8" refX="6.5" refY="2.8" orient="auto">
+            <path d="M0,0 L6.5,2.8 L0,5.6 Z" fill="#2f6f5e"/>
+          </marker>
+        </defs>
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+          <text x="8" y="36" font-size="13" fill="#2f6f5e" font-weight="600">主线一</text>
+          <text x="8" y="54" font-size="11.5" fill="#7c7a72">瓶颈迁移</text>
+          <g font-size="12" fill="#14171e">
+            <rect x="92" y="20" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="151" y="42" text-anchor="middle">指令吞吐</text>
+            <rect x="236" y="20" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="295" y="42" text-anchor="middle">流水线 / 时钟</text>
+            <rect x="380" y="20" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="439" y="42" text-anchor="middle">访存延迟</text>
+            <rect x="524" y="20" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="583" y="42" text-anchor="middle">互连带宽</text>
+            <rect x="668" y="20" width="150" height="34" rx="8" fill="#2f6f5e"/><text x="743" y="42" text-anchor="middle" fill="#fff">电力与成本</text>
+          </g>
+          <g stroke="#2f6f5e" stroke-width="1.4" opacity=".55" marker-end="url(#arw2)">
+            <path d="M212,37 L232,37"/><path d="M356,37 L376,37"/><path d="M500,37 L520,37"/><path d="M644,37 L664,37"/>
+          </g>
+
+          <text x="8" y="106" font-size="13" fill="#2f6f5e" font-weight="600">主线二</text>
+          <text x="8" y="124" font-size="11.5" fill="#7c7a72">形态选择</text>
+          <g font-size="12" fill="#14171e">
+            <rect x="92" y="90" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="151" y="112" text-anchor="middle">x86 通用</text>
+            <rect x="236" y="90" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="295" y="112" text-anchor="middle">GPU / ASIC</text>
+            <rect x="380" y="90" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="439" y="112" text-anchor="middle">Chiplet 组装</text>
+            <rect x="524" y="90" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="583" y="112" text-anchor="middle">RISC-V 定制</text>
+            <rect x="668" y="90" width="150" height="34" rx="8" fill="#2f6f5e"/><text x="743" y="112" text-anchor="middle" fill="#fff">按场景合成</text>
+          </g>
+          <g stroke="#2f6f5e" stroke-width="1.4" opacity=".55" marker-end="url(#arw2)">
+            <path d="M212,107 L232,107"/><path d="M356,107 L376,107"/><path d="M500,107 L520,107"/><path d="M644,107 L664,107"/>
+          </g>
+
+          <text x="8" y="176" font-size="13" fill="#2f6f5e" font-weight="600">主线三</text>
+          <text x="8" y="194" font-size="11.5" fill="#7c7a72">规模单位</text>
+          <g font-size="12" fill="#14171e">
+            <rect x="92" y="160" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="151" y="182" text-anchor="middle">单核</text>
+            <rect x="236" y="160" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="295" y="182" text-anchor="middle">多核 SoC</text>
+            <rect x="380" y="160" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="439" y="182" text-anchor="middle">机群集群</text>
+            <rect x="524" y="160" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="583" y="182" text-anchor="middle">机架</text>
+            <rect x="668" y="160" width="150" height="34" rx="8" fill="#2f6f5e"/><text x="743" y="182" text-anchor="middle" fill="#fff">AI 工厂</text>
+          </g>
+          <g stroke="#2f6f5e" stroke-width="1.4" opacity=".55" marker-end="url(#arw2)">
+            <path d="M212,177 L232,177"/><path d="M356,177 L376,177"/><path d="M500,177 L520,177"/><path d="M644,177 L664,177"/>
+          </g>
+        </g>
+      </svg>
+      <figcaption>
+        图 2 · 三条主线。值得注意的是<b>三者不同步</b>：主线二（形态）比主线三（规模）慢半拍，而主线一（瓶颈）始终在追赶前两者——这正是当下「算力堆得很快、内存与互连跟不上」的根源。
+      </figcaption>
+    </figure>
+
+    <div class="grid2" style="margin-top:16px">
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7h-6"/><path d="M21 7v6"/></svg>
+          主线一的代价
+        </h3>
+        <p>每次「解决瓶颈」的做法都是<strong>把复杂度推向上一层</strong>：多核逼出并发编程，GPU 逼出编程模型与库，集群逼出分布式一致性，AI 工厂逼出调度与成本治理。技术债不会消失，只会换一层楼继续住。</p>
+      </div>
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
+          主线二的代价
+        </h3>
+        <p>专用化换来效率，代价是<strong>生态碎片化</strong>：CUDA 锁住生态，RISC-V 面临各家自定义扩展互不兼容。判断新架构的成熟度，看的不是峰值参数，而是「一套镜像能不能跨品牌部署」。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 影响对照表 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">03</span><h2>带来的影响：十个维度的结构性改变</h2>
+      <span class="sub">架构变了什么 → 谁买单</span>
+    </div>
+
+    <div class="figbox" style="padding:20px 22px 8px">
+      <table>
+        <thead>
+          <tr><th>架构变化</th><th>改变的规则</th><th>谁最先感受到</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>存储程序 + 通用机</td>
+            <td>「程序」成为可存储、可复制、可分发的独立对象</td>
+            <td>整个软件产业从第一天起就存在</td>
+          </tr>
+          <tr>
+            <td>ISA 商业契约 + 向下兼容</td>
+            <td>兼容性的价值长期高于架构的先进程度</td>
+            <td>PC 生态三十年格局；也埋下 x86 的路径依赖</td>
+          </tr>
+          <tr>
+            <td>Cache / 存储层次</td>
+            <td>性能优化从「少执行指令」转向「少等数据」</td>
+            <td>所有延迟敏感型服务（数据库、推理、在线系统）</td>
+          </tr>
+          <tr>
+            <td>多核 / SMP</td>
+            <td>顺序代码不再够用，并发成为默认能力</td>
+            <td>后端与基础设施团队；也是分布式系统的起点</td>
+          </tr>
+          <tr>
+            <td>GPU + CUDA 生态</td>
+            <td>竞争焦点从指令集转到<b>编程模型与库</b>；迁移成本由生态决定</td>
+            <td>算法与平台团队（换后端 = 换生态，不是换硬件）</td>
+          </tr>
+          <tr>
+            <td>数据中心专用化</td>
+            <td>采购与优化单元从「芯片」变成「集群 / 机架 / 电力」</td>
+            <td>基础设施与 FinOps：TCO 模型整体重写</td>
+          </tr>
+          <tr>
+            <td>HBM4 + Chiplet + 液冷</td>
+            <td>成本结构从「算力成本」转向<b>内存 + 电力 + 互联</b>三元组</td>
+            <td>推理服务方与平台成本治理</td>
+          </tr>
+          <tr>
+            <td>RISC-V + 可定制</td>
+            <td>指令集从商品变底座，<b>差异化能力转向定制与系统集成</b></td>
+            <td>芯片设计方；软件方面临新的碎片化风险</td>
+          </tr>
+          <tr>
+            <td>推理成为主负载</td>
+            <td>从「训练一次、用无数次」变成「每次调用都要付钱」</td>
+            <td>产品形态：成本直接决定商业模式能否成立</td>
+          </tr>
+          <tr>
+            <td>Agent 负载结构</td>
+            <td>算力密集 <b>＋</b> 控制密集 <b>＋</b> I/O 密集并存</td>
+            <td>Agent 平台：CPU/GPU 分池与资源画像成为一等能力</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="muted" style="margin-top:12px">
+      落到具体动作，可看 <a href="index.html" style="color:var(--accent)">核心沉淀</a>页的「对 Agent 平台建设的 5 条推论」；
+      引用具体数字请看 <a href="03-current.html" style="color:var(--accent)">现状与来源</a>页。
+    </p>
+  </section>
+
+  <footer>
+    电脑技术的发展路径 · 02 底层架构与影响 · 事实核对截至 2026 年 11 月公开信息<br/>
+    配套专题：<a href="index.html">核心沉淀</a> · <a href="01-history.html">发展路径</a> · <a href="03-current.html">现状与来源</a> · <a href="04-glossary.html">术语表</a> · <a href="05-industrial-logic.html">工业革命的逻辑</a>
+  </footer>
+
+</div>
+</body>
+</html>

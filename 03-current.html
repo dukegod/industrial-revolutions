@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>03 现状与来源 · 电脑技术的发展路径</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <span class="nav-brand">Computer Architecture</span>
+    <div class="nav-links">
+      <a href="index.html">核心沉淀</a>
+      <a href="01-history.html">发展路径</a>
+      <a href="02-architecture.html">底层架构与影响</a>
+      <a href="03-current.html" class="on">现状与来源</a>
+      <a href="04-glossary.html">术语表</a>
+      <a href="05-industrial-logic.html">工业革命的逻辑</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="kicker">03 · Current State &amp; Sources</p>
+    <h1>2026 年的三个硬约束，与全部来源</h1>
+    <p class="lede">
+      现状部分的所有数字都标注了<b>一手来源与时间</b>，并在末尾列出了口径差异与不确定项。
+      引用这些数字对外汇报前，建议先看最后一节的「不确定项与口径差异」。
+    </p>
+    <div class="meta">
+      <span class="tag">核对至 <b>2026-11</b></span>
+      <span class="tag">一手来源 <b>5 个</b></span>
+      <span class="tag">补充来源 <b>3 个</b></span>
+      <span class="tag">不确定项 <b>5 条</b></span>
+    </div>
+  </header>
+
+  <!-- ============ 三个硬约束 ============ -->
+  <section style="margin-top:36px">
+    <div class="sec-head">
+      <span class="num">01</span><h2>三个硬约束</h2>
+      <span class="sub">数据均标注一手来源与时间</span>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11v2M10 11v2M14 11v2M18 11v2"/></svg>
+          约束一：内存墙
+        </h3>
+        <p style="margin-bottom:14px">算力、内存带宽、互连带宽的增速已经脱节——这正是 AI 芯片「买了却用不满」的原因。</p>
+        <div class="bench">
+          <span class="bench-label">峰值算力</span>
+          <div class="bench-track"><div class="bench-fill" style="width:100%"></div></div>
+          <span class="bench-val">3.0× <small>/ 2年</small></span>
+        </div>
+        <div class="bench">
+          <span class="bench-label">内存带宽</span>
+          <div class="bench-track"><div class="bench-fill" style="width:53%;opacity:.72"></div></div>
+          <span class="bench-val">1.6× <small>/ 2年</small></span>
+        </div>
+        <div class="bench">
+          <span class="bench-label">互连带宽</span>
+          <div class="bench-track"><div class="bench-fill" style="width:47%;opacity:.5"></div></div>
+          <span class="bench-val">1.4× <small>/ 2年</small></span>
+        </div>
+        <p class="muted" style="margin-top:10px">
+          折算 20 年：算力约 <b class="mono">60 万倍</b>、DRAM 带宽约 <b class="mono">100 倍</b>、互连约 <b class="mono">30 倍</b>（Gholami et al., 2024）。
+          用 Roofline 模型看，就是拐点右上移，更多负载落进 Memory-Bound 区域。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7h-6"/><path d="M21 7v6"/></svg>
+          约束二：内存产能即算力配额
+        </h3>
+        <dl class="kv">
+          <dt>HBM4 接口</dt><dd>2048-bit（较 HBM3 翻倍）</dd>
+          <dt>单堆栈带宽</dt><dd>最高 3.3 TB/s（三星 11.7Gbps）</dd>
+          <dt>美光 HBM4</dt><dd>36GB 12H &gt;2.8 TB/s</dd>
+          <dt>堆栈价格</dt><dd>HBM3 ≈$200 / 3E ≈$300 / 4 ≈$500</dd>
+          <dt>DRAM 合约价</dt><dd>2026 年预计 +70% 以上</dd>
+          <dt>产能格局</dt><dd>2026 Q1 产能已被预订至年底</dd>
+        </dl>
+        <p class="muted" style="margin-top:10px">结论：<b>算力扩张速度事实上受制于 12–18 个月前签下的内存长约</b>，而不受制于芯片设计。</p>
+      </div>
+    </div>
+
+    <div class="grid2" style="margin-top:14px">
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
+          约束三：ISA 格局松动，但生态是硬门槛
+        </h3>
+        <div class="bench">
+          <span class="bench-label">RISC-V 处理器份额</span>
+          <div class="bench-track"><div class="bench-fill" style="width:25%"></div></div>
+          <span class="bench-val">≈25%</span>
+        </div>
+        <p style="margin-top:12px;font-size:13.8px">2026 年的三个标志性进展：</p>
+        <ul style="margin:6px 0 0;padding-left:18px;font-size:13.8px;color:var(--ink2)">
+          <li><b>RVA23 服务器平台规范 1.0</b>（2026-06 欧洲峰会）：统一 UEFI/ACPI、PCIe/IOMMU、BMC、RAS、安全启动，使跨品牌部署成为可能。</li>
+          <li><b>CPU 直连 GPU</b>：RISC-V CPU 经 NVLink Fusion 与 NVIDIA GPU 硬件级互连，进入 AI 数据中心核心链路。</li>
+          <li><b>边缘与车载规模化</b>：车规 RISC-V 已上车量产；可穿戴领域出现头部厂商转向。</li>
+        </ul>
+        <p class="muted" style="margin-top:10px">但三道门槛同时存在：<b>各家自定义扩展互不兼容</b>（技术方言）、<b>软件适配周期常超一年</b>、<b>晶圆产能排产优先级低</b>。</p>
+      </div>
+
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          2026–2028 平台路线图
+        </h3>
+        <div class="bench">
+          <span class="bench-label">2026</span>
+          <div class="bench-track"><div class="bench-fill" style="width:34%"></div></div>
+          <span class="bench-val">Vera Rubin</span>
+        </div>
+        <div class="bench">
+          <span class="bench-label">2027</span>
+          <div class="bench-track"><div class="bench-fill" style="width:67%;opacity:.72"></div></div>
+          <span class="bench-val">Rubin Ultra</span>
+        </div>
+        <div class="bench">
+          <span class="bench-label">2028</span>
+          <div class="bench-track"><div class="bench-fill" style="width:100%;opacity:.45"></div></div>
+          <span class="bench-val">Feynman</span>
+        </div>
+        <p style="margin-top:12px;font-size:13.8px">NVIDIA 已宣布 Vera Rubin 进入量产，2026 下半年经合作伙伴上市——它不再是「一颗 GPU」，而是包含 <b>Rubin GPU + Vera CPU + NVLink 6 + ConnectX-9 + BlueField-4 + Spectrum-6 + Groq 3 LPU</b> 的七芯片平台。</p>
+        <p class="muted" style="margin-top:8px">2027/2028 为<b>路线图口径</b>，非交付承诺。</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H4z"/><path d="M8 20h8M12 16v4"/></svg>
+        同期的另一半：自研 ASIC 与推理专用化
+      </h3>
+      <div class="grid3" style="margin-top:8px">
+        <div>
+          <p style="font-size:13.8px"><b>Google TPU7x（Ironwood）</b> — 第七代 TPU，Google Cloud 当前最新一代。双芯粒架构，每芯片 192GB HBM、约 7.37 TB/s，单芯片 BF16 峰值 2307 TFLOPs，Pod 规模 9,216 芯片。JAX 将每个芯片暴露为两个设备，需重新做拓扑编排。<span class="muted">（文档更新 2026-09-16）</span></p>
+        </div>
+        <div>
+          <p style="font-size:13.8px"><b>推理被拆成两段</b> — Prefill 算力密集、可用 DDR 方案；Decode 反复读权重与 KV Cache、内存敏感、仍需 HBM。这直接催生 prefill/decode 分离部署与 KV Cache 分层。<span class="muted">（TrendForce, 2026-01）</span></p>
+        </div>
+        <div>
+          <p style="font-size:13.8px"><b>网络侧成为一等公民</b> — DPU（BlueField-4）、PCIe Gen6 SSD（连续读 28 GB/s、随机读 550 万 IOPS）、SOCAMM2 低功耗内存模块，都是为「数据搬得动」而不是「算得动」服务。<span class="muted">（GTC 2026, 2026-03）</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 来源 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">02</span><h2>信息来源</h2>
+      <span class="sub">历史部分为公认事实；现状部分标注时间与来源</span>
+    </div>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>一手来源</h3>
+        <div class="src">
+          <p style="margin-bottom:9px">· Google Cloud 文档「TPU7x (Ironwood)」<br/><span>docs.cloud.google.com/tpu/docs/tpu7x · 文档最后更新 2026-09-16</span></p>
+          <p style="margin-bottom:9px">· NVIDIA GTC 2026 主旨与路线图（2026-03-16, San Jose）<br/><span>Vera Rubin 发布 / 2027 Rubin Ultra + Kyber / 2028 Feynman</span></p>
+          <p style="margin-bottom:9px">· 美光 GTC 2026 新闻稿（2026-03-17）<br/><span>HBM4 36GB 12H、SOCAMM2 48–256GB、PCIe Gen6 SSD 9650</span></p>
+          <p style="margin-bottom:9px">· 三星半导体 HBM4 量产公告<br/><span>11.7 Gbps/pin、3.3 TB/s/stack、24/36GB 12 层，48GB 16 层规划中</span></p>
+          <p style="margin-bottom:0">· TrendForce 集邦咨询（2026-01）《记忆体墙》专题<br/><span>HBM/DDR5 对照表、AI 芯片 HBM 搭载趋势、2026 DRAM 价格展望</span></p>
+        </div>
+      </div>
+      <div class="card">
+        <h3>补充来源</h3>
+        <div class="src">
+          <p style="margin-bottom:9px">· 央广网（2026-03-24 / 2026-10-22）RISC-V 生态大会与中国峰会<br/><span>玄铁 C950、全球处理器份额 ≈25%、V100 服务器级芯片</span></p>
+          <p style="margin-bottom:9px">· 钛媒体 / 半导体产业纵横（2026）RVA23 服务器平台规范 1.0 解读<br/><span>2026-06 欧洲峰会发布，统一 UEFI/PCIe/BMC/RAS 等整机规则</span></p>
+          <p style="margin-bottom:0">· Gholami et al.,《AI and Memory Wall》(2024)<br/><span>算力 2 年 3.0× / 内存带宽 1.6× / 互连 1.4×</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 不确定项 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">03</span><h2>不确定项与口径差异</h2>
+      <span class="sub">对外引用前请先读这一节</span>
+    </div>
+    <div class="notes">
+      <h3>五条需要注意的地方</h3>
+      <ul>
+        <li><b>路线图 ≠ 交付：</b>2027 / 2028 的平台为 NVIDIA 官方路线图口径，最终时间与配置可能变化；「量产」也不等于所有客户可立即获得。</li>
+        <li><b>RISC-V 25% 为行业机构口径</b>（处理器颗数口径），非厂商营收口径，且高度集中于嵌入式与物联网，高端通用计算仍由 x86/ARM 主导。</li>
+        <li><b>TPU 代际命名存在差异：</b>TrendForce 表格中出现 v7p / v8e / v8p 等命名，而 Google Cloud 官方文档明确「当前最新一代为 TPU7x (Ironwood)」且更新时间在 2026 年 9 月。本套文档以 Google Cloud 官方文档为准。</li>
+        <li><b>「25% 份额」与「从技术验证走向规模化商用」并存：</b>二者不矛盾——前者来自海量嵌入式出货，后者是数据中心等高价值场景的进展，中间仍隔着软件生态与产能两道门槛。</li>
+        <li><b>「对 Agent 平台的 5 条推论」为推论：</b>基于公开架构事实推导，非对特定内部系统的既成判断，落地前需结合真实负载数据校验。</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    电脑技术的发展路径 · 03 现状与来源 · 事实核对截至 2026 年 11 月公开信息<br/>
+    配套专题：<a href="index.html">核心沉淀</a> · <a href="01-history.html">发展路径</a> · <a href="02-architecture.html">底层架构与影响</a> · <a href="04-glossary.html">术语表</a> · <a href="05-industrial-logic.html">工业革命的逻辑</a>
+  </footer>
+
+</div>
+</body>
+</html>

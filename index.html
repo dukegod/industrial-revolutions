@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>电脑技术的发展路径 · 核心沉淀</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <span class="nav-brand">Computer Architecture</span>
+    <div class="nav-links">
+      <a href="index.html" class="on">核心沉淀</a>
+      <a href="01-history.html">发展路径</a>
+      <a href="02-architecture.html">底层架构与影响</a>
+      <a href="03-current.html">现状与来源</a>
+      <a href="04-glossary.html">术语表</a>
+      <a href="05-industrial-logic.html">工业革命的逻辑</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="kicker">Core · 核心沉淀</p>
+    <h1>电脑技术的发展路径：结论、判断与行动项</h1>
+    <p class="lede">
+      这一页只放<b>沉淀下来的核心</b>：结论、三条主线、当下的硬约束、对 Agent 平台的推论，以及最高频的 20 个术语。
+      完整的时间轴、架构分层、数据与来源分散在四个专题页，页首导航可随时跳转。
+    </p>
+    <div class="meta">
+      <span class="tag">共 <b>6 页</b></span>
+      <span class="tag">历史主线 <b>四轮革命</b></span>
+      <span class="tag">术语 <b>98 条</b></span>
+      <span class="tag">现状核对至 <b>2026-11</b></span>
+      <span class="tag"><a href="04-glossary.html">术语速查 <b>20 条</b> →</a></span>
+    </div>
+  </header>
+
+  <div class="conclusion">
+    <div class="lbl">核心结论</div>
+    <p><b>电脑技术史 = 「通用化 → 专用化 → 可定制化」与「单机 → 集群 → AI 工厂」两条曲线的叠加。</b></p>
+    <p>
+      架构的每次跃迁都不是单纯把机器做得更快，而是<b>重新分配了「算力」与「数据搬运」的比重</b>。
+      当算力不再稀缺，内存容量、互连带宽与电力供给就成了新的稀缺资源。因此今天评价一套计算系统，
+      衡量对象已从单颗芯片的 FLOPS，转向<b>每瓦每秒产出多少 token、每个 token 的端到端成本、以及异构资源被调度的效率</b>。
+    </p>
+    <p>
+      而这一切的位置感来自更外层：<b>电脑是第三次工业革命的核心标志物，它的普及定义了信息时代</b>。
+      三次革命依次替代<b>体力</b>、<b>肌肉</b>、<b>认知</b>，当下正在发生的第四次走向<b>自主决策</b>——
+      详见下面的坐标系与 <a href="01-history.html" style="color:var(--accent)">01 发展路径</a>。
+    </p>
+  </div>
+
+  <!-- ============ 00 坐标系 ============ -->
+  <section style="margin-top:36px">
+    <div class="sec-head">
+      <span class="num">00</span><h2>坐标系：电脑站在第几轮工业革命里</h2>
+      <span class="sub">先定位，再往下看</span>
+    </div>
+    <div class="card">
+      <p style="font-size:14.5px">
+        电脑是<b>第三次工业革命的核心标志物</b>——第三次科技革命四大发明之一（原子能、电子计算机、空间技术、生物工程），
+        也是其中唯一仍在持续演进的那一个；它的普及又直接定义了<b>信息时代</b>。
+        两个说法不矛盾：<b>工业革命</b>讲的是生产方式的变革，<b>信息时代</b>讲的是资源结构的变化，
+        <b>电脑</b>是同时落在两层上的具体技术载体。
+      </p>
+      <div class="figbox" style="padding:16px 22px 8px;margin-top:12px">
+        <table>
+          <thead>
+            <tr><th>维度</th><th>第一次</th><th>第二次</th><th>第三次</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>时期</td><td>1760s 起</td><td>1870s 起</td><td>1945 / 1970s 起</td></tr>
+            <tr><td>通用技术</td><td>蒸汽机</td><td>电力与电动机</td><td>计算机、信息技术</td></tr>
+            <tr><td>替代了什么</td><td>体力</td><td>肌肉</td><td>认知</td></tr>
+            <tr><td>关键资源</td><td>煤</td><td>电 + 材料</td><td>信息与知识</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted" style="margin-top:12px">
+        三次革命分别替代<b>体力</b>、<b>肌肉</b>、<b>认知</b>。按产业经济学口径正在进入的第四次，替代的是<b>自主决策</b>——
+        从辅助人决策，转向系统自主拆解与执行；而 Agent 平台正好压在这条分界线上。
+        四轮革命的完整史实主线（前两次不再只给摘要）、第三次革命内部的八次架构跃迁，以及各轮的代价与分配后果，见 <a href="01-history.html" style="color:var(--accent)">01 发展路径</a>；
+        把四轮压成可复用的规律与铁律，见 <a href="05-industrial-logic.html" style="color:var(--accent)">05 工业革命的逻辑</a>。
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 三条核心判断 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">01</span><h2>三条核心判断</h2>
+      <span class="sub">如果只记三句话，记这三条</span>
+    </div>
+    <div class="card">
+      <div class="imp">
+        <div class="idx">01</div>
+        <div>
+          <h3>算力已经过剩，数据搬运与电力才是稀缺资源</h3>
+          <p>近 20 年峰值算力增长约 60 万倍，DRAM 带宽只增长约 100 倍，互连带宽只增长约 30 倍。<b>大多数算力在等数据</b>——这就是内存墙。评价系统的正确视角，是「每瓦每秒 token」，而不是峰值 FLOPS。</p>
+        </div>
+      </div>
+      <div class="imp">
+        <div class="idx">02</div>
+        <div>
+          <h3>专用化不可逆，代价是生态碎片化</h3>
+          <p>从 x86 通用到 GPU/ASIC 专用，再到 RISC-V + Chiplet 可定制，效率一路提升，但每一步都在制造新的迁移成本。<b>ISA 只是契约，真正决定迁移成本的是编程模型与库生态</b>——CUDA 正是靠后两者锁住生态。异构化的账单迟早要付，最好现在付。</p>
+        </div>
+      </div>
+      <div class="imp">
+        <div class="idx">03</div>
+        <div>
+          <h3>Agent 的成本结构既不同于训练，也不同于传统请求</h3>
+          <p>Agent 负载是<b>算力密集 + 控制密集 + I/O 密集</b>三者并存：推理吃 GPU 的带宽与显存，任务拆解、工具调用、权限校验吃 CPU 与内存。只按「GPU 卡时」做资源画像，会系统性高估利用率、低估真实瓶颈。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 三条主线 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">02</span><h2>三条主线：演进的骨架</h2>
+      <span class="sub">八段历史可压缩成这三行</span>
+    </div>
+
+    <figure class="figbox">
+      <svg viewBox="0 0 860 222" width="100%" style="display:block;height:auto" role="img" aria-label="三条技术主线的演进方向">
+        <defs>
+          <marker id="arw2" markerWidth="8" markerHeight="8" refX="6.5" refY="2.8" orient="auto">
+            <path d="M0,0 L6.5,2.8 L0,5.6 Z" fill="#2f6f5e"/>
+          </marker>
+        </defs>
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+          <text x="8" y="36" font-size="13" fill="#2f6f5e" font-weight="600">主线一</text>
+          <text x="8" y="54" font-size="11.5" fill="#7c7a72">瓶颈迁移</text>
+          <g font-size="12" fill="#14171e">
+            <rect x="92" y="20" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="151" y="42" text-anchor="middle">指令吞吐</text>
+            <rect x="236" y="20" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="295" y="42" text-anchor="middle">流水线 / 时钟</text>
+            <rect x="380" y="20" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="439" y="42" text-anchor="middle">访存延迟</text>
+            <rect x="524" y="20" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="583" y="42" text-anchor="middle">互连带宽</text>
+            <rect x="668" y="20" width="150" height="34" rx="8" fill="#2f6f5e"/><text x="743" y="42" text-anchor="middle" fill="#fff">电力与成本</text>
+          </g>
+          <g stroke="#2f6f5e" stroke-width="1.4" opacity=".55" marker-end="url(#arw2)">
+            <path d="M212,37 L232,37"/><path d="M356,37 L376,37"/><path d="M500,37 L520,37"/><path d="M644,37 L664,37"/>
+          </g>
+
+          <text x="8" y="106" font-size="13" fill="#2f6f5e" font-weight="600">主线二</text>
+          <text x="8" y="124" font-size="11.5" fill="#7c7a72">形态选择</text>
+          <g font-size="12" fill="#14171e">
+            <rect x="92" y="90" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="151" y="112" text-anchor="middle">x86 通用</text>
+            <rect x="236" y="90" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="295" y="112" text-anchor="middle">GPU / ASIC</text>
+            <rect x="380" y="90" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="439" y="112" text-anchor="middle">Chiplet 组装</text>
+            <rect x="524" y="90" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="583" y="112" text-anchor="middle">RISC-V 定制</text>
+            <rect x="668" y="90" width="150" height="34" rx="8" fill="#2f6f5e"/><text x="743" y="112" text-anchor="middle" fill="#fff">按场景合成</text>
+          </g>
+          <g stroke="#2f6f5e" stroke-width="1.4" opacity=".55" marker-end="url(#arw2)">
+            <path d="M212,107 L232,107"/><path d="M356,107 L376,107"/><path d="M500,107 L520,107"/><path d="M644,107 L664,107"/>
+          </g>
+
+          <text x="8" y="176" font-size="13" fill="#2f6f5e" font-weight="600">主线三</text>
+          <text x="8" y="194" font-size="11.5" fill="#7c7a72">规模单位</text>
+          <g font-size="12" fill="#14171e">
+            <rect x="92" y="160" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="151" y="182" text-anchor="middle">单核</text>
+            <rect x="236" y="160" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="295" y="182" text-anchor="middle">多核 SoC</text>
+            <rect x="380" y="160" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="439" y="182" text-anchor="middle">机群集群</text>
+            <rect x="524" y="160" width="118" height="34" rx="8" fill="#fff" stroke="#e9e3d6"/><text x="583" y="182" text-anchor="middle">机架</text>
+            <rect x="668" y="160" width="150" height="34" rx="8" fill="#2f6f5e"/><text x="743" y="182" text-anchor="middle" fill="#fff">AI 工厂</text>
+          </g>
+          <g stroke="#2f6f5e" stroke-width="1.4" opacity=".55" marker-end="url(#arw2)">
+            <path d="M212,177 L232,177"/><path d="M356,177 L376,177"/><path d="M500,177 L520,177"/><path d="M644,177 L664,177"/>
+          </g>
+        </g>
+      </svg>
+      <figcaption>
+        图 · 三条主线。关键在于<b>三者不同步</b>：主线二（形态）比主线三（规模）慢半拍，而主线一（瓶颈）始终在追赶前两者——这正是当下「算力堆得很快、内存与互连跟不上」的根源。
+      </figcaption>
+    </figure>
+    <p class="muted" style="margin-top:10px">
+      每次「解决瓶颈」的做法都是<b>把复杂度推向上一层</b>：多核逼出并发编程，GPU 逼出编程模型与库，集群逼出分布式一致性，AI 工厂逼出调度与成本治理。
+      技术债不会消失，只会换一层楼继续住。详细拆解见 <a href="02-architecture.html" style="color:var(--accent)">底层架构与影响</a>。
+    </p>
+  </section>
+
+  <!-- ============ 硬约束速览 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">03</span><h2>2026 年的三个硬约束</h2>
+      <span class="sub">速览 · 完整数据与来源见<a href="03-current.html" style="color:var(--accent)">现状与来源</a></span>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 11v2M10 11v2M14 11v2M18 11v2"/></svg>
+          约束一：内存墙
+        </h3>
+        <p style="margin-bottom:12px">算力、内存带宽、互连带宽的增速已经脱节——这正是 AI 芯片「买了却用不满」的原因。</p>
+        <div class="bench">
+          <span class="bench-label">峰值算力</span>
+          <div class="bench-track"><div class="bench-fill" style="width:100%"></div></div>
+          <span class="bench-val">3.0× <small>/ 2年</small></span>
+        </div>
+        <div class="bench">
+          <span class="bench-label">内存带宽</span>
+          <div class="bench-track"><div class="bench-fill" style="width:53%;opacity:.72"></div></div>
+          <span class="bench-val">1.6× <small>/ 2年</small></span>
+        </div>
+        <div class="bench">
+          <span class="bench-label">互连带宽</span>
+          <div class="bench-track"><div class="bench-fill" style="width:47%;opacity:.5"></div></div>
+          <span class="bench-val">1.4× <small>/ 2年</small></span>
+        </div>
+        <p class="muted" style="margin-top:8px">折算 20 年：算力约 60 万倍、DRAM 带宽约 100 倍、互连约 30 倍（Gholami et al., 2024）。</p>
+      </div>
+
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7h-6"/><path d="M21 7v6"/></svg>
+          约束二：内存产能即算力配额
+        </h3>
+        <dl class="kv">
+          <dt>HBM4 接口</dt><dd>2048-bit（较 HBM3 翻倍）</dd>
+          <dt>单堆栈带宽</dt><dd>最高 3.3 TB/s（三星 11.7Gbps）</dd>
+          <dt>堆栈价格</dt><dd>HBM3 ≈$200 / 3E ≈$300 / 4 ≈$500</dd>
+          <dt>DRAM 合约价</dt><dd>2026 年预计 +70% 以上</dd>
+          <dt>产能格局</dt><dd>2026 Q1 产能已被预订至年底</dd>
+        </dl>
+        <p class="muted" style="margin-top:8px">算力扩张速度事实上受制于 12–18 个月前签下的内存长约，而不受制于芯片设计。</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
+        约束三：ISA 格局松动，但生态是硬门槛
+      </h3>
+      <div class="bench">
+        <span class="bench-label">RISC-V 处理器份额</span>
+        <div class="bench-track"><div class="bench-fill" style="width:25%"></div></div>
+        <span class="bench-val">≈25%</span>
+      </div>
+      <p style="margin-top:12px;font-size:13.8px">
+        2026 年的三个标志性进展：<b>RVA23 服务器平台规范 1.0</b>（2026-06）统一了 UEFI/ACPI、PCIe/IOMMU、BMC、RAS 与安全启动，让跨品牌部署成为可能；
+        <b>CPU 直连 GPU</b>（RISC-V 经 NVLink Fusion 与 NVIDIA GPU 硬件级互连）使其进入 AI 数据中心核心链路；
+        <b>边缘与车载规模化</b>（车规 RISC-V 已量产上车）。
+        但三道门槛同时存在：各家自定义扩展互不兼容、软件适配周期常超一年、晶圆产能排产优先级低。
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ 5 条推论 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">04</span><h2>对 Agent 平台建设的 5 条推论</h2>
+      <span class="sub">基于架构事实的推论，落地前需结合真实负载校验</span>
+    </div>
+    <div class="card">
+      <div class="imp">
+        <div class="idx">01</div>
+        <div>
+          <h3>Agent 的成本模型不是「卡时」，是「token 成本 + 内存占用」<span class="infer">推论</span></h3>
+          <p>长上下文、多轮工具调用、并发子 Agent 会同时放大两件事：<b>KV Cache 的内存占用</b>与<b>解码阶段的带宽需求</b>。这意味着上下文压缩、分层缓存、prefill/decode 分离路由属于<b>平台级能力</b>，而不是应用侧可以各自实现的技巧——否则每个应用都会重复踩一遍内存墙。</p>
+        </div>
+      </div>
+      <div class="imp">
+        <div class="idx">02</div>
+        <div>
+          <h3>CPU 不是配角，Agent 的大部分时间花在控制流上<span class="infer">推论</span></h3>
+          <p>任务拆解、工具调用、权限校验、结果解析、跨系统编排，本质是控制密集与 I/O 密集负载，落在 CPU 与内存上；而 LLM 推理落在 GPU 上。<b>如果平台按「GPU 卡时」单一维度做资源画像，就会系统性高估利用率、低估真实瓶颈。</b>CPU/GPU 分池 + 按请求阶段做资源画像，比统一队列更贴合真实负载。</p>
+        </div>
+      </div>
+      <div class="imp">
+        <div class="idx">03</div>
+        <div>
+          <h3>推理后端必须可替换，否则硬件代际切换会变成平台级事故<span class="infer">推论</span></h3>
+          <p>路线图上 2026/2027/2028 每年一代平台，每代更换内存代际与互连标准。把推理引擎、调度策略与硬件形态解耦（模型服务层可替换、算子与量化路径可替换），让硬件代际切换退化为<b>配置变更</b>而非架构改造。这是「专用化不可逆」这条主线的直接推论。</p>
+        </div>
+      </div>
+      <div class="imp">
+        <div class="idx">04</div>
+        <div>
+          <h3>可移植性现在做，比未来迁移便宜得多<span class="infer">推论</span></h3>
+          <p>RISC-V 与各类自研 ASIC 的现实路径是「先在应用与模型层兼容，再谈 ISA 层」——指令集迁移的主要成本是软件生态，而软件生态的重建通常需要一年以上。<b>平台侧现在就把模型服务、向量检索、工具协议与具体加速器解耦</b>，是把未来成本前置到今天的低息投入。</p>
+        </div>
+      </div>
+      <div class="imp">
+        <div class="idx">05</div>
+        <div>
+          <h3>把「每瓦每秒 token」引入平台级 SLO<span class="infer">推论</span></h3>
+          <p>行业衡量指标已从 FLOPS 转向能效与吞吐比。对平台而言，可落地的对应物是<b>单位资源的有效产出</b>：单个推理节点的有效 token 产出、显存与内存的占用率、以及不同推理形态（短问答 / 长上下文 / 多 Agent 并发）各自的成本曲线。把这些变成可观测、可分账的指标，比单看 QPS 更接近真实成本。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 术语速查 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">05</span><h2>高频术语速查</h2>
+      <span class="sub">20 条 · 完整 <a href="04-glossary.html" style="color:var(--accent)">98 条术语表</a></span>
+    </div>
+    <div class="figbox">
+      <div class="ggrid quick">
+        <div class="entry"><h4>内存墙 <span class="en">Memory wall</span></h4><p>算力增速远超内存带宽增速，导致计算单元在等数据。</p></div>
+        <div class="entry"><h4>存储层次 <span class="en">Memory hierarchy</span></h4><p>寄存器→缓存→主存→SSD→远端存储的层级，靠局部性做出等效扩容。</p></div>
+        <div class="entry"><h4>缓存三要素 <span class="en">Cache</span></h4><p>命中时间、缺失率、容量，决定访存是纳秒级还是百纳秒级。</p></div>
+        <div class="entry"><h4>算术强度 <span class="en">Arithmetic intensity</span></h4><p>每搬 1 字节能做多少次运算，决定负载是算力受限还是带宽受限。</p></div>
+        <div class="entry"><h4>Roofline 模型</h4><p>用可达算力与内存带宽两条线界定性能上限。</p></div>
+        <div class="entry"><h4>HBM <span class="en">High Bandwidth Memory</span></h4><p>垂直堆叠 DRAM 与加速器同封装，靠超宽接口而非高频率取胜。</p></div>
+        <div class="entry"><h4>NUMA <span class="en">Non-uniform memory access</span></h4><p>内存按节点绑定，跨节点更慢；远端内存带宽是集群扩展的真实上限。</p></div>
+        <div class="entry"><h4>CUDA</h4><p>NVIDIA 的并行计算平台与编程模型，本身即护城河。</p></div>
+        <div class="entry"><h4>量化 <span class="en">Quantization</span></h4><p>用更低位宽表示权重与激活，以降低显存与带宽需求。</p></div>
+        <div class="entry"><h4>KV Cache</h4><p>缓存已生成 token 的键值对，推理显存占用的头号来源。</p></div>
+        <div class="entry"><h4>预填充与解码 <span class="en">Prefill / Decode</span></h4><p>前者算力密集，后者带宽密集，是分离部署的前提。</p></div>
+        <div class="entry"><h4>连续批处理 <span class="en">Continuous batching</span></h4><p>请求完成即补入新请求，直接决定吞吐与排队时延。</p></div>
+        <div class="entry"><h4>推理引擎</h4><p>面向生成式模型优化的服务框架，核心是调度与显存管理。</p></div>
+        <div class="entry"><h4>前缀缓存 <span class="en">Prefix caching</span></h4><p>复用相同前缀的 KV Cache，多轮与共享提示场景省下大量成本。</p></div>
+        <div class="entry"><h4>Scale-up / Scale-out</h4><p>同域扩加速器 / 跨节点扩集群，出域即从芯片互连变成网络问题。</p></div>
+        <div class="entry"><h4>装箱 <span class="en">Bin packing</span></h4><p>把不同规格负载塞进异构算力池，是训练推理混部的前提。</p></div>
+        <div class="entry"><h4>TCO <span class="en">Total cost of ownership</span></h4><p>硬件、机房、电力、网络与运维的总账，自研与采购须同口径比较。</p></div>
+        <div class="entry"><h4>每瓦每秒 token</h4><p>把能效与产出绑定的指标，已取代单纯 FLOPS 成为主要口径。</p></div>
+        <div class="entry"><h4>Agent Loop</h4><p>感知—推理—行动—反馈闭环，每轮都重读上下文，成本被放大的根源。</p></div>
+        <div class="entry"><h4>MCP / A2A</h4><p>模型接工具、Agent 接 Agent 的两类标准化协议，解决重复造轮子与跨主体委派。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 文档导航 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">06</span><h2>本套文档怎么读</h2>
+      <span class="sub">六页，按需取用</span>
+    </div>
+    <div class="figbox" style="padding:16px 22px 8px">
+      <table>
+        <thead>
+          <tr><th>页面</th><th>内容</th><th>什么时候读</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><a href="index.html">核心沉淀</a></td><td>结论、三条主线、硬约束速览、5 条推论、20 条术语速查</td><td>汇报前 5 分钟、通勤路上、作为长期记忆的锚点</td></tr>
+          <tr><td><a href="01-history.html">01 发展路径</a></td><td>工业革命主线（四轮完整展开）+ 第三次内部八次架构跃迁</td><td>需要讲清来龙去脉、做行业对比或新人科普时</td></tr>
+          <tr><td><a href="02-architecture.html">02 底层架构与影响</a></td><td>七层抽象栈、三条主线的完整图示、十个维度的影响对照表</td><td>做抽象层设计、划定平台边界、说服别人时</td></tr>
+          <tr><td><a href="03-current.html">03 现状与来源</a></td><td>2026 年三个硬约束的完整数据、2026–2028 路线图、全部来源与不确定项</td><td>引用具体数字、对外汇报需要可核对来源时</td></tr>
+          <tr><td><a href="04-glossary.html">04 术语表</a></td><td>十组易混概念辨析、98 条分组词条、按角色的阅读路径</td><td>读文档、评审、面试、写材料时的随身词典</td></tr>
+          <tr><td><a href="05-industrial-logic.html">05 工业革命的逻辑</a></td><td>四轮革命的机制速查、推进发展的四条铁律、当下定位与 5 条平台推论</td><td>做方向判断、写战略叙事、解释「为什么现在还不能只看效果」时</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    电脑技术的发展路径 · 核心沉淀页 · 事实核对截至 2026 年 11 月公开信息 · 历史分期为编者归纳，各阶段边界为近似划分<br/>
+    配套专题：<a href="01-history.html">发展路径</a> · <a href="02-architecture.html">底层架构与影响</a> · <a href="03-current.html">现状与来源</a> · <a href="04-glossary.html">术语表</a> · <a href="05-industrial-logic.html">工业革命的逻辑</a>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>04 术语表 · 电脑技术的发展路径</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <span class="nav-brand">Computer Architecture</span>
+    <div class="nav-links">
+      <a href="index.html">核心沉淀</a>
+      <a href="01-history.html">发展路径</a>
+      <a href="02-architecture.html">底层架构与影响</a>
+      <a href="03-current.html">现状与来源</a>
+      <a href="04-glossary.html" class="on">术语表</a>
+      <a href="05-industrial-logic.html">工业革命的逻辑</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="kicker">04 · Glossary</p>
+    <h1>专业术语表</h1>
+    <p class="lede">
+      共 <b>98 条</b>，按「体系结构 → 存储互连 → 系统 → 软件 → 平台 → 工业革命与时代」排列。
+      术语定义取行业通用口径，不同厂商文档措辞可能略有差异。<b>先看 7.1 的辨析表</b>，能省掉大部分「两个词到底差在哪」的困惑。
+      <b>G 组是理解全文的背景坐标系</b>，建议先扫一眼。
+    </p>
+    <div class="meta">
+      <span class="tag">词条 <b>98 条</b></span>
+      <span class="tag">分组 <b>7 组</b></span>
+      <span class="tag">辨析表 <b>10 组</b></span>
+      <span class="tag">高频 <a href="index.html"><b>20 条速查</b> →</a></span>
+    </div>
+  </header>
+
+  <!-- ============ 7.1 辨析 ============ -->
+  <section style="margin-top:36px">
+    <div class="sec-head">
+      <span class="num">7.1</span><h2>十组最常被混用的概念</h2>
+      <span class="sub">最容易读错的地方</span>
+    </div>
+    <div class="figbox" style="padding:16px 22px 8px">
+      <table>
+        <thead>
+          <tr><th>概念 A</th><th>概念 B</th><th>关键区别</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Scale-up</td><td>Scale-out / Scale-across</td><td>前者是<b>同一个互连域内</b>扩加速器，后者跨节点、跨机架。出了域，就从「芯片互连」变成「网络」问题</td></tr>
+          <tr><td>峰值算力 FLOPs</td><td>实测吞吐</td><td>峰值是标称上限；实测受内存墙、调度、通信拖累，两者常有数倍差距</td></tr>
+          <tr><td>算力</td><td>带宽</td><td>算力决定「能算多快」，带宽决定「喂得上吗」。算力翻倍而带宽不变，只会让更多计算单元空转</td></tr>
+          <tr><td>容量</td><td>带宽</td><td>容量决定「装得下吗」（权重、KV Cache），带宽决定「搬得快吗」。长上下文先撞容量，解码先撞带宽</td></tr>
+          <tr><td>训练</td><td>预填充 / 解码</td><td>训练离线最重；预填充一次性吞入输入、算力密集；解码逐 token 生成、带宽密集</td></tr>
+          <tr><td>ISA</td><td>编程模型与库生态</td><td>ISA 只是契约，<b>迁移成本主要由编程模型与现成库决定</b>。CUDA 生态正是靠后两者锁住用户，而非靠指令集本身</td></tr>
+          <tr><td>HBM</td><td>DDR5</td><td>HBM 与加速器同封装、带宽极高但容量固定且昂贵；DDR5 容量可扩展、成本低，适合通用服务器与 prefill</td></tr>
+          <tr><td>缓存</td><td>主存</td><td>SRAM 快小贵、命中纳秒级；DRAM 慢大便宜、命中百纳秒级。存储层次的整体性能取决于两者间的搬运策略</td></tr>
+          <tr><td>信息时代</td><td>后工业社会 / 知识经济 / 数字经济</td><td>四个词常被混用，但判据不同：信息时代看「信息是否为社会核心资源」；后工业社会（贝尔 1973）看「经济重心是否从制造转向服务」；知识经济（德鲁克 1993）看「知识是否为最高效生产要素」；数字经济看「经济形态是否由数字技术驱动」。汇报时最好只用一个</td></tr>
+          <tr><td>第三次工业革命</td><td>第四次工业革命</td><td>分期无共识：教材口径的第三次科技革命 = 1945 / 1970s 起的原子能 + 计算机 + 空间 + 生物；产业经济学口径的第三次产业革命 = 1970s 起的信息技术，第四次 = 2010s 起的 AI / 物联网 / 智能体。按后一套口径，Agent 平台属于第四次</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ 7.2 词条 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">7.2</span><h2>分组词条</h2>
+      <span class="sub">7 组 · 合计 98 条</span>
+    </div>
+
+    <h3 class="gcat" style="margin-top:18px;font-family:var(--sans);font-size:15px;font-weight:600;border-bottom:none;padding-bottom:0;color:var(--accent)">A · 体系结构与指令集<span class="cnt">17 条</span></h3>
+    <div class="ggrid">
+      <div class="entry"><h4>指令集架构 <span class="en">ISA</span></h4><p>CPU 执行程序的契约：寄存器、指令编码、寻址方式与内存模型。它划定了硬件与软件的责任边界。</p></div>
+      <div class="entry"><h4>微架构 <span class="en">Microarchitecture</span></h4><p>实现同一 ISA 的具体内部设计——流水线深度、分支预测器、执行单元、缓存层次。<b>同一 ISA 可以有截然不同的微架构。</b></p></div>
+      <div class="entry"><h4>冯·诺依曼结构 <span class="en">Von Neumann</span></h4><p>程序与数据共用同一存储、顺序取指执行的体系结构。「存储程序」是它留给后世的核心遗产。</p></div>
+      <div class="entry"><h4>存储程序 <span class="en">Stored-program</span></h4><p>指令以数据形式存放在内存中、可读取与修改，执行程序不再需要每次重新物理接线。</p></div>
+      <div class="entry"><h4>精简指令集 <span class="en">RISC</span></h4><p>指令少而规整、定长、寄存器多，便于流水线实现与编译器优化。RISC-V 属于此类。</p></div>
+      <div class="entry"><h4>复杂指令集 <span class="en">CISC</span></h4><p>单条指令可完成多步操作、寻址方式丰富，以指令数换兼容性。x86 是典型代表。</p></div>
+      <div class="entry"><h4>流水线 <span class="en">Pipeline</span></h4><p>把指令拆成取指/译码/执行/访存/写回等阶段并行重叠，用延迟换吞吐。</p></div>
+      <div class="entry"><h4>超标量与乱序执行 <span class="en">Superscalar, OoO</span></h4><p>超标量靠多发射端口提高每周期指令数；乱序执行按就绪顺序发射以隐藏延迟，但需内存序保证正确性。</p></div>
+      <div class="entry"><h4>分支预测与推测执行 <span class="en">Branch prediction, Speculation</span></h4><p>用历史统计猜测控制流走向并先行执行；预测失败要清空流水线。它同时是性能来源与 Spectre 类漏洞的源头。</p></div>
+      <div class="entry"><h4>存储层次 <span class="en">Memory hierarchy</span></h4><p>寄存器 → 缓存 → 主存 → SSD → 远端存储的层级结构，靠时间与空间局部性做出「等效扩容」。</p></div>
+      <div class="entry"><h4>缓存三要素 <span class="en">Cache</span></h4><p>命中时间、缺失率、容量。缓存命中与否直接决定这次访存是几纳秒还是几百纳秒。</p></div>
+      <div class="entry"><h4>内存墙 <span class="en">Memory wall</span></h4><p>算力增速远超内存带宽增速，导致大量计算单元在等数据，系统实际吞吐远低于峰值。</p></div>
+      <div class="entry"><h4>内存模型与内存序 <span class="en">Memory model, ordering</span></h4><p>多核访问内存的可见性与顺序规则。x86 较强、ARM/RISC-V 较弱，直接决定并行程序该怎么写才正确。</p></div>
+      <div class="entry"><h4>虚拟内存 / 页表 / TLB <span class="en">Page table, TLB</span></h4><p>页表完成虚拟地址到物理地址的映射，TLB 缓存映射结果。它是进程隔离与容器化的基础。</p></div>
+      <div class="entry"><h4>IOMMU</h4><p>把设备发起的 DMA 访问也纳入页表与权限控制，是 GPU 直连与设备级安全隔离的关键机制。</p></div>
+      <div class="entry"><h4>中断 / DMA / 异常</h4><p>CPU 与外设协作的三种基本机制。中断是 I/O 密集型负载进入内核的主要入口，DMA 则让搬运不占 CPU。</p></div>
+      <div class="entry"><h4>RAS 机制 <span class="en">Reliability, Availability, Serviceability</span></h4><p>数据中心的硬件级容错机制：纠错、故障隔离、热插拔与故障预测，是 7×24 运行的底座。</p></div>
+    </div>
+
+    <h3 class="gcat" style="margin-top:26px;font-family:var(--sans);font-size:15px;font-weight:600;border-bottom:none;padding-bottom:0;color:var(--accent)">B · 并行与加速器<span class="cnt">19 条</span></h3>
+    <div class="ggrid">
+      <div class="entry"><h4>对称多处理 <span class="en">SMP</span></h4><p>多个处理器核共享同一内存空间与同一操作系统，是现代服务器的基本形态。</p></div>
+      <div class="entry"><h4>NUMA / CC-NUMA <span class="en">Non-uniform memory access</span></h4><p>内存按节点绑定，跨节点访问更慢。<b>远端内存带宽是集群扩展的真实上限</b>，而非单卡算力。</p></div>
+      <div class="entry"><h4>超线程 <span class="en">SMT</span></h4><p>同一物理核上跑多个硬件线程，用执行单元的空档换吞吐，不提升单线程峰值性能。</p></div>
+      <div class="entry"><h4>SIMD 与向量扩展 <span class="en">RVV, NEON, SVE</span></h4><p>一条指令对多个数据并行计算。RISC-V 的 RVV 是开放且可定制的向量扩展路线。</p></div>
+      <div class="entry"><h4>算术强度 <span class="en">Arithmetic intensity</span></h4><p>每搬运 1 字节数据能做多少次浮点运算。它直接决定一个负载是算力受限还是带宽受限。</p></div>
+      <div class="entry"><h4>Roofline 模型 <span class="en">Roofline</span></h4><p>用可达算力与内存带宽两条线界定性能上限，拐点即「运算强度够不够」的分界线。</p></div>
+      <div class="entry"><h4>GPU</h4><p>由大量简单计算单元构成的高度并行处理器。图形流水线演化为通用并行阵列后，成为 AI 算力主力。</p></div>
+      <div class="entry"><h4>CUDA</h4><p>NVIDIA 的并行计算平台，含编程模型、库、工具链与运行时。<b>它本身就是护城河，而不只是驱动。</b></p></div>
+      <div class="entry"><h4>矩阵单元 <span class="en">Tensor Core, MMA</span></h4><p>专做矩阵乘加的硬件单元，低精度下吞吐可达通用单元的数倍，是推理加速的主引擎。</p></div>
+      <div class="entry"><h4>ASIC 与 NPU <span class="en">Application-specific IC</span></h4><p>为特定负载定制的电路，能效最优但通用性差；NPU 是其面向端侧低功耗推理的形态。</p></div>
+      <div class="entry"><h4>数值格式 <span class="en">FP16, BF16, FP8, INT8, NVFP4</span></h4><p>精度越低，显存占用与带宽压力越小、算力利用率越高，但对数值稳定性与校准的要求越高。</p></div>
+      <div class="entry"><h4>量化 <span class="en">Quantization</span></h4><p>用更低位宽表示权重与激活以节省显存与带宽；分为训练后量化与需要校准的校准后量化。</p></div>
+      <div class="entry"><h4>KV Cache</h4><p>注意力机制中缓存已生成 token 的键值对。容量随上下文长度与并发数线性增长，<b>是推理显存占用的头号来源</b>。</p></div>
+      <div class="entry"><h4>GQA / MQA <span class="en">Grouped / Multi-query attention</span></h4><p>让多个查询头共享同一组 KV 头，显著压低 KV Cache 体积与解码阶段的带宽压力。</p></div>
+      <div class="entry"><h4>预填充与解码 <span class="en">Prefill / Decode</span></h4><p>推理的两阶段：预填充一次性处理完整输入、算力密集；解码逐 token 生成、内存带宽密集。</p></div>
+      <div class="entry"><h4>连续批处理 <span class="en">Continuous batching</span></h4><p>请求完成后立即把新请求补入空位，而非等整批结束。它直接决定推理服务的吞吐与排队时延。</p></div>
+      <div class="entry"><h4>投机解码 <span class="en">Speculative decoding</span></h4><p>用小模型草拟多个 token 再由大模型并行验证，用额外算力换更低的单 token 时延。</p></div>
+      <div class="entry"><h4>张量 / 流水 / 序列并行</h4><p>把一次前向计算切到多卡的三种方式，分别切矩阵、切层、切序列，对通信模式的要求各不相同。</p></div>
+      <div class="entry"><h4>集合通信原语 <span class="en">Collective, AllReduce</span></h4><p>跨卡数据交换的基础操作，是分布式训练与推理的通信底座，其效率常成为实际瓶颈。</p></div>
+    </div>
+
+    <h3 class="gcat" style="margin-top:26px;font-family:var(--sans);font-size:15px;font-weight:600;border-bottom:none;padding-bottom:0;color:var(--accent)">C · 存储与互连<span class="cnt">17 条</span></h3>
+    <div class="ggrid">
+      <div class="entry"><h4>SRAM 与 DRAM</h4><p>SRAM 速度快、无需刷新但面积大密度低，用作缓存；DRAM 密度高但需刷新，用作主存。</p></div>
+      <div class="entry"><h4>高带宽内存 <span class="en">HBM</span></h4><p>垂直堆叠 DRAM 并与加速器同封装，靠超宽接口而非高频率取胜，是 AI 加速器的默认内存形态。</p></div>
+      <div class="entry"><h4>HBM 代际 <span class="en">HBM3E / HBM4 / HBM4E</span></h4><p>接口宽度、传输速率与堆叠层数逐代提升。HBM4 把接口宽度翻倍至 2048-bit，单堆栈带宽进入 TB/s 级。</p></div>
+      <div class="entry"><h4>硅通孔 <span class="en">TSV, Through-silicon via</span></h4><p>穿透硅片连接堆叠 DRAM 层的工艺，是 HBM 得以成立的关键，间距越小良率挑战越大。</p></div>
+      <div class="entry"><h4>堆叠层数 <span class="en">12H / 16H</span></h4><p>单堆叠内的 DRAM 层数，直接决定单堆容量；层数越高，良率与散热越难。</p></div>
+      <div class="entry"><h4>GDDR / DDR5 / LPDDR</h4><p>分别面向图形、服务器通用与终端低功耗的 DRAM 品类，容量与带宽取舍不同。</p></div>
+      <div class="entry"><h4>SOCAMM</h4><p>面向 AI 服务器的低功耗高容量内存模块形态，定位在 HBM 与 DDR 之间，用于 CPU 侧大内存供给。</p></div>
+      <div class="entry"><h4>CXL <span class="en">Compute Express Link</span></h4><p>在 PCIe 物理层上承载缓存一致互连，让 CPU、加速器与内存池共享同一套内存语义。</p></div>
+      <div class="entry"><h4>NVMe 与 PCIe Gen6</h4><p>固态存储的协议与接口代际，持续推高顺序带宽与随机 IOPS，用于缓解数据墙。</p></div>
+      <div class="entry"><h4>显存 <span class="en">VRAM</span></h4><p>加速器本地内存的通用称呼。HBM 时代，其容量与带宽直接决定可服务的模型规模与并发数。</p></div>
+      <div class="entry"><h4>NVLink</h4><p>NVIDIA 的高带宽片间互连，用于同一域内 GPU 之间的 scale-up，版本随平台代际同步升级。</p></div>
+      <div class="entry"><h4>ICI <span class="en">Inter-chip interconnect</span></h4><p>Google TPU 的芯片间互连，构成一个 Pod 内的 scale-up 域，拓扑为三维网格。</p></div>
+      <div class="entry"><h4>InfiniBand / RDMA / RoCE</h4><p>数据中心无损网络与远程直接内存访问技术，让网络访问接近内存语义，降低通信开销与 CPU 占用。</p></div>
+      <div class="entry"><h4>Scale-up / Scale-out / Scale-across</h4><p>同域扩加速器、跨节点扩集群、跨机架扩集群三级扩展，三者瓶颈位置与网络要求完全不同。</p></div>
+      <div class="entry"><h4>NVL72 / NVL144</h4><p>NVIDIA 机架级 scale-up 域规格，分别把 72 / 144 个 GPU 纳入单一高速互连域。</p></div>
+      <div class="entry"><h4>3D torus / mesh 拓扑</h4><p>集群内芯片互连的常见拓扑，决定了全归约等集合通信的效率与扩展性。</p></div>
+      <div class="entry"><h4>共封装光学 <span class="en">CPO</span></h4><p>把光引擎与交换芯片共封装，降低高速互连的功耗与距离损耗，是下一代 scale-out 的候选方案。</p></div>
+    </div>
+
+    <h3 class="gcat" style="margin-top:26px;font-family:var(--sans);font-size:15px;font-weight:600;border-bottom:none;padding-bottom:0;color:var(--accent)">D · 系统、集群与数据中心<span class="cnt">12 条</span></h3>
+    <div class="ggrid">
+      <div class="entry"><h4>域内与域外通信</h4><p>域内由芯片互连决定带宽与延迟，域外退化为网络问题。<b>扩展规模前先确认请求落在哪一侧。</b></p></div>
+      <div class="entry"><h4>液冷 <span class="en">Direct-to-chip</span></h4><p>把冷却液送到芯片附近直接带走热量，是高密度机柜的必需配套，而非可选项。</p></div>
+      <div class="entry"><h4>机柜功率密度与供电</h4><p>单机柜功率从十几千瓦走向上百千瓦，供电、配电与机柜改造成为机房建设的硬约束。</p></div>
+      <div class="entry"><h4>PUE <span class="en">Power Usage Effectiveness</span></h4><p>数据中心总能耗与 IT 设备能耗之比，衡量基础设施效率，不反映 IT 设备本身的能效。</p></div>
+      <div class="entry"><h4>前端网络 / 后端网络</h4><p>面向外部请求与集群内部东西向流量的两张网络，二者的容量规划与故障域完全不同。</p></div>
+      <div class="entry"><h4>调度器 / 队列 / 抢占</h4><p>集群资源分配的策略层，决定利用率、公平性与故障恢复行为，是平台治理的主战场。</p></div>
+      <div class="entry"><h4>装箱 <span class="en">Bin packing</span></h4><p>把不同规格的负载塞进异构算力池的策略，是推理与训练混部能否成立的前提。</p></div>
+      <div class="entry"><h4>Gang Scheduling</h4><p>分布式作业的所有节点同时就绪才启动，避免部分占用导致的资源死锁与碎片。</p></div>
+      <div class="entry"><h4>拓扑感知调度</h4><p>按 GPU、NUMA 节点与机架位置分配任务，降低跨域通信开销。</p></div>
+      <div class="entry"><h4>多租户 / 配额 / 抢占式实例</h4><p>共享集群的隔离与公平机制；抢占式实例成本低但可能被随时收回，适合可中断负载。</p></div>
+      <div class="entry"><h4>TCO <span class="en">Total cost of ownership</span></h4><p>总拥有成本，含硬件、机房、电力、网络与运维；自研与采购的对比应以同一口径计算。</p></div>
+      <div class="entry"><h4>每瓦每秒 token</h4><p>把能效与产出绑定的指标，已取代单纯的 FLOPS，成为 AI 基础设施的主要衡量口径。</p></div>
+    </div>
+
+    <h3 class="gcat" style="margin-top:26px;font-family:var(--sans);font-size:15px;font-weight:600;border-bottom:none;padding-bottom:0;color:var(--accent)">E · 软件与推理栈<span class="cnt">11 条</span></h3>
+    <div class="ggrid">
+      <div class="entry"><h4>推理引擎</h4><p>面向生成式模型优化的服务框架（vLLM、SGLang、TensorRT-LLM 等），核心能力是调度与显存管理。</p></div>
+      <div class="entry"><h4>PagedAttention</h4><p>用分页方式管理 KV Cache，避免传统连续分块带来的显存碎片浪费。</p></div>
+      <div class="entry"><h4>前缀缓存 <span class="en">Prefix caching</span></h4><p>复用相同前缀的 KV Cache，在多轮对话与共享系统提示场景下可显著降低算力与带宽成本。</p></div>
+      <div class="entry"><h4>上下文窗口与上下文压缩</h4><p>长上下文带来 KV Cache 膨胀，压缩、摘要与外部记忆是主要的缓解手段。</p></div>
+      <div class="entry"><h4>算子与 Kernel <span class="en">Operator</span></h4><p>矩阵乘法等计算在具体后端上的实现。算子库的深度与质量直接决定框架的硬件利用率。</p></div>
+      <div class="entry"><h4>编译器栈 <span class="en">XLA, Triton</span></h4><p>把模型图编译为加速器指令的链路，决定了性能优化的可达上限，也决定换硬件的改造量。</p></div>
+      <div class="entry"><h4>分布式训练框架 <span class="en">FSDP, Megatron</span></h4><p>负责张量/数据并行下的切分、通信与检查点管理，是大规模训练的工程底座。</p></div>
+      <div class="entry"><h4>梯度累积与微批次</h4><p>用更小的 micro-batch 累积梯度以模拟大 batch 效果，是省显存的经典手段。</p></div>
+      <div class="entry"><h4>检查点与容错</h4><p>长训练或长会话周期下，从硬件或软件故障中恢复状态的机制。</p></div>
+      <div class="entry"><h4>SLO / SLA / 配额</h4><p>服务目标、对外承诺与资源上限的三层约束，平台必须能分别度量与触发。</p></div>
+      <div class="entry"><h4>可观测性 <span class="en">Metrics / Logs / Trace</span></h4><p>定位推理时延与失败根因的基础；没有分段可观测性，成本治理无从谈起。</p></div>
+    </div>
+
+    <h3 class="gcat" style="margin-top:26px;font-family:var(--sans);font-size:15px;font-weight:600;border-bottom:none;padding-bottom:0;color:var(--accent)">F · Agent 与平台<span class="cnt">9 条</span></h3>
+    <div class="ggrid">
+      <div class="entry"><h4>Agent Loop</h4><p>感知—推理—行动—反馈的闭环。每一轮都要重新读取上下文，是成本被放大的根源。</p></div>
+      <div class="entry"><h4>工具调用 <span class="en">Tool / Function calling</span></h4><p>模型以结构化方式请求外部能力。参数校验、幂等性与错误语义是平台的责任，而非模型的。</p></div>
+      <div class="entry"><h4>MCP</h4><p>模型与外部工具、数据源之间的标准化连接协议，解决每个应用重复造轮子的问题。</p></div>
+      <div class="entry"><h4>A2A <span class="en">Agent-to-agent</span></h4><p>Agent 之间的通信与委派协议，解决跨主体协作、任务交接与身份信任问题。</p></div>
+      <div class="entry"><h4>上下文与记忆分层</h4><p>会话内上下文、长期记忆与外部检索分层管理，决定「记得住」与「花得起」能否兼得。</p></div>
+      <div class="entry"><h4>幂等 / 超时 / 重试</h4><p>工具调用的可靠性三件套。它们是否做对，直接决定 Agent 失败时的放大程度。</p></div>
+      <div class="entry"><h4>多 Agent 并发与扇出</h4><p>并发子 Agent 会让上下文与工具调用呈扇出式增长，KV Cache 与并发度是主要成本项。</p></div>
+      <div class="entry"><h4>冷热分层</h4><p>热数据放 HBM/GPU、冷数据放 DDR/SSD，用可接受的延迟换取明显的成本下降。</p></div>
+      <div class="entry"><h4>资源池化 <span class="en">Pooling</span></h4><p>把加速器、内存与网络抽象为可切分、可复用的共享资源，提升整体利用率。</p></div>
+    </div>
+
+    <h3 class="gcat" style="margin-top:26px;font-family:var(--sans);font-size:15px;font-weight:600;border-bottom:none;padding-bottom:0;color:var(--accent)">G · 工业革命与时代<span class="cnt">13 条 · 背景坐标系</span></h3>
+    <div class="ggrid">
+      <div class="entry"><h4>工业革命 <span class="en">Industrial Revolution</span></h4><p>以一项通用技术的普及为标志，生产方式、生产组织与社会结构被整体改写的过程。<b>分期口径并不统一</b>，引用前需说明用的是哪一套。</p></div>
+      <div class="entry"><h4>第三次科技革命</h4><p>传统教材口径：以原子能、电子计算机、空间技术与生物工程的兴起为标志，起点取 1945 或 1970s。与「第三次产业革命」并非完全同义。</p></div>
+      <div class="entry"><h4>通用技术 <span class="en">General Purpose Technology</span></h4><p>会渗透到多数行业并引发组织与制度变化的技术（蒸汽机、电力、信息技术）。<b>只有通用技术才能改写生产方式，而不只是提效。</b></p></div>
+      <div class="entry"><h4>信息时代 <span class="en">Information Age</span></h4><p>以信息成为与物质、能源并列的核心资源为特征的时代。托夫勒《第三次浪潮》1980 最早提出，卡斯特尔斯《网络社会的崛起》1996 定型。</p></div>
+      <div class="entry"><h4>后工业社会 <span class="en">Post-industrial Society</span></h4><p>贝尔 1973《后工业社会的来临》：经济重心从制造转向服务，知识与专业角色成为主导。它讲的是<b>产业结构</b>，不是「信息资源」。</p></div>
+      <div class="entry"><h4>知识经济 <span class="en">Knowledge Economy</span></h4><p>德鲁克 1993：知识是最能增值的生产要素。它讲的是<b>要素地位</b>，与信息时代的「资源结构」判断不是一回事。</p></div>
+      <div class="entry"><h4>数字经济 <span class="en">Digital Economy</span></h4><p>由数字技术驱动、以数据要素为核心的经济形态。侧重「驱动力与形态」，常被当作信息时代的操作化版本使用。</p></div>
+      <div class="entry"><h4>第四次工业革命 <span class="en">Industry 4.0</span></h4><p>2010s 起的智能化浪潮：AI、物联网、机器人与数字孪生进入生产系统。<b>分水岭在系统自主性，而非单纯自动化。</b></p></div>
+      <div class="entry"><h4>泰勒制 / 科学管理 <span class="en">Taylorism</span></h4><p>第二次工业革命的组织维度标志：把作业拆解、计时、标准化与考核，以牺牲熟练工人的自主性换取可复制的流水线效率。</p></div>
+      <div class="entry"><h4>功能固着 <span class="en">Functional fixity</span></h4><p>David 用于解释电气化迟滞的概念：管理者把旧流程的形状当成技术本身的一部分，于是<b>只做替换而不做重排</b>。换马达不换布局，等于什么都没变。</p></div>
+      <div class="entry"><h4>单元驱动 <span class="en">Unit drive</span></h4><p>每台机器配自己的电动机，从而摆脱中央传动轴的布局约束，机器可按物料流向排列。<b>第二次革命生产率爆发的真正开关</b>，与今天的「流程重构」是同一个动作。</p></div>
+      <div class="entry"><h4>生产率 J 曲线 <span class="en">Productivity J-curve</span></h4><p>Brynjolfsson 等提出：重组期先付出成本、后收获收益，测得生产率先下探再陡升。<b>短期看不到收益是重组的正常形态</b>，不是失败的信号。</p></div>
+      <div class="entry"><h4>恩格斯停顿 <span class="en">Engels' Pause</span></h4><p>Allen 量化：1780–1840 年英国劳均产出 +46%，实际工资仅 +12%。<b>技术收益与分配收益是两件事</b>，后者有自己的时间表——直到 1860 年后工资增速反超产出增速，「共享增长」才确立。</p></div>
+    </div>
+
+    <p class="glossary-note">合计 98 条。词条按「是什么 → 为什么值得知道」写，刻意不复述定义词典；如需展开某一组，可直接说想看哪一块。</p>
+  </section>
+
+  <!-- ============ 7.3 阅读路径 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">7.3</span><h2>按角色的阅读路径</h2>
+      <span class="sub">不必通读 98 条</span>
+    </div>
+    <div class="figbox" style="padding:16px 22px 8px">
+      <table>
+        <thead>
+          <tr><th>你的角色</th><th>必读</th><th>选读</th><th>读完要能回答</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>平台架构师</td><td>A 组、D 组、F 组</td><td>C 组中 HBM 与互连部分</td><td>哪些抽象层该由平台固化、哪些必须留出替换接口</td></tr>
+          <tr><td>推理服务开发</td><td>B 组中加速器与推理部分、E 组</td><td>C 组存储部分</td><td>一次请求的时延如何拆成 prefill、decode 与通信三段</td></tr>
+          <tr><td>基础设施 / SRE</td><td>D 组、C 组互连部分</td><td>A 组中内存模型与 NUMA</td><td>「资源都占着但吞吐上不去」的根因在哪一层</td></tr>
+          <tr><td>芯片与互联相关</td><td>A 组、C 组</td><td>B 组中 SIMD 与矩阵单元</td><td>代际路线图的规格差异说明了什么取舍</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="muted" style="margin-top:10px">另：<b>G 组（工业革命与时代）是所有角色的共同背景</b>，约 5 分钟扫一遍，判断自己所处的坐标会清楚很多。</p>
+  </section>
+
+  <footer>
+    电脑技术的发展路径 · 04 术语表 · 术语定义取行业通用口径，不同厂商文档措辞可能略有差异<br/>
+    配套专题：<a href="index.html">核心沉淀</a> · <a href="01-history.html">发展路径</a> · <a href="02-architecture.html">底层架构与影响</a> · <a href="03-current.html">现状与来源</a> · <a href="05-industrial-logic.html">工业革命的逻辑</a>
+  </footer>
+
+</div>
+</body>
+</html>
