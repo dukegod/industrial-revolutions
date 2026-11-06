@@ -1,0 +1,34 @@
+01-first.html
+  h_c10f653d02d2fc 19-57,151,155,157
+02-second.html
+  h_c10f653d02d2fc 19-57,204,208,210
+03-third.html
+  h_c10f653d02d2fc 19-57,214,234,238,240
+04-architecture.html
+  h_c10f653d02d2fc 6,19-57,63,304-306
+05-fourth.html
+  h_c10f653d02d2fc 6,19-57,63,174,176
+06-current.html
+  h_c10f653d02d2fc 19-57,68,238-240
+07-glossary.html
+  h_c10f653d02d2fc 19-57,63,265-267
+08-logic.html
+  h_c10f653d02d2fc 19-57,71,444-446
+assets/style.css
+  h_c10f653d02d2fc 38,45-105,109
+computer-architecture-evolution.html
+  h_c10f653d02d2fc 36-37
+index.html
+  h_c10f653d02d2fc 19-57,407,632-633,642,644
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1bbc401cc3fc6735c79d571aa82fafee64fa7df1",
+  "prompts": {},
+  "humans": {
+    "h_c10f653d02d2fc": {
+      "author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
