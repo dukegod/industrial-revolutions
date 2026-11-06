@@ -278,10 +278,122 @@
     </p>
   </section>
 
+  <!-- ============ 台阶放大 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">03</span><h2>台阶放大：逐层看内部</h2>
+      <span class="sub">先把台阶一摊开看</span>
+    </div>
+
+    <p>
+      金字塔给出的是骨架。要看清每一段台阶内部到底发生了什么，得把它单独放大。
+      <b>每一段台阶的读法都一样</b>：里面的每次跃迁各自带来新技术、各自改了一条规则、各自往下面压一份稀缺、各自往上面交一份能力；整段台阶对外只兑现一句话，对内只压一样东西。
+    </p>
+
+    <figure class="figbox" style="padding:20px 22px 14px;margin-top:16px">
+      <div class="scroll-x">
+      <svg viewBox="0 0 960 610" width="100%" style="display:block;height:auto" role="img" aria-label="台阶一放大：指令集与微架构内部的三次跃迁，分别列出带来的新技术、改变的规则、压给下面的稀缺与交付给上层的能力">
+        <defs>
+          <linearGradient id="gup" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2f6f5e" stop-opacity=".16"/>
+            <stop offset="1" stop-color="#2f6f5e" stop-opacity=".05"/>
+          </linearGradient>
+          <linearGradient id="gdn" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#c97b3f" stop-opacity=".07"/>
+            <stop offset="1" stop-color="#c97b3f" stop-opacity=".20"/>
+          </linearGradient>
+        </defs>
+
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+
+          <rect x="40" y="26" width="880" height="64" rx="12" fill="url(#gup)" stroke="#2f6f5e" stroke-opacity=".35"/>
+          <text x="62" y="53" font-size="13" font-weight="600" fill="#2f6f5e">台阶 1 对上只承诺一件事：不必自己写指令</text>
+          <text x="62" y="75" font-size="11.5" fill="#3a4256">一套稳定的 ISA 契约 · 可存储的程序 · 可隐藏延迟的存储层次 —— 三样都是这一段建起来的</text>
+
+          <g font-size="10.5" fill="#7c7a72" font-family="JetBrains Mono, monospace">
+            <text x="62" y="106">跃迁 · 名称</text>
+            <text x="270" y="106">带来了什么新技术</text>
+            <text x="580" y="106">改变了什么规则</text>
+          </g>
+
+          <rect x="40" y="118" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="118" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="150" font-size="14"><tspan fill="#14171e" font-weight="600">跃迁 3</tspan><tspan fill="#2f6f5e" font-weight="600"> · RISC / Cache</tspan></text>
+          <text x="62" y="172" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">1985–1995</text>
+          <text x="62" y="192" font-size="11.5" fill="#3a4256">流水线 + 存储层次</text>
+          <text x="270" y="150" font-size="12.5" fill="#3a4256">流水线 · 寄存器堆 · 多级 Cache</text>
+          <text x="270" y="172" font-size="12.5" fill="#3a4256">存储层次 · TLB</text>
+          <text x="580" y="150" font-size="12.5" fill="#3a4256">性能优化从「少执行指令」</text>
+          <text x="580" y="172" font-size="12.5" fill="#3a4256">转向「少等数据」</text>
+          <line x1="62" y1="212" x2="898" y2="212" stroke="#e9e3d6"/>
+          <text x="62" y="234" font-size="11" fill="#c97b3f">↓ 压给下面：访存延迟 → 内存墙</text>
+          <text x="580" y="234" font-size="11" fill="#2f6f5e">↑ 交付给上层：性能靠喂饱流水线</text>
+
+          <rect x="40" y="256" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="256" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="288" font-size="14"><tspan fill="#14171e" font-weight="600">跃迁 2</tspan><tspan fill="#2f6f5e" font-weight="600"> · ISA 商业化</tspan></text>
+          <text x="62" y="310" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">1958–1978</text>
+          <text x="62" y="330" font-size="11.5" fill="#3a4256">集成电路 · x86 向下兼容成为契约</text>
+          <text x="270" y="288" font-size="12.5" fill="#3a4256">硅片集成 · 微处理器（4004）</text>
+          <text x="270" y="310" font-size="12.5" fill="#3a4256">商业 ISA · 向下兼容</text>
+          <text x="580" y="288" font-size="12.5" fill="#3a4256">兼容性的价值长期高于</text>
+          <text x="580" y="310" font-size="12.5" fill="#3a4256">架构的先进程度</text>
+          <line x1="62" y1="350" x2="898" y2="350" stroke="#e9e3d6"/>
+          <text x="62" y="372" font-size="11" fill="#c97b3f">↓ 压给下面：集成度与制程</text>
+          <text x="580" y="372" font-size="11" fill="#2f6f5e">↑ 交付给上层：软硬件解耦，可移植</text>
+
+          <rect x="40" y="394" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="394" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="426" font-size="14"><tspan fill="#14171e" font-weight="600">跃迁 1</tspan><tspan fill="#2f6f5e" font-weight="600"> · 电子管 / 晶体管</tspan></text>
+          <text x="62" y="448" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">1945–1957</text>
+          <text x="62" y="468" font-size="11.5" fill="#3a4256">确立「存储程序」</text>
+          <text x="270" y="426" font-size="12.5" fill="#3a4256">存储程序 · 条件跳转 · 编译器概念</text>
+          <text x="270" y="448" font-size="12.5" fill="#3a4256">地址总线 · 晶体管</text>
+          <text x="580" y="426" font-size="12.5" fill="#3a4256">「程序」成为可存储、可复制、</text>
+          <text x="580" y="448" font-size="12.5" fill="#3a4256">可分发的独立对象</text>
+          <line x1="62" y1="488" x2="898" y2="488" stroke="#e9e3d6"/>
+          <text x="62" y="510" font-size="11" fill="#c97b3f">↓ 压给下面：晶体管小型化</text>
+          <text x="580" y="510" font-size="11" fill="#2f6f5e">↑ 交付给上层：一台机器跑不同程序</text>
+
+          <rect x="40" y="532" width="880" height="64" rx="12" fill="url(#gdn)" stroke="#c97b3f" stroke-opacity=".35"/>
+          <text x="62" y="559" font-size="13" font-weight="600" fill="#c97b3f">台阶 1 对下压给基座：硅与工艺 · 内存与带宽</text>
+          <text x="62" y="581" font-size="11.5" fill="#3a4256">跃迁 1、2 压的是硅与工艺；跃迁 3 压的是访存延迟 —— 后者后来长成了内存墙</text>
+        </g>
+      </svg>
+      </div>
+      <figcaption>
+        图 3 · 台阶一放大：指令集与微架构内部（跃迁 1–3）。读法是<b>从下往上</b>：每次跃迁改一条规则、往上面交一份能力、往下面压一份稀缺。
+        注意底部那行——<b>前两次压的是硅与工艺，第三次压的却是访存延迟</b>；这一次换靶子，才有了后来「内存墙」这个说法。
+        窄屏可横向滚动查看。
+      </figcaption>
+    </figure>
+
+    <div class="grid2" style="margin-top:16px">
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+          这一段对外的兑现
+        </h3>
+        <p>三步走完，程序员<b>不必再碰机器指令</b>：一套跨代稳定的 ISA 契约、一套能存能复制的程序、一套能把延迟藏起来的存储层次。</p>
+      </div>
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
+          这一段对下的欠账
+        </h3>
+        <p>三次跃迁各压一份稀缺下去：<b>晶体管小型化 → 集成度与制程 → 访存延迟</b>。前两份沉在基座，第三份指向了内存墙。</p>
+      </div>
+    </div>
+
+    <p class="muted" style="margin-top:16px">
+      台阶二（运行时与框架）、台阶三（系统与调度）、台阶四（应用与工作负载）的放大图，按同一格式待补。
+    </p>
+  </section>
+
   <!-- ============ 三条主线 ============ -->
   <section>
     <div class="sec-head">
-      <span class="num">03</span><h2>把八段历史压缩成三条主线</h2>
+      <span class="num">04</span><h2>把八段历史压缩成三条主线</h2>
       <span class="sub">记住这三条，就抓住了演进的骨架</span>
     </div>
 
@@ -334,7 +446,7 @@
         </g>
       </svg>
       <figcaption>
-        图 3 · 三条主线。值得注意的是<b>三者不同步</b>：主线二（形态）比主线三（规模）慢半拍，而主线一（瓶颈）始终在追赶前两者——这正是当下「算力堆得很快、内存与互连跟不上」的根源。
+        图 4 · 三条主线。值得注意的是<b>三者不同步</b>：主线二（形态）比主线三（规模）慢半拍，而主线一（瓶颈）始终在追赶前两者——这正是当下「算力堆得很快、内存与互连跟不上」的根源。
       </figcaption>
     </figure>
 
@@ -359,7 +471,7 @@
   <!-- ============ 跃迁 × 层：技术如何逐层传递 ============ -->
   <section>
     <div class="sec-head">
-      <span class="num">04</span><h2>技术如何一层层传递</h2>
+      <span class="num">05</span><h2>技术如何一层层传递</h2>
       <span class="sub">八次跃迁 × 七层栈</span>
     </div>
 
@@ -396,7 +508,7 @@
         </table>
       </div>
       <figcaption>
-        图 4 · 八次跃迁 × 七层栈。竖着读是每一层被解放的顺序：指令层（1–3）→ 运行时层（4–5）→ 系统层（6）→ 应用层（7–8）。
+        图 5 · 八次跃迁 × 七层栈。竖着读是每一层被解放的顺序：指令层（1–3）→ 运行时层（4–5）→ 系统层（6）→ 应用层（7–8）。
         <b>八轮里有六轮从最底层起手，只有一轮（跃迁 7）从内存层起手</b>——起手层决定了后面传导的形状。
         窄屏可横向滚动查看。
       </figcaption>
@@ -442,7 +554,7 @@
   <!-- ============ 影响对照表 ============ -->
   <section>
     <div class="sec-head">
-      <span class="num">05</span><h2>带来的影响：十个维度的结构性改变</h2>
+      <span class="num">06</span><h2>带来的影响：十个维度的结构性改变</h2>
       <span class="sub">架构变了什么 → 谁买单</span>
     </div>
 
