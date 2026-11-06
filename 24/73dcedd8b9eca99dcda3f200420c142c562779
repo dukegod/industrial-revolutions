@@ -1,0 +1,21 @@
+visualization/04-architecture.html
+  s_ae6303e289bfd2::t_9fbcd221c0b3eb 285,290-291,294-295,297,299,303,310,359,365,368-424,426-537,539-553,557,617,679
+visualization/assets/style.css
+  s_ae6303e289bfd2::t_c3f2900f730fab 213-217
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2473dcedd8b9eca99dcda3f200420c142c562779",
+  "prompts": {},
+  "sessions": {
+    "s_ae6303e289bfd2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a5a9-f28b-7581-9380-507f1225840b",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
