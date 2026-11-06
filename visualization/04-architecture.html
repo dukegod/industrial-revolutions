@@ -282,31 +282,32 @@
   <section>
     <div class="sec-head">
       <span class="num">03</span><h2>台阶放大：逐层看内部</h2>
-      <span class="sub">先把台阶一摊开看</span>
+      <span class="sub">四段台阶，一个读法</span>
     </div>
 
     <p>
       金字塔给出的是骨架。要看清每一段台阶内部到底发生了什么，得把它单独放大。
-      <b>每一段台阶的读法都一样</b>：里面的每次跃迁各自带来新技术、各自改了一条规则、各自往下面压一份稀缺、各自往上面交一份能力；整段台阶对外只兑现一句话，对内只压一样东西。
+      <b>四段台阶的读法完全一样</b>：里面的每次跃迁各自带来新技术、各自改一条规则、
+      各自往下面压一份稀缺、各自往上面交一份能力；整段台阶对外只兑现一句话，对内只压一样东西。
     </p>
 
-    <figure class="figbox" style="padding:20px 22px 14px;margin-top:16px">
+    <h3 class="step-title">台阶一 · 指令集与微架构<span class="ramp">跃迁 1–3</span></h3>
+    <figure class="figbox" style="padding:20px 22px 14px">
       <div class="scroll-x">
-      <svg viewBox="0 0 960 610" width="100%" style="display:block;height:auto" role="img" aria-label="台阶一放大：指令集与微架构内部的三次跃迁，分别列出带来的新技术、改变的规则、压给下面的稀缺与交付给上层的能力">
+<svg viewBox="0 0 960 610" width="100%" style="display:block;height:auto" role="img" aria-label="台阶一放大：指令集与微架构内部的三次跃迁，分别列出带来的新技术、改变的规则、压给下面的稀缺与交付给上层的能力">
         <defs>
-          <linearGradient id="gup" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient id="gup1" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stop-color="#2f6f5e" stop-opacity=".16"/>
             <stop offset="1" stop-color="#2f6f5e" stop-opacity=".05"/>
           </linearGradient>
-          <linearGradient id="gdn" x1="0" y1="0" x2="0" y2="1">
+          <linearGradient id="gdn1" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stop-color="#c97b3f" stop-opacity=".07"/>
             <stop offset="1" stop-color="#c97b3f" stop-opacity=".20"/>
           </linearGradient>
         </defs>
-
         <g font-family="Outfit, 'PingFang SC', sans-serif">
 
-          <rect x="40" y="26" width="880" height="64" rx="12" fill="url(#gup)" stroke="#2f6f5e" stroke-opacity=".35"/>
+          <rect x="40" y="26" width="880" height="64" rx="12" fill="url(#gup1)" stroke="#2f6f5e" stroke-opacity=".35"/>
           <text x="62" y="53" font-size="13" font-weight="600" fill="#2f6f5e">台阶 1 对上只承诺一件事：不必自己写指令</text>
           <text x="62" y="75" font-size="11.5" fill="#3a4256">一套稳定的 ISA 契约 · 可存储的程序 · 可隐藏延迟的存储层次 —— 三样都是这一段建起来的</text>
 
@@ -355,38 +356,205 @@
           <text x="62" y="510" font-size="11" fill="#c97b3f">↓ 压给下面：晶体管小型化</text>
           <text x="580" y="510" font-size="11" fill="#2f6f5e">↑ 交付给上层：一台机器跑不同程序</text>
 
-          <rect x="40" y="532" width="880" height="64" rx="12" fill="url(#gdn)" stroke="#c97b3f" stroke-opacity=".35"/>
+          <rect x="40" y="532" width="880" height="64" rx="12" fill="url(#gdn1)" stroke="#c97b3f" stroke-opacity=".35"/>
           <text x="62" y="559" font-size="13" font-weight="600" fill="#c97b3f">台阶 1 对下压给基座：硅与工艺 · 内存与带宽</text>
           <text x="62" y="581" font-size="11.5" fill="#3a4256">跃迁 1、2 压的是硅与工艺；跃迁 3 压的是访存延迟 —— 后者后来长成了内存墙</text>
         </g>
       </svg>
       </div>
-      <figcaption>
-        图 3 · 台阶一放大：指令集与微架构内部（跃迁 1–3）。读法是<b>从下往上</b>：每次跃迁改一条规则、往上面交一份能力、往下面压一份稀缺。
-        注意底部那行——<b>前两次压的是硅与工艺，第三次压的却是访存延迟</b>；这一次换靶子，才有了后来「内存墙」这个说法。
-        窄屏可横向滚动查看。
-      </figcaption>
+      <figcaption>图 3 · 台阶一放大：指令集与微架构内部（跃迁 1–3）。读法是<b>从下往上</b>：每次跃迁改一条规则、往上面交一份能力、往下面压一份稀缺。注意底部那行——<b>前两次压的是硅与工艺，第三次压的却是访存延迟</b>；这一次换靶子，才有了后来「内存墙」这个说法。 窄屏可横向滚动查看。</figcaption>
     </figure>
 
-    <div class="grid2" style="margin-top:16px">
-      <div class="card">
-        <h3>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
-          这一段对外的兑现
-        </h3>
-        <p>三步走完，程序员<b>不必再碰机器指令</b>：一套跨代稳定的 ISA 契约、一套能存能复制的程序、一套能把延迟藏起来的存储层次。</p>
+    <h3 class="step-title">台阶二 · 运行时与框架<span class="ramp">跃迁 4–5</span></h3>
+    <figure class="figbox" style="padding:20px 22px 14px">
+      <div class="scroll-x">
+<svg viewBox="0 0 960 472" width="100%" style="display:block;height:auto" role="img" aria-label="台阶二放大：运行时与框架内部的两条跃迁，分别列出带来的新技术、改变的规则、压给下面的稀缺与交付给上层的能力">
+        <defs>
+          <linearGradient id="gup2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2f6f5e" stop-opacity=".16"/>
+            <stop offset="1" stop-color="#2f6f5e" stop-opacity=".05"/>
+          </linearGradient>
+          <linearGradient id="gdn2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#c97b3f" stop-opacity=".07"/>
+            <stop offset="1" stop-color="#c97b3f" stop-opacity=".20"/>
+          </linearGradient>
+        </defs>
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+
+          <rect x="40" y="26" width="880" height="64" rx="12" fill="url(#gup2)" stroke="#2f6f5e" stroke-opacity=".35"/>
+          <text x="62" y="53" font-size="13" font-weight="600" fill="#2f6f5e">台阶 2 对上只兑现一件事：不必自己写并行</text>
+          <text x="62" y="75" font-size="11.5" fill="#3a4256">并发与 GPU 的复杂度被框架和库吸收 —— 线程 / 锁 / 内存序 / kernel · 库，调用方只调接口</text>
+
+          <g font-size="10.5" fill="#7c7a72" font-family="JetBrains Mono, monospace">
+            <text x="62" y="106">跃迁 · 名称</text>
+            <text x="270" y="106">带来了什么新技术</text>
+            <text x="580" y="106">改变了什么规则</text>
+          </g>
+
+          <rect x="40" y="118" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="118" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="150" font-size="14"><tspan fill="#14171e" font-weight="600">跃迁 5</tspan><tspan fill="#2f6f5e" font-weight="600"> · GPU / CUDA</tspan></text>
+          <text x="62" y="172" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">2006–2015</text>
+          <text x="62" y="192" font-size="11.5" fill="#3a4256">通用并行 + 移动优先，两条支线同时爆发</text>
+          <text x="270" y="150" font-size="12.5" fill="#3a4256">通用并行计算 · SIMT / PTX</text>
+          <text x="270" y="172" font-size="12.5" fill="#3a4256">CUDA 库 · 异构 SoC · FinFET 制程</text>
+          <text x="580" y="150" font-size="12.5" fill="#3a4256">竞争焦点从指令集转到「编程模型</text>
+          <text x="580" y="172" font-size="12.5" fill="#3a4256">与库」；迁移成本由生态决定</text>
+          <line x1="62" y1="212" x2="898" y2="212" stroke="#e9e3d6"/>
+          <text x="62" y="234" font-size="11" fill="#c97b3f">↓ 压给下面：显存带宽与制程封装</text>
+          <text x="580" y="234" font-size="11" fill="#2f6f5e">↑ 交付给上层：并行算力变成可调用的库</text>
+
+          <rect x="40" y="256" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="256" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="288" font-size="14"><tspan fill="#14171e" font-weight="600">跃迁 4</tspan><tspan fill="#2f6f5e" font-weight="600"> · 多核 / SMP</tspan></text>
+          <text x="62" y="310" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">1995–2006</text>
+          <text x="62" y="330" font-size="11.5" fill="#3a4256">并发成为通用工程能力</text>
+          <text x="270" y="288" font-size="12.5" fill="#3a4256">多核 SoC · NUMA 拓扑 · 一致性协议</text>
+          <text x="270" y="310" font-size="12.5" fill="#3a4256">内存屏障 · SMT</text>
+          <text x="580" y="288" font-size="12.5" fill="#3a4256">顺序代码不再够用，</text>
+          <text x="580" y="310" font-size="12.5" fill="#3a4256">并发成为默认能力</text>
+          <line x1="62" y1="350" x2="898" y2="350" stroke="#e9e3d6"/>
+          <text x="62" y="372" font-size="11" fill="#c97b3f">↓ 压给下面：核间互连与访存一致性</text>
+          <text x="580" y="372" font-size="11" fill="#2f6f5e">↑ 交付给上层：横向扩展的算力</text>
+
+          <rect x="40" y="394" width="880" height="64" rx="12" fill="url(#gdn2)" stroke="#c97b3f" stroke-opacity=".35"/>
+          <text x="62" y="421" font-size="13" font-weight="600" fill="#c97b3f">台阶 2 对下压给基座：内存带宽与互连 · 制程与封装</text>
+          <text x="62" y="443" font-size="11.5" fill="#3a4256">跃迁 4 压的是核间互连与一致性；跃迁 5 压的是显存带宽 —— 算力堆得快，带宽跟不上</text>
+        </g>
+      </svg>
       </div>
-      <div class="card">
-        <h3>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
-          这一段对下的欠账
-        </h3>
-        <p>三次跃迁各压一份稀缺下去：<b>晶体管小型化 → 集成度与制程 → 访存延迟</b>。前两份沉在基座，第三份指向了内存墙。</p>
+      <figcaption>图 4 · 台阶二放大：运行时与框架内部（跃迁 4–5）。这一段解放的是「并行」——多核把并发逼成刚需，GPU 把并行变成可调用的库。<b>压下去的靶子也从互连换到了带宽</b>：算力堆得快，带宽跟不上。 窄屏可横向滚动查看。</figcaption>
+    </figure>
+
+    <h3 class="step-title">台阶三 · 系统与调度<span class="ramp">跃迁 6</span></h3>
+    <figure class="figbox" style="padding:20px 22px 14px">
+      <div class="scroll-x">
+<svg viewBox="0 0 960 356" width="100%" style="display:block;height:auto" role="img" aria-label="台阶三放大：系统与调度内部的一次跃迁，列出带来的新技术、改变的规则、压给下面的稀缺与交付给上层的能力">
+        <defs>
+          <linearGradient id="gup3" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2f6f5e" stop-opacity=".16"/>
+            <stop offset="1" stop-color="#2f6f5e" stop-opacity=".05"/>
+          </linearGradient>
+          <linearGradient id="gdn3" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#c97b3f" stop-opacity=".07"/>
+            <stop offset="1" stop-color="#c97b3f" stop-opacity=".20"/>
+          </linearGradient>
+        </defs>
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+
+          <rect x="40" y="26" width="880" height="64" rx="12" fill="url(#gup3)" stroke="#2f6f5e" stroke-opacity=".35"/>
+          <text x="62" y="53" font-size="13" font-weight="600" fill="#2f6f5e">台阶 3 对上只兑现一件事：不必自己管集群</text>
+          <text x="62" y="75" font-size="11.5" fill="#3a4256">机器、容器、拓扑、调度都交给编排系统 —— 采购与优化单元从「芯片」变成「机架 + 电力」</text>
+
+          <g font-size="10.5" fill="#7c7a72" font-family="JetBrains Mono, monospace">
+            <text x="62" y="106">跃迁 · 名称</text>
+            <text x="270" y="106">带来了什么新技术</text>
+            <text x="580" y="106">改变了什么规则</text>
+          </g>
+
+          <rect x="40" y="118" width="880" height="148" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="118" width="5" height="148" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="150" font-size="14"><tspan fill="#14171e" font-weight="600">跃迁 6</tspan><tspan fill="#2f6f5e" font-weight="600"> · 数据中心专用化</tspan></text>
+          <text x="62" y="172" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">2016–2022</text>
+          <text x="62" y="192" font-size="11.5" fill="#3a4256">算力竞赛升级为全栈竞赛</text>
+          <text x="270" y="150" font-size="12.5" fill="#3a4256">Transformer · 矩阵加速器</text>
+          <text x="270" y="172" font-size="12.5" fill="#3a4256">NVLink / InfiniBand · 集合通信</text>
+          <text x="270" y="194" font-size="12.5" fill="#3a4256">容器编排 · 低精度训练</text>
+          <text x="580" y="150" font-size="12.5" fill="#3a4256">竞争焦点从芯片级升级为系统、网络、</text>
+          <text x="580" y="172" font-size="12.5" fill="#3a4256">机房、电力级的全栈竞赛</text>
+          <line x1="62" y1="234" x2="898" y2="234" stroke="#e9e3d6"/>
+          <text x="62" y="256" font-size="11" fill="#c97b3f">↓ 压给下面：机架功率密度与电力</text>
+          <text x="580" y="256" font-size="11" fill="#2f6f5e">↑ 交付给上层：集群与调度不必自己管</text>
+
+          <rect x="40" y="278" width="880" height="64" rx="12" fill="url(#gdn3)" stroke="#c97b3f" stroke-opacity=".35"/>
+          <text x="62" y="305" font-size="13" font-weight="600" fill="#c97b3f">台阶 3 对下压给基座：电力与机架 · 高速互连</text>
+          <text x="62" y="327" font-size="11.5" fill="#3a4256">采购单元从「买几颗芯片」变成「买多少机架、多少电」—— 交付单元已是机架，FinOps 成为独立角色</text>
+        </g>
+      </svg>
       </div>
+      <figcaption>图 5 · 台阶三放大：系统与调度内部（跃迁 6）。只有一次跃迁，但它是<b>全栈竞赛</b>的起点：算法、加速器、互连、编排、机房一起动。交付出去的是「不必自己管集群」，代价是<b>采购单元从芯片变成机架与电</b>。 窄屏可横向滚动查看。</figcaption>
+    </figure>
+
+    <h3 class="step-title">台阶四 · 应用与工作负载<span class="ramp">跃迁 7–8</span></h3>
+    <figure class="figbox" style="padding:20px 22px 14px">
+      <div class="scroll-x">
+<svg viewBox="0 0 960 532" width="100%" style="display:block;height:auto" role="img" aria-label="台阶四放大：应用与工作负载内部的两次跃迁，分别列出带来的新技术、改变的规则、压给下面的稀缺与交付给上层的能力">
+        <defs>
+          <linearGradient id="gup4" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2f6f5e" stop-opacity=".16"/>
+            <stop offset="1" stop-color="#2f6f5e" stop-opacity=".05"/>
+          </linearGradient>
+          <linearGradient id="gdn4" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#c97b3f" stop-opacity=".07"/>
+            <stop offset="1" stop-color="#c97b3f" stop-opacity=".20"/>
+          </linearGradient>
+        </defs>
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+
+          <rect x="40" y="26" width="880" height="64" rx="12" fill="url(#gup4)" stroke="#2f6f5e" stroke-opacity=".35"/>
+          <text x="62" y="53" font-size="13" font-weight="600" fill="#2f6f5e">台阶 4 对上只兑现一件事：执行可以交出去</text>
+          <text x="62" y="75" font-size="11.5" fill="#3a4256">推理服务与跨架构迁移把「执行」变成可调用的接口 —— 但目标与验收仍不在这一层</text>
+
+          <g font-size="10.5" fill="#7c7a72" font-family="JetBrains Mono, monospace">
+            <text x="62" y="106">跃迁 · 名称</text>
+            <text x="270" y="106">带来了什么新技术</text>
+            <text x="580" y="106">改变了什么规则</text>
+          </g>
+
+          <rect x="40" y="118" width="880" height="148" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="118" width="5" height="148" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="150" font-size="14"><tspan fill="#14171e" font-weight="600">跃迁 8</tspan><tspan fill="#2f6f5e" font-weight="600"> · RISC-V</tspan></text>
+          <text x="62" y="172" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">2026→</text>
+          <text x="62" y="192" font-size="11.5" fill="#3a4256">可定制异构 · ISA 从商品变底座</text>
+          <text x="270" y="150" font-size="12.5" fill="#3a4256">开放 ISA · 服务器平台规范 1.0</text>
+          <text x="270" y="172" font-size="12.5" fill="#3a4256">UEFI/ACPI · PCIe/IOMMU · BMC Redfish</text>
+          <text x="270" y="194" font-size="12.5" fill="#3a4256">RAS · 安全启动 · 自定义扩展</text>
+          <text x="580" y="150" font-size="12.5" fill="#3a4256">ISA 从商品变底座；新壁垒是</text>
+          <text x="580" y="172" font-size="12.5" fill="#3a4256">指令扩展碎片化 + 软件生态碎片化 + 产能</text>
+          <line x1="62" y1="234" x2="898" y2="234" stroke="#e9e3d6"/>
+          <text x="62" y="256" font-size="11" fill="#c97b3f">↓ 压给下面：产能与流片成本</text>
+          <text x="580" y="256" font-size="11" fill="#2f6f5e">↑ 交付给上层：一套镜像跨品牌部署</text>
+
+          <rect x="40" y="278" width="880" height="148" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="278" width="5" height="148" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="310" font-size="14"><tspan fill="#14171e" font-weight="600">跃迁 7</tspan><tspan fill="#2f6f5e" font-weight="600"> · 内存墙 / AI 工厂</tspan></text>
+          <text x="62" y="332" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">2023–2026</text>
+          <text x="62" y="352" font-size="11.5" fill="#3a4256">瓶颈换人：算力过剩，数据搬运稀缺</text>
+          <text x="270" y="310" font-size="12.5" fill="#3a4256">HBM3E → HBM4 · Chiplet · 液冷</text>
+          <text x="270" y="332" font-size="12.5" fill="#3a4256">KV Cache 分层 · prefill/decode 分离</text>
+          <text x="270" y="354" font-size="12.5" fill="#3a4256">推测解码 · 电力与成本治理</text>
+          <text x="580" y="310" font-size="12.5" fill="#3a4256">衡量指标从 FLOPS 转向「每瓦每秒 token」</text>
+          <text x="580" y="332" font-size="12.5" fill="#3a4256">推理成为主负载</text>
+          <line x1="62" y1="394" x2="898" y2="394" stroke="#e9e3d6"/>
+          <text x="62" y="416" font-size="11" fill="#c97b3f">↓ 压给下面：HBM 容量与带宽</text>
+          <text x="580" y="416" font-size="11" fill="#2f6f5e">↑ 交付给上层：执行环节可以交出去</text>
+
+          <rect x="40" y="438" width="880" height="80" rx="12" fill="url(#gdn4)" stroke="#c97b3f" stroke-opacity=".35"/>
+          <text x="62" y="465" font-size="13" font-weight="600" fill="#c97b3f">台阶 4 压下去的东西分成了两路</text>
+          <text x="62" y="487" font-size="11.5" fill="#3a4256">跃迁 7 把 HBM 容量与带宽沉到基座，跃迁 8 把碎片化散进生态</text>
+          <text x="62" y="509" font-size="11.5" fill="#3a4256">但「信任与责任」压不下去 —— 它留在人身上，就是金字塔尖顶那一句</text>
+        </g>
+      </svg>
+      </div>
+      <figcaption>图 6 · 台阶四放大：应用与工作负载内部（跃迁 7–8）。这是第一次把「执行」整个交出去。<b>注意底部那行与其他三段不同</b>：跃迁 7 把 HBM 容量与带宽沉到基座，跃迁 8 把碎片化散进生态，而「信任与责任」压不下去——它留在人身上，就是金字塔尖顶那一句。 窄屏可横向滚动查看。</figcaption>
+    </figure>
+
+    <div class="figbox" style="padding:20px 22px 8px;margin-top:22px">
+      <table>
+        <thead>
+          <tr><th>台阶</th><th>跃迁</th><th>对上兑现</th><th>对下压给基座</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>一 · 指令集与微架构</td><td>1–3</td><td>不必自己写指令</td><td>硅与工艺 · 内存与带宽</td></tr>
+          <tr><td>二 · 运行时与框架</td><td>4–5</td><td>不必自己写并行</td><td>内存带宽与互连 · 制程与封装</td></tr>
+          <tr><td>三 · 系统与调度</td><td>6</td><td>不必自己管集群</td><td>电力与机架 · 高速互连</td></tr>
+          <tr><td>四 · 应用与工作负载</td><td>7–8</td><td><b>执行可以交出去</b></td><td>HBM 容量与带宽 · 电力<br/><b>但「信任与责任」压不下去，留在人身上</b></td></tr>
+        </tbody>
+      </table>
     </div>
 
     <p class="muted" style="margin-top:16px">
-      台阶二（运行时与框架）、台阶三（系统与调度）、台阶四（应用与工作负载）的放大图，按同一格式待补。
+      前三段的稀缺最终都沉到基座的物理层，第四段却留了一分在人身上——这就是金字塔尖顶与基座之间的落差。
     </p>
   </section>
 
@@ -446,7 +614,7 @@
         </g>
       </svg>
       <figcaption>
-        图 4 · 三条主线。值得注意的是<b>三者不同步</b>：主线二（形态）比主线三（规模）慢半拍，而主线一（瓶颈）始终在追赶前两者——这正是当下「算力堆得很快、内存与互连跟不上」的根源。
+        图 7 · 三条主线。值得注意的是<b>三者不同步</b>：主线二（形态）比主线三（规模）慢半拍，而主线一（瓶颈）始终在追赶前两者——这正是当下「算力堆得很快、内存与互连跟不上」的根源。
       </figcaption>
     </figure>
 
@@ -508,7 +676,7 @@
         </table>
       </div>
       <figcaption>
-        图 5 · 八次跃迁 × 七层栈。竖着读是每一层被解放的顺序：指令层（1–3）→ 运行时层（4–5）→ 系统层（6）→ 应用层（7–8）。
+        图 8 · 八次跃迁 × 七层栈。竖着读是每一层被解放的顺序：指令层（1–3）→ 运行时层（4–5）→ 系统层（6）→ 应用层（7–8）。
         <b>八轮里有六轮从最底层起手，只有一轮（跃迁 7）从内存层起手</b>——起手层决定了后面传导的形状。
         窄屏可横向滚动查看。
       </figcaption>
