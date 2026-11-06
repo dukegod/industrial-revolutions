@@ -1,0 +1,58 @@
+README.md
+  h_c10f653d02d2fc 1-124
+scripts/README.md
+  h_c10f653d02d2fc 1-97
+scripts/build.py
+  h_c10f653d02d2fc 1-211
+scripts/test_verify.py
+  h_c10f653d02d2fc 1-48
+scripts/verify.py
+  h_c10f653d02d2fc 1-287
+visualization/01-first.html
+  h_c10f653d02d2fc 155
+visualization/02-second.html
+  h_c10f653d02d2fc 208
+visualization/03-third.html
+  h_c10f653d02d2fc 238
+visualization/04-architecture.html
+  h_c10f653d02d2fc 304-305
+visualization/05-fourth.html
+  h_c10f653d02d2fc 174
+visualization/06-current.html
+  h_c10f653d02d2fc 238-239
+visualization/07-glossary.html
+  h_c10f653d02d2fc 265-266
+visualization/08-logic.html
+  h_c10f653d02d2fc 444-445
+visualization/index.html
+  h_c10f653d02d2fc 642-643
+wiki/01-第一次工业革命.md
+  h_c10f653d02d2fc 1-89
+wiki/02-第二次工业革命.md
+  h_c10f653d02d2fc 1-94
+wiki/03-第三次工业革命.md
+  h_c10f653d02d2fc 1-93
+wiki/04-第四次工业革命.md
+  h_c10f653d02d2fc 1-95
+wiki/05-推进逻辑四铁律.md
+  h_c10f653d02d2fc 1-135
+wiki/06-电子计算机八次跃迁.md
+  h_c10f653d02d2fc 1-107
+wiki/07-术语表.md
+  h_c10f653d02d2fc 1-72
+wiki/08-数据来源与口径.md
+  h_c10f653d02d2fc 1-86
+wiki/README.md
+  h_c10f653d02d2fc 1-57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c631c104936c459fd7c3c9241b4c86a7f7f56436",
+  "prompts": {},
+  "humans": {
+    "h_c10f653d02d2fc": {
+      "author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
