@@ -35,7 +35,7 @@
         <div class="nav-tree-panel">
           <div class="grp">第三次工业革命</div>
           <a href="03-third.html"><span class="num">03</span>第三次<span class="sub">可编程与零边际复制 · 内部章</span></a>
-          <a href="04-architecture.html" class="on"><span class="num">04</span>底层架构<span class="sub">七层抽象栈 · 三条主线 · 影响对照</span></a>
+          <a href="04-architecture.html" class="on"><span class="num">04</span>底层架构<span class="sub">七层抽象栈 · 三条主线 · 逐层传递</span></a>
         </div>
       </details>
       <details class="nav-tree">
@@ -62,10 +62,11 @@
   <header class="hero">
     <p class="kicker">04 · Architecture &amp; Impact</p>
     <h1>七层抽象栈，与它带来的结构性改变</h1>
-    <p class="lede">这是<b>第三次革命内部</b>的纵切面。第三次革命在「计算」这一个维度上的进程是八次架构跃迁（见 <a href="03-third.html">03 第三次</a>），这一页把它们压缩成<b>七层抽象栈</b>与<b>三条主线</b>——看每一层如何解决上一层的麻烦，又制造了什么新麻烦。</p>
+    <p class="lede">这是<b>第三次革命内部</b>的纵切面。第三次革命在「计算」这一个维度上的进程是八次架构跃迁（见 <a href="03-third.html">03 第三次</a>），这一页把它们压缩成<b>七层抽象栈</b>、<b>三条主线</b>与一张<b>逐层传递矩阵</b>——看每一层如何解决上一层的麻烦，又制造了什么新麻烦。</p>
     <div class="meta">
       <span class="tag">分层 <b>7 层</b></span>
       <span class="tag">主线 <b>3 条</b></span>
+      <span class="tag">传导 <b>4 式</b></span>
       <span class="tag">影响维度 <b>10 项</b></span>
       <span class="tag">八次跃迁见 <a href="03-third.html"><b>第三次</b> →</a></span>
     </div>
@@ -228,10 +229,93 @@
     </div>
   </section>
 
+  <!-- ============ 跃迁 × 层：技术如何逐层传递 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">03</span><h2>技术如何一层层传递</h2>
+      <span class="sub">八次跃迁 × 七层栈</span>
+    </div>
+
+    <p>
+      每次跃迁的技术都不止停在一层。它落在底层，然后<b>逐层向上改写</b>；每一层都必须改到位，中间环节才接得住。
+      下表是八次跃迁在七层栈上的落点——<b>横向读</b>是一次跃迁的传递路径，<b>纵向读</b>是每一层被解放的顺序。
+    </p>
+
+    <figure class="figbox" style="padding:20px 22px 14px;margin-top:16px">
+      <div class="scroll-x">
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>层 ↑ / 跃迁 →</th>
+              <th>1 存储程序</th>
+              <th>2 ISA 契约</th>
+              <th>3 流水线+Cache</th>
+              <th>4 多核</th>
+              <th>5 GPU / SoC</th>
+              <th>6 数据中心</th>
+              <th>7 AI 工厂</th>
+              <th>8 RISC-V</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>应用与工作负载</td><td>通用计算</td><td>商业软件</td><td>延迟敏感服务</td><td>并行 / 分布式应用</td><td>深度学习</td><td>大模型产品</td><td>推理服务</td><td>跨架构迁移</td></tr>
+            <tr><td>运行时与框架</td><td>编译器</td><td>标准 C / UNIX</td><td>GCC 工具链</td><td>线程与内存模型</td><td>CUDA 与库</td><td>分布式训练框架</td><td>vLLM / SGLang</td><td>移植与兼容层</td></tr>
+            <tr><td>系统与调度</td><td>批处理</td><td>分时与虚拟内存</td><td>页表与 TLB</td><td>拓扑感知调度</td><td>驱动栈</td><td>K8s 与集合通信</td><td>FinOps 与电力</td><td>RAS 与标准运维</td></tr>
+            <tr><td>互连与网络</td><td>地址总线</td><td>标准化总线</td><td>片上互连</td><td>NoC / 插槽互连</td><td>NVLink</td><td>IB / RoCE</td><td>UBB 与光互连</td><td>PCIe / IOMMU 标准化</td></tr>
+            <tr><td>内存与存储</td><td>磁芯→半导体</td><td>地址空间契约</td><td>Cache 与 DRAM 分层</td><td>NUMA</td><td>GDDR 与 DDR 分叉</td><td>HBM + 并行文件系统</td><td>HBM4 与 KV 分层</td><td>地址空间与设备树标准化</td></tr>
+            <tr><td>硅、封装与散热</td><td>晶体管小型化</td><td>集成度提升</td><td>面积换缓存</td><td>功耗密度→频率墙</td><td>制程红利 / SoC</td><td>机架整柜</td><td>Chiplet + 液冷</td><td>定制化与产能</td></tr>
+            <tr><td>指令集与微架构</td><td>存储程序 / 条件跳转</td><td>商业 ISA + 兼容</td><td>流水线 / 超标量</td><td>多核 / SMT / 内存序</td><td>SIMT / PTX</td><td>矩阵单元 / ASIC</td><td>自研域 / 矩阵扩展</td><td>开放 ISA + 自定义扩展</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figcaption>
+        图 3 · 八次跃迁 × 七层栈。竖着读是每一层被解放的顺序：指令层（1–3）→ 运行时层（4–5）→ 系统层（6）→ 应用层（7–8）。
+        <b>八轮里有六轮从最底层起手，只有一轮（跃迁 7）从内存层起手</b>——起手层决定了后面传导的形状。
+        窄屏可横向滚动查看。
+      </figcaption>
+    </figure>
+
+    <div class="grid2" style="margin-top:16px">
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+          自下而上贯通型
+        </h3>
+        <p>跃迁 1、2、8。底层先立规矩，上层逐层接住。<b>任何一层缺席，整条链就断</b>——1945 年的存储器与总线、2026 年的固件与 IOMMU 规范，都站在这个位置上。</p>
+      </div>
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M7 8l-4 4 4 4"/><path d="M17 8l4 4-4 4"/></svg>
+          横向替换型
+        </h3>
+        <p>跃迁 5、6。不替换旧路，而是在应用层<b>新增</b>一条路，中间层为它单独建栈（驱动、库、调度）。代价是生态碎片化与迁移成本——CUDA 把迁移成本抬到了硬件价格之上。</p>
+      </div>
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
+          自上而下倒逼型
+        </h3>
+        <p>跃迁 7。传导方向反转：应用层的商业压力倒逼最底层。「每次调用都要付钱」把调度器变成产品，把 HBM 容量变成整条链上最难改的一环。</p>
+      </div>
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          边界外移型
+        </h3>
+        <p>跃迁 3、4。优化的对象从 CPU 内部搬到软件栈：从「少执行指令」变成「少等数据」，再变成「少写并发代码」。<b>技术债不会消失，只会换一层楼继续住。</b></p>
+      </div>
+    </div>
+
+    <p class="muted" style="margin-top:16px">
+      逐跃迁的完整传递链与判断依据，见 wiki 条目 <b>06 电子计算机八次跃迁</b>；
+      具体数据与来源见 <a href="06-current.html" style="color:var(--accent)">现状与来源</a>页。
+    </p>
+  </section>
+
   <!-- ============ 影响对照表 ============ -->
   <section>
     <div class="sec-head">
-      <span class="num">03</span><h2>带来的影响：十个维度的结构性改变</h2>
+      <span class="num">04</span><h2>带来的影响：十个维度的结构性改变</h2>
       <span class="sub">架构变了什么 → 谁买单</span>
     </div>
 

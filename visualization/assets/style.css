@@ -200,6 +200,13 @@ tbody tr:last-child td{border-bottom:none;}
 td a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-line);}
 td a:hover{border-bottom-color:var(--accent);}
 
+/* ---------- matrix（宽表：层 × 跃迁，窄屏横向滚动） ---------- */
+.scroll-x{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+table.matrix{min-width:880px;font-size:12.3px;}
+table.matrix thead th{font-size:10px;white-space:nowrap;vertical-align:bottom;padding:0 10px 8px 0;}
+table.matrix tbody td{line-height:1.45;padding:9px 10px 9px 0;}
+table.matrix tbody td:first-child{width:auto;white-space:nowrap;font-size:12.2px;padding-right:14px;}
+
 /* ---------- kv ---------- */
 .kv{display:grid;grid-template-columns:104px 1fr;row-gap:8px;column-gap:14px;margin:0;}
 .kv dt{color:var(--muted);font-size:12.5px;padding-bottom:6px;border-bottom:1px dashed var(--line);}
