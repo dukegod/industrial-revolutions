@@ -1,0 +1,16 @@
+visualization/04-architecture.html
+  h_c10f653d02d2fc 281-392,396,449,474,511,557
+wiki/06-电子计算机八次跃迁.md
+  h_c10f653d02d2fc 229-246
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0b25eb8673f1e37965902f78e7edf2316b2b2b09",
+  "prompts": {},
+  "humans": {
+    "h_c10f653d02d2fc": {
+      "author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
