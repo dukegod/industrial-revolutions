@@ -1,0 +1,39 @@
+scripts/build.py
+  s_ae6303e289bfd2::t_2a4bbfb8784eef 37
+visualization/01-first.html
+  s_ae6303e289bfd2::t_96afaa0c073bc6 38
+visualization/02-second.html
+  s_ae6303e289bfd2::t_53acfd02abf9aa 38
+visualization/03-third.html
+  s_ae6303e289bfd2::t_6cf1a10ddb895e 38
+visualization/05-fourth.html
+  s_ae6303e289bfd2::t_a4f466fd2eb868 38
+visualization/06-current.html
+  s_ae6303e289bfd2::t_dd3ad6616a827b 38
+visualization/07-glossary.html
+  s_ae6303e289bfd2::t_f47c5e984bd9e2 38
+visualization/08-logic.html
+  s_ae6303e289bfd2::t_308bf52d15f571 38
+visualization/assets/style.css
+  s_ae6303e289bfd2::t_a922ebcbc68a68 210-212
+visualization/index.html
+  s_ae6303e289bfd2::t_d10c239c01ab85 38
+wiki/06-电子计算机八次跃迁.md
+  s_ae6303e289bfd2::t_815824691f98b8 205,207-223,225
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f0bcd55d9d909d0c183a70a3574bdbc16365db25",
+  "prompts": {},
+  "sessions": {
+    "s_ae6303e289bfd2": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a1a5a9-f28b-7581-9380-507f1225840b",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
