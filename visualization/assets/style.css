@@ -207,6 +207,9 @@ table.matrix thead th{font-size:10px;white-space:nowrap;vertical-align:bottom;pa
 table.matrix tbody td{line-height:1.45;padding:9px 10px 9px 0;}
 table.matrix tbody td:first-child{width:auto;white-space:nowrap;font-size:12.2px;padding-right:14px;}
 
+/* ---------- 宽 SVG（金字塔总图）：窄屏内部横向滚动，不缩到看不清 ---------- */
+.scroll-x > svg{width:100%;min-width:720px;}
+
 /* ---------- kv ---------- */
 .kv{display:grid;grid-template-columns:104px 1fr;row-gap:8px;column-gap:14px;margin:0;}
 .kv dt{color:var(--muted);font-size:12.5px;padding-bottom:6px;border-bottom:1px dashed var(--line);}

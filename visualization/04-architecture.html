@@ -35,7 +35,7 @@
         <div class="nav-tree-panel">
           <div class="grp">第三次工业革命</div>
           <a href="03-third.html"><span class="num">03</span>第三次<span class="sub">可编程与零边际复制 · 内部章</span></a>
-          <a href="04-architecture.html" class="on"><span class="num">04</span>底层架构<span class="sub">七层抽象栈 · 三条主线 · 逐层传递</span></a>
+          <a href="04-architecture.html" class="on"><span class="num">04</span>底层架构<span class="sub">金字塔总图 · 七层栈 · 逐层传递</span></a>
         </div>
       </details>
       <details class="nav-tree">
@@ -151,10 +151,137 @@
     </figure>
   </section>
 
+  <!-- ============ 金字塔总图 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">02</span><h2>从物理约束到目标与责任：一张图看完整个逻辑</h2>
+      <span class="sub">稀缺下沉 · 能力上浮</span>
+    </div>
+
+    <p>
+      图 1 是按<b>职责</b>把系统拆成七层。这张图换一种读法：按<b>被解放的顺序</b>把七层归成四段台阶。
+      每一段台阶做的是同一件事 —— <b>把下一段的复杂度用软件吸收掉，向上交付一层能力，同时把一份新的稀缺压给下面。</b>
+    </p>
+
+    <figure class="figbox" style="padding:20px 22px 14px;margin-top:16px">
+      <div class="scroll-x">
+      <svg viewBox="0 0 960 790" width="100%" style="display:block;height:auto" role="img" aria-label="从物理约束到目标与责任的金字塔：左侧稀缺下沉，右侧能力上浮，四段台阶分别对应四轮解放，顶部尖顶是仍握在人手里的目标与责任">
+        <defs>
+          <linearGradient id="gpyr" gradientUnits="userSpaceOnUse" x1="0" y1="690" x2="0" y2="170">
+            <stop offset="0" stop-color="#2f6f5e" stop-opacity=".17"/>
+            <stop offset="1" stop-color="#2f6f5e" stop-opacity=".04"/>
+          </linearGradient>
+          <linearGradient id="gapex" gradientUnits="userSpaceOnUse" x1="0" y1="170" x2="0" y2="40">
+            <stop offset="0" stop-color="#c97b3f" stop-opacity=".10"/>
+            <stop offset="1" stop-color="#c97b3f" stop-opacity=".28"/>
+          </linearGradient>
+          <marker id="arwUp" markerWidth="9" markerHeight="9" refX="4.5" refY="8" orient="auto">
+            <path d="M4.5,0 L9,8 L0,8 Z" fill="#2f6f5e"/>
+          </marker>
+          <marker id="arwDn" markerWidth="9" markerHeight="9" refX="4.5" refY="1" orient="auto">
+            <path d="M4.5,9 L9,1 L0,1 Z" fill="#c97b3f"/>
+          </marker>
+        </defs>
+
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+
+          <text x="248" y="60" font-size="13.5" font-weight="600" fill="#c97b3f" text-anchor="middle">稀缺下沉</text>
+          <text x="248" y="77" font-size="10.5" fill="#b3aea2" text-anchor="middle">每一层解放后，新稀缺压到了下面</text>
+          <line x1="248" y1="92" x2="248" y2="694" stroke="#c97b3f" stroke-width="2.2"
+                marker-end="url(#arwDn)" opacity=".9"/>
+
+          <text x="760" y="60" font-size="13.5" font-weight="600" fill="#2f6f5e" text-anchor="middle">能力上浮</text>
+          <text x="760" y="77" font-size="10.5" fill="#b3aea2" text-anchor="middle">吸收下层复杂度后，向上交付</text>
+          <line x1="760" y1="694" x2="760" y2="92" stroke="#2f6f5e" stroke-width="2.2"
+                marker-end="url(#arwUp)" opacity=".9"/>
+
+          <g stroke="#e9e3d6" stroke-width="1" stroke-dasharray="2 3">
+            <line x1="254" y1="235" x2="383" y2="235"/>
+            <line x1="254" y1="365" x2="349" y2="365"/>
+            <line x1="254" y1="495" x2="315" y2="495"/>
+            <line x1="254" y1="625" x2="280" y2="625"/>
+            <line x1="754" y1="235" x2="577" y2="235"/>
+            <line x1="754" y1="365" x2="611" y2="365"/>
+            <line x1="754" y1="495" x2="645" y2="495"/>
+            <line x1="754" y1="625" x2="680" y2="625"/>
+          </g>
+
+          <g font-size="12.5" fill="#7c7a72" text-anchor="end">
+            <text x="232" y="239">信任与责任</text>
+            <text x="232" y="369">电力与机架</text>
+            <text x="232" y="499">内存与带宽</text>
+            <text x="232" y="629">硅与工艺</text>
+          </g>
+
+          <g font-size="12.5" fill="#3a4256">
+            <text x="776" y="239">执行可以交出去</text>
+            <text x="776" y="369">不必自己管集群</text>
+            <text x="776" y="499">不必自己写并行</text>
+            <text x="776" y="629">不必自己写指令</text>
+          </g>
+
+          <polygon points="440,40 520,40 554,170 406,170" fill="url(#gapex)" stroke="#c97b3f" stroke-width="1.2"/>
+          <text x="480" y="98" font-size="14" font-weight="600" fill="#14171e" text-anchor="middle">目标与责任</text>
+          <text x="480" y="118" font-size="11" fill="#7c7a72" text-anchor="middle">仍在人手里</text>
+          <line x1="556" y1="92" x2="584" y2="92" stroke="#c97b3f" stroke-width="1"/>
+          <text x="590" y="96" font-size="11.5" fill="#c97b3f">→ 第四次革命的入口</text>
+
+          <polygon points="406,170 554,170 588,300 372,300" fill="url(#gpyr)" stroke="#e9e3d6"/>
+          <text x="480" y="228" font-size="15" font-weight="600" fill="#14171e" text-anchor="middle">应用与工作负载</text>
+          <text x="480" y="250" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72" text-anchor="middle">跃迁 7–8</text>
+
+          <polygon points="372,300 588,300 622,430 338,430" fill="url(#gpyr)" stroke="#e9e3d6"/>
+          <text x="480" y="358" font-size="15" font-weight="600" fill="#14171e" text-anchor="middle">系统与调度</text>
+          <text x="480" y="380" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72" text-anchor="middle">跃迁 6</text>
+
+          <polygon points="338,430 622,430 656,560 304,560" fill="url(#gpyr)" stroke="#e9e3d6"/>
+          <text x="480" y="488" font-size="15" font-weight="600" fill="#14171e" text-anchor="middle">运行时与框架</text>
+          <text x="480" y="510" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72" text-anchor="middle">跃迁 4–5</text>
+
+          <polygon points="304,560 656,560 690,690 270,690" fill="url(#gpyr)" stroke="#e9e3d6"/>
+          <text x="480" y="618" font-size="15" font-weight="600" fill="#14171e" text-anchor="middle">指令集与微架构</text>
+          <text x="480" y="640" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72" text-anchor="middle">跃迁 1–3</text>
+
+          <rect x="238" y="702" width="484" height="44" rx="10" fill="#14171e" fill-opacity=".045" stroke="#e9e3d6"/>
+          <text x="480" y="730" font-size="13" fill="#3a4256" text-anchor="middle">物理稀缺：硅 · 内存 · 电力 · 互连</text>
+        </g>
+      </svg>
+      </div>
+      <figcaption>
+        图 2 · 从物理约束到目标与责任。<b>从底往上看</b>：基座是最硬的物理约束（永不被解放）；每往上一层，就解放一样东西，
+        同时往物理层压下一份新稀缺；台阶与台阶之间标的是对应的跃迁编号。
+        <b>前三层的稀缺最终都沉到基座的物理层，唯独最上面那层的「信任与责任」压不下去</b>——它停在尖顶，仍在人手里，那正是第四次革命要处理的问题。
+        窄屏可横向滚动查看。
+      </figcaption>
+    </figure>
+
+    <div class="grid2" style="margin-top:16px">
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+          能力上浮：四段台阶
+        </h3>
+        <p>指令层 → 运行时层 → 系统层 → 应用层，<b>越往上越晚被解放</b>。到最上面一段，「执行」这件事第一次可以整个交出去。</p>
+      </div>
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M19 12l-7 7-7-7"/></svg>
+          稀缺下沉：一份也没消失
+        </h3>
+        <p>硅与工艺 → 内存与带宽 → 电力与机架 → 信任与责任。每层吸收了下一层的复杂度，就把自己的麻烦压下去。<b>只有最后一份压到了人身上。</b></p>
+      </div>
+    </div>
+
+    <p class="muted" style="margin-top:16px">
+      尖顶那句「目标与责任」，展开就是 <a href="05-fourth.html" style="color:var(--accent)">第四次工业革命</a>：
+      执行变便宜之后，稀缺就转向「谁定义目标、谁验收结果、谁担责」。
+    </p>
+  </section>
+
   <!-- ============ 三条主线 ============ -->
   <section>
     <div class="sec-head">
-      <span class="num">02</span><h2>把八段历史压缩成三条主线</h2>
+      <span class="num">03</span><h2>把八段历史压缩成三条主线</h2>
       <span class="sub">记住这三条，就抓住了演进的骨架</span>
     </div>
 
@@ -207,7 +334,7 @@
         </g>
       </svg>
       <figcaption>
-        图 2 · 三条主线。值得注意的是<b>三者不同步</b>：主线二（形态）比主线三（规模）慢半拍，而主线一（瓶颈）始终在追赶前两者——这正是当下「算力堆得很快、内存与互连跟不上」的根源。
+        图 3 · 三条主线。值得注意的是<b>三者不同步</b>：主线二（形态）比主线三（规模）慢半拍，而主线一（瓶颈）始终在追赶前两者——这正是当下「算力堆得很快、内存与互连跟不上」的根源。
       </figcaption>
     </figure>
 
@@ -232,7 +359,7 @@
   <!-- ============ 跃迁 × 层：技术如何逐层传递 ============ -->
   <section>
     <div class="sec-head">
-      <span class="num">03</span><h2>技术如何一层层传递</h2>
+      <span class="num">04</span><h2>技术如何一层层传递</h2>
       <span class="sub">八次跃迁 × 七层栈</span>
     </div>
 
@@ -269,7 +396,7 @@
         </table>
       </div>
       <figcaption>
-        图 3 · 八次跃迁 × 七层栈。竖着读是每一层被解放的顺序：指令层（1–3）→ 运行时层（4–5）→ 系统层（6）→ 应用层（7–8）。
+        图 4 · 八次跃迁 × 七层栈。竖着读是每一层被解放的顺序：指令层（1–3）→ 运行时层（4–5）→ 系统层（6）→ 应用层（7–8）。
         <b>八轮里有六轮从最底层起手，只有一轮（跃迁 7）从内存层起手</b>——起手层决定了后面传导的形状。
         窄屏可横向滚动查看。
       </figcaption>
@@ -315,7 +442,7 @@
   <!-- ============ 影响对照表 ============ -->
   <section>
     <div class="sec-head">
-      <span class="num">04</span><h2>带来的影响：十个维度的结构性改变</h2>
+      <span class="num">05</span><h2>带来的影响：十个维度的结构性改变</h2>
       <span class="sub">架构变了什么 → 谁买单</span>
     </div>
 
