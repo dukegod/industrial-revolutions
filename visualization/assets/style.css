@@ -210,6 +210,10 @@ table.matrix tbody td:first-child{width:auto;white-space:nowrap;font-size:12.2px
 /* ---------- 宽 SVG（金字塔总图）：窄屏内部横向滚动，不缩到看不清 ---------- */
 .scroll-x > svg{width:100%;min-width:720px;}
 
+/* ---------- 宽图（架构路线）：突破正文宽度，用满视口 ---------- */
+.bleed{width:min(1440px, calc(100vw - 40px));margin-left:50%;transform:translateX(-50%);}
+.bleed .scroll-x > svg.roadmap{min-width:1080px;}
+
 /* ---------- 台阶小标题（台阶放大章节内） ---------- */
 .step-title{font-size:15.5px;font-weight:600;margin:32px 0 12px;color:var(--ink);}
 .step-title::before{content:"▸ ";color:var(--accent);font-size:12px;}

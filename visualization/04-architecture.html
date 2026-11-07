@@ -35,7 +35,7 @@
         <div class="nav-tree-panel">
           <div class="grp">第三次工业革命</div>
           <a href="03-third.html"><span class="num">03</span>第三次<span class="sub">可编程与零边际复制 · 内部章</span></a>
-          <a href="04-architecture.html" class="on"><span class="num">04</span>底层架构<span class="sub">金字塔总图 · 七层栈 · 逐层传递</span></a>
+          <a href="04-architecture.html" class="on"><span class="num">04</span>底层架构<span class="sub">金字塔 · 架构路线 · 逐层传递</span></a>
         </div>
       </details>
       <details class="nav-tree">
@@ -62,10 +62,11 @@
   <header class="hero">
     <p class="kicker">04 · Architecture &amp; Impact</p>
     <h1>七层抽象栈，与它带来的结构性改变</h1>
-    <p class="lede">这是<b>第三次革命内部</b>的纵切面。第三次革命在「计算」这一个维度上的进程是八次架构跃迁（见 <a href="03-third.html">03 第三次</a>），这一页把它们压缩成<b>七层抽象栈</b>、<b>三条主线</b>与一张<b>逐层传递矩阵</b>——看每一层如何解决上一层的麻烦，又制造了什么新麻烦。</p>
+    <p class="lede">这是<b>第三次革命内部</b>的纵切面。第三次革命在「计算」这一个维度上的进程是八次架构跃迁（见 <a href="03-third.html">03 第三次</a>），这一页把它们压缩成<b>七层抽象栈</b>、一张<b>金字塔总图</b>、一张<b>技术架构路线</b>与一张<b>逐层传递矩阵</b>——看每一层如何解决上一层的麻烦，又制造了什么新麻烦。</p>
     <div class="meta">
       <span class="tag">分层 <b>7 层</b></span>
       <span class="tag">主线 <b>3 条</b></span>
+      <span class="tag">路线 <b>6 维度</b></span>
       <span class="tag">传导 <b>4 式</b></span>
       <span class="tag">影响维度 <b>10 项</b></span>
       <span class="tag">八次跃迁见 <a href="03-third.html"><b>第三次</b> →</a></span>
@@ -278,10 +279,215 @@
     </p>
   </section>
 
+  <!-- ============ 技术架构路线 ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="num">03</span><h2>技术架构路线：走到哪，接下来往哪</h2>
+      <span class="sub">六条维度 · 五个阶段 · 一条瓶颈带</span>
+    </div>
+
+    <p>
+      前两节是<b>纵切面</b>：这套栈长什么样、每一段台阶内部发生了什么。
+      这一节把它<b>横过来</b>：同一条时间轴上，六条技术维度各自是怎么被替代的，
+      以及每个阶段真正卡住大家的是哪一样东西。
+    </p>
+
+    <div class="bleed">
+    <figure class="figbox" style="padding:20px 22px 14px;margin-top:16px">
+      <div class="scroll-x">
+<svg class="roadmap" viewBox="0 0 1400 545" width="100%" style="display:block;height:auto" role="img" aria-label="电子计算机技术架构路线：横向时间轴从1945到2026，六条技术维度泳道展示各阶段的替代链，底部为主导瓶颈迁移带，右端虚线列为前方未定项">
+  <defs>
+    <marker id="axArrow" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+      <path d="M0,0 L7,3.2 L0,6.4 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <g font-family="Outfit, 'PingFang SC', sans-serif">
+    <line x1="293" y1="30" x2="1386" y2="30" stroke="#2f6f5e" stroke-width="1.6" marker-end="url(#axArrow)" opacity=".8"/>
+    <circle cx="293" cy="30" r="6" fill="#fff" stroke="#2f6f5e" stroke-width="2.4"/>
+    <text x="293" y="54" font-size="13" font-weight="600" fill="#14171e" text-anchor="middle">1945–1995</text>
+    <text x="293" y="71" font-size="10.5" font-family="JetBrains Mono, monospace" fill="#2f6f5e" text-anchor="middle">奠基期 · 跃迁 1–3</text>
+    <circle cx="539" cy="30" r="6" fill="#fff" stroke="#2f6f5e" stroke-width="2.4"/>
+    <text x="539" y="54" font-size="13" font-weight="600" fill="#14171e" text-anchor="middle">1995–2015</text>
+    <text x="539" y="71" font-size="10.5" font-family="JetBrains Mono, monospace" fill="#2f6f5e" text-anchor="middle">并行期 · 跃迁 4–5</text>
+    <circle cx="785" cy="30" r="6" fill="#fff" stroke="#2f6f5e" stroke-width="2.4"/>
+    <text x="785" y="54" font-size="13" font-weight="600" fill="#14171e" text-anchor="middle">2016–2022</text>
+    <text x="785" y="71" font-size="10.5" font-family="JetBrains Mono, monospace" fill="#2f6f5e" text-anchor="middle">专用化 · 跃迁 6</text>
+    <circle cx="1031" cy="30" r="6" fill="#fff" stroke="#2f6f5e" stroke-width="2.4"/>
+    <text x="1031" y="54" font-size="13" font-weight="600" fill="#14171e" text-anchor="middle">2023–2026</text>
+    <text x="1031" y="71" font-size="10.5" font-family="JetBrains Mono, monospace" fill="#2f6f5e" text-anchor="middle">AI 工厂 · 跃迁 7</text>
+    <circle cx="1277" cy="30" r="6" fill="#fff" stroke="#c97b3f" stroke-width="2.4"/>
+    <text x="1277" y="54" font-size="13" font-weight="600" fill="#14171e" text-anchor="middle">2026→</text>
+    <text x="1277" y="71" font-size="10.5" font-family="JetBrains Mono, monospace" fill="#c97b3f" text-anchor="middle">前方 · 跃迁 8 途中</text>
+
+    <rect x="0" y="84" width="1400" height="54" fill="#2f6f5e" fill-opacity=".025"/>
+    <text x="14" y="106" font-size="12.5" font-weight="600" fill="#14171e">逻辑部件与封装</text>
+    <text x="14" y="123" font-size="10.5" fill="#7c7a72">算力的物理载体</text>
+    <line x1="0" y1="138" x2="1400" y2="138" stroke="#e9e3d6"/>
+    <rect x="174" y="88" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="186" y="104" font-size="11.5" fill="#3a4256">电子管 → 晶体管 → 集成电路</text>
+    <text x="186" y="121" font-size="11.5" fill="#3a4256">→ VLSI 规模化</text>
+    <rect x="420" y="88" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="432" y="104" font-size="11.5" fill="#3a4256">制程红利 · FinFET</text>
+    <text x="432" y="121" font-size="11.5" fill="#3a4256">多核 SoC 单片集成</text>
+    <rect x="666" y="88" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="678" y="104" font-size="11.5" fill="#3a4256">矩阵加速器 · 专用 ASIC</text>
+    <text x="678" y="121" font-size="11.5" fill="#3a4256">异构单片</text>
+    <rect x="912" y="88" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="924" y="104" font-size="11.5" fill="#3a4256">Chiplet + 先进封装</text>
+    <text x="924" y="121" font-size="11.5" fill="#3a4256">液冷（冷板 / 浸没）</text>
+    <rect x="1158" y="88" width="238" height="45" rx="9" fill="#c97b3f" fill-opacity=".04" stroke="#c97b3f" stroke-opacity=".45" stroke-dasharray="5 4"/>
+    <text x="1170" y="104" font-size="11.5" fill="#3a4256">定制化 · 域专用加速器</text>
+    <text x="1170" y="121" font-size="11.5" fill="#3a4256">方向已明，形态未定</text>
+
+    <text x="14" y="160" font-size="12.5" font-weight="600" fill="#14171e">互连</text>
+    <text x="14" y="177" font-size="10.5" fill="#7c7a72">机器与机器之间</text>
+    <line x1="0" y1="192" x2="1400" y2="192" stroke="#e9e3d6"/>
+    <rect x="174" y="142" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="186" y="158" font-size="11.5" fill="#3a4256">地址总线 → 标准化总线</text>
+    <text x="186" y="175" font-size="11.5" fill="#3a4256">（ISA / PCI）</text>
+    <rect x="420" y="142" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="432" y="158" font-size="11.5" fill="#3a4256">片上互连 · NoC</text>
+    <text x="432" y="175" font-size="11.5" fill="#3a4256">NVLink（Scale-up）</text>
+    <rect x="666" y="142" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="678" y="158" font-size="11.5" fill="#3a4256">InfiniBand / RoCE</text>
+    <text x="678" y="175" font-size="11.5" fill="#3a4256">Scale-up 与 Scale-out 成型</text>
+    <rect x="912" y="142" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="924" y="158" font-size="11.5" fill="#3a4256">UBB · 光互连</text>
+    <text x="924" y="175" font-size="11.5" fill="#3a4256">机架内带宽成为约束</text>
+    <rect x="1158" y="142" width="238" height="45" rx="9" fill="#c97b3f" fill-opacity=".04" stroke="#c97b3f" stroke-opacity=".45" stroke-dasharray="5 4"/>
+    <text x="1170" y="158" font-size="11.5" fill="#3a4256">PCIe / IOMMU 标准化</text>
+    <text x="1170" y="175" font-size="11.5" fill="#3a4256">（服务器平台规范 1.0）</text>
+
+    <rect x="0" y="192" width="1400" height="54" fill="#2f6f5e" fill-opacity=".025"/>
+    <text x="14" y="214" font-size="12.5" font-weight="600" fill="#14171e">存储层次</text>
+    <text x="14" y="231" font-size="10.5" fill="#7c7a72">数据待在哪里</text>
+    <line x1="0" y1="246" x2="1400" y2="246" stroke="#e9e3d6"/>
+    <rect x="174" y="196" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="186" y="212" font-size="11.5" fill="#3a4256">磁芯 → 半导体</text>
+    <text x="186" y="229" font-size="11.5" fill="#3a4256">Cache / DRAM 分层</text>
+    <rect x="420" y="196" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="432" y="212" font-size="11.5" fill="#3a4256">NUMA 拓扑</text>
+    <text x="432" y="229" font-size="11.5" fill="#3a4256">GDDR 与 DDR 分叉</text>
+    <rect x="666" y="196" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="678" y="212" font-size="11.5" fill="#3a4256">HBM + 并行文件系统</text>
+    <text x="678" y="229" font-size="11.5" fill="#3a4256">训练数据成为新 IO 瓶颈</text>
+    <rect x="912" y="196" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="924" y="212" font-size="11.5" fill="#3a4256">HBM4 · KV Cache 分层</text>
+    <text x="924" y="229" font-size="11.5" fill="#3a4256">prefill / decode 分离</text>
+    <rect x="1158" y="196" width="238" height="45" rx="9" fill="#c97b3f" fill-opacity=".04" stroke="#c97b3f" stroke-opacity=".45" stroke-dasharray="5 4"/>
+    <text x="1170" y="212" font-size="11.5" fill="#b3aea2">？尚未定位</text>
+    <text x="1170" y="229" font-size="11.5" fill="#b3aea2">下一个存储约束待观察</text>
+    <text x="1384" y="234" font-size="10.5" fill="#b3aea2" text-anchor="end">未定</text>
+
+    <text x="14" y="268" font-size="12.5" font-weight="600" fill="#14171e">执行与并发模型</text>
+    <text x="14" y="285" font-size="10.5" fill="#7c7a72">一台机器怎么同时干多件事</text>
+    <line x1="0" y1="300" x2="1400" y2="300" stroke="#e9e3d6"/>
+    <rect x="174" y="250" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="186" y="266" font-size="11.5" fill="#3a4256">单指令流 → 流水线</text>
+    <text x="186" y="283" font-size="11.5" fill="#3a4256">→ 超标量</text>
+    <rect x="420" y="250" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="432" y="266" font-size="11.5" fill="#3a4256">多核 / SMP → SIMT</text>
+    <text x="432" y="283" font-size="11.5" fill="#3a4256">吞吐优先、延迟不敏感</text>
+    <rect x="666" y="250" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="678" y="266" font-size="11.5" fill="#3a4256">集合通信 · 分布式训练</text>
+    <text x="678" y="283" font-size="11.5" fill="#3a4256">同步更新取代参数同步</text>
+    <rect x="912" y="250" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="924" y="266" font-size="11.5" fill="#3a4256">推理服务 · Agent 编排</text>
+    <text x="924" y="283" font-size="11.5" fill="#3a4256">算力 + 控制 + I/O 混合负载</text>
+    <rect x="1158" y="250" width="238" height="45" rx="9" fill="#c97b3f" fill-opacity=".04" stroke="#c97b3f" stroke-opacity=".45" stroke-dasharray="5 4"/>
+    <text x="1170" y="266" font-size="11.5" fill="#b3aea2">？尚未定位</text>
+    <text x="1170" y="283" font-size="11.5" fill="#b3aea2">负载形态尚未定型</text>
+    <text x="1384" y="288" font-size="10.5" fill="#b3aea2" text-anchor="end">未定</text>
+
+    <rect x="0" y="300" width="1400" height="54" fill="#2f6f5e" fill-opacity=".025"/>
+    <text x="14" y="322" font-size="12.5" font-weight="600" fill="#14171e">编程模型与生态</text>
+    <text x="14" y="339" font-size="10.5" fill="#7c7a72">人怎么对机器说话</text>
+    <line x1="0" y1="354" x2="1400" y2="354" stroke="#e9e3d6"/>
+    <rect x="174" y="304" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="186" y="320" font-size="11.5" fill="#3a4256">机器码 → 汇编</text>
+    <text x="186" y="337" font-size="11.5" fill="#3a4256">→ 编译器 · 标准 C</text>
+    <rect x="420" y="304" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="432" y="320" font-size="11.5" fill="#3a4256">线程与内存模型</text>
+    <text x="432" y="337" font-size="11.5" fill="#3a4256">CUDA 与库（生态护城河）</text>
+    <rect x="666" y="304" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="678" y="320" font-size="11.5" fill="#3a4256">分布式训练框架</text>
+    <text x="678" y="337" font-size="11.5" fill="#3a4256">集合通信成为一等公民</text>
+    <rect x="912" y="304" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="924" y="320" font-size="11.5" fill="#3a4256">vLLM / SGLang · 兼容层</text>
+    <text x="924" y="337" font-size="11.5" fill="#3a4256">调度器本身变成产品</text>
+    <rect x="1158" y="304" width="238" height="45" rx="9" fill="#c97b3f" fill-opacity=".04" stroke="#c97b3f" stroke-opacity=".45" stroke-dasharray="5 4"/>
+    <text x="1170" y="320" font-size="11.5" fill="#b3aea2">多版本二进制 · AI 辅助移植</text>
+    <text x="1170" y="337" font-size="11.5" fill="#b3aea2">碎片化尚未收敛</text>
+    <text x="1384" y="342" font-size="10.5" fill="#b3aea2" text-anchor="end">未定</text>
+
+    <text x="14" y="376" font-size="12.5" font-weight="600" fill="#14171e">规模与交付单元</text>
+    <text x="14" y="393" font-size="10.5" fill="#7c7a72">一次买多少、怎么运</text>
+    <line x1="0" y1="408" x2="1400" y2="408" stroke="#e9e3d6"/>
+    <rect x="174" y="358" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="186" y="378" font-size="11.5" fill="#3a4256">单机 → 工作站</text>
+    <rect x="420" y="358" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="432" y="378" font-size="11.5" fill="#3a4256">多核 SoC → 机群</text>
+    <rect x="666" y="358" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="678" y="378" font-size="11.5" fill="#3a4256">机架（整柜交付）</text>
+    <rect x="912" y="358" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="924" y="378" font-size="11.5" fill="#3a4256">AI 工厂</text>
+    <rect x="1158" y="358" width="238" height="45" rx="9" fill="#c97b3f" fill-opacity=".04" stroke="#c97b3f" stroke-opacity=".45" stroke-dasharray="5 4"/>
+    <text x="1170" y="378" font-size="11.5" fill="#b3aea2">？尚未定位</text>
+    <text x="1384" y="396" font-size="10.5" fill="#b3aea2" text-anchor="end">未定</text>
+
+    <rect x="0" y="418" width="1400" height="60" rx="10" fill="#c97b3f" fill-opacity=".09" stroke="#c97b3f" stroke-opacity=".3"/>
+    <text x="14" y="442" font-size="12.5" font-weight="600" fill="#c97b3f">主导瓶颈</text>
+    <text x="14" y="459" font-size="10.5" fill="#a97a4f">每一段台阶挤掉的下一个</text>
+    <text x="186" y="450" font-size="11.5" fill="#8a5a30">指令吞吐 → 访存延迟</text>
+    <text x="432" y="450" font-size="11.5" fill="#8a5a30">访存延迟 → 互连带宽</text>
+    <text x="678" y="450" font-size="11.5" fill="#8a5a30">互连带宽 → 内存容量与带宽</text>
+    <text x="924" y="450" font-size="11.5" fill="#8a5a30">内存容量与带宽 → 电力与成本</text>
+    <rect x="1158" y="423" width="238" height="50" rx="9" fill="none" stroke="#c97b3f" stroke-opacity=".5" stroke-dasharray="5 4"/>
+    <text x="1170" y="450" font-size="11.5" fill="#b3aea2">？下一轮主导瓶颈未确定</text>
+
+    <line x1="1150" y1="16" x2="1150" y2="478" stroke="#c97b3f" stroke-width="1.4" stroke-dasharray="6 4"/>
+    <text x="1142" y="20" font-size="11" font-weight="600" fill="#c97b3f" text-anchor="end">现在 · 2026-11</text>
+
+    <text x="14" y="504" font-size="10.5" fill="#7c7a72">实线框 = 已发生　虚线框 = 前方 / 进行中　灰字「未定」= 尚未定位</text>
+    <text x="14" y="522" font-size="10.5" fill="#7c7a72">主导瓶颈带按主线一（瓶颈迁移）推移；右端只写有依据的方向，未写明的即为不确定</text>
+  </g>
+</svg>
+      </div>
+      <figcaption>
+        图 3 · 电子计算机技术架构路线。<b>横着读</b>是每条维度在各阶段的技术形态（箭头即替代关系）；
+        <b>竖着读</b>是同一时刻六条维度各自的处境。底部暖色带是主导瓶颈的迁移——
+        它与「三条主线」里的主线一（瓶颈迁移）是同一条线，但换成了按阶段看。
+        右端虚线列是<b>前方</b>：只写有依据的方向，写不出来的标「尚未定位」，不猜。
+        窄屏可横向滚动查看。
+      </figcaption>
+    </figure>
+    </div>
+
+    <div class="grid2" style="margin-top:16px">
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M5 12l7-7 7 7"/></svg>
+          前方：已确认的三条方向
+        </h3>
+        <p>开放 ISA 的服务器平台规范落地（2026-06）让互连与固件层标准化；定制化与 Chiplet 成为交付主流；
+        推理主导负载后，「每瓦每秒 token」取代 FLOPS 成为核心指标。</p>
+      </div>
+      <div class="card">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 2.5-3 4"/><path d="M12 17h.01"/></svg>
+          前方：还没定位的四件事
+        </h3>
+        <p>下一轮主导瓶颈落在哪一层；下一轮的技术跃迁发生在哪一层；
+        指令扩展与软件生态的碎片化最终收敛还是加剧；存储层次上会出现什么新的约束。
+        <b>这四条目前都没有足够依据，图中一律留空并标「尚未定位」。</b></p>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ 台阶放大 ============ -->
   <section>
     <div class="sec-head">
-      <span class="num">03</span><h2>台阶放大：逐层看内部</h2>
+      <span class="num">04</span><h2>台阶放大：逐层看内部</h2>
       <span class="sub">四段台阶，一个读法</span>
     </div>
 
@@ -362,7 +568,7 @@
         </g>
       </svg>
       </div>
-      <figcaption>图 3 · 台阶一放大：指令集与微架构内部（跃迁 1–3）。读法是<b>从下往上</b>：每次跃迁改一条规则、往上面交一份能力、往下面压一份稀缺。注意底部那行——<b>前两次压的是硅与工艺，第三次压的却是访存延迟</b>；这一次换靶子，才有了后来「内存墙」这个说法。 窄屏可横向滚动查看。</figcaption>
+      <figcaption>图 4 · 台阶一放大：指令集与微架构内部（跃迁 1–3）。读法是<b>从下往上</b>：每次跃迁改一条规则、往上面交一份能力、往下面压一份稀缺。注意底部那行——<b>前两次压的是硅与工艺，第三次压的却是访存延迟</b>；这一次换靶子，才有了后来「内存墙」这个说法。 窄屏可横向滚动查看。</figcaption>
     </figure>
 
     <h3 class="step-title">台阶二 · 运行时与框架<span class="ramp">跃迁 4–5</span></h3>
@@ -423,7 +629,7 @@
         </g>
       </svg>
       </div>
-      <figcaption>图 4 · 台阶二放大：运行时与框架内部（跃迁 4–5）。这一段解放的是「并行」——多核把并发逼成刚需，GPU 把并行变成可调用的库。<b>压下去的靶子也从互连换到了带宽</b>：算力堆得快，带宽跟不上。 窄屏可横向滚动查看。</figcaption>
+      <figcaption>图 5 · 台阶二放大：运行时与框架内部（跃迁 4–5）。这一段解放的是「并行」——多核把并发逼成刚需，GPU 把并行变成可调用的库。<b>压下去的靶子也从互连换到了带宽</b>：算力堆得快，带宽跟不上。 窄屏可横向滚动查看。</figcaption>
     </figure>
 
     <h3 class="step-title">台阶三 · 系统与调度<span class="ramp">跃迁 6</span></h3>
@@ -472,7 +678,7 @@
         </g>
       </svg>
       </div>
-      <figcaption>图 5 · 台阶三放大：系统与调度内部（跃迁 6）。只有一次跃迁，但它是<b>全栈竞赛</b>的起点：算法、加速器、互连、编排、机房一起动。交付出去的是「不必自己管集群」，代价是<b>采购单元从芯片变成机架与电</b>。 窄屏可横向滚动查看。</figcaption>
+      <figcaption>图 6 · 台阶三放大：系统与调度内部（跃迁 6）。只有一次跃迁，但它是<b>全栈竞赛</b>的起点：算法、加速器、互连、编排、机房一起动。交付出去的是「不必自己管集群」，代价是<b>采购单元从芯片变成机架与电</b>。 窄屏可横向滚动查看。</figcaption>
     </figure>
 
     <h3 class="step-title">台阶四 · 应用与工作负载<span class="ramp">跃迁 7–8</span></h3>
@@ -536,7 +742,7 @@
         </g>
       </svg>
       </div>
-      <figcaption>图 6 · 台阶四放大：应用与工作负载内部（跃迁 7–8）。这是第一次把「执行」整个交出去。<b>注意底部那行与其他三段不同</b>：跃迁 7 把 HBM 容量与带宽沉到基座，跃迁 8 把碎片化散进生态，而「信任与责任」压不下去——它留在人身上，就是金字塔尖顶那一句。 窄屏可横向滚动查看。</figcaption>
+      <figcaption>图 7 · 台阶四放大：应用与工作负载内部（跃迁 7–8）。这是第一次把「执行」整个交出去。<b>注意底部那行与其他三段不同</b>：跃迁 7 把 HBM 容量与带宽沉到基座，跃迁 8 把碎片化散进生态，而「信任与责任」压不下去——它留在人身上，就是金字塔尖顶那一句。 窄屏可横向滚动查看。</figcaption>
     </figure>
 
     <div class="figbox" style="padding:20px 22px 8px;margin-top:22px">
@@ -561,7 +767,7 @@
   <!-- ============ 三条主线 ============ -->
   <section>
     <div class="sec-head">
-      <span class="num">04</span><h2>把八段历史压缩成三条主线</h2>
+      <span class="num">05</span><h2>把八段历史压缩成三条主线</h2>
       <span class="sub">记住这三条，就抓住了演进的骨架</span>
     </div>
 
@@ -614,7 +820,7 @@
         </g>
       </svg>
       <figcaption>
-        图 7 · 三条主线。值得注意的是<b>三者不同步</b>：主线二（形态）比主线三（规模）慢半拍，而主线一（瓶颈）始终在追赶前两者——这正是当下「算力堆得很快、内存与互连跟不上」的根源。
+        图 8 · 三条主线。值得注意的是<b>三者不同步</b>：主线二（形态）比主线三（规模）慢半拍，而主线一（瓶颈）始终在追赶前两者——这正是当下「算力堆得很快、内存与互连跟不上」的根源。
       </figcaption>
     </figure>
 
@@ -639,7 +845,7 @@
   <!-- ============ 跃迁 × 层：技术如何逐层传递 ============ -->
   <section>
     <div class="sec-head">
-      <span class="num">05</span><h2>技术如何一层层传递</h2>
+      <span class="num">06</span><h2>技术如何一层层传递</h2>
       <span class="sub">八次跃迁 × 七层栈</span>
     </div>
 
@@ -676,7 +882,7 @@
         </table>
       </div>
       <figcaption>
-        图 8 · 八次跃迁 × 七层栈。竖着读是每一层被解放的顺序：指令层（1–3）→ 运行时层（4–5）→ 系统层（6）→ 应用层（7–8）。
+        图 9 · 八次跃迁 × 七层栈。竖着读是每一层被解放的顺序：指令层（1–3）→ 运行时层（4–5）→ 系统层（6）→ 应用层（7–8）。
         <b>八轮里有六轮从最底层起手，只有一轮（跃迁 7）从内存层起手</b>——起手层决定了后面传导的形状。
         窄屏可横向滚动查看。
       </figcaption>
@@ -722,7 +928,7 @@
   <!-- ============ 影响对照表 ============ -->
   <section>
     <div class="sec-head">
-      <span class="num">06</span><h2>带来的影响：十个维度的结构性改变</h2>
+      <span class="num">07</span><h2>带来的影响：十个维度的结构性改变</h2>
       <span class="sub">架构变了什么 → 谁买单</span>
     </div>
 
