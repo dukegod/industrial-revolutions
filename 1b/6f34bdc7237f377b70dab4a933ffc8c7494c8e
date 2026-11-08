@@ -1,0 +1,26 @@
+README.md
+  h_c10f653d02d2fc 75
+scripts/README.md
+  h_c10f653d02d2fc 93-113
+scripts/test_alignment.py
+  h_c10f653d02d2fc 1-196
+visualization/03-third.html
+  h_c10f653d02d2fc 338-666
+visualization/04-architecture.html
+  h_c10f653d02d2fc 550,624,685,734,812-817
+wiki/03-第三次工业革命.md
+  h_c10f653d02d2fc 75-92
+wiki/README.md
+  h_c10f653d02d2fc 23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1b6f34bdc7237f377b70dab4a933ffc8c7494c8e",
+  "prompts": {},
+  "humans": {
+    "h_c10f653d02d2fc": {
+      "author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
