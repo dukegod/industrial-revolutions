@@ -335,6 +335,335 @@
       </div>
     </div>
 
+    <div class="figbox" style="padding:20px 22px 8px;margin-top:22px">
+      <table>
+        <thead>
+          <tr><th>#</th><th>计算线台阶</th><th>跃迁</th><th>连接与接入线阶段</th><th>关键节点</th><th>对齐要点</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>一 · 指令集与微架构</td><td>1–3</td><td>一 · 连接与寻址</td><td>万维网、TCP/IP、ARPANET</td><td>通用机成立的同时，行为第一次可被寻址</td></tr>
+          <tr><td>2</td><td>二 · 运行时与框架</td><td>4–5</td><td>二 · 普及与移动</td><td>4G、iPhone、云计算、宽带与 Web 2.0</td><td><b>2006–2015 两条线同时到拐点</b></td></tr>
+          <tr><td>3</td><td>三 · 系统与调度</td><td>6</td><td>三 · 云底座与规模化</td><td>5G、流媒体与短视频、数据中心</td><td>算力与内容都变成按需服务</td></tr>
+          <tr><td>4</td><td>四 · 应用与工作负载</td><td>7–8</td><td>四 · 模型分发与端侧</td><td>Agent 工具协议、端侧模型、模型即服务</td><td><b>执行可以交出去；信任与责任留在人身上</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="muted" style="margin-top:16px">
+      <b>逐项对齐：</b>两条线各分四段，段号一一对应，每段覆盖同一批跃迁。下面四张放大图与计算线的四段台阶（见
+      <a href="04-architecture.html" style="color:var(--accent)">04 底层架构</a> 的「台阶放大」）用同一套模板、同一套读法。
+    </p>
+
+    <h3 class="step-title">阶段一 · 连接与寻址<span class="ramp">对应计算线 台阶一 · 跃迁 1–3</span></h3>
+    <figure class="figbox" style="padding:20px 22px 14px">
+      <div class="scroll-x">
+<svg class="stagefig" data-stage="1" data-peers="一" data-leaps="1–3" data-events="万维网|TCP/IP|ARPANET" viewBox="0 0 960 610" width="100%" style="display:block;height:auto" role="img" aria-label="阶段一放大：连接与寻址（对应计算线台阶一，跃迁 1–3）。列出三次关键节点带来的新技术、改变的规则、压给下面的稀缺与交付给上层的能力">
+        <defs>
+          <linearGradient id="gup101" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2f6f5e" stop-opacity=".16"/>
+            <stop offset="1" stop-color="#2f6f5e" stop-opacity=".05"/>
+          </linearGradient>
+          <linearGradient id="gdn101" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#c97b3f" stop-opacity=".07"/>
+            <stop offset="1" stop-color="#c97b3f" stop-opacity=".20"/>
+          </linearGradient>
+        </defs>
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+
+          <rect x="40" y="26" width="880" height="64" rx="12" fill="url(#gup101)" stroke="#2f6f5e" stroke-opacity=".35"/>
+          <text x="62" y="53" font-size="13" font-weight="600" fill="#2f6f5e">阶段 1 对上只兑现一件事：行为可以被发布与寻址</text>
+          <text x="62" y="75" font-size="11.5" fill="#3a4256">一个 URL 指向一份可复制的行为 —— 通用机负责「怎么算」，这条线负责「怎么送」</text>
+
+          <g font-size="10.5" fill="#7c7a72" font-family="JetBrains Mono, monospace">
+            <text x="62" y="106">节点 · 名称</text>
+            <text x="270" y="106">带来了什么新技术</text>
+            <text x="580" y="106">改变了什么规则</text>
+          </g>
+
+          <rect x="40" y="118" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="118" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="150" font-size="14"><tspan fill="#14171e" font-weight="600">万维网</tspan><tspan fill="#2f6f5e" font-weight="600"> · 第一次兑现</tspan></text>
+          <text x="62" y="172" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">1991</text>
+          <text x="62" y="192" font-size="11.5" fill="#3a4256">发布成为可引用的动作</text>
+          <text x="270" y="150" font-size="12.5" fill="#3a4256">HTTP / URL · 超文本</text>
+          <text x="270" y="172" font-size="12.5" fill="#3a4256">浏览器 · 首个网站</text>
+          <text x="580" y="150" font-size="12.5" fill="#3a4256">「发布」从一次性动作</text>
+          <text x="580" y="172" font-size="12.5" fill="#3a4256">变成一个可被引用的地址</text>
+          <line x1="62" y1="212" x2="876" y2="212" stroke="#e9e3d6"/>
+          <text x="62" y="234" font-size="11" fill="#c97b3f">↓ 压给下面：带宽与主机的稀缺</text>
+          <text x="580" y="234" font-size="11" fill="#2f6f5e">↑ 交付给上层：行为可以被发布与寻址</text>
+
+          <rect x="40" y="256" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="256" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="288" font-size="14"><tspan fill="#14171e" font-weight="600">TCP/IP</tspan><tspan fill="#2f6f5e" font-weight="600"> · 互联互通</tspan></text>
+          <text x="62" y="310" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">1983</text>
+          <text x="62" y="330" font-size="11.5" fill="#3a4256">从「一个网络」到「网的网络」</text>
+          <text x="270" y="288" font-size="12.5" fill="#3a4256">分层协议 · IP · 路由</text>
+          <text x="270" y="310" font-size="12.5" fill="#3a4256">DNS · 互操作的标准层</text>
+          <text x="580" y="288" font-size="12.5" fill="#3a4256">互联互通成为设计目标</text>
+          <text x="580" y="310" font-size="12.5" fill="#3a4256">而非事后补丁</text>
+          <line x1="62" y1="350" x2="876" y2="350" stroke="#e9e3d6"/>
+          <text x="62" y="372" font-size="11" fill="#c97b3f">↓ 压给下面：骨干网与路由的稀缺</text>
+          <text x="580" y="372" font-size="11" fill="#2f6f5e">↑ 交付给上层：不同的网络可以连在一起</text>
+
+          <rect x="40" y="394" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="394" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="426" font-size="14"><tspan fill="#14171e" font-weight="600">ARPANET</tspan><tspan fill="#2f6f5e" font-weight="600"> · 公共设施</tspan></text>
+          <text x="62" y="448" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">1969</text>
+          <text x="62" y="468" font-size="11.5" fill="#3a4256">远程访问成为可能</text>
+          <text x="270" y="426" font-size="12.5" fill="#3a4256">分组交换 · 冗余路由</text>
+          <text x="270" y="448" font-size="12.5" fill="#3a4256">接口消息协议</text>
+          <text x="580" y="426" font-size="12.5" fill="#3a4256">网络从「专线」变成</text>
+          <text x="580" y="448" font-size="12.5" fill="#3a4256">可共享的公共设施</text>
+          <line x1="62" y1="488" x2="876" y2="488" stroke="#e9e3d6"/>
+          <text x="62" y="510" font-size="11" fill="#c97b3f">↓ 压给下面：接入与许可的稀缺</text>
+          <text x="580" y="510" font-size="11" fill="#2f6f5e">↑ 交付给上层：远程访问成为可能</text>
+
+          <rect x="40" y="532" width="880" height="64" rx="12" fill="url(#gdn101)" stroke="#c97b3f" stroke-opacity=".35"/>
+          <text x="62" y="559" font-size="13" font-weight="600" fill="#c97b3f">阶段 1 对下压给基座：接入与许可的稀缺</text>
+          <text x="62" y="581" font-size="11.5" fill="#3a4256">从专线到公共网络，连接第一次要抢许可、抢端口 —— 这正是 1990s 拨号与 ISP 的瓶颈</text>
+        </g>
+      </svg>
+      </div>
+      <figcaption>图 2 · 阶段一放大：连接与寻址。与计算线台阶一同构，读法一致——每次节点改一条规则、往上面交一份能力、往下面压一份稀缺。窄屏可横向滚动查看。</figcaption>
+    </figure>
+
+    <h3 class="step-title">阶段二 · 普及与移动<span class="ramp">对应计算线 台阶二 · 跃迁 4–5</span></h3>
+    <figure class="figbox" style="padding:20px 22px 14px">
+      <div class="scroll-x">
+<svg class="stagefig" data-stage="2" data-peers="二" data-leaps="4–5" data-events="4G|iPhone|云计算|宽带与 Web 2.0" viewBox="0 0 960 748" width="100%" style="display:block;height:auto" role="img" aria-label="阶段二放大：普及与移动（对应计算线台阶二，跃迁 4–5）。列出四个关键节点带来的新技术、改变的规则、压给下面的稀缺与交付给上层的能力">
+        <defs>
+          <linearGradient id="gup102" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2f6f5e" stop-opacity=".16"/>
+            <stop offset="1" stop-color="#2f6f5e" stop-opacity=".05"/>
+          </linearGradient>
+          <linearGradient id="gdn102" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#c97b3f" stop-opacity=".07"/>
+            <stop offset="1" stop-color="#c97b3f" stop-opacity=".20"/>
+          </linearGradient>
+        </defs>
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+
+          <rect x="40" y="26" width="880" height="64" rx="12" fill="url(#gup102)" stroke="#2f6f5e" stroke-opacity=".35"/>
+          <text x="62" y="53" font-size="13" font-weight="600" fill="#2f6f5e">阶段 2 对上只兑现一件事：不必自己拥有算力与接入</text>
+          <text x="62" y="75" font-size="11.5" fill="#3a4256">算力从「买」变成「租」，接入从「地点」变成「随时」——口袋里的通用机 + 按需租用的算力</text>
+
+          <g font-size="10.5" fill="#7c7a72" font-family="JetBrains Mono, monospace">
+            <text x="62" y="106">节点 · 名称</text>
+            <text x="270" y="106">带来了什么新技术</text>
+            <text x="580" y="106">改变了什么规则</text>
+          </g>
+
+          <rect x="40" y="118" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="118" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="150" font-size="14"><tspan fill="#14171e" font-weight="600">4G</tspan><tspan fill="#2f6f5e" font-weight="600"> · 随时随地</tspan></text>
+          <text x="62" y="172" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">2010</text>
+          <text x="62" y="192" font-size="11.5" fill="#3a4256">接入从地点变成随时</text>
+          <text x="270" y="150" font-size="12.5" fill="#3a4256">LTE · 全 IP 化</text>
+          <text x="270" y="172" font-size="12.5" fill="#3a4256">移动宽带 · 实时通信</text>
+          <text x="580" y="150" font-size="12.5" fill="#3a4256">接入从一个地点</text>
+          <text x="580" y="172" font-size="12.5" fill="#3a4256">变成随时随地</text>
+          <line x1="62" y1="212" x2="876" y2="212" stroke="#e9e3d6"/>
+          <text x="62" y="234" font-size="11" fill="#c97b3f">↓ 压给下面：基站与频谱的稀缺</text>
+          <text x="580" y="234" font-size="11" fill="#2f6f5e">↑ 交付给上层：移动优先的互联网</text>
+
+          <rect x="40" y="256" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="256" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="288" font-size="14"><tspan fill="#14171e" font-weight="600">iPhone</tspan><tspan fill="#2f6f5e" font-weight="600"> · 口袋里的通用机</tspan></text>
+          <text x="62" y="310" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">2007</text>
+          <text x="62" y="330" font-size="11.5" fill="#3a4256">分发第一次被平台化</text>
+          <text x="270" y="288" font-size="12.5" fill="#3a4256">触屏交互 · 移动 OS</text>
+          <text x="270" y="310" font-size="12.5" fill="#3a4256">App 商店 · 内置传感器</text>
+          <text x="580" y="288" font-size="12.5" fill="#3a4256">软件分发从「下载」</text>
+          <text x="580" y="310" font-size="12.5" fill="#3a4256">变成「上架」</text>
+          <line x1="62" y1="350" x2="876" y2="350" stroke="#e9e3d6"/>
+          <text x="62" y="372" font-size="11" fill="#c97b3f">↓ 压给下面：入口与注意力的稀缺</text>
+          <text x="580" y="372" font-size="11" fill="#2f6f5e">↑ 交付给上层：口袋里有一台通用机</text>
+
+          <rect x="40" y="394" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="394" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="426" font-size="14"><tspan fill="#14171e" font-weight="600">云计算</tspan><tspan fill="#2f6f5e" font-weight="600"> · 算力可租用</tspan></text>
+          <text x="62" y="448" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">2006</text>
+          <text x="62" y="468" font-size="11.5" fill="#3a4256">从买机器到按小时租</text>
+          <text x="270" y="426" font-size="12.5" fill="#3a4256">IaaS / PaaS · 按需租用</text>
+          <text x="270" y="448" font-size="12.5" fill="#3a4256">弹性伸缩 · 多可用区</text>
+          <text x="580" y="426" font-size="12.5" fill="#3a4256">算力从「买机器」</text>
+          <text x="580" y="448" font-size="12.5" fill="#3a4256">变成「按小时租」</text>
+          <line x1="62" y1="488" x2="876" y2="488" stroke="#e9e3d6"/>
+          <text x="62" y="510" font-size="11" fill="#c97b3f">↓ 压给下面：数据中心与电力的稀缺</text>
+          <text x="580" y="510" font-size="11" fill="#2f6f5e">↑ 交付给上层：算力可随取随用</text>
+
+          <rect x="40" y="532" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="532" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="564" font-size="14"><tspan fill="#14171e" font-weight="600">宽带与 Web 2.0</tspan><tspan fill="#2f6f5e" font-weight="600"> · 默认设施</tspan></text>
+          <text x="62" y="586" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">1995–2005</text>
+          <text x="62" y="606" font-size="11.5" fill="#3a4256">连接从特权变成默认</text>
+          <text x="270" y="564" font-size="12.5" fill="#3a4256">宽带接入 · 搜索引擎</text>
+          <text x="270" y="586" font-size="12.5" fill="#3a4256">门户 · 论坛</text>
+          <text x="580" y="564" font-size="12.5" fill="#3a4256">连接从少数人的特权</text>
+          <text x="580" y="586" font-size="12.5" fill="#3a4256">变成默认基础设施</text>
+          <line x1="62" y1="626" x2="876" y2="626" stroke="#e9e3d6"/>
+          <text x="62" y="648" font-size="11" fill="#c97b3f">↓ 压给下面：带宽的稀缺</text>
+          <text x="580" y="648" font-size="11" fill="#2f6f5e">↑ 交付给上层：信息可低成本触达大众</text>
+
+          <rect x="40" y="670" width="880" height="64" rx="12" fill="url(#gdn102)" stroke="#c97b3f" stroke-opacity=".35"/>
+          <text x="62" y="697" font-size="13" font-weight="600" fill="#c97b3f">阶段 2 对下压给基座：带宽与流量的稀缺</text>
+          <text x="62" y="719" font-size="11.5" fill="#3a4256">连接普及之后，稀缺不再是「连不上」，而是「带宽不够、流量太贵」</text>
+        </g>
+      </svg>
+      </div>
+      <figcaption>图 3 · 阶段二放大：普及与移动。与计算线台阶二同构，读法一致——每次节点改一条规则、往上面交一份能力、往下面压一份稀缺。窄屏可横向滚动查看。</figcaption>
+    </figure>
+
+    <h3 class="step-title">阶段三 · 云底座与规模化<span class="ramp">对应计算线 台阶三 · 跃迁 6</span></h3>
+    <figure class="figbox" style="padding:20px 22px 14px">
+      <div class="scroll-x">
+<svg class="stagefig" data-stage="3" data-peers="三" data-leaps="6" data-events="5G|流媒体与短视频|数据中心" viewBox="0 0 960 610" width="100%" style="display:block;height:auto" role="img" aria-label="阶段三放大：云底座与规模化（对应计算线台阶三，跃迁 6）。列出三个关键节点带来的新技术、改变的规则、压给下面的稀缺与交付给上层的能力">
+        <defs>
+          <linearGradient id="gup103" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2f6f5e" stop-opacity=".16"/>
+            <stop offset="1" stop-color="#2f6f5e" stop-opacity=".05"/>
+          </linearGradient>
+          <linearGradient id="gdn103" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#c97b3f" stop-opacity=".07"/>
+            <stop offset="1" stop-color="#c97b3f" stop-opacity=".20"/>
+          </linearGradient>
+        </defs>
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+
+          <rect x="40" y="26" width="880" height="64" rx="12" fill="url(#gup103)" stroke="#2f6f5e" stroke-opacity=".35"/>
+          <text x="62" y="53" font-size="13" font-weight="600" fill="#2f6f5e">阶段 3 对上只兑现一件事：算力与内容都变成按需服务</text>
+          <text x="62" y="75" font-size="11.5" fill="#3a4256">云不再抽象 —— 它是具体的一排机房；连接不再只谈带宽，开始谈时延与可靠性</text>
+
+          <g font-size="10.5" fill="#7c7a72" font-family="JetBrains Mono, monospace">
+            <text x="62" y="106">节点 · 名称</text>
+            <text x="270" y="106">带来了什么新技术</text>
+            <text x="580" y="106">改变了什么规则</text>
+          </g>
+
+          <rect x="40" y="118" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="118" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="150" font-size="14"><tspan fill="#14171e" font-weight="600">5G</tspan><tspan fill="#2f6f5e" font-weight="600"> · 连接的新指标</tspan></text>
+          <text x="62" y="172" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">2019</text>
+          <text x="62" y="192" font-size="11.5" fill="#3a4256">从带宽到时延与可靠性</text>
+          <text x="270" y="150" font-size="12.5" fill="#3a4256">新频段 · 网络切片</text>
+          <text x="270" y="172" font-size="12.5" fill="#3a4256">低时延 · 大连接</text>
+          <text x="580" y="150" font-size="12.5" fill="#3a4256">连接的指标从「带宽」</text>
+          <text x="580" y="172" font-size="12.5" fill="#3a4256">扩展到「时延与可靠性」</text>
+          <line x1="62" y1="212" x2="876" y2="212" stroke="#e9e3d6"/>
+          <text x="62" y="234" font-size="11" fill="#c97b3f">↓ 压给下面：基站与频谱的稀缺</text>
+          <text x="580" y="234" font-size="11" fill="#2f6f5e">↑ 交付给上层：实时化的服务成为可能</text>
+
+          <rect x="40" y="256" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="256" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="288" font-size="14"><tspan fill="#14171e" font-weight="600">流媒体与短视频</tspan><tspan fill="#2f6f5e" font-weight="600"> · 分发趋零</tspan></text>
+          <text x="62" y="310" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">2016–2020</text>
+          <text x="62" y="330" font-size="11.5" fill="#3a4256">带宽从成本变成商品</text>
+          <text x="270" y="288" font-size="12.5" fill="#3a4256">自适应码率 · CDN</text>
+          <text x="270" y="310" font-size="12.5" fill="#3a4256">推荐分发 · 转码流水线</text>
+          <text x="580" y="288" font-size="12.5" fill="#3a4256">带宽从成本变成商品</text>
+          <text x="580" y="310" font-size="12.5" fill="#3a4256">内容分发成本趋近于零</text>
+          <line x1="62" y1="350" x2="876" y2="350" stroke="#e9e3d6"/>
+          <text x="62" y="372" font-size="11" fill="#c97b3f">↓ 压给下面：流量与骨干网的稀缺</text>
+          <text x="580" y="372" font-size="11" fill="#2f6f5e">↑ 交付给上层：内容可以无限分发</text>
+
+          <rect x="40" y="394" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="394" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="426" font-size="14"><tspan fill="#14171e" font-weight="600">数据中心</tspan><tspan fill="#2f6f5e" font-weight="600"> · 云有了物理形态</tspan></text>
+          <text x="62" y="448" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">2016–</text>
+          <text x="62" y="468" font-size="11.5" fill="#3a4256">它就是一批具体机房</text>
+          <text x="270" y="426" font-size="12.5" fill="#3a4256">定制硬件 · 区域可用区</text>
+          <text x="270" y="448" font-size="12.5" fill="#3a4256">自研 ASIC · 运维自动化</text>
+          <text x="580" y="426" font-size="12.5" fill="#3a4256">「云」不再抽象</text>
+          <text x="580" y="448" font-size="12.5" fill="#3a4256">它是一批具体机房</text>
+          <line x1="62" y1="488" x2="876" y2="488" stroke="#e9e3d6"/>
+          <text x="62" y="510" font-size="11" fill="#c97b3f">↓ 压给下面：电力与机房的稀缺</text>
+          <text x="580" y="510" font-size="11" fill="#2f6f5e">↑ 交付给上层：算力与存储随取随用</text>
+
+          <rect x="40" y="532" width="880" height="64" rx="12" fill="url(#gdn103)" stroke="#c97b3f" stroke-opacity=".35"/>
+          <text x="62" y="559" font-size="13" font-weight="600" fill="#c97b3f">阶段 3 对下压给基座：电力与机房的稀缺</text>
+          <text x="62" y="581" font-size="11.5" fill="#3a4256">规模化的账单落在物理层：机架功率密度、骨干网容量、区域可用区</text>
+        </g>
+      </svg>
+      </div>
+      <figcaption>图 4 · 阶段三放大：云底座与规模化。与计算线台阶三同构，读法一致——每次节点改一条规则、往上面交一份能力、往下面压一份稀缺。窄屏可横向滚动查看。</figcaption>
+    </figure>
+
+    <h3 class="step-title">阶段四 · 模型分发与端侧<span class="ramp">对应计算线 台阶四 · 跃迁 7–8</span></h3>
+    <figure class="figbox" style="padding:20px 22px 14px">
+      <div class="scroll-x">
+<svg class="stagefig" data-stage="4" data-peers="四" data-leaps="7–8" data-events="Agent 工具协议|端侧模型|模型即服务" viewBox="0 0 960 626" width="100%" style="display:block;height:auto" role="img" aria-label="阶段四放大：模型分发与端侧（对应计算线台阶四，跃迁 7–8）。列出三个关键节点带来的新技术、改变的规则、压给下面的稀缺与交付给上层的能力">
+        <defs>
+          <linearGradient id="gup104" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#2f6f5e" stop-opacity=".16"/>
+            <stop offset="1" stop-color="#2f6f5e" stop-opacity=".05"/>
+          </linearGradient>
+          <linearGradient id="gdn104" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#c97b3f" stop-opacity=".07"/>
+            <stop offset="1" stop-color="#c97b3f" stop-opacity=".20"/>
+          </linearGradient>
+        </defs>
+        <g font-family="Outfit, 'PingFang SC', sans-serif">
+
+          <rect x="40" y="26" width="880" height="64" rx="12" fill="url(#gup104)" stroke="#2f6f5e" stroke-opacity=".35"/>
+          <text x="62" y="53" font-size="13" font-weight="600" fill="#2f6f5e">阶段 4 对上只兑现一件事：执行可以交出去</text>
+          <text x="62" y="75" font-size="11.5" fill="#3a4256">模型经互联网分发、终端随手接入 —— 但目标与验收仍不在这条线上</text>
+
+          <g font-size="10.5" fill="#7c7a72" font-family="JetBrains Mono, monospace">
+            <text x="62" y="106">节点 · 名称</text>
+            <text x="270" y="106">带来了什么新技术</text>
+            <text x="580" y="106">改变了什么规则</text>
+          </g>
+
+          <rect x="40" y="118" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="118" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="150" font-size="14"><tspan fill="#14171e" font-weight="600">Agent 工具协议</tspan><tspan fill="#2f6f5e" font-weight="600"> · 需要契约</tspan></text>
+          <text x="62" y="172" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">2024–</text>
+          <text x="62" y="192" font-size="11.5" fill="#3a4256">第一次需要一套契约与授权</text>
+          <text x="270" y="150" font-size="12.5" fill="#3a4256">工具调用协议 · 权限模型</text>
+          <text x="270" y="172" font-size="12.5" fill="#3a4256">可观测与审计</text>
+          <text x="580" y="150" font-size="12.5" fill="#3a4256">「调用能力」第一次需要</text>
+          <text x="580" y="172" font-size="12.5" fill="#3a4256">一套契约与授权</text>
+          <line x1="62" y1="212" x2="876" y2="212" stroke="#e9e3d6"/>
+          <text x="62" y="234" font-size="11" fill="#c97b3f">↓ 压给下面：信任与责任</text>
+          <text x="580" y="234" font-size="11" fill="#2f6f5e">↑ 交付给上层：执行可以交出去</text>
+
+          <rect x="40" y="256" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="256" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="288" font-size="14"><tspan fill="#14171e" font-weight="600">端侧模型</tspan><tspan fill="#2f6f5e" font-weight="600"> · 端云协同</tspan></text>
+          <text x="62" y="310" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">2023–2026</text>
+          <text x="62" y="330" font-size="11.5" fill="#3a4256">时延与隐私变成可选</text>
+          <text x="270" y="288" font-size="12.5" fill="#3a4256">端侧 NPU · 蒸馏与量化</text>
+          <text x="270" y="310" font-size="12.5" fill="#3a4256">混合推理路由</text>
+          <text x="580" y="288" font-size="12.5" fill="#3a4256">推理的一部分回到设备上</text>
+          <text x="580" y="310" font-size="12.5" fill="#3a4256">时延与隐私变成可选</text>
+          <line x1="62" y1="350" x2="876" y2="350" stroke="#e9e3d6"/>
+          <text x="62" y="372" font-size="11" fill="#c97b3f">↓ 压给下面：端侧内存与电力的稀缺</text>
+          <text x="580" y="372" font-size="11" fill="#2f6f5e">↑ 交付给上层：离线的、可个性化的执行</text>
+
+          <rect x="40" y="394" width="880" height="126" rx="12" fill="#fff" stroke="#e9e3d6"/>
+          <rect x="40" y="394" width="5" height="126" rx="2.5" fill="#2f6f5e"/>
+          <text x="62" y="426" font-size="14"><tspan fill="#14171e" font-weight="600">模型即服务</tspan><tspan fill="#2f6f5e" font-weight="600"> · 按调用付费</tspan></text>
+          <text x="62" y="448" font-size="11" font-family="JetBrains Mono, monospace" fill="#7c7a72">2023–2026</text>
+          <text x="62" y="468" font-size="11.5" fill="#3a4256">从「一个模型」到「一组模型」</text>
+          <text x="270" y="426" font-size="12.5" fill="#3a4256">API 化模型 · 流式推理</text>
+          <text x="270" y="448" font-size="12.5" fill="#3a4256">多模型路由 · 上下文缓存</text>
+          <text x="580" y="426" font-size="12.5" fill="#3a4256">「一个模型」变成</text>
+          <text x="580" y="448" font-size="12.5" fill="#3a4256">「按需切换的一组模型」</text>
+          <line x1="62" y1="488" x2="876" y2="488" stroke="#e9e3d6"/>
+          <text x="62" y="510" font-size="11" fill="#c97b3f">↓ 压给下面：推理成本与容量的稀缺</text>
+          <text x="580" y="510" font-size="11" fill="#2f6f5e">↑ 交付给上层：能力可以按调用付费</text>
+
+          <rect x="40" y="532" width="880" height="80" rx="12" fill="url(#gdn104)" stroke="#c97b3f" stroke-opacity=".35"/>
+          <text x="62" y="559" font-size="13" font-weight="600" fill="#c97b3f">阶段 4 压下去的东西分成两路</text>
+          <text x="62" y="581" font-size="11.5" fill="#3a4256">模型即服务把推理成本压进账单；端侧模型把一部分推理拉回设备</text>
+          <text x="62" y="603" font-size="11.5" fill="#3a4256">但「信任与责任」压不下去 —— 它留在人身上，就是金字塔尖顶那一句</text>
+        </g>
+      </svg>
+      </div>
+      <figcaption>图 5 · 阶段四放大：模型分发与端侧。与计算线台阶四同构，读法一致——每次节点改一条规则、往上面交一份能力、往下面压一份稀缺。窄屏可横向滚动查看。</figcaption>
+    </figure>
+
     <p class="muted" style="margin-top:16px">
       两条线缺一条，零边际复制就不成立：<b>通用机管「怎么算」，网络管「怎么送」，口袋终端管「送到谁手里」</b>。
       这也是为什么第四次的「自主执行」必须长成「云端算力 + 口袋终端 + 工具协议」的结构——缺一条就跑不起来；
