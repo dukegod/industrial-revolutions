@@ -34,7 +34,7 @@
         <summary><span class="caret"></span>第三次</summary>
         <div class="nav-tree-panel">
           <div class="grp">第三次工业革命</div>
-          <a href="03-third.html"><span class="num">03</span>第三次<span class="sub">可编程与零边际复制 · 两条线</span></a>
+          <a href="03-third.html"><span class="num">03</span>第三次<span class="sub">可编程与零边际复制 · 三条线</span></a>
           <a href="04-architecture.html" class="on"><span class="num">04</span>底层架构<span class="sub">金字塔 · 架构路线 · 逐层传递</span></a>
         </div>
       </details>
@@ -66,7 +66,7 @@
     <div class="meta">
       <span class="tag">分层 <b>7 层</b></span>
       <span class="tag">主线 <b>3 条</b></span>
-      <span class="tag">路线 <b>8 维度</b></span>
+      <span class="tag">路线 <b>11 维度</b></span>
       <span class="tag">传导 <b>4 式</b></span>
       <span class="tag">影响维度 <b>10 项</b></span>
       <span class="tag">八次跃迁见 <a href="03-third.html"><b>第三次</b> →</a></span>
@@ -283,7 +283,7 @@
   <section>
     <div class="sec-head">
       <span class="num">03</span><h2>技术架构路线：走到哪，接下来往哪</h2>
-      <span class="sub">八条维度 · 五个阶段 · 两条瓶颈带</span>
+      <span class="sub">十一条维度 · 五个阶段 · 三条瓶颈带</span>
     </div>
 
     <p>
@@ -295,7 +295,7 @@
     <div class="bleed">
     <figure class="figbox" style="padding:20px 22px 14px;margin-top:16px">
       <div class="scroll-x">
-<svg class="roadmap" viewBox="0 0 1400 716" width="100%" style="display:block;height:auto" role="img" aria-label="电子计算机技术架构路线：横向时间轴从1945到2026，六条技术维度泳道展示各阶段的替代链，底部为主导瓶颈迁移带，右端虚线列为前方未定项">
+<svg viewBox="0 0 1400 950" width="100%" style="display:block;height:auto" role="img" aria-label="电子计算机技术架构路线：横向时间轴从1945到2026，六条技术维度泳道展示各阶段的替代链，底部为主导瓶颈迁移带，右端虚线列为前方未定项">
   <defs>
     <marker id="axArrow" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
       <path d="M0,0 L7,3.2 L0,6.4 Z" fill="#2f6f5e"/>
@@ -472,38 +472,103 @@
     <rect x="1158" y="466" width="238" height="45" rx="9" fill="#c97b3f" fill-opacity=".04" stroke="#c97b3f" stroke-opacity=".45" stroke-dasharray="5 4"/>
     <text x="1170" y="486" font-size="11.5" fill="#3a4256">？尚未定位</text>
 
-    <rect x="0" y="528" width="1400" height="58" rx="10" fill="#c97b3f" fill-opacity=".09" stroke="#c97b3f" stroke-opacity=".3"/>
-    <text x="14" y="552" font-size="12.5" font-weight="600" fill="#c97b3f">主导瓶颈（计算）</text>
-    <text x="14" y="569" font-size="10.5" fill="#a97a4f">每一段台阶挤掉的下一个</text>
-    <text x="186" y="560" font-size="11.5" fill="#8a5a30">指令吞吐 → 访存延迟</text>
-    <text x="432" y="560" font-size="11.5" fill="#8a5a30">访存延迟 → 互连带宽</text>
-    <text x="678" y="560" font-size="11.5" fill="#8a5a30">互连带宽 → 内存容量与带宽</text>
-    <text x="924" y="560" font-size="11.5" fill="#8a5a30">内存容量与带宽 → 电力与成本</text>
-    <rect x="1158" y="533" width="238" height="48" rx="9" fill="none" stroke="#c97b3f" stroke-opacity=".5" stroke-dasharray="5 4"/>
-    <text x="1170" y="560" font-size="11.5" fill="#b3aea2">？下一轮主导瓶颈未确定</text>
+    <rect x="0" y="516" width="1400" height="54" fill="#2f6f5e" fill-opacity=".025"/>
+    <text x="14" y="538" font-size="12.5" font-weight="600" fill="#14171e">半导体与封装</text>
+    <text x="14" y="555" font-size="10.5" fill="#7c7a72">算力的物理载体</text>
+    <line x1="0" y1="570" x2="1400" y2="570" stroke="#e9e3d6"/>
+    <rect x="174" y="520" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="186" y="536" font-size="11.5" fill="#3a4256">晶体管 → 平面工艺 → 光刻</text>
+    <text x="186" y="553" font-size="11.5" fill="#3a4256">→ 集成电路 / VLSI</text>
+    <rect x="420" y="520" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="432" y="536" font-size="11.5" fill="#3a4256">深亚微米 · 铜互连 · FinFET</text>
+    <text x="432" y="553" font-size="11.5" fill="#3a4256">存储器缩放</text>
+    <rect x="666" y="520" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="678" y="536" font-size="11.5" fill="#3a4256">EUV 量产 · HBM · CoWoS</text>
+    <text x="678" y="553" font-size="11.5" fill="#3a4256">Chiplet</text>
+    <rect x="912" y="520" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="924" y="536" font-size="11.5" fill="#3a4256">GAA · High-NA EUV</text>
+    <text x="924" y="553" font-size="11.5" fill="#3a4256">HBM4 · 先进封装</text>
+    <rect x="1158" y="520" width="238" height="45" rx="9" fill="#c97b3f" fill-opacity=".04" stroke="#c97b3f" stroke-opacity=".45" stroke-dasharray="5 4"/>
+    <text x="1170" y="536" font-size="11.5" fill="#3a4256">定制化 · 域专用</text>
+    <text x="1170" y="553" font-size="11.5" fill="#3a4256">三维堆叠（形态未定）</text>
 
-    <rect x="0" y="596" width="1400" height="58" rx="10" fill="#c97b3f" fill-opacity=".05" stroke="#c97b3f" stroke-opacity=".22"/>
-    <text x="14" y="620" font-size="12.5" font-weight="600" fill="#b07a4c">主导瓶颈（连接与接入）</text>
-    <text x="14" y="637" font-size="10.5" fill="#b3aea2">这条线挤掉的下一个</text>
-    <text x="186" y="628" font-size="11.5" fill="#8a5a30">接入稀缺（拨号与许可）</text>
-    <text x="432" y="628" font-size="11.5" fill="#8a5a30">带宽稀缺（骨干网与 CDN）</text>
-    <text x="678" y="628" font-size="11.5" fill="#8a5a30">流量与分发稀缺（视频流）</text>
-    <text x="924" y="628" font-size="11.5" fill="#8a5a30">入口与注意力稀缺（超级 App）</text>
-    <rect x="1158" y="601" width="238" height="48" rx="9" fill="none" stroke="#c97b3f" stroke-opacity=".4" stroke-dasharray="5 4"/>
-    <text x="1170" y="628" font-size="11.5" fill="#b3aea2">？未确定</text>
+    <text x="14" y="592" font-size="12.5" font-weight="600" fill="#14171e">通信与光互连</text>
+    <text x="14" y="609" font-size="10.5" fill="#7c7a72">机器与机器怎么连</text>
+    <line x1="0" y1="624" x2="1400" y2="624" stroke="#e9e3d6"/>
+    <rect x="174" y="574" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="186" y="594" font-size="11.5" fill="#3a4256">铜缆 → 同轴 → 光纤</text>
+    <rect x="420" y="574" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="432" y="590" font-size="11.5" fill="#3a4256">光骨干网 · 2G / 3G / 4G</text>
+    <text x="432" y="607" font-size="11.5" fill="#3a4256">宽带与蜂窝</text>
+    <rect x="666" y="574" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="678" y="590" font-size="11.5" fill="#3a4256">硅光 · 400G / 800G 光模块</text>
+    <text x="678" y="607" font-size="11.5" fill="#3a4256">数据中心光互连</text>
+    <rect x="912" y="574" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="924" y="590" font-size="11.5" fill="#3a4256">CPO 共封装光学 · 1.6T</text>
+    <text x="924" y="607" font-size="11.5" fill="#3a4256">低轨卫星</text>
+    <rect x="1158" y="574" width="238" height="45" rx="9" fill="#c97b3f" fill-opacity=".04" stroke="#c97b3f" stroke-opacity=".45" stroke-dasharray="5 4"/>
+    <text x="1170" y="594" font-size="11.5" fill="#3a4256">？尚未定位</text>
 
-    <line x1="1150" y1="16" x2="1150" y2="654" stroke="#c97b3f" stroke-width="1.4" stroke-dasharray="6 4"/>
+    <rect x="0" y="624" width="1400" height="54" fill="#2f6f5e" fill-opacity=".025"/>
+    <text x="14" y="646" font-size="12.5" font-weight="600" fill="#14171e">能源与散热</text>
+    <text x="14" y="663" font-size="10.5" fill="#7c7a72">这套系统的物理天花板</text>
+    <line x1="0" y1="678" x2="1400" y2="678" stroke="#e9e3d6"/>
+    <rect x="174" y="628" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="186" y="648" font-size="11.5" fill="#3a4256">风冷 · 机房级供电</text>
+    <rect x="420" y="628" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="432" y="648" font-size="11.5" fill="#3a4256">冷冻水 · 机柜 10–20kW</text>
+    <rect x="666" y="628" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="678" y="644" font-size="11.5" fill="#3a4256">数据中心电力集中化</text>
+    <text x="678" y="661" font-size="11.5" fill="#3a4256">30kW 级机柜</text>
+    <rect x="912" y="628" width="238" height="45" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="924" y="644" font-size="11.5" fill="#3a4256">冷板液冷为主 · 100kW+ 机柜</text>
+    <text x="924" y="661" font-size="11.5" fill="#3a4256">变电与选址成为约束</text>
+    <rect x="1158" y="628" width="238" height="45" rx="9" fill="#c97b3f" fill-opacity=".04" stroke="#c97b3f" stroke-opacity=".45" stroke-dasharray="5 4"/>
+    <text x="1170" y="648" font-size="11.5" fill="#3a4256">浸没式与液冷路线未定</text>
+
+    <rect x="0" y="688" width="1400" height="58" rx="10" fill="#c97b3f" fill-opacity=".09" stroke="#c97b3f" stroke-opacity=".3"/>
+    <text x="14" y="712" font-size="12.5" font-weight="600" fill="#c97b3f">主导瓶颈（计算）</text>
+    <text x="14" y="729" font-size="10.5" fill="#a97a4f">每一段台阶挤掉的下一个</text>
+    <text x="186" y="720" font-size="11.5" fill="#8a5a30">指令吞吐 → 访存延迟</text>
+    <text x="432" y="720" font-size="11.5" fill="#8a5a30">访存延迟 → 互连带宽</text>
+    <text x="678" y="720" font-size="11.5" fill="#8a5a30">互连带宽 → 内存容量与带宽</text>
+    <text x="924" y="720" font-size="11.5" fill="#8a5a30">内存容量与带宽 → 电力与成本</text>
+    <rect x="1158" y="693" width="238" height="48" rx="9" fill="none" stroke="#c97b3f" stroke-opacity=".5" stroke-dasharray="5 4"/>
+    <text x="1170" y="720" font-size="11.5" fill="#b3aea2">？下一轮主导瓶颈未确定</text>
+
+    <rect x="0" y="756" width="1400" height="58" rx="10" fill="#c97b3f" fill-opacity=".05" stroke="#c97b3f" stroke-opacity=".22"/>
+    <text x="14" y="780" font-size="12.5" font-weight="600" fill="#b07a4c">主导瓶颈（连接与接入）</text>
+    <text x="14" y="797" font-size="10.5" fill="#b3aea2">这条线挤掉的下一个</text>
+    <text x="186" y="788" font-size="11.5" fill="#8a5a30">接入稀缺（拨号与许可）</text>
+    <text x="432" y="788" font-size="11.5" fill="#8a5a30">带宽稀缺（骨干网与 CDN）</text>
+    <text x="678" y="788" font-size="11.5" fill="#8a5a30">流量与分发稀缺（视频流）</text>
+    <text x="924" y="788" font-size="11.5" fill="#8a5a30">入口与注意力稀缺（超级 App）</text>
+    <rect x="1158" y="761" width="238" height="48" rx="9" fill="none" stroke="#c97b3f" stroke-opacity=".4" stroke-dasharray="5 4"/>
+    <text x="1170" y="788" font-size="11.5" fill="#b3aea2">？未确定</text>
+
+    <rect x="0" y="824" width="1400" height="58" rx="10" fill="#c97b3f" fill-opacity=".035" stroke="#c97b3f" stroke-opacity=".18"/>
+    <text x="14" y="848" font-size="12.5" font-weight="600" fill="#b07a4c">主导瓶颈（物理层）</text>
+    <text x="14" y="865" font-size="10.5" fill="#b3aea2">托着上面两条线的那层</text>
+    <text x="186" y="856" font-size="11.5" fill="#8a5a30">器件与工艺</text>
+    <text x="432" y="856" font-size="11.5" fill="#8a5a30">互连延迟与漏电</text>
+    <text x="678" y="856" font-size="11.5" fill="#8a5a30">封装产能与光模块产能</text>
+    <text x="924" y="856" font-size="11.5" fill="#8a5a30">电力与散热</text>
+    <rect x="1158" y="829" width="238" height="48" rx="9" fill="none" stroke="#c97b3f" stroke-opacity=".35" stroke-dasharray="5 4"/>
+    <text x="1170" y="856" font-size="11.5" fill="#b3aea2">？未确定</text>
+
+    <line x1="1150" y1="16" x2="1150" y2="882" stroke="#c97b3f" stroke-width="1.4" stroke-dasharray="6 4"/>
     <text x="1142" y="20" font-size="11" font-weight="600" fill="#c97b3f" text-anchor="end">现在 · 2026-11</text>
 
-    <text x="14" y="684" font-size="10.5" fill="#7c7a72">实线框 = 已发生　虚线框 = 前方 / 进行中　灰字「未定」= 尚未定位</text>
-    <text x="14" y="702" font-size="10.5" fill="#7c7a72">两条瓶颈带分别对应计算线与连接/接入线；右端只写有依据的方向，未写明的即为不确定</text>
+    <text x="14" y="912" font-size="10.5" fill="#7c7a72">实线框 = 已发生　虚线框 = 前方 / 进行中　灰字「未定」= 尚未定位</text>
+    <text x="14" y="930" font-size="10.5" fill="#7c7a72">三条瓶颈带分别对应计算线、连接/接入线与物理层；右端只写有依据的方向，未写明的即为不确定</text>
   </g>
 </svg>
       </div>
       <figcaption>
         图 3 · 电子计算机技术架构路线。<b>横着读</b>是每条维度在各阶段的技术形态（箭头即替代关系）；
-        <b>竖着读</b>是同一时刻八条维度各自的处境。底部两条暖色带是主导瓶颈的迁移——
-        上带对应计算线（即「三条主线」的主线一，换成按阶段看），下带对应连接与接入线。
+        <b>竖着读</b>是同一时刻十一条维度各自的处境。底部三条暖色带是主导瓶颈的迁移——
+        最上带对应计算线（即「三条主线」的主线一，换成按阶段看），中间带对应连接与接入线，
+        最下带对应托着这两条线的<b>物理层</b>（半导体 · 通信 · 能源与散热）。
         右端虚线列是<b>前方</b>：只写有依据的方向，写不出来的标「尚未定位」，不猜。
         窄屏可横向滚动查看。
       </figcaption>

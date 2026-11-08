@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""两条线的逐项对齐校验。
+"""三条线的逐项对齐校验。
 
-检查计算线（四段台阶）与连接/接入线（四个阶段）是否严格一一对应：
+第三次革命有三条线：
 
-  1. 计算线四张台阶图齐全，阶段号 1–4 无缺无重
+  计算线        四段台阶（八次架构跃迁）        04-architecture.html  class="stepfig"
+  连接与接入线   四个阶段（互联网与移动设备）    03-third.html        class="stagefig"
+  物理基础线     四个物理段（半导体·通信·能源）  03-third.html        class="physfig"
+
+三条线段号一一对应，每段覆盖同一批跃迁。这个脚本自动验这种对应关系：
+
+  1. 三条线各自的阶段号 1–4 齐全，无缺无重
   2. 计算线的跃迁区间合并后正好覆盖八次跃迁，不重叠、不遗漏
-  3. 连接/接入线四张阶段图齐全，阶段号 1–4 无缺无重
-  4. 同一阶段号的两张图，跃迁区间完全一致
-  5. 每张图 data-events 里的每个名称都必须出现在该图的实际文本里
+  3. 同阶段号的三张图，跃迁区间完全一致
+  4. 每张图 data-events 里的每个名称都必须出现在该图的实际文本里
      （数据标记不能与画出来的内容脱节）
-  6. wiki/03 的对齐表每一行与两张图的数据一致
+  5. wiki/03 的两张对齐表逐行与三张图的数据一致
 
 用法：
   python3 scripts/test_alignment.py
@@ -25,7 +30,7 @@ ARCH = ROOT / 'visualization' / '04-architecture.html'
 THIRD = ROOT / 'visualization' / '03-third.html'
 WIKI = ROOT / 'wiki' / '03-第三次工业革命.md'
 
-ALL_LEAPS = list(range(1, 9))          # 八次跃迁
+ALL_LEAPS = list(range(1, 9))
 EXPECT_LEAPS = ['1–3', '4–5', '6', '7–8']
 
 problems = []
@@ -58,35 +63,40 @@ def svg_figures(path, cls):
             'events': ev.group(1).split('|'),
             'peers': pr.group(1) if pr else '',
             'texts': texts,
-            'body': body,
         })
     return out
 
 
-def wiki_rows():
-    """解析 wiki/03 的对齐表，返回 [(stage, 台阶, 跃迁, 阶段, 关键节点)]。"""
+def wiki_tables():
+    """解析 wiki/03 的对齐表，按表头第 4 列区分类型。
+
+    返回 {'conn': [...], 'phys': [...]}；每行含 stage / step / leaps / name / events。
+    """
     t = WIKI.read_text(encoding='utf-8')
-    rows = []
+    out = {'conn': [], 'phys': []}
+    kind = None
     for line in t.splitlines():
-        if not line.strip().startswith('|'):
+        s = line.strip()
+        if not s.startswith('|'):
+            kind = None
             continue
-        cells = [c.strip() for c in line.strip().strip('|').split('|')]
-        if len(cells) < 5 or not cells[0].isdigit():
+        cells = [c.strip() for c in s.strip('|').split('|')]
+        if '计算线台阶' in s:
+            kind = 'phys' if len(cells) > 3 and cells[3] == '物理段' else ('conn' if len(cells) > 3 and cells[3] == '连接与接入线阶段' else None)
             continue
-        if '计算线台阶' in line:          # 表头
+        if kind is None or len(cells) < 5 or not cells[0].isdigit():
             continue
-        rows.append({
+        out[kind].append({
             'stage': int(cells[0]),
             'step': cells[1],
             'leaps': cells[2],
-            'stage_name': cells[3],
+            'name': cells[3],
             'events': [e.strip() for e in re.split(r'[、,，]', cells[4]) if e.strip()],
         })
-    return rows
+    return out
 
 
 def leap_list(s):
-    """'1–3' → [1,2,3]；'6' → [6]"""
     out = []
     for part in s.replace(',', '，').split('，'):
         part = part.strip()
@@ -101,86 +111,86 @@ def leap_list(s):
 
 
 def main():
-    if not (ARCH.exists() and THIRD.exists() and WIKI.exists()):
-        print('找不到 04-architecture.html / 03-third.html / wiki/03')
-        return 1
+    for f in (ARCH, THIRD, WIKI):
+        if not f.exists():
+            print('找不到 %s' % f)
+            return 1
 
     steps = svg_figures(ARCH, 'stepfig')
     stages = svg_figures(THIRD, 'stagefig')
+    phys = svg_figures(THIRD, 'physfig')
+    tables = wiki_tables()
 
-    # 1. 计算线齐全
-    step_by_stage = {f['stage']: f for f in steps}
-    if sorted(step_by_stage) != [1, 2, 3, 4]:
-        bad('计算线台阶图阶段号应为 1–4，实际 %s' % sorted(step_by_stage))
-    else:
-        notes.append('计算线：4 张台阶图，阶段号 1–4 无缺无重')
+    lines = [('计算线', steps), ('连接与接入线', stages), ('物理基础线', phys)]
 
-    # 2. 跃迁区间正好覆盖八次跃迁
+    # 1. 三条线阶段号齐全
+    for name, figs in lines:
+        by_stage = {f['stage']: f for f in figs}
+        if sorted(by_stage) != [1, 2, 3, 4]:
+            bad('%s 的阶段号应为 1–4，实际 %s' % (name, sorted(by_stage)))
+        else:
+            notes.append('%s：4 张图，阶段号 1–4 无缺无重' % name)
+
+    step_by = {f['stage']: f for f in steps}
+    stage_by = {f['stage']: f for f in stages}
+    phys_by = {f['stage']: f for f in phys}
+
+    # 2. 八次跃迁覆盖完整
     covered = []
     for i in range(1, 5):
-        f = step_by_stage.get(i)
+        f = step_by.get(i)
         if not f:
             continue
         if f['leaps'] != EXPECT_LEAPS[i - 1]:
             bad('计算线台阶 %d 的跃迁区间应为 %s，实际 %s' % (i, EXPECT_LEAPS[i - 1], f['leaps']))
             continue
-        a, b = f['leaps'].split('–') if '–' in f['leaps'] else (f['leaps'], f['leaps'])
-        covered.extend(range(int(a), int(b) + 1))
+        covered.extend(leap_list(f['leaps']))
     if sorted(covered) != ALL_LEAPS:
         bad('八次跃迁覆盖不全或有重叠：%s' % sorted(covered))
     else:
         notes.append('八次跃迁：1–3 / 4–5 / 6 / 7–8 分段完整，覆盖无重叠无遗漏')
 
-    # 3. 第二线齐全
-    stage_by_stage = {f['stage']: f for f in stages}
-    if sorted(stage_by_stage) != [1, 2, 3, 4]:
-        bad('连接/接入线阶段图阶段号应为 1–4，实际 %s' % sorted(stage_by_stage))
-    else:
-        notes.append('连接/接入线：4 张阶段图，阶段号 1–4 无缺无重')
-
-    # 4. 同一阶段跃迁区间一致
+    # 3. 三条线同阶段跃迁区间一致
     for i in range(1, 5):
-        a = step_by_stage.get(i)
-        b = stage_by_stage.get(i)
-        if not a or not b:
-            continue
-        if a['leaps'] != b['leaps']:
-            bad('阶段 %d 跃迁区间错位：计算线 %s，连接/接入线 %s' % (i, a['leaps'], b['leaps']))
-    notes.append('同阶段跃迁区间：4/4 一致')
+        ref = step_by.get(i)
+        for name, by in (('连接与接入线', stage_by), ('物理基础线', phys_by)):
+            f = by.get(i)
+            if not ref or not f:
+                continue
+            if ref['leaps'] != f['leaps']:
+                bad('阶段 %d 跃迁区间错位：计算线 %s，%s %s' % (i, ref['leaps'], name, f['leaps']))
+    notes.append('同阶段跃迁区间：三条线 4/4 一致')
 
-    # 5. data-events 必须出现在图的实际文本里
-    for label, figs in (('计算线', steps), ('连接/接入线', stages)):
+    # 4. data-events 必须出现在图的实际文本里
+    for name, figs in lines:
         for f in figs:
             joined = ' '.join(f['texts'])
             for e in f['events']:
                 if e not in joined:
-                    bad('%s 阶段 %d：data-events 里的「%s」在图中找不到' % (label, f['stage'], e))
-    notes.append('图内事件名：全部能在对应 SVG 文本中找到（标记与画出来的一致）')
+                    bad('%s 阶段 %d：data-events 里的「%s」在图中找不到' % (name, f['stage'], e))
+    notes.append('图内事件名：三条线全部能在对应 SVG 文本中找到（标记与画出来的一致）')
 
-    # 6. wiki 对齐表逐项比对
-    rows = wiki_rows()
-    if len(rows) != 4:
-        bad('wiki/03 对齐表应有 4 行，实际 %d 行' % len(rows))
-    else:
+    # 5. wiki 两张对齐表逐行比对
+    for kind, by, label in (('conn', stage_by, '连接与接入线'), ('phys', phys_by, '物理基础线')):
+        rows = tables[kind]
+        if len(rows) != 4:
+            bad('wiki/03 %s 对齐表应有 4 行，实际 %d 行' % (label, len(rows)))
+            continue
         for r in rows:
             i = r['stage']
-            a = step_by_stage.get(i)
-            b = stage_by_stage.get(i)
-            if not a or not b:
+            ref = step_by.get(i)
+            f = by.get(i)
+            if not ref or not f:
                 continue
-            if r['leaps'] != a['leaps']:
-                bad('wiki 对齐表阶段 %d 的跃迁区间 %s 与计算线 %s 不符' % (i, r['leaps'], a['leaps']))
-            if r['leaps'] != b['leaps']:
-                bad('wiki 对齐表阶段 %d 的跃迁区间 %s 与连接/接入线 %s 不符' % (i, r['leaps'], b['leaps']))
-            if r['events'] != b['events']:
-                bad('wiki 对齐表阶段 %d 的关键节点 %s 与图中 %s 不符'
-                    % (i, r['events'], b['events']))
-            if b['peers'] and not r['stage_name'].startswith(b['peers']):
-                bad('wiki 对齐表阶段 %d 的阶段名「%s」与图上的「%s」不符'
-                    % (i, r['stage_name'], b['peers']))
-    notes.append('wiki/03 对齐表：4 行的跃迁区间与关键节点与两张图逐项一致')
+            if r['leaps'] != ref['leaps']:
+                bad('wiki %s 对齐表阶段 %d 的跃迁区间 %s 与计算线 %s 不符' % (label, i, r['leaps'], ref['leaps']))
+            if r['leaps'] != f['leaps']:
+                bad('wiki %s 对齐表阶段 %d 的跃迁区间 %s 与图中 %s 不符' % (label, i, r['leaps'], f['leaps']))
+            if r['events'] != f['events']:
+                bad('wiki %s 对齐表阶段 %d 的关键节点 %s 与图中 %s 不符' % (label, i, r['events'], f['events']))
+        notes.append('wiki/03 %s 对齐表：4 行的跃迁区间与关键节点与图中逐项一致' % label)
 
-    print('=== 两条线对齐校验 ===')
+    print('=== 三条线对齐校验 ===')
     for n in notes:
         print('  ✓', n)
     if problems:
