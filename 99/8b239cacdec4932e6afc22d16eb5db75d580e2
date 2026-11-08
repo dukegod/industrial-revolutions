@@ -1,0 +1,26 @@
+scripts/README.md
+  h_c10f653d02d2fc 115-121
+scripts/test_alignment.py
+  h_c10f653d02d2fc 56,61-63,66-67,73,75-77,80,91-93,96-111,209-210,223-276
+visualization/03-third.html
+  h_c10f653d02d2fc 1062-1145,1149-1150
+visualization/04-architecture.html
+  h_c10f653d02d2fc 298,492-493,510-511,528-529,574-575
+wiki/03-第三次工业革命.md
+  h_c10f653d02d2fc 127,129-133,135-137
+wiki/06-电子计算机八次跃迁.md
+  h_c10f653d02d2fc 302-304,307
+wiki/08-数据来源与口径.md
+  h_c10f653d02d2fc 79-108,123
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "998b239cacdec4932e6afc22d16eb5db75d580e2",
+  "prompts": {},
+  "humans": {
+    "h_c10f653d02d2fc": {
+      "author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
