@@ -295,7 +295,7 @@
     <div class="bleed">
     <figure class="figbox" style="padding:20px 22px 14px;margin-top:16px">
       <div class="scroll-x">
-<svg viewBox="0 0 1400 950" width="100%" style="display:block;height:auto" role="img" aria-label="电子计算机技术架构路线：横向时间轴从1945到2026，六条技术维度泳道展示各阶段的替代链，底部为主导瓶颈迁移带，右端虚线列为前方未定项">
+<svg class="roadmap" data-forkkeys="冷板|定制 ASIC|混合键合" viewBox="0 0 1400 950" width="100%" style="display:block;height:auto" role="img" aria-label="电子计算机技术架构路线：横向时间轴从1945到2026，六条技术维度泳道展示各阶段的替代链，底部为主导瓶颈迁移带，右端虚线列为前方未定项">
   <defs>
     <marker id="axArrow" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
       <path d="M0,0 L7,3.2 L0,6.4 Z" fill="#2f6f5e"/>
@@ -489,8 +489,8 @@
     <text x="924" y="536" font-size="11.5" fill="#3a4256">GAA · High-NA EUV</text>
     <text x="924" y="553" font-size="11.5" fill="#3a4256">HBM4 · 先进封装</text>
     <rect x="1158" y="520" width="238" height="45" rx="9" fill="#c97b3f" fill-opacity=".04" stroke="#c97b3f" stroke-opacity=".45" stroke-dasharray="5 4"/>
-    <text x="1170" y="536" font-size="11.5" fill="#3a4256">定制化 · 域专用</text>
-    <text x="1170" y="553" font-size="11.5" fill="#3a4256">三维堆叠（形态未定）</text>
+    <text x="1170" y="536" data-forkkey="定制 ASIC" font-size="11.5" fill="#3a4256">定制 ASIC 增速首超 GPU</text>
+    <text x="1170" y="553" data-forkkey="混合键合" font-size="11.5" fill="#3a4256">混合键合推迟到 HBM4E</text>
 
     <text x="14" y="592" font-size="12.5" font-weight="600" fill="#14171e">通信与光互连</text>
     <text x="14" y="609" font-size="10.5" fill="#7c7a72">机器与机器怎么连</text>
@@ -507,7 +507,8 @@
     <text x="924" y="590" font-size="11.5" fill="#3a4256">CPO 共封装光学 · 1.6T</text>
     <text x="924" y="607" font-size="11.5" fill="#3a4256">低轨卫星</text>
     <rect x="1158" y="574" width="238" height="45" rx="9" fill="#c97b3f" fill-opacity=".04" stroke="#c97b3f" stroke-opacity=".45" stroke-dasharray="5 4"/>
-    <text x="1170" y="594" font-size="11.5" fill="#3a4256">？尚未定位</text>
+    <text x="1170" y="590" font-size="11.5" fill="#3a4256">CPO 首批量产 · 1.6T</text>
+    <text x="1170" y="607" font-size="11.5" fill="#3a4256">？卫星与光互连形态未定</text>
 
     <rect x="0" y="624" width="1400" height="54" fill="#2f6f5e" fill-opacity=".025"/>
     <text x="14" y="646" font-size="12.5" font-weight="600" fill="#14171e">能源与散热</text>
@@ -524,7 +525,8 @@
     <text x="924" y="644" font-size="11.5" fill="#3a4256">冷板液冷为主 · 100kW+ 机柜</text>
     <text x="924" y="661" font-size="11.5" fill="#3a4256">变电与选址成为约束</text>
     <rect x="1158" y="628" width="238" height="45" rx="9" fill="#c97b3f" fill-opacity=".04" stroke="#c97b3f" stroke-opacity=".45" stroke-dasharray="5 4"/>
-    <text x="1170" y="648" font-size="11.5" fill="#3a4256">浸没式与液冷路线未定</text>
+    <text x="1170" y="644" data-forkkey="冷板" font-size="11.5" fill="#3a4256">冷板 93.5% 主导</text>
+    <text x="1170" y="661" font-size="11.5" fill="#3a4256">浸没吃 &gt;200kW 高密场景</text>
 
     <rect x="0" y="688" width="1400" height="58" rx="10" fill="#c97b3f" fill-opacity=".09" stroke="#c97b3f" stroke-opacity=".3"/>
     <text x="14" y="712" font-size="12.5" font-weight="600" fill="#c97b3f">主导瓶颈（计算）</text>
@@ -569,7 +571,8 @@
         <b>竖着读</b>是同一时刻十一条维度各自的处境。底部三条暖色带是主导瓶颈的迁移——
         最上带对应计算线（即「三条主线」的主线一，换成按阶段看），中间带对应连接与接入线，
         最下带对应托着这两条线的<b>物理层</b>（半导体 · 通信 · 能源与散热）。
-        右端虚线列是<b>前方</b>：只写有依据的方向，写不出来的标「尚未定位」，不猜。
+        右端虚线列是<b>前方</b>：三个物理岔路（散热形态 / 芯片形态 / 堆叠形态）都已查证到<b>判定条件</b>，
+        见 <a href="03-third.html" style="color:var(--accent)">03 第三次</a> 的「三个岔路」；确实没有定论的仍标「尚未定位」，不猜。
         窄屏可横向滚动查看。
       </figcaption>
     </figure>

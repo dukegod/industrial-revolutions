@@ -53,27 +53,31 @@ def svg_figures(path, cls):
         lp = re.search(r'data-leaps="([^"]+)"', attrs)
         ev = re.search(r'data-events="([^"]+)"', attrs)
         pr = re.search(r'data-peers="([^"]+)"', attrs)
-        if not (st and lp and ev):
+        if 'data-' not in attrs:
             bad('%s：有一张 %s 图缺少 data-* 标记' % (path.name, cls))
             continue
         texts = [re.sub(r'<[^>]+>', '', x) for x in re.findall(r'<text\b[^>]*>(.*?)</text>', body, re.S)]
         out.append({
-            'stage': int(st.group(1)),
-            'leaps': lp.group(1),
-            'events': ev.group(1).split('|'),
+            'stage': int(st.group(1)) if st else None,
+            'leaps': lp.group(1) if lp else '',
+            'events': ev.group(1).split('|') if ev else [],
             'peers': pr.group(1) if pr else '',
             'texts': texts,
+            'body': body,
+            'attrs': attrs,
         })
     return out
 
 
 def wiki_tables():
-    """解析 wiki/03 的对齐表，按表头第 4 列区分类型。
+    """解析 wiki/03 的对齐表，按表头第 4 列 / 第 2 列区分类型。
 
-    返回 {'conn': [...], 'phys': [...]}；每行含 stage / step / leaps / name / events。
+    返回 {'conn': [...], 'phys': [...], 'fork': [...]}。
+    conn / phys 行含 stage / step / leaps / name / events；
+    fork 行含 stage / name / settled / trigger / unknown。
     """
     t = WIKI.read_text(encoding='utf-8')
-    out = {'conn': [], 'phys': []}
+    out = {'conn': [], 'phys': [], 'fork': []}
     kind = None
     for line in t.splitlines():
         s = line.strip()
@@ -84,15 +88,27 @@ def wiki_tables():
         if '计算线台阶' in s:
             kind = 'phys' if len(cells) > 3 and cells[3] == '物理段' else ('conn' if len(cells) > 3 and cells[3] == '连接与接入线阶段' else None)
             continue
+        if len(cells) > 1 and cells[1] == '岔路':
+            kind = 'fork'
+            continue
         if kind is None or len(cells) < 5 or not cells[0].isdigit():
             continue
-        out[kind].append({
-            'stage': int(cells[0]),
-            'step': cells[1],
-            'leaps': cells[2],
-            'name': cells[3],
-            'events': [e.strip() for e in re.split(r'[、,，]', cells[4]) if e.strip()],
-        })
+        if kind == 'fork':
+            out['fork'].append({
+                'stage': int(cells[0]),
+                'name': cells[1],
+                'settled': cells[2],
+                'trigger': cells[3],
+                'unknown': cells[4],
+            })
+        else:
+            out[kind].append({
+                'stage': int(cells[0]),
+                'step': cells[1],
+                'leaps': cells[2],
+                'name': cells[3],
+                'events': [e.strip() for e in re.split(r'[、,，]', cells[4]) if e.strip()],
+            })
     return out
 
 
@@ -190,6 +206,8 @@ def main():
                 bad('wiki %s 对齐表阶段 %d 的关键节点 %s 与图中 %s 不符' % (label, i, r['events'], f['events']))
         notes.append('wiki/03 %s 对齐表：4 行的跃迁区间与关键节点与图中逐项一致' % label)
 
+    check_forks()
+
     print('=== 三条线对齐校验 ===')
     for n in notes:
         print('  ✓', n)
@@ -200,6 +218,60 @@ def main():
         return 1
     print('\n全部对齐。')
     return 0
+
+
+def check_forks():
+    """三个岔路：图 / wiki 表 / 路线图三者必须说同一件事。"""
+    figs = svg_figures(THIRD, 'forkfig')
+    rows = wiki_tables()['fork']
+    road = svg_figures(ARCH, 'roadmap')
+    if not road:
+        bad('路线图缺少 class="roadmap" 标记')
+        return
+
+    if len(figs) != 1:
+        bad('应有一张岔路图（class="forkfig"），实际 %d 张' % len(figs))
+        return
+    fig = figs[0]
+    names = fig['attrs'].split('data-forknames="')[1].split('"')[0].split('|')
+
+    if len(rows) != len(names):
+        bad('wiki/03 岔路表应有 %d 行，实际 %d 行' % (len(names), len(rows)))
+        return
+
+    joined = ' '.join(fig['texts'])
+    for i, nm in enumerate(names):
+        r = rows[i]
+        if r['name'] != nm:
+            bad('岔路 %d 名称错位：wiki 表「%s」vs 图上「%s」' % (i + 1, r['name'], nm))
+        if nm not in joined:
+            bad('岔路图里找不到「%s」' % nm)
+        for key, label in (('settled', '已定型的现状'), ('trigger', '判定条件'), ('unknown', '仍然不确定')):
+            if not r[key] or r[key].startswith('？'):
+                bad('wiki/03 岔路表「%s」的「%s」为空或仍是未定占位' % (nm, label))
+    notes.append('三个岔路：图上的三个名称与 wiki/03 岔路表逐行一致，'
+                 '每行的现状 / 判定条件 / 仍不确定三栏均非空')
+
+    body = road[0]['body']
+    keys = road[0]['attrs'].split('data-forkkeys="')[1].split('"')[0].split('|')
+    marked = re.findall(r'<text x="([\d.]+)"[^>]*data-forkkey="([^"]+)"', body)
+    if not marked:
+        bad('路线图里没有任何 data-forkkey 标记（2026→ 列未与三个岔路挂钩）')
+        return
+    # 几何验证：被标记的文本必须落在整张图最右侧的一列（即 2026→ 列）
+    cell_x = sorted({float(x) for x in re.findall(r'<text x="([\d.]+)"[^>]*font-size="11.5"', body)})
+    rightmost = cell_x[-1] if cell_x else 0
+    got = set()
+    for x, k in marked:
+        got.add(k)
+        if float(x) < rightmost - 1:
+            bad('路线图里带 data-forkkey="%s" 的文本在 x=%.0f，不在最右一列（x=%.0f）—— 它不在 2026→ 列里'
+                % (k, float(x), rightmost))
+    for k in keys:
+        if k not in got:
+            bad('路线图 2026→ 列里找不到岔路关键词「%s」' % k)
+    notes.append('路线图 2026→ 列：%d 个岔路关键词均带精确标记且落在最右一列（不再是空白占位）'
+                 % len(marked))
 
 
 if __name__ == '__main__':

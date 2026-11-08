@@ -1059,10 +1059,95 @@
       <figcaption>图 9 · 物理段四放大：电力、散热与三维缩放。与计算线的台阶图同构、读法一致——每个节点改一条规则、往上面交一份能力、往下面压一份稀缺。窄屏可横向滚动查看。</figcaption>
     </figure>
 
+    <h3 class="step-title">前方的三个岔路<span class="ramp">查证到判定条件</span></h3>
+    <figure class="figbox" style="padding:20px 22px 14px">
+      <div class="scroll-x">
+<svg class="forkfig" data-forks="cooling|chip|stack" data-forknames="散热形态|芯片形态|堆叠形态" viewBox="0 0 1190 562" width="100%" style="display:block;height:auto" role="img" aria-label="物理层的三个岔路：散热形态冷板与浸没、芯片形态通用GPU与定制ASIC、堆叠形态混合键合与微凸点；每条给出已定型的现状、岔路口的判定条件，以及仍然不确定的部分">
+  <g font-family="Outfit, 'PingFang SC', sans-serif">
+    <rect x="0" y="0" width="1190" height="38" rx="10" fill="#2f6f5e" fill-opacity=".07" stroke="#2f6f5e" stroke-opacity=".22"/>
+    <text x="14" y="26" font-size="12.5" fill="#3a4256">三条岔路都<tspan font-weight="600" fill="#14171e">已经有了判定条件</tspan>——不再是不确定，而是「在什么条件下换道」：换道的门槛与时间表都已给出，剩下的不确定项单独列出。</text>
+    <rect x="0" y="46" width="1190" height="152" rx="12" fill="#fff" stroke="#e9e3d6"/>
+    <rect x="0" y="46" width="4" height="152" rx="2" fill="#2f6f5e"/>
+    <text x="26" y="76" font-size="13" font-weight="600" fill="#14171e">岔路一 · 散热形态</text>
+    <text x="26" y="106" font-size="11.5" fill="#2f6f5e">冷板式</text>
+    <line x1="92" y1="102" x2="110" y2="102" stroke="#2f6f5e" stroke-width="1.2" opacity=".55"/>
+    <text x="26" y="128" font-size="11.5" fill="#c97b3f">浸没式</text>
+    <line x1="92" y1="124" x2="110" y2="124" stroke="#c97b3f" stroke-width="1.2" opacity=".55"/>
+    <text x="200" y="76" font-size="10.5" font-family="JetBrains Mono, monospace" fill="#2f6f5e">已定型的现状</text>
+    <text x="200" y="99" font-size="11.5" fill="#3a4256">2025 年中国液冷市场中冷板式占 93.5%</text>
+    <text x="200" y="119" font-size="11.5" fill="#3a4256">未来 3–5 年仍是主流方案</text>
+    <text x="200" y="139" font-size="11.5" fill="#3a4256">GB/T 48023-2026 冷板式液冷国标</text>
+    <text x="200" y="159" font-size="11.5" fill="#3a4256">2026-08 发布、2027-02 实施</text>
+    <text x="516" y="76" font-size="10.5" font-family="JetBrains Mono, monospace" fill="#c97b3f">岔路口的判定条件</text>
+    <text x="516" y="99" font-size="11.5" fill="#3a4256">单柜功率 &gt;200kW 时浸没才占优</text>
+    <text x="516" y="119" font-size="11.5" fill="#3a4256">100 柜 × 20kW：浸没初始投资高约 1000 万</text>
+    <text x="516" y="139" font-size="11.5" fill="#3a4256">年省 190 万，6 年是 TCO 交叉点</text>
+    <text x="842" y="76" font-size="10.5" font-family="JetBrains Mono, monospace" fill="#b3aea2">仍然不确定</text>
+    <text x="842" y="99" font-size="11.5" fill="#7c7a72">冷却液工质无统一标准</text>
+    <text x="842" y="119" font-size="11.5" fill="#7c7a72">（硅油 / 氟化液 / PG25 / EG25 / 去离子水）</text>
+    <text x="842" y="139" font-size="11.5" fill="#7c7a72">浸没式液冷液占系统价值量约 60%</text>
+    <line x1="502" y1="62" x2="502" y2="182" stroke="#e9e3d6"/>
+    <line x1="828" y1="62" x2="828" y2="182" stroke="#e9e3d6"/>
+    <rect x="0" y="212" width="1190" height="152" rx="12" fill="#fff" stroke="#e9e3d6"/>
+    <rect x="0" y="212" width="4" height="152" rx="2" fill="#2f6f5e"/>
+    <text x="26" y="242" font-size="13" font-weight="600" fill="#14171e">岔路二 · 芯片形态</text>
+    <text x="26" y="272" font-size="11.5" fill="#2f6f5e">通用 GPU</text>
+    <line x1="92" y1="268" x2="110" y2="268" stroke="#2f6f5e" stroke-width="1.2" opacity=".55"/>
+    <text x="26" y="294" font-size="11.5" fill="#c97b3f">定制 ASIC</text>
+    <line x1="92" y1="290" x2="110" y2="290" stroke="#c97b3f" stroke-width="1.2" opacity=".55"/>
+    <text x="200" y="242" font-size="10.5" font-family="JetBrains Mono, monospace" fill="#2f6f5e">已定型的现状</text>
+    <text x="200" y="265" font-size="11.5" fill="#3a4256">2026 年定制 ASIC 出货增速 44.6%</text>
+    <text x="200" y="285" font-size="11.5" fill="#3a4256">首次超过商用 GPU 的 16.1%</text>
+    <text x="200" y="305" font-size="11.5" fill="#3a4256">NVIDIA 仍约占 AI 芯片 70%</text>
+    <text x="200" y="325" font-size="11.5" fill="#3a4256">共设计市场 Broadcom+Marvell 约 95%</text>
+    <text x="516" y="242" font-size="10.5" font-family="JetBrains Mono, monospace" fill="#c97b3f">岔路口的判定条件</text>
+    <text x="516" y="265" font-size="11.5" fill="#3a4256">工作负载是否固定</text>
+    <text x="516" y="285" font-size="11.5" fill="#3a4256">推理侧架构稳定、重复到十亿级，定制才划算</text>
+    <text x="516" y="305" font-size="11.5" fill="#3a4256">训练与研究侧仍需通用性</text>
+    <text x="842" y="242" font-size="10.5" font-family="JetBrains Mono, monospace" fill="#b3aea2">仍然不确定</text>
+    <text x="842" y="265" font-size="11.5" fill="#7c7a72">定制芯片是多代 co-design 的对赌</text>
+    <text x="842" y="285" font-size="11.5" fill="#7c7a72">模型架构换代，已定制的硅成沉没成本</text>
+    <text x="842" y="305" font-size="11.5" fill="#7c7a72">成本数亿美元 + 2–3 年，须靠规模摊薄</text>
+    <line x1="502" y1="228" x2="502" y2="348" stroke="#e9e3d6"/>
+    <line x1="828" y1="228" x2="828" y2="348" stroke="#e9e3d6"/>
+    <rect x="0" y="378" width="1190" height="152" rx="12" fill="#fff" stroke="#e9e3d6"/>
+    <rect x="0" y="378" width="4" height="152" rx="2" fill="#2f6f5e"/>
+    <text x="26" y="408" font-size="13" font-weight="600" fill="#14171e">岔路三 · 堆叠形态</text>
+    <text x="26" y="438" font-size="11.5" fill="#2f6f5e">混合键合</text>
+    <line x1="92" y1="434" x2="110" y2="434" stroke="#2f6f5e" stroke-width="1.2" opacity=".55"/>
+    <text x="26" y="460" font-size="11.5" fill="#c97b3f">微凸点</text>
+    <line x1="92" y1="456" x2="110" y2="456" stroke="#c97b3f" stroke-width="1.2" opacity=".55"/>
+    <text x="200" y="408" font-size="10.5" font-family="JetBrains Mono, monospace" fill="#2f6f5e">已定型的现状</text>
+    <text x="200" y="431" font-size="11.5" fill="#3a4256">混合键合逻辑侧已量产</text>
+    <text x="200" y="451" font-size="11.5" fill="#3a4256">SoIC 6μm · Foveros Direct 9μm</text>
+    <text x="200" y="471" font-size="11.5" fill="#3a4256">Foveros Direct 2026 上半年出货</text>
+    <text x="200" y="491" font-size="11.5" fill="#3a4256">内存侧被推迟</text>
+    <text x="516" y="408" font-size="10.5" font-family="JetBrains Mono, monospace" fill="#c97b3f">岔路口的判定条件</text>
+    <text x="516" y="431" font-size="11.5" fill="#3a4256">JEDEC 2026-01 放宽 HBM 高度上限</text>
+    <text x="516" y="451" font-size="11.5" fill="#3a4256">（775μm），HBM4 16 层可继续用微凸点</text>
+    <text x="516" y="471" font-size="11.5" fill="#3a4256">混合键合推迟到 HBM4E / HBM5</text>
+    <text x="842" y="408" font-size="10.5" font-family="JetBrains Mono, monospace" fill="#b3aea2">仍然不确定</text>
+    <text x="842" y="431" font-size="11.5" fill="#7c7a72">逻辑堆叠现量产仅 2–3 层</text>
+    <text x="842" y="451" font-size="11.5" fill="#7c7a72">三道闸门叠加：reticle 858mm²、</text>
+    <text x="842" y="471" font-size="11.5" fill="#7c7a72">层数良率相乘、逐层热阻累加</text>
+    <text x="842" y="491" font-size="11.5" fill="#7c7a72">8–16 层仍在论文阶段</text>
+    <line x1="502" y1="394" x2="502" y2="514" stroke="#e9e3d6"/>
+    <line x1="828" y1="394" x2="828" y2="514" stroke="#e9e3d6"/>
+    <text x="14" y="550" font-size="10.5" fill="#7c7a72">来源与口径见 wiki「08 数据来源与口径」；灰字一栏为当前确实没有定论的部分，不做推测。</text>
+  </g>
+</svg>
+      </div>
+      <figcaption>图 10 · 物理层的三个岔路：现状与判定条件。
+        每条岔路都给出<b>已定型的现状</b>（有出处的事实）、<b>换道的判定条件</b>（阈值或时间表）与<b>仍然不确定</b>的部分。
+        这三项分开，是因为<b>「现在走哪条路」已经有答案，「什么时候换道」也已经有条件，只有「换道之后长什么样」还没定论</b>。
+        窄屏可横向滚动查看。</figcaption>
+    </figure>
+
     <p class="muted" style="margin-top:16px">
       <b>物理段 4 收在同一句话上：</b>电力与水的物理上限。到这里为止，前两条线能把算力做到多便宜、多快、多远，
       最终由这一层决定——<b>这正是「技术可用 ≠ 生产率兑现」在物理侧的样子</b>：机器装上了，电力与散热没跟上。
-      前方的走向（浸没式还是冷板、定制化还是通用、三维堆叠的极限在哪）目前<b>没有定论，图中一律留空并标「尚未定位」</b>。
+      前方的三个岔路已单独查证：散热形态（冷板 vs 浸没）、芯片形态（通用 GPU vs 定制 ASIC）、堆叠形态（混合键合 vs 微凸点）——
+      见上面的「前方的三个岔路」。
     </p>
   </section>
 
