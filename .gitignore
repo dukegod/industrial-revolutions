@@ -19,3 +19,6 @@
 # dist/
 # .vitepress/cache/
 # .vitepress/dist/
+
+# 图生成器的中间产物（out/ 只是给人看的，页面里嵌的才是本体）
+scripts/figures/out/

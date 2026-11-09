@@ -91,7 +91,6 @@ python3 scripts/test_verify.py
 ---
 
 ## test_alignment.py —— 三条线的逐项对齐校验
-
 第三次革命有三条线，段号一一对应，每段覆盖同一批跃迁：
 
 | 线 | 段 | 位置 |
@@ -122,8 +121,30 @@ python3 scripts/test_alignment.py
 
 ---
 
+## figures/ —— 图的生成与校验
+
+页面上的 18 张 SVG 由 `scripts/figures/` 下的生成器产出：生成器是本体，页面里嵌的是它的产物。另有 8 处手写图没有生成器。
+
+```bash
+python3 scripts/figures/build_figures.py            # 生成到 out/
+python3 scripts/figures/build_figures.py --splice    # 生成并回写进页面
+python3 scripts/figures/verify_embedded.py           # 页面与生成器是否逐字一致（防漂移）
+python3 scripts/figures/check_svg.py                 # 全站所有图的几何检查
+```
+
+**改图的标准流程**：改 `scripts/figures/` 里的生成器 → `build_figures.py --splice` 回写 → `verify_embedded.py` + `check_svg.py` 双校验。
+
+`verify_embedded.py` 挡的是「脚本改了、页面没改」：这种漂移页面照旧显示旧图，
+下一次回写会把页面整体改掉，肉眼很难发现。
+`check_svg.py` 查同基线文本重叠、画布越界、文字溢出所属色块、SVG 内混入 HTML 标签、id 重复 —— 全部是肉眼看不出来的那一类。
+
+细节见 [`figures/README.md`](figures/README.md)。
+
+---
+
 ## 约定
 
 - **脚本只保证结构，不生成内容。** 内容以 `wiki/` 为准，页面是它的呈现。
 - **不改脚本的路径常量。** `build.py` / `verify.py` 用 `Path(__file__).parent.parent` 定位项目根，可整体移动。
 - **历史迭代版不进仓库。** 本目录只保留当前有效的最终形态。
+- **临时脚本不进仓库，也不留在 workspace。** 需要长期维护的脚本一律放进本目录对应位置。
