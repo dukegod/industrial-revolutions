@@ -395,22 +395,178 @@
 
   <section>
     <div class="sec-head">
-      <span class="num">07</span><h2>它对第三次革命意味着什么</h2>
-      <span class="sub">回到主线</span>
+      <span class="num">07</span><h2>算力过剩之后</h2>
+      <span class="sub">技术问题 → 供给问题</span>
     </div>
 
-    <div class="notes">
-      <h3>半导体的进步第一次快过了整个系统的进步</h3>
-      <ul>
-        <li>跃迁 7（2023–2026）是八次里第一次「<b>算力过剩</b>」：算力两年翻 3 倍，内存带宽只涨 1.6 倍、互连只涨 1.4 倍。<b>卡住的不是晶体管，是 HBM、电力和封装产能。</b></li>
-        <li>这解释了第四次的结构为何是「云端算力 + 口袋终端 + 工具协议」：模型在云端跑（半导体），经互联网分发（连接线），由终端接入（移动设备）。</li>
-        <li>因此<b>产能与电力配额是平台设计的前置约束，不是上线后的运维问题</b> —— 这与「技术可用 ≠ 生产率兑现」是同一件事在物理侧的样子。</li>
-      </ul>
+    <p class="lede">
+      <b>半导体的进步第一次快过了整个系统的进步。</b>
+      跃迁 7（2023–2026）是八次里第一次「算力过剩」：算力两年翻 3 倍，内存带宽只涨 1.6 倍、互连只涨 1.4 倍。
+      <b>卡住的不是晶体管，是 HBM、电力和封装产能。</b>
+    </p>
+
+    <figure class="figbox" style="padding:20px 22px 14px;margin-top:16px">
+      <div class="scroll-x">
+<svg viewBox="0 0 1160 540" width="100%" style="display:block;height:auto" role="img" aria-label="瓶颈的性质在跃迁 7 发生转变：前六次的瓶颈是技术问题，要靠发明与设计解决；跃迁 7 与 8 的瓶颈是供给问题，只能等产能、电力与生态">
+  <defs>
+    <marker id="r3Arrow" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+      <path d="M0,0 L7,3.2 L0,6.4 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <g font-family="Outfit, 'PingFang SC', sans-serif">
+    <rect x="20" y="18" width="1120" height="86" rx="12" fill="#2f6f5e" fill-opacity=".05" stroke="#e9e3d6"/>
+    <text x="40" y="44" font-size="12.5" font-weight="600" fill="#14171e">两个事实</text>
+    <text x="620" y="44" font-size="12.5" font-weight="600" fill="#14171e">怎么读这两个事实</text>
+    <text x="40" y="70" font-size="12" fill="#3a4256">2 年增速：算力 <tspan font-weight="600" fill="#14171e">3.0×</tspan> · 内存带宽 <tspan font-weight="600" fill="#14171e">1.6×</tspan> · 互连 <tspan font-weight="600" fill="#14171e">1.4×</tspan></text>
+    <text x="40" y="92" font-size="12" fill="#3a4256">折算 20 年：算力约 <tspan font-weight="600" fill="#14171e">60 万倍</tspan> · DRAM 带宽约 <tspan font-weight="600" fill="#14171e">100 倍</tspan> · 互连约 <tspan font-weight="600" fill="#14171e">30 倍</tspan></text>
+    <text x="620" y="70" font-size="11.5" fill="#7c7a72">倍数差 = 此前六次里，架构必须替存储与互连吸收掉的量</text>
+    <text x="620" y="92" font-size="11.5" fill="#7c7a72">到 2023–2026，架构手段用尽，这笔账再也吸收不掉</text>
+    <line x1="48" y1="214" x2="1108" y2="214" stroke="#d8d2c4" stroke-width="2.4" marker-end="url(#r3Arrow)"/>
+    <text x="88" y="152" font-size="11" font-family="JetBrains Mono, monospace" fill="#2f6f5e" text-anchor="middle">跃迁 1</text>
+    <text x="88" y="172" font-size="12.5" font-weight="600" fill="#14171e" text-anchor="middle">电子管 / 晶体管</text>
+    <circle cx="88" cy="214" r="8" fill="#fff" stroke="#2f6f5e" stroke-width="2.6"/>
+    <text x="88" y="246" font-size="11.5" fill="#3a4256" text-anchor="middle">造不出更快的器件</text>
+    <text x="88" y="266" font-size="10" fill="#2f6f5e" text-anchor="middle">技术问题</text>
+    <text x="228" y="152" font-size="11" font-family="JetBrains Mono, monospace" fill="#2f6f5e" text-anchor="middle">跃迁 2</text>
+    <text x="228" y="172" font-size="12.5" font-weight="600" fill="#14171e" text-anchor="middle">ISA 商业化</text>
+    <circle cx="228" cy="214" r="8" fill="#fff" stroke="#2f6f5e" stroke-width="2.6"/>
+    <text x="228" y="246" font-size="11.5" fill="#3a4256" text-anchor="middle">造不便宜、买不到</text>
+    <text x="228" y="266" font-size="10" fill="#2f6f5e" text-anchor="middle">技术问题</text>
+    <text x="369" y="152" font-size="11" font-family="JetBrains Mono, monospace" fill="#2f6f5e" text-anchor="middle">跃迁 3</text>
+    <text x="369" y="172" font-size="12.5" font-weight="600" fill="#14171e" text-anchor="middle">RISC / Cache</text>
+    <circle cx="369" cy="214" r="8" fill="#fff" stroke="#2f6f5e" stroke-width="2.6"/>
+    <text x="369" y="246" font-size="11.5" fill="#3a4256" text-anchor="middle">访存延迟</text>
+    <text x="369" y="266" font-size="10" fill="#2f6f5e" text-anchor="middle">技术问题</text>
+    <text x="509" y="152" font-size="11" font-family="JetBrains Mono, monospace" fill="#2f6f5e" text-anchor="middle">跃迁 4</text>
+    <text x="509" y="172" font-size="12.5" font-weight="600" fill="#14171e" text-anchor="middle">多核 / SMP</text>
+    <circle cx="509" cy="214" r="8" fill="#fff" stroke="#2f6f5e" stroke-width="2.6"/>
+    <text x="509" y="246" font-size="11.5" fill="#3a4256" text-anchor="middle">顺序代码不够用</text>
+    <text x="509" y="266" font-size="10" fill="#2f6f5e" text-anchor="middle">技术问题</text>
+    <text x="650" y="152" font-size="11" font-family="JetBrains Mono, monospace" fill="#2f6f5e" text-anchor="middle">跃迁 5</text>
+    <text x="650" y="172" font-size="12.5" font-weight="600" fill="#14171e" text-anchor="middle">GPU / CUDA</text>
+    <circle cx="650" cy="214" r="8" fill="#fff" stroke="#2f6f5e" stroke-width="2.6"/>
+    <text x="650" y="246" font-size="11.5" fill="#3a4256" text-anchor="middle">并行编程太难</text>
+    <text x="650" y="266" font-size="10" fill="#2f6f5e" text-anchor="middle">技术问题</text>
+    <text x="790" y="152" font-size="11" font-family="JetBrains Mono, monospace" fill="#2f6f5e" text-anchor="middle">跃迁 6</text>
+    <text x="790" y="172" font-size="12.5" font-weight="600" fill="#14171e" text-anchor="middle">数据中心专用化</text>
+    <circle cx="790" cy="214" r="8" fill="#fff" stroke="#2f6f5e" stroke-width="2.6"/>
+    <text x="790" y="246" font-size="11.5" fill="#3a4256" text-anchor="middle">集群带不动</text>
+    <text x="790" y="266" font-size="10" fill="#2f6f5e" text-anchor="middle">技术问题</text>
+    <text x="931" y="152" font-size="11" font-family="JetBrains Mono, monospace" fill="#c97b3f" text-anchor="middle">跃迁 7</text>
+    <text x="931" y="172" font-size="12.5" font-weight="600" fill="#14171e" text-anchor="middle">内存墙 / AI 工厂</text>
+    <circle cx="931" cy="214" r="8" fill="#fff" stroke="#c97b3f" stroke-width="2.6"/>
+    <text x="931" y="246" font-size="11.5" fill="#3a4256" text-anchor="middle">算力有了，数据供不上</text>
+    <text x="931" y="266" font-size="10" fill="#c97b3f" text-anchor="middle">供给问题</text>
+    <text x="1072" y="152" font-size="11" font-family="JetBrains Mono, monospace" fill="#c97b3f" text-anchor="middle">跃迁 8</text>
+    <text x="1072" y="172" font-size="12.5" font-weight="600" fill="#14171e" text-anchor="middle">RISC-V 底座</text>
+    <circle cx="1072" cy="214" r="8" fill="#fff" stroke="#c97b3f" stroke-width="2.6"/>
+    <text x="1072" y="246" font-size="11.5" fill="#3a4256" text-anchor="middle">ISA 换不动了</text>
+    <text x="1072" y="266" font-size="10" fill="#c97b3f" text-anchor="middle">供给问题</text>
+    <line x1="861" y1="134" x2="861" y2="282" stroke="#c97b3f" stroke-width="1.6" stroke-dasharray="6 4"/>
+    <text x="861" y="126" font-size="11.5" font-weight="600" fill="#c97b3f" text-anchor="middle">跃迁 7 · 瓶颈换人</text>
+    <rect x="20" y="298" width="1120" height="84" rx="12" fill="#2f6f5e" fill-opacity=".07" stroke="#2f6f5e" stroke-opacity=".3"/>
+    <text x="40" y="324" font-size="13" font-weight="600" fill="#2f6f5e">跃迁 1–6：技术问题</text>
+    <text x="40" y="346" font-size="11.5" fill="#3a4256">还没被解决 —— 需要发明与设计：缓存、并发抽象、编程模型、互连与调度</text>
+    <text x="40" y="366" font-size="11.5" fill="#3a4256">难点大，但<tspan font-weight="600" fill="#14171e">方向由研发决定</tspan>，不必等别人给你额度</text>
+    <rect x="20" y="398" width="1120" height="84" rx="12" fill="#c97b3f" fill-opacity=".10" stroke="#c97b3f" stroke-opacity=".45"/>
+    <text x="40" y="424" font-size="13" font-weight="600" fill="#c97b3f">跃迁 7–8：供给问题</text>
+    <text x="40" y="446" font-size="11.5" fill="#3a4256">技术已解决 —— 缺的是<tspan font-weight="600" fill="#14171e">产能与额度</tspan>：HBM、CoWoS、电力、机位</text>
+    <text x="40" y="466" font-size="11.5" fill="#3a4256">只能等别人扩产：CoWoS 新增产能 2027–2028 才释放</text>
+    <text x="20" y="512" font-size="12" fill="#3a4256"><tspan font-weight="600" fill="#14171e">这条分界决定了平台建设的打法</tspan>：前六次可以靠设计与流程跨越；这一次必须先问物理账，再问组织账。</text>
+  </g>
+</svg>
+      </div>
+      <figcaption>图 3 · 瓶颈的性质在跃迁 7 发生转变。跃迁 1–6 卡住的是「能不能造出来 / 造得起 / 用得好」，是<b>技术问题</b>；
+        跃迁 7–8 卡住的是「能不能给到量」，是<b>供给问题</b>。
+        窄屏可横向滚动查看。</figcaption>
+    </figure>
+
+    <div class="imp">
+      <div class="idx">01</div>
+      <div>
+        <h3>为什么是第一次算力过剩</h3>
+        <p>前六次卡住的都是「能不能造出来 / 造得起 / 用得好」—— 器件造不出更快的、机器贵到买不动、并行编程太难、集群带不动。
+          <b>方向由研发决定，不必等别人给你额度。</b>跃迁 7 起卡住的是「能不能给到量」：20 年折算，算力约 60 万倍、DRAM 带宽约 100 倍、互连约 30 倍
+          —— 此前六次里架构必须替存储与互连吸收掉的量级差，现在变成了墙本身。
+          <b>「算力过剩」是相对于上一个瓶颈说的</b>，不是说算力不值钱了。</p>
+      </div>
+    </div>
+
+    <div class="imp">
+      <div class="idx">02</div>
+      <div>
+        <h3>为什么卡住的不是晶体管</h3>
+        <p>四个层面各自都能查证，结论一致：</p>
+        <table style="margin-top:10px">
+          <thead>
+            <tr><th style="width:17%">层面</th><th>事实</th><th>所以</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>逻辑制程</td><td>节点仍在前进（90nm → 2nm），EUV 2019 年已量产</td><td>晶体管密度不是瓶颈</td></tr>
+            <tr><td>单芯片面积</td><td>reticle 上限 858mm²，层数良率逐层相乘</td><td>路线从「更大」改道「封装缩放」</td></tr>
+            <tr><td>高带宽存储</td><td>HBM4 已到 2048-bit / 16 层 / 约 3.3 TB/s；JEDEC 2026-01 放宽堆叠高度上限至 775μm</td><td>混合键合被推迟到 HBM4E / HBM5</td></tr>
+            <tr><td>产能排期</td><td>CoWoS 缺口 10–20%，多数新增产能 2027–2028 才释放；HBM 提价</td><td>物理上都能造，卡住的是排期与额度</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:10px">结论：<b>卡住的是高带宽存储与先进封装这两类产能，加上电力与机位</b>，不是晶体管本身，也不是光刻。</p>
+      </div>
+    </div>
+
+    <div class="imp">
+      <div class="idx">03</div>
+      <div>
+        <h3>第四次结构为什么必然是三样</h3>
+        <p>「云端算力 + 口袋终端 + 工具协议」不是三个并列的偏好，是被物理账逼出来的：</p>
+        <ul style="margin:8px 0 0;padding-left:20px;font-size:14px;line-height:1.6">
+          <li><b>模型必须留在云端</b> —— 口袋设备带不动训练与推理，内存墙、电池、散热三头堵死（半导体线）</li>
+          <li><b>必须经互联网分发</b> —— 云端算力与终端之间只隔一条连接线（连接线）</li>
+          <li><b>必须由终端接入</b> —— 能力在云端，价值在使用现场（移动设备线）</li>
+          <li><b>必须有工具协议</b> —— 这条不属于上面三条线，而是为了让「执行」能整段交出去：权限、审计、责任都要有一个可约定的边界（协议层）</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="imp">
+      <div class="idx">04</div>
+      <div>
+        <h3>前置约束 vs 运维问题：区别在可逆性</h3>
+        <table style="margin-top:10px">
+          <thead>
+            <tr><th style="width:17%">维度</th><th style="width:41%">运维问题</th><th>前置约束</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>何时暴露</td><td>上线之后</td><td>设计期</td></tr>
+            <tr><td>典型项</td><td>流量波峰、慢查询、缓存命中率</td><td>变电容量、液冷路线、园区选址、芯片选型、机位与电费</td></tr>
+            <tr><td>能否补救</td><td>能 —— 限流、降级、扩容、优化</td><td>基本不能 —— 决策周期月–年</td></tr>
+            <tr><td>谁来决定</td><td>你自己</td><td>取决于别人扩不扩产</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:10px">最实操的一条推论：<b>降级方案要设计在延迟与质量上，而不是算力上。</b>
+          算力不足可以排队、限流、切小模型；但电力与热不足导致的降频与宕机是物理的、不可编排的 —— 你没法对变压器做请求级调度。</p>
+      </div>
+    </div>
+
+    <div class="imp">
+      <div class="idx">05</div>
+      <div>
+        <h3>与「技术可用 ≠ 生产率兑现」的关系</h3>
+        <p>同一个形状，多一层：前几轮兑现迟滞，障碍主要是<b>组织层面</b>的 —— 流程没改、激励没对齐、岗位没重构；
+          这一轮是<b>组织 + 物理约束混合</b>，而且必须<b>同时</b>解决。
+          <b>J 曲线不会因为「大家都在等」而变短</b> —— 供给约束是全局的，不是单个厂商的组织问题；你把组织改到最优，产能不会因此变多。</p>
+        <p style="margin-top:8px">所以顺序不能反：<b>先问物理账，再问组织账。</b>反过来做，你会把流程调到最优，然后卡在一个自己控制不了的变量上。</p>
+      </div>
+    </div>
+
+    <div class="conclusion">
+      <div class="lbl">结论</div>
+      <p>跃迁 1–6 的瓶颈是<b>技术问题</b>，跃迁 7–8 的瓶颈是<b>供给问题</b>。</p>
+      <p>前六次可以靠设计与流程跨越；这一次必须先问物理账，再问组织账。</p>
     </div>
 
     <p class="muted" style="margin-top:20px">
       相关：<a href="03-third.html" style="color:var(--accent)">03 第三次</a>（三条线全景）·
       <a href="04-architecture.html" style="color:var(--accent)">04 底层架构</a>（七层栈与传递矩阵）·
+      <a href="06-fourth.html" style="color:var(--accent)">06 第四次</a>（云端算力 + 口袋终端 + 工具协议）·
       <a href="07-current.html" style="color:var(--accent)">07 现状与来源</a>（2026 三个硬约束）
     </p>
   </section>
