@@ -1,0 +1,48 @@
+README.md
+  h_c10f653d02d2fc 54,64-68,78-82,100
+scripts/build.py
+  h_c10f653d02d2fc 38,41-42,45-46,65-69,74-75,77-82,174-177
+scripts/test_verify.py
+  h_c10f653d02d2fc 20,23-27,32
+scripts/verify.py
+  h_c10f653d02d2fc 29,31-32,105,148,152,154
+visualization/01-first.html
+  h_c10f653d02d2fc 39,46-47,54-55,152,158
+visualization/02-second.html
+  h_c10f653d02d2fc 39,46-47,54-55,205,211
+visualization/03-third.html
+  h_c10f653d02d2fc 39,46-47,54-55,684,704,1181
+visualization/04-architecture.html
+  h_c10f653d02d2fc 39,46-47,54-55,278,1046,1119,1125
+visualization/05-semiconductor.html
+  h_c10f653d02d2fc 1-425
+visualization/06-fourth.html
+  h_c10f653d02d2fc 6,39,46-47,54-55,64,156,171,177
+visualization/07-current.html
+  h_c10f653d02d2fc 6,39,46-47,54-55,64,69,241
+visualization/08-glossary.html
+  h_c10f653d02d2fc 6,39,46-47,54-55,64,268
+visualization/09-logic.html
+  h_c10f653d02d2fc 6,39,46-47,54-55,64,72,447
+visualization/computer-architecture-evolution.html
+  h_c10f653d02d2fc 36,38-40
+visualization/index.html
+  h_c10f653d02d2fc 39,46-47,54-55,78,409,589,633,635-637,645
+wiki/07-术语表.md
+  h_c10f653d02d2fc 3
+wiki/09-半导体的发展进程.md
+  h_c10f653d02d2fc 1-169
+wiki/README.md
+  h_c10f653d02d2fc 34-39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "afbea8cff9389ed066368deb30db9effe49517de",
+  "prompts": {},
+  "humans": {
+    "h_c10f653d02d2fc": {
+      "author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
