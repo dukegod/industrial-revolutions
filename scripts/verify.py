@@ -26,10 +26,10 @@ SITE = ROOT / 'visualization'
 
 EXPECT_GROUPS = ['第一次工业革命', '第二次工业革命', '第三次工业革命',
                   '第四次工业革命', '通用参考']
-EXPECT_FOOTER = ['第一次', '第二次', '第三次', '底层架构', '第四次',
+EXPECT_FOOTER = ['第一次', '第二次', '第三次', '底层架构', '半导体', '第四次',
                  '现状与来源', '术语表', '铁律与推论']
-LEGACY_FILES = ['04-fourth.html', '05-architecture.html', '07-current.html',
-                '08-glossary.html', '09-logic.html']
+LEGACY_FILES = ['04-fourth.html', '05-fourth.html', '05-architecture.html',
+                '06-current.html', '07-glossary.html', '08-logic.html']
 
 # 关键数字：必须跨页一致（词条数变化时此表同步更新）
 KEY_FIGURES = ['46%', '12%', '90%', '123%', '1.61%', '1.03%',
@@ -102,7 +102,7 @@ def check_nav(pages):
             bad('当前分组标记数不符 %s: %d（应为 %d）' % (f.name, active, expected_active))
         if onlinks != 1:
             bad('导航高亮数不符 %s: %d' % (f.name, onlinks))
-    notes.append('树形导航：9 页结构一致（5 组 / 当前项唯一 / 高亮唯一）')
+    notes.append('树形导航：%d 页结构一致（5 组 / 当前项唯一 / 高亮唯一）' % len(pages))
 
 
 def check_numbering(pages):
@@ -145,13 +145,13 @@ def check_footers(pages):
         labels = [x[1] for x in re.findall(r'href="([^"]+)">([^<]+)</a>', m.group(1))]
         if labels != EXPECT_FOOTER:
             bad('页脚顺序不符 %s: %s' % (f.name, labels))
-    notes.append('页脚：9 页顺序与树形层级一致')
+    notes.append('页脚：%d 页顺序与树形层级一致' % len(pages))
 
 
 def check_glossary(pages):
-    g = SITE / '07-glossary.html'
+    g = SITE / '08-glossary.html'
     if not g.exists():
-        bad('术语表缺失: 07-glossary.html')
+        bad('术语表缺失: 08-glossary.html')
         return
     gl = g.read_text(encoding='utf-8')
     blocks = list(re.finditer(r'<h3 class="gcat"[^>]*>(.*?)<span class="cnt">(.*?)</span>', gl, re.S))

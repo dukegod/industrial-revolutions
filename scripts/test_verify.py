@@ -17,17 +17,19 @@ WIKI = ROOT / 'wiki'
 
 # (标签, 目标文件, 期望是否应报错)
 cases = [
-    ('05 底层架构', SITE / '05-fourth.html', True),      # 修之前的真实错误
+    ('06 底层架构', SITE / '06-fourth.html', True),       # 编号对得上但名称对不上
     ('04 底层架构', SITE / '04-architecture.html', False),
     ('03 第三次工业革命', SITE / '03-third.html', False),
-    ('05 第四次工业革命', SITE / '05-fourth.html', False),
-    ('07 术语表', SITE / '07-glossary.html', False),
-    ('06 现状与来源', SITE / '06-current.html', False),
-    ('08 铁律与推论', SITE / '08-logic.html', False),
+    ('06 第四次工业革命', SITE / '06-fourth.html', False),
+    ('08 术语表', SITE / '08-glossary.html', False),
+    ('07 现状与来源', SITE / '07-current.html', False),
+    ('09 铁律与推论', SITE / '09-logic.html', False),
+    ('05 半导体', SITE / '05-semiconductor.html', False),
     ('03 第三次工业革命 内部章', SITE / '03-third.html', False),
     ('07 术语表', WIKI / '07-术语表.md', False),
     ('05 推进逻辑四铁律', WIKI / '05-推进逻辑四铁律.md', False),
     ('06 电子计算机八次跃迁', WIKI / '06-电子计算机八次跃迁.md', False),
+    ('09 半导体的发展进程', WIKI / '09-半导体的发展进程.md', False),
     ('08 数据来源与口径', WIKI / '08-数据来源与口径.md', False),
     ('知识索引', WIKI / 'README.md', False),            # 索引页不参与名称校验
     ('07 术语表', WIKI / '06-电子计算机八次跃迁.md', True),  # 编号错位

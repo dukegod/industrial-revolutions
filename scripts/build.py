@@ -35,14 +35,15 @@ TREE = [
     ('第三次工业革命', [
         ('03-third.html', '第三次', '可编程与零边际复制 · 三条线'),
         ('04-architecture.html', '底层架构', '金字塔 · 架构路线 · 逐层传递'),
+        ('05-semiconductor.html', '半导体', '制程 · 光刻 · 存储 · 封装'),
     ]),
     ('第四次工业革命', [
-        ('05-fourth.html', '第四次', '自主执行 · 2026 当下数据'),
-        ('06-current.html', '现状与来源', '三个硬约束 · 路线图 · 全部来源'),
+        ('06-fourth.html', '第四次', '自主执行 · 2026 当下数据'),
+        ('07-current.html', '现状与来源', '三个硬约束 · 路线图 · 全部来源'),
     ]),
     ('通用参考', [
-        ('07-glossary.html', '术语表', '100 条分组词条 · 阅读路径'),
-        ('08-logic.html', '铁律与推论', '四条铁律 · 推导过程 · 平台推论'),
+        ('08-glossary.html', '术语表', '100 条分组词条 · 阅读路径'),
+        ('09-logic.html', '铁律与推论', '四条铁律 · 推导过程 · 平台推论'),
     ]),
 ]
 
@@ -61,19 +62,24 @@ PREFIX_MAP = [
     ('02-second.html',       '02 第二次'),
     ('03-third.html',        '03 第三次'),
     ('04-architecture.html', '04 底层架构'),
-    ('05-fourth.html',       '05 第四次'),
-    ('06-current.html',      '06 现状与来源'),
-    ('07-glossary.html',     '07 术语表'),
-    ('08-logic.html',        '08 铁律与推论'),
+    ('05-semiconductor.html', '05 半导体'),
+    ('06-fourth.html',       '06 第四次'),
+    ('07-current.html',      '07 现状与来源'),
+    ('08-glossary.html',     '08 术语表'),
+    ('09-logic.html',        '09 铁律与推论'),
 ]
 
 # 历史文件名 → 现文件名（重命名遗留，兼容旧引用）
 LEGACY_LINK = [
-    ('04-fourth.html',      '05-fourth.html'),
+    ('04-fourth.html',      '06-fourth.html'),
+    ('05-fourth.html',      '06-fourth.html'),
     ('05-architecture.html', '04-architecture.html'),
-    ('07-current.html',     '06-current.html'),
-    ('08-glossary.html',    '07-glossary.html'),
-    ('09-logic.html',       '08-logic.html'),
+    ('06-current.html',     '07-current.html'),
+    ('07-current.html',     '07-current.html'),
+    ('07-glossary.html',    '08-glossary.html'),
+    ('08-glossary.html',    '08-glossary.html'),
+    ('08-logic.html',       '09-logic.html'),
+    ('09-logic.html',       '09-logic.html'),
 ]
 
 PAGES = [f for f in sorted(SITE.glob('*.html'))
@@ -165,10 +171,10 @@ def sync_links(text):
 # 旧编号 → 新编号 的正文前缀替换对：{新文件名: [(旧前缀, ...)]}
 LEGACY_PREFIX = {
     '04-architecture.html': ['05 底层架构'],
-    '05-fourth.html':       ['04 第四次'],
-    '06-current.html':      ['03 现状与来源'],
-    '07-glossary.html':     ['04 术语表'],
-    '08-logic.html':        ['09 铁律与推论'],
+    '06-fourth.html':       ['04 第四次', '05 第四次'],
+    '07-current.html':      ['03 现状与来源', '06 现状与来源'],
+    '08-glossary.html':     ['04 术语表', '07 术语表'],
+    '09-logic.html':        ['09 铁律与推论', '08 铁律与推论'],
 }
 
 
