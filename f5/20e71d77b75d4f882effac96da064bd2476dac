@@ -1,0 +1,50 @@
+.gitignore
+  h_c10f653d02d2fc 22-24
+scripts/README.md
+  h_c10f653d02d2fc 124-144,150
+scripts/figures/README.md
+  h_c10f653d02d2fc 1-121
+scripts/figures/build_figures.py
+  h_c10f653d02d2fc 1-85
+scripts/figures/check_svg.py
+  h_c10f653d02d2fc 1-134
+scripts/figures/gen_forks.py
+  h_c10f653d02d2fc 1-118
+scripts/figures/gen_roadmap.py
+  h_c10f653d02d2fc 1-277
+scripts/figures/gen_semi.py
+  h_c10f653d02d2fc 1-203
+scripts/figures/gen_semi3.py
+  h_c10f653d02d2fc 1-102
+scripts/figures/gen_stages.py
+  h_c10f653d02d2fc 1-67
+scripts/figures/gen_twolines.py
+  h_c10f653d02d2fc 1-159
+scripts/figures/phys_stages_data.py
+  h_c10f653d02d2fc 1-127
+scripts/figures/registry.py
+  h_c10f653d02d2fc 1-59
+scripts/figures/stage_template.py
+  h_c10f653d02d2fc 1-103
+scripts/figures/stages_data.py
+  h_c10f653d02d2fc 1-133
+scripts/figures/steps_data.py
+  h_c10f653d02d2fc 1-91
+scripts/figures/svgutil.py
+  h_c10f653d02d2fc 1-91
+scripts/figures/verify_embedded.py
+  h_c10f653d02d2fc 1-78
+visualization/03-third.html
+  h_c10f653d02d2fc 235
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f520e71d77b75d4f882effac96da064bd2476dac",
+  "prompts": {},
+  "humans": {
+    "h_c10f653d02d2fc": {
+      "author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
