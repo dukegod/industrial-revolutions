@@ -1,0 +1,20 @@
+visualization/05-semiconductor.html
+  h_c10f653d02d2fc 398-399,402-563,569
+wiki/03-第三次工业革命.md
+  h_c10f653d02d2fc 166-167
+wiki/09-半导体的发展进程.md
+  h_c10f653d02d2fc 144,150-209
+wiki/README.md
+  h_c10f653d02d2fc 38
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "898cde52ca0d41aa751c5de6c84cbaf1e76b6c02",
+  "prompts": {},
+  "humans": {
+    "h_c10f653d02d2fc": {
+      "author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
