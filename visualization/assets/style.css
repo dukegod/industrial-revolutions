@@ -31,6 +31,21 @@ body{
 .wrap{max-width:1024px;margin:0 auto;padding:44px 24px 88px;}
 @media (max-width:640px){.wrap{padding:30px 18px 60px;}}
 
+/* 窄屏排版：字号与纵向节奏各收一档 */
+@media (max-width:640px){
+  .wrap{padding:26px 16px 56px;}
+  h1{font-size:26px;letter-spacing:-.004em;}
+  h2{font-size:20px;}
+  h3{font-size:15px;}
+  section{margin-top:36px;}
+  .sec-head{flex-wrap:wrap;row-gap:0;}
+  .sec-head .sub{margin-left:0;flex-basis:100%;font-size:12.5px;}
+  .conclusion,.notes{padding:15px 16px;border-radius:12px;}
+  .conclusion p{font-size:14.5px;}
+  .hero{padding-bottom:20px;}
+  .hero .meta{margin-top:16px;}
+}
+
 /* ---------- nav ---------- */
 .nav{position:sticky;top:0;z-index:30;background:rgba(247,245,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
 .nav-in{max-width:1024px;margin:0 auto;padding:11px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
@@ -91,22 +106,36 @@ body{
   display:block;font-size:11.5px;color:var(--muted);margin-top:1px;line-height:1.4;
 }
 
-/* 移动端：树形展开改为纵向堆叠 */
+/* 窄屏：分组排成紧凑网格（2–3 列），展开的分组横跨整行。
+   原来是一行一个分组，nav 高约 300px；再加 position:sticky 会长期占掉小窗口大半屏。 */
 @media (max-width:860px){
-  .nav-tree{width:100%;}
-  .nav-tree > summary{padding:4px 0;}
+  .nav-in{display:block;padding:10px 18px;}
+  .nav-brand{display:block;margin-bottom:8px;font-size:10.5px;}
+  .nav-links{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:0 14px;align-items:start;
+  }
+  .nav-links > a{padding:5px 0;}
+  .nav-tree{width:auto;position:static;}
+  .nav-tree[open]{grid-column:1 / -1;}
+  .nav-tree > summary{padding:5px 0;}
+  /* 展开时以整幅浮层挂在 nav 下沿：nav 本体保持 ~85px，浮层盖住正文而不撑高 */
   .nav-tree-panel{
-    position:static;min-width:0;width:100%;margin:2px 0 8px;
-    box-shadow:none;background:transparent;border:none;border-left:2px solid var(--line);
-    border-radius:0;padding:2px 0 2px 12px;
+    position:absolute;top:100%;left:0;right:0;width:auto;min-width:0;margin:0;
+    padding:10px 16px 12px;background:var(--card);
+    border:1px solid var(--line);border-radius:0 0 14px 14px;
+    box-shadow:0 14px 26px -12px rgba(0,0,0,.20);
   }
   .nav-tree-panel .grp{padding-left:4px;}
-  .nav-tree-panel a{padding:5px 8px;}
+  .nav-tree-panel a{padding:6px 8px;}
 }
 @media (max-width:640px){
-  .nav-in{padding:10px 16px;gap:10px;}
-  .nav-links{gap:14px;}
+  .nav-in{padding:9px 16px;}
+  .nav-links{gap:0 12px;}
   .nav-links a,.nav-tree > summary{font-size:13px;}
+}
+@media (max-width:460px){
+  .nav-links{grid-template-columns:repeat(2,minmax(0,1fr));}
 }
 
 /* ---------- typography ---------- */

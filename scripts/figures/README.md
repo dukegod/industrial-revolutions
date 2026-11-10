@@ -38,6 +38,7 @@ python3 scripts/figures/check_svg.py                 # 全站所有图的几何�
 | `verify_embedded.py` | 比对「页面里嵌的」与「生成器输出的」是否逐字一致 |
 | `check_svg.py` | 几何检查（见下），可查全站页面、单个页面或单个 svg 文件 |
 | `svgutil.py` | 页面内 SVG 的定位 / 取出 / 归一化，以及文本宽度估算 |
+| `preview_narrow.html` | **窄屏布局验收台**：把页面塞进 380 / 520 / 768px 的 iframe 里，媒体查询按该宽度生效 |
 | `stage_template.py` | 三族放大图共用的渲染模板 |
 | `gen_stages.py` | 三族放大图共 12 张（计算线台阶 / 连接线阶段 / 物理段） |
 | `gen_semi.py` / `gen_semi3.py` | 05 半导体页的三张图 |
@@ -87,6 +88,20 @@ python3 scripts/figures/check_svg.py out/05-fig3.svg # 只查单张
 ```
 
 退出码 `0` = 全过。
+
+---
+
+## 窄屏布局怎么验
+
+浏览器工具没有「改视口」的动作，**唯一可靠的窄屏验收办法是把页面塞进固定宽度的 iframe**：
+
+```bash
+open scripts/figures/preview_narrow.html     # 改里面的 src 指向要看的页面
+```
+
+`preview_narrow.html` 并排摆 380 / 520 / 768px 三个 iframe，媒体查询在每个 iframe 内按各自宽度生效。改完 `visualization/assets/style.css` 刷新即可。
+
+**窄屏 nav 的现状**（2026-11-10 改）：`≤860px` 时分组排成 2–3 列网格，nav 本体约 85px（原来一行一个分组，约 300px）；点开的分组以**整幅下拉浮层**挂在 nav 下沿（`position:absolute; top:100%`，靠 `.nav-tree{position:static}` 把定位基准让给 `.nav`），所以展开时 nav 不会变高、也不会把正文顶下去。桌面端（`>860px`）不受影响。
 
 ---
 
