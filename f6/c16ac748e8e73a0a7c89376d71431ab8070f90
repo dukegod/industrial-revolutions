@@ -1,0 +1,18 @@
+scripts/figures/README.md
+  h_c10f653d02d2fc 41,94-107
+scripts/figures/preview_narrow.html
+  h_c10f653d02d2fc 1-31
+visualization/assets/style.css
+  h_c10f653d02d2fc 34-48,109-110,112-122,124-127,130,133-134,137-139
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f6c16ac748e8e73a0a7c89376d71431ab8070f90",
+  "prompts": {},
+  "humans": {
+    "h_c10f653d02d2fc": {
+      "author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
