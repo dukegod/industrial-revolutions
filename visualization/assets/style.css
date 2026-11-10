@@ -49,7 +49,8 @@ body{
 /* ---------- nav ---------- */
 .nav{position:sticky;top:0;z-index:30;background:rgba(247,245,240,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
 .nav-in{max-width:1024px;margin:0 auto;padding:11px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
-.nav-brand{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:500;white-space:nowrap;}
+.nav-brand{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:500;white-space:nowrap;text-decoration:none;transition:opacity .18s;}
+.nav-brand:hover{opacity:.68;}
 .nav-links{display:flex;gap:18px;flex-wrap:wrap;align-items:center;}
 .nav-links a{
   font-size:13.5px;color:var(--ink2);text-decoration:none;padding:2px 0;

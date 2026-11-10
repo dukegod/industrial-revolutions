@@ -140,13 +140,17 @@ def replace_footer(text):
 
 # ---------------------------------------------------------------- 写入步骤
 def replace_nav(text, active_file):
-    """整块替换 nav 内的 nav-links（用 nav-in 边界锚定，避免嵌套 div 截断）。"""
-    new_nav = '<div class="nav-links">\n' + build_nav(active_file) + '\n    </div>'
-    m = re.search(r'(<span class="nav-brand">.*?</span>\s*)(<div class="nav-links">.*?)(</div>\s*</nav>)',
-                  text, re.S)
+    """整块替换 nav 里的 brand + nav-links（用 nav-in 边界锚定，避免嵌套 div 截断）。
+
+    品牌是首页入口：<a class="nav-brand" href="index.html">。
+    """
+    new_block = ('<a class="nav-brand" href="index.html">Industrial Revolutions</a>\n'
+                 '    <div class="nav-links">\n' + build_nav(active_file) + '\n    </div>')
+    m = re.search(r'(<span class="nav-brand">.*?</span>|<a class="nav-brand"[^>]*>.*?</a>)\s*'
+                  r'(<div class="nav-links">.*?)(</div>\s*</nav>)', text, re.S)
     if not m:
         return text, False
-    return text[:m.start(2)] + new_nav + text[m.end(2):], True
+    return text[:m.start(1)] + new_block + text[m.end(2):], True
 
 
 

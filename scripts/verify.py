@@ -88,6 +88,9 @@ def check_nav(pages):
             bad('导航块定位失败: %s' % f.name)
             continue
         nav = m.group(1)
+        # 品牌是首页入口，必须是可点的链接
+        if '<a class="nav-brand" href="index.html">' not in t:
+            bad('品牌未链接到首页: %s' % f.name)
         groups = re.findall(r'<div class="grp">([^<]+)</div>', nav)
         trees = nav.count('<details class="nav-tree')
         active = nav.count('nav-tree has-active')
