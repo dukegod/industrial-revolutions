@@ -97,7 +97,9 @@ def build_nav(active_file):
             continue
         in_group = any(f == active_file for f, _, _ in items)
         cls = ' nav-tree has-active' if in_group else ''
-        out.append('      <details class="nav-tree%s">' % cls)
+        # name="nav"：原生 HTML 独占手风琴 —— 同名的 details 只会有一个处于打开状态
+        # （打开一个会自动关掉其余）。零 JS，不引脚本。
+        out.append('      <details class="nav-tree%s" name="nav">' % cls)
         out.append('        <summary><span class="caret"></span>%s</summary>' % SHORT[group])
         out.append('        <div class="nav-tree-panel">')
         out.append('          <div class="grp">%s</div>' % group)

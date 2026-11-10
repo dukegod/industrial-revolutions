@@ -117,7 +117,6 @@ body{
   }
   .nav-links > a{padding:5px 0;}
   .nav-tree{width:auto;position:static;}
-  .nav-tree[open]{grid-column:1 / -1;}
   .nav-tree > summary{padding:5px 0;}
   /* 展开时以整幅浮层挂在 nav 下沿：nav 本体保持 ~85px，浮层盖住正文而不撑高 */
   .nav-tree-panel{
