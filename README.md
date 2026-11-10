@@ -9,7 +9,7 @@
 ## 目录结构
 
 ```
-computer-knowledge/
+industrial-revolutions/
 ├── README.md          ← 本文件：项目说明
 ├── wiki/              ← 核心知识体系（Markdown，结论的权威来源）
 ├── visualization/     ← 静态可视化页面（HTML 站点，结论的可视化表达）
