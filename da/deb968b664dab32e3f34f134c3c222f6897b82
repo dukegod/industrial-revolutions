@@ -1,0 +1,20 @@
+README.md
+  h_c10f653d02d2fc 88,101
+wiki/08-数据来源与口径.md
+  h_c10f653d02d2fc 19-22,36-62,151-166
+wiki/10-能源与工业革命.md
+  h_c10f653d02d2fc 1-479
+wiki/README.md
+  h_c10f653d02d2fc 39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "dadeb968b664dab32e3f34f134c3c222f6897b82",
+  "prompts": {},
+  "humans": {
+    "h_c10f653d02d2fc": {
+      "author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
