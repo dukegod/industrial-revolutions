@@ -1,0 +1,48 @@
+README.md
+  h_c10f653d02d2fc 25,54,67-69,84
+scripts/build.py
+  h_c10f653d02d2fc 48-50,55-56,74
+scripts/figures/gen_energy.py
+  h_c10f653d02d2fc 1-156
+scripts/figures/registry.py
+  h_c10f653d02d2fc 42-46
+scripts/verify.py
+  h_c10f653d02d2fc 28,30,37-38,42-43,102-103,110-111
+visualization/01-first.html
+  h_c10f653d02d2fc 58-64,165
+visualization/02-second.html
+  h_c10f653d02d2fc 58-64,218
+visualization/03-third.html
+  h_c10f653d02d2fc 58-64,1188
+visualization/04-architecture.html
+  h_c10f653d02d2fc 58-64,1132
+visualization/05-semiconductor.html
+  h_c10f653d02d2fc 58-64,583
+visualization/06-fourth.html
+  h_c10f653d02d2fc 58-64,184
+visualization/07-current.html
+  h_c10f653d02d2fc 58-64,248
+visualization/08-glossary.html
+  h_c10f653d02d2fc 58-64,275
+visualization/09-logic.html
+  h_c10f653d02d2fc 58-64,454
+visualization/10-energy.html
+  h_c10f653d02d2fc 1-428
+visualization/index.html
+  h_c10f653d02d2fc 58-64,628,645,653
+wiki/10-能源与工业革命.md
+  h_c10f653d02d2fc 42-43,299-301
+wiki/README.md
+  h_c10f653d02d2fc 24,30,32,39
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "98c799c77e5f26a6ba1421bbd8394d4532dd259b",
+  "prompts": {},
+  "humans": {
+    "h_c10f653d02d2fc": {
+      "author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
