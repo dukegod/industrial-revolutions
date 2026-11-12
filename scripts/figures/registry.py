@@ -39,6 +39,11 @@ FIGURES = [
     {'id': '04-roadmap', 'page': '04-architecture.html',
      'module': 'gen_roadmap', 'func': 'gen',
      'locate': ('attrs', 'class="roadmap"')},
+
+    # ── 10 能源专题：ERCOT 并网队列漏斗 ────────────────────────────
+    {'id': '10-funnel', 'page': '10-energy.html',
+     'module': 'gen_energy', 'func': 'gen',
+     'locate': ('aria', 'ERCOT 并网队列漏斗')},
 ]
 
 

@@ -25,20 +25,22 @@ ROOT = Path(__file__).resolve().parent.parent
 SITE = ROOT / 'visualization'
 
 EXPECT_GROUPS = ['第一次工业革命', '第二次工业革命', '第三次工业革命',
-                  '第四次工业革命', '通用参考']
+                  '第四次工业革命', '通用参考', '能源专题']
 EXPECT_FOOTER = ['第一次', '第二次', '第三次', '底层架构', '半导体', '第四次',
-                 '现状与来源', '术语表', '铁律与推论']
+                 '现状与来源', '术语表', '铁律与推论', '能源与工业革命']
 LEGACY_FILES = ['04-fourth.html', '05-fourth.html', '05-architecture.html',
                 '06-current.html', '07-glossary.html', '08-logic.html']
 
 # 关键数字：必须跨页一致（词条数变化时此表同步更新）
 KEY_FIGURES = ['46%', '12%', '90%', '123%', '1.61%', '1.03%',
                '1780–1840', '53%', '88%', '74%', '7.2×',
-               '1760s–1840s', '1870s–1914', '1940s–', '2010s–']
+               '1760s–1840s', '1870s–1914', '1940s–', '2010s–',
+               '466,497', '8,927', '3,900', '0.84%']
 
 # 关键数字：必须已沉淀进 wiki（页面有则 wiki 必须有）
 WIKI_FIGURES = ['46%', '12%', '1.61%', '1.03%', '1780–1840',
-                '53%', '88%', '74%', '7.2×']
+                '53%', '88%', '74%', '7.2×',
+                '466,497', '8,927', '3,900', '0.84%']
 
 problems = []
 notes = []
@@ -97,15 +99,16 @@ def check_nav(pages):
         onlinks = len(re.findall(r'<a href="[^"]+" class="on">', nav))
         if groups != EXPECT_GROUPS:
             bad('导航分组不符 %s: %s' % (f.name, groups))
-        if trees != 5:
-            bad('导航树数量不符 %s: %d' % (f.name, trees))
+        if trees != len(EXPECT_GROUPS):
+            bad('导航树数量不符 %s: %d（应为 %d）' % (f.name, trees, len(EXPECT_GROUPS)))
         # 核心沉淀页不属于任何分组，故无 has-active；其余页必须有且仅有一个
         expected_active = 0 if f.name == 'index.html' else 1
         if active != expected_active:
             bad('当前分组标记数不符 %s: %d（应为 %d）' % (f.name, active, expected_active))
         if onlinks != 1:
             bad('导航高亮数不符 %s: %d' % (f.name, onlinks))
-    notes.append('树形导航：%d 页结构一致（5 组 / 当前项唯一 / 高亮唯一）' % len(pages))
+    notes.append('树形导航：%d 页结构一致（%d 组 / 当前项唯一 / 高亮唯一）'
+                 % (len(pages), len(EXPECT_GROUPS)))
 
 
 def check_numbering(pages):
