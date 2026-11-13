@@ -1,0 +1,43 @@
+README.md
+  s_8aef4ac63b7dec::t_0b5c6efdf57656 82
+scripts/build.py
+  s_8aef4ac63b7dec::t_305cbb5e069c4f 45
+visualization/01-first.html
+  s_8aef4ac63b7dec::t_b2064bc70c2901 54
+visualization/02-second.html
+  s_8aef4ac63b7dec::t_978a7506eacfee 54
+visualization/03-third.html
+  s_8aef4ac63b7dec::t_7e0c15dcf896b6 54
+visualization/04-architecture.html
+  s_8aef4ac63b7dec::t_b682d92dda40b7 54
+visualization/05-semiconductor.html
+  s_8aef4ac63b7dec::t_f32d9d4b8b8d44 54
+visualization/06-fourth.html
+  s_8aef4ac63b7dec::t_6a7ab0dbe4bfd4 54
+visualization/07-current.html
+  s_8aef4ac63b7dec::t_a05a6fa619115f 54
+visualization/09-logic.html
+  s_8aef4ac63b7dec::t_63a56debfc900d 54
+visualization/10-energy.html
+  s_8aef4ac63b7dec::t_5e78ae67094cfb 54
+visualization/index.html
+  s_8aef4ac63b7dec::t_ebf675f83be939 54,596,643
+wiki/07-术语表.md
+  s_8aef4ac63b7dec::t_871d500ec37a6e 3-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6efed096b4e0d5b8bc31f640f1376e293fcd9b5a",
+  "prompts": {},
+  "sessions": {
+    "s_8aef4ac63b7dec": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "36d1dab3-a85b-4125-8690-0d80af329bc4",
+        "model": "MiniMax-M3"
+      },
+      "human_author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
