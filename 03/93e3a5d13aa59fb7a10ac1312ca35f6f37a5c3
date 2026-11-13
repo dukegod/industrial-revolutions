@@ -1,0 +1,40 @@
+README.md
+  h_c10f653d02d2fc 82
+scripts/build.py
+  h_c10f653d02d2fc 45
+visualization/01-first.html
+  h_c10f653d02d2fc 54
+visualization/02-second.html
+  h_c10f653d02d2fc 54
+visualization/03-third.html
+  h_c10f653d02d2fc 54
+visualization/04-architecture.html
+  h_c10f653d02d2fc 54
+visualization/05-semiconductor.html
+  h_c10f653d02d2fc 54
+visualization/06-fourth.html
+  h_c10f653d02d2fc 54
+visualization/07-current.html
+  h_c10f653d02d2fc 54
+visualization/08-glossary.html
+  h_c10f653d02d2fc 54,74,79,117,141,147,249,256
+visualization/09-logic.html
+  h_c10f653d02d2fc 54
+visualization/10-energy.html
+  h_c10f653d02d2fc 54
+visualization/index.html
+  h_c10f653d02d2fc 54,596,643
+wiki/07-术语表.md
+  h_c10f653d02d2fc 3-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0393e3a5d13aa59fb7a10ac1312ca35f6f37a5c3",
+  "prompts": {},
+  "humans": {
+    "h_c10f653d02d2fc": {
+      "author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
