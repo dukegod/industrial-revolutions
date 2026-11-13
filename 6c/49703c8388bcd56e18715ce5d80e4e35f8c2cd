@@ -1,0 +1,14 @@
+visualization/computer-architecture-evolution.html
+  h_c10f653d02d2fc 29-30,37-42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "6c49703c8388bcd56e18715ce5d80e4e35f8c2cd",
+  "prompts": {},
+  "humans": {
+    "h_c10f653d02d2fc": {
+      "author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
