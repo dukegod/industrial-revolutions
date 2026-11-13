@@ -51,7 +51,7 @@
         <summary><span class="caret"></span>参考</summary>
         <div class="nav-tree-panel">
           <div class="grp">通用参考</div>
-          <a href="08-glossary.html" class="on"><span class="num">08</span>术语表<span class="sub">100 条分组词条 · 阅读路径</span></a>
+          <a href="08-glossary.html" class="on"><span class="num">08</span>术语表<span class="sub">101 条分组词条 · 阅读路径</span></a>
           <a href="09-logic.html"><span class="num">09</span>铁律与推论<span class="sub">四条铁律 · 推导过程 · 平台推论</span></a>
         </div>
       </details>
@@ -71,12 +71,12 @@
     <p class="kicker">08 · Glossary</p>
     <h1>专业术语表</h1>
     <p class="lede">
-      共 <b>100 条</b>，按「体系结构 → 存储互连 → 系统 → 软件 → 平台 → 工业革命与时代」排列。
+      共 <b>101 条</b>，按「体系结构 → 存储互连 → 系统 → 软件 → 平台 → 工业革命与时代」排列。
       术语定义取行业通用口径，不同厂商文档措辞可能略有差异。<b>先看 7.1 的辨析表</b>，能省掉大部分「两个词到底差在哪」的困惑。
       <b>G 组是理解全文的背景坐标系</b>，建议先扫一眼。
     </p>
     <div class="meta">
-      <span class="tag">词条 <b>100 条</b></span>
+      <span class="tag">词条 <b>101 条</b></span>
       <span class="tag">分组 <b>7 组</b></span>
       <span class="tag">辨析表 <b>10 组</b></span>
       <span class="tag">高频 <a href="index.html"><b>20 条速查</b> →</a></span>
@@ -114,7 +114,7 @@
   <section>
     <div class="sec-head">
       <span class="num">7.2</span><h2>分组词条</h2>
-      <span class="sub">7 组 · 合计 100 条</span>
+      <span class="sub">7 组 · 合计 101 条</span>
     </div>
 
     <h3 class="gcat" style="margin-top:18px;font-family:var(--sans);font-size:15px;font-weight:600;border-bottom:none;padding-bottom:0;color:var(--accent)">A · 体系结构与指令集<span class="cnt">17 条</span></h3>
@@ -138,12 +138,13 @@
       <div class="entry"><h4>RAS 机制 <span class="en">Reliability, Availability, Serviceability</span></h4><p>数据中心的硬件级容错机制：纠错、故障隔离、热插拔与故障预测，是 7×24 运行的底座。</p></div>
     </div>
 
-    <h3 class="gcat" style="margin-top:26px;font-family:var(--sans);font-size:15px;font-weight:600;border-bottom:none;padding-bottom:0;color:var(--accent)">B · 并行与加速器<span class="cnt">19 条</span></h3>
+    <h3 class="gcat" style="margin-top:26px;font-family:var(--sans);font-size:15px;font-weight:600;border-bottom:none;padding-bottom:0;color:var(--accent)">B · 并行与加速器<span class="cnt">20 条</span></h3>
     <div class="ggrid">
       <div class="entry"><h4>对称多处理 <span class="en">SMP</span></h4><p>多个处理器核共享同一内存空间与同一操作系统，是现代服务器的基本形态。</p></div>
       <div class="entry"><h4>NUMA / CC-NUMA <span class="en">Non-uniform memory access</span></h4><p>内存按节点绑定，跨节点访问更慢。<b>远端内存带宽是集群扩展的真实上限</b>，而非单卡算力。</p></div>
       <div class="entry"><h4>超线程 <span class="en">SMT</span></h4><p>同一物理核上跑多个硬件线程，用执行单元的空档换吞吐，不提升单线程峰值性能。</p></div>
       <div class="entry"><h4>SIMD 与向量扩展 <span class="en">RVV, NEON, SVE</span></h4><p>一条指令对多个数据并行计算。RISC-V 的 RVV 是开放且可定制的向量扩展路线。</p></div>
+      <div class="entry"><h4>SIMT <span class="en">Single Instruction, Multiple Threads</span></h4><p>CUDA 的执行模型：一条指令作用于整组线程（warp，32 线程），而每个线程保有自己的寄存器与上下文。<b>与 SIMD 的区别</b>：SIMD 把多个数据打包进向量寄存器、程序员显式操作向量；SIMT 下程序员写的是标量代码，SIMD 由硬件代劳。<b>代价是分支发散</b>——同一 warp 内走了不同分支的路径会串行执行。</p></div>
       <div class="entry"><h4>算术强度 <span class="en">Arithmetic intensity</span></h4><p>每搬运 1 字节数据能做多少次浮点运算。它直接决定一个负载是算力受限还是带宽受限。</p></div>
       <div class="entry"><h4>Roofline 模型 <span class="en">Roofline</span></h4><p>用可达算力与内存带宽两条线界定性能上限，拐点即「运算强度够不够」的分界线。</p></div>
       <div class="entry"><h4>GPU</h4><p>由大量简单计算单元构成的高度并行处理器。图形流水线演化为通用并行阵列后，成为 AI 算力主力。</p></div>
@@ -245,14 +246,14 @@
       <div class="entry"><h4>恩格斯停顿 <span class="en">Engels' Pause</span></h4><p>Allen 量化：1780–1840 年英国劳均产出 +46%，实际工资仅 +12%。<b>技术收益与分配收益是两件事</b>，后者有自己的时间表——直到 1860 年后工资增速反超产出增速，「共享增长」才确立。</p></div>
     </div>
 
-    <p class="glossary-note">合计 100 条。词条按「是什么 → 为什么值得知道」写，刻意不复述定义词典；如需展开某一组，可直接说想看哪一块。</p>
+    <p class="glossary-note">合计 101 条。词条按「是什么 → 为什么值得知道」写，刻意不复述定义词典；如需展开某一组，可直接说想看哪一块。</p>
   </section>
 
   <!-- ============ 7.3 阅读路径 ============ -->
   <section>
     <div class="sec-head">
       <span class="num">7.3</span><h2>按角色的阅读路径</h2>
-      <span class="sub">不必通读 100 条</span>
+      <span class="sub">不必通读 101 条</span>
     </div>
     <div class="figbox" style="padding:16px 22px 8px">
       <table>
