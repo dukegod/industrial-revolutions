@@ -12,10 +12,18 @@
   6. 页脚链接顺序与树形层级一致
   7. 术语表分组计数自洽（declared == actual）
   8. 关键数字口径跨页一致
+  9. 资源引用可达（src / poster 指向的本地文件必须存在）
+ 10. 无孤儿资源（assets/ 下的每个文件都必须被某个页面引用）
+ 11. wiki 与页面的口径一致
 
 用法：
   python3 scripts/verify.py
 退出码 0 = 全部通过，1 = 存在问题
+
+[INPUT]: depends on the HTML pages under visualization/ and the Markdown entries under wiki/
+[OUTPUT]: exports check_links / check_tags / check_nav / check_numbering / check_legacy / check_footers / check_glossary / check_figures / check_src / check_orphans / check_wiki, plus a main() that exits 0 on pass and 1 on any problem
+[POS]: the whole-site consistency gate; scripts/figures/verify_embedded.py covers only the generated figures, this one covers the pages themselves
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
 """
 import re
 import sys
@@ -65,8 +73,10 @@ def check_links(pages):
 
 
 def check_tags(pages):
+    # 只列有闭合标签的标签；source / img / br 这类空元素不做配平
     tags = ['div', 'section', 'svg', 'table', 'ol', 'li', 'a', 'p', 'text',
-            'h2', 'h3', 'h4', 'dl', 'dt', 'dd', 'ul', 'span', 'details', 'summary']
+            'h2', 'h3', 'h4', 'dl', 'dt', 'dd', 'ul', 'span', 'details', 'summary',
+            'figure', 'figcaption', 'video']
     ok = True
     for f in pages:
         t = f.read_text(encoding='utf-8')
@@ -78,6 +88,46 @@ def check_tags(pages):
                 ok = False
     if ok:
         notes.append('标签配平：%d 个文件全部通过' % len(pages))
+
+
+def check_src(pages):
+    """资源引用必须可达：src / poster 指向的本地文件必须真的存在。
+
+    链接检查只覆盖 href，而位图与视频走的是 src —— 两者是两条独立的引用通道，
+    少查一条，资源删了页面也不会报错。
+    """
+    n = 0
+    for f in pages:
+        t = f.read_text(encoding='utf-8')
+        for ref in sorted(set(re.findall(r'(?:\ssrc|\sposter)="([^"]+)"', t))):
+            if ref.startswith(('http://', 'https://', 'data:', '//')):
+                continue
+            if not (SITE / ref).exists():
+                bad('资源不可达 %s -> %s' % (f.name, ref))
+                n += 1
+    if n == 0:
+        notes.append('资源引用：src / poster 全部可达')
+
+
+def check_orphans(pages):
+    """assets/ 下的每个文件都必须被某个页面引用，否则就是孤儿资源。
+
+    孤儿资源不会让任何检查失败 —— 它只是躺在仓库里占体积、误导后来者，
+    所以这里直接当作问题报出来。
+    """
+    assets = SITE / 'assets'
+    if not assets.exists():
+        return
+    files = [f for f in sorted(assets.iterdir())
+             if f.is_file() and f.suffix != '.md']       # .md 是模块地图，不是站点资源
+    text = ''.join(f.read_text(encoding='utf-8') for f in pages)
+    n = 0
+    for f in files:
+        if 'assets/%s' % f.name not in text:
+            bad('孤儿资源：assets/%s 未被任何页面引用' % f.name)
+            n += 1
+    if n == 0:
+        notes.append('孤儿资源：assets/ 下 %d 个文件全部被引用' % len(files))
 
 
 def check_nav(pages):
@@ -226,7 +276,7 @@ def check_wiki():
     if not wiki.exists():
         bad('缺少 wiki/ 目录')
         return
-    md = sorted(wiki.glob('*.md'))
+    md = sorted(f for f in wiki.glob('*.md') if f.name != 'CLAUDE.md')   # CLAUDE.md 是模块地图，不是条目
     if len(md) < 8:
         bad('wiki 条目过少: %d' % len(md))
 
@@ -275,6 +325,8 @@ def main():
     check_footers(pages)
     check_glossary(pages)
     check_figures(pages)
+    check_src(pages)
+    check_orphans(pages)
     check_wiki()
 
     print('=== 校验结果 ===')

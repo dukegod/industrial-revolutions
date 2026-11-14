@@ -1,12 +1,19 @@
+<!--
+[INPUT]: depends on the four scripts in this directory
+[OUTPUT]: exports the usage of every script, where to edit when the site structure changes, and the conventions
+[POS]: the operations manual of this directory
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
+-->
+
 # 维护脚本
 
-保证 `visualization/` 下九个页面的结构一致性。只用 Python 标准库，无依赖。
+保证 `visualization/` 下十一个页面的结构一致性。只用 Python 标准库，无依赖。
 
 ---
 
 ## build.py —— 站点构建
 
-同步四类结构，避免手工改九个文件时出错：
+同步四类结构，避免手工改十一个文件时出错：
 
 | 同步项 | 说明 |
 |---|---|
@@ -45,17 +52,19 @@ TREE = [
 
 ## verify.py —— 全站校验
 
-九项检查：
+十一项检查：
 
 1. 链接可达性（无断链）
-2. HTML 标签配平（19 类标签）
+2. HTML 标签配平（22 类标签）
 3. 树形导航结构一致（分组数、当前项标记、面板高亮）
 4. 文件名 / kicker / title 编号一致
 5. 旧文件名无残留
 6. 页脚链接顺序与树形层级一致
 7. 术语表分组计数自洽（declared == actual）
 8. 关键数字口径跨页一致（15 项）
-9. `wiki/` 与 `visualization/` 口径一致（链接可达、标签与目标对得上、关键数字已沉淀）
+9. 资源引用可达（`src` / `poster` 指向的本地文件必须存在）
+10. 无孤儿资源（`visualization/assets/` 下每个文件都必须被某个页面引用）
+11. `wiki/` 与 `visualization/` 口径一致（链接可达、标签与目标对得上、关键数字已沉淀）
 
 ### 用法
 
