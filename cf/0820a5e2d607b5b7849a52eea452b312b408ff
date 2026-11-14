@@ -1,0 +1,111 @@
+README.md
+  s_8c2a3ab5d9d27f::t_03002729ae7860 1-7,32,36-49,64-65,96,100,107,146
+scripts/figures/README.md
+  s_8c2a3ab5d9d27f::t_1e043b4f62c0c6 1-7
+scripts/figures/build_figures.py
+  s_8c2a3ab5d9d27f::t_e0cf33368baf51 13-17
+scripts/figures/check_svg.py
+  s_8c2a3ab5d9d27f::t_0ef78b99521f50 19-23
+scripts/figures/gen_energy.py
+  s_8c2a3ab5d9d27f::t_8908cf509f2ce5 18-22
+scripts/figures/gen_forks.py
+  s_8c2a3ab5d9d27f::t_b803b58a866e17 7-11
+scripts/figures/gen_roadmap.py
+  s_8c2a3ab5d9d27f::t_f4a56b83177756 7-11
+scripts/figures/gen_semi.py
+  s_8c2a3ab5d9d27f::t_b8b42dee249160 10-14
+scripts/figures/gen_semi3.py
+  s_8c2a3ab5d9d27f::t_916f3b7127280e 7-11
+scripts/figures/gen_stages.py
+  s_8c2a3ab5d9d27f::t_e7f67a458f0c37 17-21
+scripts/figures/gen_twolines.py
+  s_8c2a3ab5d9d27f::t_e8fa87b5e315ba 7-11
+scripts/figures/phys_stages_data.py
+  s_8c2a3ab5d9d27f::t_f3a8aad6fe9103 3-9
+scripts/figures/preview_narrow.html
+  s_8c2a3ab5d9d27f::t_1b0e6ec9c0d8e9 2-8
+scripts/figures/stage_template.py
+  s_8c2a3ab5d9d27f::t_37b898a210b62b 8-12
+scripts/figures/stages_data.py
+  s_8c2a3ab5d9d27f::t_27a6dff66ef714 3-9
+scripts/figures/steps_data.py
+  s_8c2a3ab5d9d27f::t_e7f4ee065d8c83 7-11
+scripts/figures/svgutil.py
+  s_8c2a3ab5d9d27f::t_fa95fbbd917334 3-9
+scripts/figures/verify_embedded.py
+  s_8c2a3ab5d9d27f::t_20af172190a3ee 13-17
+scripts/test_alignment.py
+  s_8c2a3ab5d9d27f::t_bca60b2fef7a88 23-27
+scripts/test_verify.py
+  s_8c2a3ab5d9d27f::t_739002a15f9f69 7-11
+visualization/01-first.html
+  s_8c2a3ab5d9d27f::t_d658408e62c5db 2-8
+visualization/02-second.html
+  s_8c2a3ab5d9d27f::t_656bf0bb90f722 2-8
+visualization/03-third.html
+  s_8c2a3ab5d9d27f::t_31681ee98243db 2-8
+visualization/05-semiconductor.html
+  s_8c2a3ab5d9d27f::t_505da2933d372f 2-8
+visualization/06-fourth.html
+  s_8c2a3ab5d9d27f::t_2fc4ba06e8932d 2-8
+visualization/07-current.html
+  s_8c2a3ab5d9d27f::t_cefa1b282cadef 2-8
+visualization/08-glossary.html
+  s_8c2a3ab5d9d27f::t_3586ab0120aa67 2-8
+visualization/09-logic.html
+  s_8c2a3ab5d9d27f::t_0ba3679971355d 2-8
+visualization/10-energy.html
+  s_8c2a3ab5d9d27f::t_5244bce9bb4838 2-8
+visualization/computer-architecture-evolution.html
+  s_8c2a3ab5d9d27f::t_2e3b80207a7f14 2-8
+wiki/01-第一次工业革命.md
+  s_8c2a3ab5d9d27f::t_dd8a8dd86f06c7 1-7
+wiki/02-第二次工业革命.md
+  s_8c2a3ab5d9d27f::t_2d0ac3847a34c6 1-7
+wiki/04-第四次工业革命.md
+  s_8c2a3ab5d9d27f::t_00fc2c571f20c9 1-7
+wiki/05-推进逻辑四铁律.md
+  s_8c2a3ab5d9d27f::t_87b4db95a08f90 1-7
+wiki/07-术语表.md
+  s_8c2a3ab5d9d27f::t_9bd64aed7ba5f6 1-7
+wiki/09-半导体的发展进程.md
+  s_8c2a3ab5d9d27f::t_e06456ae9b4deb 1-7
+wiki/10-能源与工业革命.md
+  s_8c2a3ab5d9d27f::t_392662694bd27a 1-7
+wiki/README.md
+  s_8c2a3ab5d9d27f::t_f388b626e6b1aa 1-7
+CLAUDE.md
+  s_8c2a3ab5d9d27f::t_f4b5b04679775a 1-37
+scripts/CLAUDE.md
+  s_8c2a3ab5d9d27f::t_ddea40016fbf81 1-22
+scripts/build.py
+  s_8c2a3ab5d9d27f::t_80ba4cf6d6b8fe 15-19
+scripts/figures/CLAUDE.md
+  s_8c2a3ab5d9d27f::t_26b208b8f6273b 1-37
+visualization/CLAUDE.md
+  s_8c2a3ab5d9d27f::t_cc66d543d3b23d 1-30
+visualization/assets/CLAUDE.md
+  s_8c2a3ab5d9d27f::t_f0624db413e162 1-19
+wiki/03-第三次工业革命.md
+  s_8c2a3ab5d9d27f::t_74f3f0b574304f 1-7
+wiki/06-电子计算机八次跃迁.md
+  s_8c2a3ab5d9d27f::t_87ffb1f0145800 1-7
+wiki/CLAUDE.md
+  s_8c2a3ab5d9d27f::t_9acb1f894923e9 1-27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cf0820a5e2d607b5b7849a52eea452b312b408ff",
+  "prompts": {},
+  "sessions": {
+    "s_8c2a3ab5d9d27f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "35d2a9b9-9d35-4b75-9181-24491a3d8d76",
+        "model": "MiniMax-M3"
+      },
+      "human_author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
