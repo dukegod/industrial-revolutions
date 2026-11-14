@@ -1,0 +1,43 @@
+visualization/assets/style.css
+  s_8c2a3ab5d9d27f::t_dd71332a445d7a 3-9
+  s_8c2a3ab5d9d27f::t_e5cf18fd9cbe37 193-198
+visualization/index.html
+  s_8c2a3ab5d9d27f::t_b570c863c4b2f8 2-3,5-8
+  s_8c2a3ab5d9d27f::t_ebaa1fd155f330 4
+  s_8c2a3ab5d9d27f::t_d2908c6cb89572 94-108
+visualization/04-architecture.html
+  s_8c2a3ab5d9d27f::t_6942f283cf22a3 176-272
+  s_8c2a3ab5d9d27f::t_d5a9c2f35c10f4 2-3,5-8
+  s_8c2a3ab5d9d27f::t_ebaa1fd155f330 4
+  s_8c2a3ab5d9d27f::t_322fc9c29c4e4a 168-175,273-277
+  s_8c2a3ab5d9d27f::t_6f0f1a38f0428a 377,695,811,872,921,985,1069,1131
+scripts/figures/gen_cutaway.py
+  s_8c2a3ab5d9d27f::t_d972c8227e7ba6 1-27,29,37-72,74-81,83-104
+  s_8c2a3ab5d9d27f::t_ce650c112ad6e3 73,82
+  s_8c2a3ab5d9d27f::t_b4aa784e39daff 28,30-36
+.gitignore
+  s_8c2a3ab5d9d27f::t_ded590ea881eb0 26-33
+  s_8c2a3ab5d9d27f::t_f78b27c270074b 16
+scripts/figures/registry.py
+  s_8c2a3ab5d9d27f::t_fe0d8d5438701b 16-20
+  s_8c2a3ab5d9d27f::t_960d46775b7e18 48-52
+wiki/08-数据来源与口径.md
+  s_8c2a3ab5d9d27f::t_b6a5d5665c9848 192-211
+  s_8c2a3ab5d9d27f::t_efbe0718bf7253 1-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f11acfdda159261233f33abd5cb8284d7c2a759f",
+  "prompts": {},
+  "sessions": {
+    "s_8c2a3ab5d9d27f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "35d2a9b9-9d35-4b75-9181-24491a3d8d76",
+        "model": "MiniMax-M3"
+      },
+      "human_author": "dukegod <841530656@qq.com>"
+    }
+  }
+}
