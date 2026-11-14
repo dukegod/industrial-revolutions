@@ -13,6 +13,7 @@
 *.tmp
 *.bak
 .DS_Store
+.tmp/
 
 # 站点构建输出（本项目当前为纯静态 HTML，无构建步骤；
 # 若后续引入 VitePress 等构建工具，请按需取消注释）
@@ -22,3 +23,11 @@
 
 # 图生成器的中间产物（out/ 只是给人看的，页面里嵌的才是本体）
 scripts/figures/out/
+
+# 媒体源件不入库：成品在 visualization/assets/（随站点发布），
+# 源件与中间产物留在 .tmp/stash/。根目录的散图与 videos/ 目录一律不入库。
+/videos/
+/*.jpg
+/*.jpeg
+/*.png
+

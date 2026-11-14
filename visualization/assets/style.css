@@ -1,7 +1,12 @@
 /* ============================================================
    工业革命与人类发展 · 共享样式表
-   用于 index.html / 01-first / 02-second / 03-third / 04-fourth /
-        05-architecture / 06-current / 07-glossary / 08-logic
+   用于 index.html / 01-first / 02-second / 03-third / 04-architecture /
+        05-semiconductor / 06-fourth / 07-current / 08-glossary / 09-logic / 10-energy
+
+   [INPUT]: depends on nothing; this file is the single stylesheet for every page under visualization/
+   [OUTPUT]: exports the CSS custom properties and the shared component rules (nav / hero / figbox / timeline / cards / glossary …)
+   [POS]: the only stylesheet of the site; every page links it once via assets/style.css
+   [PROTOCOL]: Update this header on change, then check CLAUDE.md
    ============================================================ */
 :root{
   --paper:#f7f5f0;
@@ -184,6 +189,12 @@ section{margin-top:52px;}
 figure{margin:0;}
 .figbox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 18px 16px;box-shadow:0 4px 16px -2px rgba(0,0,0,.06);}
 figcaption{margin-top:12px;font-size:12.5px;color:var(--muted);line-height:1.55;}
+
+/* ---------- 开篇视频 ---------- */
+.hero-video{margin-top:22px;}
+.hero-video video{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line);background:var(--card);}
+.hero-video figcaption{margin-top:10px;}
+.hero-video figcaption b{color:var(--ink2);font-weight:600;}
 
 /* ---------- timeline ---------- */
 .tl{list-style:none;margin:0;padding:0;position:relative;}

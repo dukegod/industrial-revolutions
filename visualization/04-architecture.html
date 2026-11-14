@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+
+<!--
+[INPUT]: depends on wiki/05-推进逻辑四铁律.md and wiki/06-电子计算机八次跃迁.md
+[OUTPUT]: exports the seven-layer stack, the two physical implementations of one abstraction, the pyramid, and the roadmap
+[POS]: the architecture page; it turns the rules into a layered reading of the machine
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
+-->
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8" />
@@ -158,6 +165,116 @@
         图 1 · 七层抽象栈。S1–S8 对应 <a href="03-third.html" style="color:var(--accent)">第三次工业革命</a>页的八次架构跃迁编号。
       </figcaption>
     </figure>
+
+    <p>
+      栈是抽象，机器是实体。图 1 的七层在两代机器上由完全不同的零件承担：1940 年代的电子管与继电器，
+      和今天的 CPU 与内存条，落在<b>同一套逻辑位置上</b>。换掉的不是结构，是结构底下那块地板 ——
+      这正是「稀缺下沉」在硬件上的样子。
+    </p>
+
+    <figure class="figbox">
+      <svg viewBox="0 0 960 556" width="100%" style="display:block;height:auto" role="img" aria-label="同一套抽象结构的两套物理实现：左列是电子管时代的实物部件，中间是两个时代共用的抽象层，右列是集成电路时代的实物部件，左右箭头指向中间说明抽象结构没变；底带说明稀缺从体积与发热下沉到硅、内存带宽与电力">
+  <defs>
+    <marker id="cutArrL" markerWidth="8" markerHeight="8" refX="6.5" refY="2.8" orient="auto">
+      <path d="M0,0 L6.5,2.8 L0,5.6 Z" fill="#2f6f5e"/>
+    </marker>
+    <marker id="cutArrR" markerWidth="8" markerHeight="8" refX="6.5" refY="2.8" orient="auto">
+      <path d="M0,0 L6.5,2.8 L0,5.6 Z" fill="#2f6f5e"/>
+    </marker>
+  </defs>
+  <g font-family="Outfit, 'PingFang SC', sans-serif">
+    <rect x="24" y="14" width="258" height="42" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="153" y="34" font-size="13" font-weight="600" fill="#14171e" text-anchor="middle">电子管时代 · 实物形态</text>
+    <text x="153" y="49" font-size="10.5" fill="#7c7a72" text-anchor="middle">1945–1957</text>
+    <rect x="306" y="14" width="336" height="42" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="474" y="34" font-size="13" font-weight="600" fill="#14171e" text-anchor="middle">抽象层 · 两个时代共用</text>
+    <text x="474" y="49" font-size="10.5" fill="#7c7a72" text-anchor="middle">逻辑结构没有变，变的只是它落在什么硬件上</text>
+    <rect x="666" y="14" width="270" height="42" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <text x="801" y="34" font-size="13" font-weight="600" fill="#14171e" text-anchor="middle">集成电路时代 · 实物形态</text>
+    <text x="801" y="49" font-size="10.5" fill="#7c7a72" text-anchor="middle">2020s</text>
+
+    <rect x="24" y="70" width="258" height="48" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <rect x="306" y="70" width="336" height="48" rx="9" fill="#f7f4ec" stroke="#e9e3d6"/>
+    <rect x="666" y="70" width="270" height="48" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <rect x="306" y="70" width="5" height="48" rx="2.5" fill="#2f6f5e"/>
+    <text x="36" y="99" font-size="12" fill="#3a4256">电子管与继电器搭出的运算与控制逻辑</text>
+    <text x="320" y="91" font-size="12.5" font-weight="600" fill="#14171e">运算器 · 控制器</text>
+    <text x="320" y="108" font-size="10.5" fill="#7c7a72">完成算术运算与取指</text>
+    <text x="678" y="99" font-size="12" fill="#3a4256">CPU 内部的运算器与控制器</text>
+    <line x1="286" y1="94" x2="302" y2="94" stroke="#2f6f5e" stroke-width="1.4" marker-end="url(#cutArrL)" opacity=".8"/>
+    <line x1="662" y1="94" x2="646" y2="94" stroke="#2f6f5e" stroke-width="1.4" marker-end="url(#cutArrR)" opacity=".8"/>
+    <rect x="24" y="124" width="258" height="48" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <rect x="306" y="124" width="336" height="48" rx="9" fill="#f7f4ec" stroke="#e9e3d6"/>
+    <rect x="666" y="124" width="270" height="48" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <rect x="306" y="124" width="5" height="48" rx="2.5" fill="#2f6f5e"/>
+    <text x="36" y="153" font-size="12" fill="#3a4256">汞延迟线 · 磁鼓 · 继电器矩阵</text>
+    <text x="320" y="145" font-size="12.5" font-weight="600" fill="#14171e">存储器</text>
+    <text x="320" y="162" font-size="10.5" fill="#7c7a72">暂存程序与中间结果</text>
+    <text x="678" y="153" font-size="12" fill="#3a4256">DRAM 内存条 · HBM · NVMe 固态盘</text>
+    <line x1="286" y1="148" x2="302" y2="148" stroke="#2f6f5e" stroke-width="1.4" marker-end="url(#cutArrL)" opacity=".8"/>
+    <line x1="662" y1="148" x2="646" y2="148" stroke="#2f6f5e" stroke-width="1.4" marker-end="url(#cutArrR)" opacity=".8"/>
+    <rect x="24" y="178" width="258" height="48" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <rect x="306" y="178" width="336" height="48" rx="9" fill="#f7f4ec" stroke="#e9e3d6"/>
+    <rect x="666" y="178" width="270" height="48" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <rect x="306" y="178" width="5" height="48" rx="2.5" fill="#2f6f5e"/>
+    <text x="36" y="207" font-size="12" fill="#3a4256">穿孔卡片 · 纸带读入机</text>
+    <text x="320" y="199" font-size="12.5" font-weight="600" fill="#14171e">指令与数据入口</text>
+    <text x="320" y="216" font-size="10.5" fill="#7c7a72">把程序与数据送进来</text>
+    <text x="678" y="207" font-size="12" fill="#3a4256">键盘 · 触摸 · 网卡</text>
+    <line x1="286" y1="202" x2="302" y2="202" stroke="#2f6f5e" stroke-width="1.4" marker-end="url(#cutArrL)" opacity=".8"/>
+    <line x1="662" y1="202" x2="646" y2="202" stroke="#2f6f5e" stroke-width="1.4" marker-end="url(#cutArrR)" opacity=".8"/>
+    <rect x="24" y="232" width="258" height="48" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <rect x="306" y="232" width="336" height="48" rx="9" fill="#f7f4ec" stroke="#e9e3d6"/>
+    <rect x="666" y="232" width="270" height="48" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <rect x="306" y="232" width="5" height="48" rx="2.5" fill="#2f6f5e"/>
+    <text x="36" y="261" font-size="12" fill="#3a4256">纸带输出机 · 曲线仪</text>
+    <text x="320" y="253" font-size="12.5" font-weight="600" fill="#14171e">结果出口</text>
+    <text x="320" y="270" font-size="10.5" fill="#7c7a72">把结果送出去</text>
+    <text x="678" y="261" font-size="12" fill="#3a4256">显示器 · 模型 API</text>
+    <line x1="286" y1="256" x2="302" y2="256" stroke="#2f6f5e" stroke-width="1.4" marker-end="url(#cutArrL)" opacity=".8"/>
+    <line x1="662" y1="256" x2="646" y2="256" stroke="#2f6f5e" stroke-width="1.4" marker-end="url(#cutArrR)" opacity=".8"/>
+    <rect x="24" y="286" width="258" height="48" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <rect x="306" y="286" width="336" height="48" rx="9" fill="#f7f4ec" stroke="#e9e3d6"/>
+    <rect x="666" y="286" width="270" height="48" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <rect x="306" y="286" width="5" height="48" rx="2.5" fill="#2f6f5e"/>
+    <text x="36" y="315" font-size="12" fill="#3a4256">接线盘 · 同轴电缆 · 继电器矩阵</text>
+    <text x="320" y="307" font-size="12.5" font-weight="600" fill="#14171e">互联</text>
+    <text x="320" y="324" font-size="10.5" fill="#7c7a72">把各部件接在一起</text>
+    <text x="678" y="315" font-size="12" fill="#3a4256">PCIe · NVLink · 以太网</text>
+    <line x1="286" y1="310" x2="302" y2="310" stroke="#2f6f5e" stroke-width="1.4" marker-end="url(#cutArrL)" opacity=".8"/>
+    <line x1="662" y1="310" x2="646" y2="310" stroke="#2f6f5e" stroke-width="1.4" marker-end="url(#cutArrR)" opacity=".8"/>
+    <rect x="24" y="340" width="258" height="48" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <rect x="306" y="340" width="336" height="48" rx="9" fill="#f7f4ec" stroke="#e9e3d6"/>
+    <rect x="666" y="340" width="270" height="48" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <rect x="306" y="340" width="5" height="48" rx="2.5" fill="#2f6f5e"/>
+    <text x="36" y="369" font-size="12" fill="#3a4256">高压直流电源 · 灯丝供电</text>
+    <text x="320" y="361" font-size="12.5" font-weight="600" fill="#14171e">能源</text>
+    <text x="320" y="378" font-size="10.5" fill="#7c7a72">提供稳定电压与电流</text>
+    <text x="678" y="369" font-size="12" fill="#3a4256">电源单元 · 高压直流</text>
+    <line x1="286" y1="364" x2="302" y2="364" stroke="#2f6f5e" stroke-width="1.4" marker-end="url(#cutArrL)" opacity=".8"/>
+    <line x1="662" y1="364" x2="646" y2="364" stroke="#2f6f5e" stroke-width="1.4" marker-end="url(#cutArrR)" opacity=".8"/>
+    <rect x="24" y="394" width="258" height="48" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <rect x="306" y="394" width="336" height="48" rx="9" fill="#f7f4ec" stroke="#e9e3d6"/>
+    <rect x="666" y="394" width="270" height="48" rx="9" fill="#fff" stroke="#e9e3d6"/>
+    <rect x="306" y="394" width="5" height="48" rx="2.5" fill="#2f6f5e"/>
+    <text x="36" y="423" font-size="12" fill="#3a4256">离心鼓风机与风道</text>
+    <text x="320" y="415" font-size="12.5" font-weight="600" fill="#14171e">散热</text>
+    <text x="320" y="432" font-size="10.5" fill="#7c7a72">把热带走</text>
+    <text x="678" y="423" font-size="12" fill="#3a4256">风扇 · 均热板 · 液冷冷板</text>
+    <line x1="286" y1="418" x2="302" y2="418" stroke="#2f6f5e" stroke-width="1.4" marker-end="url(#cutArrL)" opacity=".8"/>
+    <line x1="662" y1="418" x2="646" y2="418" stroke="#2f6f5e" stroke-width="1.4" marker-end="url(#cutArrR)" opacity=".8"/>
+
+    <rect x="24" y="458" width="912" height="76" rx="10" fill="#c97b3f" fill-opacity=".08" stroke="#c97b3f" stroke-opacity=".45"/>
+    <text x="40" y="484" font-size="13" font-weight="600" fill="#a9663a">稀缺没有消失，它换了位置</text>
+    <text x="40" y="506" font-size="11.5" fill="#3a4256">电子管时代 ↓ 压给下面：体积、发热与灯丝供电 —— 稀缺是「机器有多大、耗多少电」</text>
+    <text x="40" y="526" font-size="11.5" fill="#3a4256">集成电路时代 ↓ 压给下面：硅制程、内存带宽与电力 —— 稀缺是「算力够不够、内存等不等得起」</text>
+  </g>
+</svg>
+      <figcaption>
+        图 2 · 同一套抽象结构的两套物理实现。左右两列是各自时代的实物部件，中间是两个时代共用的抽象层；
+        箭头指向中间，说明变的是零件、不变的是结构。底带是这张图的落点：稀缺从体积与发热下沉到硅、内存带宽与电力。
+      </figcaption>
+    </figure>
   </section>
 
   <!-- ============ 金字塔总图 ============ -->
@@ -257,7 +374,7 @@
       </svg>
       </div>
       <figcaption>
-        图 2 · 从物理约束到目标与责任。<b>从底往上看</b>：基座是最硬的物理约束（永不被解放）；每往上一层，就解放一样东西，
+        图 3 · 从物理约束到目标与责任。<b>从底往上看</b>：基座是最硬的物理约束（永不被解放）；每往上一层，就解放一样东西，
         同时往物理层压下一份新稀缺；台阶与台阶之间标的是对应的跃迁编号。
         <b>前三层的稀缺最终都沉到基座的物理层，唯独最上面那层的「信任与责任」压不下去</b>——它停在尖顶，仍在人手里，那正是第四次革命要处理的问题。
         窄屏可横向滚动查看。
@@ -575,7 +692,7 @@
 </svg>
       </div>
       <figcaption>
-        图 3 · 电子计算机技术架构路线。<b>横着读</b>是每条维度在各阶段的技术形态（箭头即替代关系）；
+        图 4 · 电子计算机技术架构路线。<b>横着读</b>是每条维度在各阶段的技术形态（箭头即替代关系）；
         <b>竖着读</b>是同一时刻十一条维度各自的处境。底部三条暖色带是主导瓶颈的迁移——
         最上带对应计算线（即「三条主线」的主线一，换成按阶段看），中间带对应连接与接入线，
         最下带对应托着这两条线的<b>物理层</b>（半导体 · 通信 · 能源与散热）。
@@ -691,7 +808,7 @@
         </g>
       </svg>
       </div>
-      <figcaption>图 4 · 台阶一放大：指令集与微架构内部（跃迁 1–3）。读法是<b>从下往上</b>：每次跃迁改一条规则、往上面交一份能力、往下面压一份稀缺。注意底部那行——<b>前两次压的是硅与工艺，第三次压的却是访存延迟</b>；这一次换靶子，才有了后来「内存墙」这个说法。 窄屏可横向滚动查看。</figcaption>
+      <figcaption>图 5 · 台阶一放大：指令集与微架构内部（跃迁 1–3）。读法是<b>从下往上</b>：每次跃迁改一条规则、往上面交一份能力、往下面压一份稀缺。注意底部那行——<b>前两次压的是硅与工艺，第三次压的却是访存延迟</b>；这一次换靶子，才有了后来「内存墙」这个说法。 窄屏可横向滚动查看。</figcaption>
     </figure>
 
     <h3 class="step-title">台阶二 · 运行时与框架<span class="ramp">跃迁 4–5</span></h3>
@@ -752,7 +869,7 @@
         </g>
       </svg>
       </div>
-      <figcaption>图 5 · 台阶二放大：运行时与框架内部（跃迁 4–5）。这一段解放的是「并行」——多核把并发逼成刚需，GPU 把并行变成可调用的库。<b>压下去的靶子也从互连换到了带宽</b>：算力堆得快，带宽跟不上。 窄屏可横向滚动查看。</figcaption>
+      <figcaption>图 6 · 台阶二放大：运行时与框架内部（跃迁 4–5）。这一段解放的是「并行」——多核把并发逼成刚需，GPU 把并行变成可调用的库。<b>压下去的靶子也从互连换到了带宽</b>：算力堆得快，带宽跟不上。 窄屏可横向滚动查看。</figcaption>
     </figure>
 
     <h3 class="step-title">台阶三 · 系统与调度<span class="ramp">跃迁 6</span></h3>
@@ -801,7 +918,7 @@
         </g>
       </svg>
       </div>
-      <figcaption>图 6 · 台阶三放大：系统与调度内部（跃迁 6）。只有一次跃迁，但它是<b>全栈竞赛</b>的起点：算法、加速器、互连、编排、机房一起动。交付出去的是「不必自己管集群」，代价是<b>采购单元从芯片变成机架与电</b>。 窄屏可横向滚动查看。</figcaption>
+      <figcaption>图 7 · 台阶三放大：系统与调度内部（跃迁 6）。只有一次跃迁，但它是<b>全栈竞赛</b>的起点：算法、加速器、互连、编排、机房一起动。交付出去的是「不必自己管集群」，代价是<b>采购单元从芯片变成机架与电</b>。 窄屏可横向滚动查看。</figcaption>
     </figure>
 
     <h3 class="step-title">台阶四 · 应用与工作负载<span class="ramp">跃迁 7–8</span></h3>
@@ -865,7 +982,7 @@
         </g>
       </svg>
       </div>
-      <figcaption>图 7 · 台阶四放大：应用与工作负载内部（跃迁 7–8）。这是第一次把「执行」整个交出去。<b>注意底部那行与其他三段不同</b>：跃迁 7 把 HBM 容量与带宽沉到基座，跃迁 8 把碎片化散进生态，而「信任与责任」压不下去——它留在人身上，就是金字塔尖顶那一句。 窄屏可横向滚动查看。</figcaption>
+      <figcaption>图 8 · 台阶四放大：应用与工作负载内部（跃迁 7–8）。这是第一次把「执行」整个交出去。<b>注意底部那行与其他三段不同</b>：跃迁 7 把 HBM 容量与带宽沉到基座，跃迁 8 把碎片化散进生态，而「信任与责任」压不下去——它留在人身上，就是金字塔尖顶那一句。 窄屏可横向滚动查看。</figcaption>
     </figure>
 
     <div class="figbox" style="padding:20px 22px 8px;margin-top:22px">
@@ -949,7 +1066,7 @@
         </g>
       </svg>
       <figcaption>
-        图 8 · 三条主线。值得注意的是<b>三者不同步</b>：主线二（形态）比主线三（规模）慢半拍，而主线一（瓶颈）始终在追赶前两者——这正是当下「算力堆得很快、内存与互连跟不上」的根源。
+        图 9 · 三条主线。值得注意的是<b>三者不同步</b>：主线二（形态）比主线三（规模）慢半拍，而主线一（瓶颈）始终在追赶前两者——这正是当下「算力堆得很快、内存与互连跟不上」的根源。
       </figcaption>
     </figure>
 
@@ -1011,7 +1128,7 @@
         </table>
       </div>
       <figcaption>
-        图 9 · 八次跃迁 × 七层栈。竖着读是每一层被解放的顺序：指令层（1–3）→ 运行时层（4–5）→ 系统层（6）→ 应用层（7–8）。
+        图 10 · 八次跃迁 × 七层栈。竖着读是每一层被解放的顺序：指令层（1–3）→ 运行时层（4–5）→ 系统层（6）→ 应用层（7–8）。
         <b>八轮里有六轮从最底层起手，只有一轮（跃迁 7）从内存层起手</b>——起手层决定了后面传导的形状。
         窄屏可横向滚动查看。
       </figcaption>

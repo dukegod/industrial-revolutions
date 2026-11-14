@@ -13,6 +13,11 @@
 定位方式（locate）：
 - `('attrs', 'class="stepfig" data-stage="1"')` —— 结构性锚点，最稳；
 - `('aria', '缩放方式的三次转移')`      —— 无 class 的图用 aria-label 前缀。
+
+[INPUT]: depends on nothing; it is the single source of truth for the generated figures
+[OUTPUT]: exports FIGURES and BY_ID, one record per figure: page, generator, function, and locating anchor
+[POS]: the figure registry; build_figures.py and verify_embedded.py both work off it
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
 """
 
 FIGURES = [
@@ -39,6 +44,11 @@ FIGURES = [
     {'id': '04-roadmap', 'page': '04-architecture.html',
      'module': 'gen_roadmap', 'func': 'gen',
      'locate': ('attrs', 'class="roadmap"')},
+
+    # ── 04 底层架构：同一套抽象结构的两套物理实现 ──────────────────
+    {'id': '04-cutaway', 'page': '04-architecture.html',
+     'module': 'gen_cutaway', 'func': 'gen',
+     'locate': ('aria', '同一套抽象结构的两套物理实现')},
 
     # ── 10 能源专题：ERCOT 并网队列漏斗 ────────────────────────────
     {'id': '10-funnel', 'page': '10-energy.html',
