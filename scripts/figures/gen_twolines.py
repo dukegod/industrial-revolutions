@@ -4,6 +4,11 @@
 
 用法：python3 scripts/figures/gen_twolines.py（打印 SVG）
       或由 scripts/figures/build_figures.py 统一生成 / 回写。
+
+[INPUT]: depends on nothing; its lane data is inline
+[OUTPUT]: exports the three-lines overview SVG of the third revolution
+[POS]: the producer of the three-lines overview figure
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
 """
 
 COL_X = [116, 314, 512, 710]

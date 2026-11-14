@@ -1,3 +1,10 @@
+<!--
+[INPUT]: depends on every module in this directory
+[OUTPUT]: exports the standard flow for changing a figure, the file list, the geometry checks, and the hand-written figure inventory
+[POS]: the operations manual of this directory
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
+-->
+
 # 图的生成与校验
 
 页面上的 SVG 有两种来路：

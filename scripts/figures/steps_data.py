@@ -4,6 +4,11 @@
 
 每段：aria / top[2] / bands[] / bottom[2|3]。
 bands 里每条节点：label / title / period / sub / tech[] / rule[] / down / up。
+
+[INPUT]: depends on wiki/06-电子计算机八次跃迁.md
+[OUTPUT]: exports the four compute-line steps with their leap markers
+[POS]: the copy source of the compute-line zoom figures; wording changes belong here
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
 """
 
 # 与页面上 <svg class="stepfig" data-* > 的对齐标记一一对应（test_alignment.py 会校验）

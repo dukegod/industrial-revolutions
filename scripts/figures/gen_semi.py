@@ -7,6 +7,11 @@
 
 用法：python3 scripts/figures/gen_semi.py（打印 SVG）
       或由 scripts/figures/build_figures.py 统一生成 / 回写。
+
+[INPUT]: depends on wiki/09-半导体的发展进程.md
+[OUTPUT]: exports the two semiconductor figures: the three shifts of scaling, and the lithography wavelength evolution
+[POS]: the producer of the two figures on the semiconductor page
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
 """
 import json
 from pathlib import Path

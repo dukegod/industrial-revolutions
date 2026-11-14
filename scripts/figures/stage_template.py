@@ -5,6 +5,11 @@
 几何（与已入库的四张计算线台阶图逐像素一致）：
   顶部绿带 y=26..90；列头基线 106；带起点 118；带高 126（两行内容）/148（三行）；
   底部暖色带 h=64（两行）/80（三行）。
+
+[INPUT]: depends on nothing
+[OUTPUT]: exports render(), the shared layout template for the three families of zoom-in figures
+[POS]: the shared template; it guarantees the compute-line and connection-line families are structurally identical
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
 """
 
 BAND_TOP = 26

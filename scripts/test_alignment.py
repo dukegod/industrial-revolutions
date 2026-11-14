@@ -20,6 +20,11 @@
 用法：
   python3 scripts/test_alignment.py
 退出码 0 = 全部对齐，1 = 存在错位
+
+[INPUT]: depends on the three line data modules under scripts/figures/
+[OUTPUT]: exports the item-by-item alignment check across compute, connection, and physical lines
+[POS]: the alignment gate for the three lines; it guards the cross-line claims of the third revolution
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
 """
 import re
 import sys

@@ -10,6 +10,11 @@
 回写策略：一张一张替换，每张替换后重新读文件 —— 不做批量偏移替换。
 （批量替换会让前一次替换改变字符串长度，后续匹配的偏移全部失效，
 产出 `<figure<svg` 这类坏 HTML，肉眼看不出来。）
+
+[INPUT]: depends on scripts/figures/registry.py and the gen_* modules
+[OUTPUT]: exports the generator that renders every registered figure and optionally splices it back into the page
+[POS]: the producer of the figures; it is the only writer of figure SVG in the pages
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
 """
 import argparse
 import importlib

@@ -4,6 +4,11 @@
 
 用法：python3 scripts/figures/gen_forks.py（打印 SVG）
       或由 scripts/figures/build_figures.py 统一生成 / 回写。
+
+[INPUT]: depends on wiki/10-能源与工业革命.md
+[OUTPUT]: exports the three-fork figure of the physical layer with its decision conditions
+[POS]: the producer of the physical-layer fork figure
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
 """
 
 FORKS = [

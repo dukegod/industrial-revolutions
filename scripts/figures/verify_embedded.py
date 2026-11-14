@@ -10,6 +10,11 @@
     python3 scripts/figures/verify_embedded.py 05-fig3  # 只比某一张
 
 退出码 0 = 全部一致。
+
+[INPUT]: depends on scripts/figures/registry.py and the gen_* modules
+[OUTPUT]: exports the check that the SVG embedded in the pages matches the generator output byte for byte
+[POS]: the drift guard for figures; it catches the case where the script changed and the page did not
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
 """
 import argparse
 import sys

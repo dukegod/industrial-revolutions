@@ -4,6 +4,11 @@
 
 用法：python3 scripts/test_verify.py
 退出码 0 = 判据仍然有效，1 = 判据已失效，必须改回 verify.py
+
+[INPUT]: depends on scripts/verify.py
+[OUTPUT]: exports negative tests proving each check actually catches the error it claims to
+[POS]: the self-test of the gate; run it after every change to verify.py
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
 """
 import sys
 from pathlib import Path

@@ -4,6 +4,11 @@
 
 用法：python3 scripts/figures/gen_roadmap.py（打印 SVG）
       或由 scripts/figures/build_figures.py 统一生成 / 回写。
+
+[INPUT]: depends on wiki/06-电子计算机八次跃迁.md
+[OUTPUT]: exports the technology-architecture roadmap SVG, including the UNDET markers for cells with no evidence
+[POS]: the producer of the roadmap figure; it is where the "do not guess" rule is enforced in code
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
 """
 
 LABEL_W = 170

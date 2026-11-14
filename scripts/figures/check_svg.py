@@ -16,6 +16,11 @@
     python3 scripts/figures/check_svg.py                 # 检查全站页面里的所有图
     python3 scripts/figures/check_svg.py 某个.svg        # 检查单个文件
     python3 scripts/figures/check_svg.py 03-third.html   # 检查某个页面
+
+[INPUT]: depends on scripts/figures/svgutil.py
+[OUTPUT]: exports the five geometry checks over every SVG in the site
+[POS]: the geometry gate; it finds layout accidents that the eye cannot see
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
 """
 import re
 import sys

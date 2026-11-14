@@ -12,6 +12,11 @@
 用法：
   python3 scripts/build.py            # 构建（幂等，可重复执行）
   python3 scripts/build.py --check    # 只检查不写入，输出差异
+
+[INPUT]: depends on nothing; the site structure (nav groups, page prefixes, legacy links) is declared inline in this file
+[OUTPUT]: exports the nav, footer, cross-page link and numbering synchronizer
+[POS]: the build step; it makes structural edits mechanical instead of hand-editing twelve pages
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
 """
 import argparse
 import re

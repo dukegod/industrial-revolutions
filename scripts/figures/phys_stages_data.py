@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""物理基础线（半导体 · 通信 · 能源）的四个物理段 —— 与前两条线同模板、逐段对齐。"""
+"""物理基础线（半导体 · 通信 · 能源）的四个物理段 —— 与前两条线同模板、逐段对齐。
+
+[INPUT]: depends on wiki/09-半导体的发展进程.md and wiki/10-能源与工业革命.md
+[OUTPUT]: exports the four physical segments aligned with the other two lines
+[POS]: the copy source of the physical-line zoom figures
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
+"""
 
 # 与页面上 <svg class="physfig" data-* > 的对齐标记一一对应（test_alignment.py 会校验）
 # stage -> (段落名, 关键节点)

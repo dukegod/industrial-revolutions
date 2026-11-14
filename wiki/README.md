@@ -1,3 +1,10 @@
+<!--
+[INPUT]: depends on the ten wiki entries 01-10
+[OUTPUT]: exports the index table mapping each entry to the question it answers, plus the reading paths
+[POS]: the knowledge index; it carries no conclusion of its own
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
+-->
+
 # 核心知识体系 · Wiki
 
 本目录是这套文档的**知识本体**：把散在可视化页面里的结论、机制与数据，沉淀成可检索、可引用、可单独阅读的 Markdown。

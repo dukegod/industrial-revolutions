@@ -1,3 +1,10 @@
+<!--
+[INPUT]: depends on the wiki entries, the site pages, and the maintenance scripts
+[OUTPUT]: exports the project overview: directory structure, resource-carrying convention, page table, and version history
+[POS]: the project constitution in human-readable form; CLAUDE.md is its agent-facing twin
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
+-->
+
 # 工业革命与人类发展
 
 一套以**工业革命为主线**的知识库：从四轮革命的机制与组织变革出发，推导人类发展的共通规律，并落到当下的 Agent 平台判断。
@@ -22,9 +29,23 @@ industrial-revolutions/
 |---|---|---|
 | **`wiki/`** | 结论、机制、数据口径的**权威来源**。纯 Markdown，可 grep、可 diff、可被 Agent 直接引用 | 不是页面的复制 |
 | **`visualization/`** | 自包含的静态站点，图表化呈现 + 树形导航，适合阅读与演示 | 不是知识的权威来源 |
-| **`scripts/`** | 保证 10 个页面结构一致性的构建与校验工具 | 不是内容生产流水线（内容以 wiki 为准） |
+| **`scripts/`** | 保证 11 个页面结构一致性的构建与校验工具 | 不是内容生产流水线（内容以 wiki 为准） |
 
 **维护顺序**：事实先改 `wiki/` → 跑 `scripts/build.py` 同步页面 → 跑 `scripts/verify.py` 确认无回归。
+
+### 资源承载约定
+
+站点的图**全部由脚本生成并内嵌进页面**，不引用外部位图 —— 这样每一张图都能被重新生成、被 `verify_embedded.py` 逐字比对，页面与图不会悄悄失配。
+
+`visualization/assets/` 是唯一的例外目录，当前只有三类文件：
+
+| 文件 | 为什么可以例外 |
+|---|---|
+| `style.css` | 全站唯一样式表 |
+| `industrial-revolutions-720p.mp4` | 开篇视频，AI 生成的示意演绎；口径与限制见 [wiki/08](wiki/08-数据来源与口径.md) 第九节 |
+| `industrial-revolutions-poster.jpg` | 上一条的封面帧 |
+
+**新增媒体资源的门槛**：先进 `scripts/figures/registry.py`（图）或明确写出它是例外（视频），再让页面引用它。`scripts/verify.py` 会同时检查 `src`/`poster` 可达与**孤儿资源** —— 放进去却没人引用的文件会被直接报出来。
 
 ---
 
@@ -40,7 +61,8 @@ python3 scripts/build.py
 # 只检查是否有待构建内容
 python3 scripts/build.py --check
 
-# 全站校验：链接 / 标签 / 导航 / 编号 / 页脚 / 术语计数 / 关键数字 / wiki 一致性
+# 全站校验：链接 / 标签 / 导航 / 编号 / 页脚 / 术语计数 / 关键数字 /
+#           资源引用 / 孤儿资源 / wiki 一致性
 python3 scripts/verify.py
 
 # 校验逻辑自测（改动 verify.py 后必须跑）
@@ -71,17 +93,18 @@ python3 scripts/test_verify.py
 
 | 页面 | 内容 |
 |---|---|
-| `index.html` | 主线地图、三条铁律、当下定位、对 Agent 平台的 5 条推论、术语速查 |
+| `index.html` | 开篇片（AI 生成的引子片）、主线地图、三条铁律、当下定位、对 Agent 平台的 5 条推论、术语速查 |
 | `01-first.html` | 蒸汽动力、工厂制度、1833 工厂法、为何发生在英国、这一轮的账 |
 | `02-second.html` | 单元驱动与布局重排、贝塞麦/泰勒制/流水线、共享增长的确立 |
 | `03-third.html` | 可编程与零边际复制 + **内部章：电子计算机的八次架构跃迁** + **第二条线：互联网与移动设备**（2006–2015 与计算线交汇） + **第三条线：物理基础**（半导体 · 通信 · 能源）—— 三条线各四个段，与计算线逐项对齐 |
-| `04-architecture.html` | 七层抽象栈、金字塔总图（从物理约束到目标与责任）、技术架构路线（十一维度 × 五阶段 × 三条瓶颈带）、四段台阶放大、逐层传递矩阵、十个维度的影响对照表 |
+| `04-architecture.html` | 七层抽象栈、**同一套抽象结构的两套物理实现**（电子管时代 vs 集成电路时代）、金字塔总图（从物理约束到目标与责任）、技术架构路线（十一维度 × 五阶段 × 三条瓶颈带）、四段台阶放大、逐层传递矩阵、十个维度的影响对照表 |
 | `05-semiconductor.html` | **独立主题：半导体的发展进程** —— 缩放方式的三次转移、光刻波长与制程节点年表、存储与封装、产业分工、中国的位置（口径分清） |
 | `06-fourth.html` | 自主执行、2026 普及数据、组织端为何没动、新稀缺预告 |
 | `07-current.html` | 2026 三个硬约束完整数据、2026–2028 路线图、全部来源与不确定项 |
 | `08-glossary.html` | 106 条分组词条 + 按角色的阅读路径 |
 | `09-logic.html` | 四条铁律的完整推导、兑现时滞时间轴、推论完整版 |
 | `10-energy.html` | 能源在四轮革命里的四种角色（前提 / 基础设施 / 背景变量 / 准入条件）、ERCOT 并网队列漏斗（兑现率 0.84%）、IEA/CSO 一手数据、能源解释不了什么 |
+| `computer-architecture-evolution.html` | 旧入口的重定向页（meta refresh → `index.html`），不对外导航 |
 
 ---
 
@@ -120,6 +143,7 @@ python3 scripts/test_verify.py
 | `restructure-2026-11` | 九页结构：四轮革命各一页，电脑史嵌入第三次 |
 | `v2.0.0` | 工业革命主线定稿：中国口径分期 + 电子计算机口径 + 树形导航 |
 | `v3.0.0` | 三目录重组：`wiki/` 知识沉淀 + `visualization/` 静态页面 + `scripts/` 维护工具 |
+| `v3.1.0` | 首次承载二进制资源：新增开篇视频（`visualization/assets/`，随站点发布）与「同一套抽象结构的两套物理实现」图（`scripts/figures/gen_cutaway.py` 生成）；`verify.py` 增资源引用与孤儿资源两项检查 |
 
 ---
 

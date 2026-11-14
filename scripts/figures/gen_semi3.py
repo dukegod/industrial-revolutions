@@ -4,6 +4,11 @@
 
 用法：python3 scripts/figures/gen_semi3.py（打印 SVG）
       或由 scripts/figures/build_figures.py 统一生成 / 回写。
+
+[INPUT]: depends on wiki/09-半导体的发展进程.md
+[OUTPUT]: exports the figure on how the bottleneck changes character in leap 7
+[POS]: the producer of the third semiconductor figure
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
 """
 
 INK, INK2, MUTED, LINE, ACCENT, RUST = '#14171e', '#3a4256', '#7c7a72', '#e9e3d6', '#2f6f5e', '#c97b3f'

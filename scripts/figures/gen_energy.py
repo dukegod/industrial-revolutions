@@ -15,6 +15,11 @@
 
 用法：python3 scripts/figures/gen_energy.py（打印 SVG）
       或由 scripts/figures/build_figures.py 统一生成 / 回写。
+
+[INPUT]: depends on the ERCOT Large Load Working Group report, page by page
+[OUTPUT]: exports the ERCOT grid-queue funnel SVG: requested, approved, operating
+[POS]: the producer of the energy funnel figure; every number in it is traced to a page of the primary document
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
 """
 
 # ── 数据（一手，页码见 wiki/08） ──────────────────────────────────

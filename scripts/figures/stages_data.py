@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""连接与接入线（互联网与移动设备）的四个阶段 —— 与计算线四段台阶逐项对齐。"""
+"""连接与接入线（互联网与移动设备）的四个阶段 —— 与计算线四段台阶逐项对齐。
+
+[INPUT]: depends on wiki/03-第三次工业革命.md
+[OUTPUT]: exports the four connection-line stages aligned item by item with the compute line
+[POS]: the copy source of the connection-line zoom figures
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
+"""
 
 # 与页面上 <svg class="stagefig" data-* > 的对齐标记一一对应（test_alignment.py 会校验）
 # stage -> (对应计算线台阶名, 跃迁区间, 阶段名, 关键节点)

@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""页面内 SVG 的定位 / 取出 / 归一化 —— 生成器与校验脚本共用。"""
+"""页面内 SVG 的定位 / 取出 / 归一化 —— 生成器与校验脚本共用。
+
+[INPUT]: depends on nothing
+[OUTPUT]: exports SVG locating, extraction, normalization, and CJK text-width estimation
+[POS]: the shared primitive layer of the figure toolchain; both generators and checkers use it
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
+"""
 import re
 
 SVG_RE = re.compile(r'<svg\b[^>]*>.*?</svg>', re.S)

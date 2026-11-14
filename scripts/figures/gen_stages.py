@@ -14,6 +14,11 @@
 用法：
     python3 scripts/figures/gen_stages.py             # 打印全部 12 张
     python3 scripts/figures/gen_stages.py phys 3      # 只打印物理段三
+
+[INPUT]: depends on scripts/figures/stage_template.py and the three *_data.py modules
+[OUTPUT]: exports the twelve zoom-in figures (compute-line steps, connection-line stages, physical segments)
+[POS]: the producer of the zoom-in figure family
+[PROTOCOL]: Update this header on change, then check CLAUDE.md
 """
 import sys
 from pathlib import Path
